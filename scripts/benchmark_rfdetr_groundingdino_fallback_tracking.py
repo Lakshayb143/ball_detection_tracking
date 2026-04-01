@@ -110,6 +110,20 @@ from groundingdino.models import build_model  # type: ignore  # noqa: E402
 from groundingdino.util.misc import clean_state_dict  # type: ignore  # noqa: E402
 from groundingdino.util.slconfig import SLConfig  # type: ignore  # noqa: E402
 from groundingdino.util.utils import get_phrases_from_posmap  # type: ignore  # noqa: E402
+try:
+    from groundingdino import _C as _groundingdino_ext  # type: ignore  # noqa: F401,E402
+except Exception as exc:  # noqa: E402
+    raise RuntimeError(
+        "GroundingDINO custom C++/CUDA ops are not available.\n"
+        "This usually means GroundingDINO was not installed/built correctly for your CUDA environment.\n"
+        "Recommended fix on your Linux box:\n"
+        "  cd GroundingDINO\n"
+        "  export CUDA_HOME=$(dirname $(dirname $(which nvcc)))\n"
+        "  pip install -e .\n"
+        "Then verify with:\n"
+        "  python -c \"from groundingdino import _C; print('ok')\"\n"
+        "GroundingDINO README reference: it explicitly calls out NameError: '_C' is not defined when install steps are not followed."
+    ) from exc
 
 
 @dataclass
