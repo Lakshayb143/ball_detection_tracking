@@ -288,6 +288,45 @@ def csv_write_dicts(path: Path, rows: Iterable[dict]) -> None:
         writer.writerows(rows)
 
 
+def load_frame_records(path: Path) -> List[FrameRecord]:
+    if not path.exists():
+        return []
+
+    records: List[FrameRecord] = []
+    with path.open("r", encoding="utf-8", newline="") as handle:
+        reader = csv.DictReader(handle)
+        for row in reader:
+            records.append(
+                FrameRecord(
+                    frame=int(row["frame"]),
+                    gt_exists=str2bool(row["gt_exists"]),
+                    gt_iou_raw=float(row["gt_iou_raw"]),
+                    gt_iou_final=float(row["gt_iou_final"]),
+                    raw_candidate_count=int(row["raw_candidate_count"]),
+                    crop_candidate_count=int(row["crop_candidate_count"]),
+                    raw_best_score=float(row["raw_best_score"]),
+                    crop_best_score=float(row["crop_best_score"]),
+                    output_score=float(row["output_score"]),
+                    output_source=row["output_source"],
+                    tracker_active=str2bool(row["tracker_active"]),
+                    tracker_gap=int(row["tracker_gap"]),
+                    detector_ms=float(row["detector_ms"]),
+                    crop_ms=float(row["crop_ms"]),
+                    tracking_ms=float(row["tracking_ms"]),
+                    total_ms=float(row["total_ms"]),
+                )
+            )
+    return records
+
+
+def expected_image_count(seq_dir: Path, max_frames_per_seq: int) -> int:
+    image_dir = seq_dir / "img1"
+    image_paths = sorted(path for path in image_dir.iterdir() if path.suffix.lower() in {".jpg", ".jpeg", ".png"})
+    if max_frames_per_seq > 0:
+        image_paths = image_paths[:max_frames_per_seq]
+    return len(image_paths)
+
+
 def find_ball_track_ids(gameinfo_path: Path) -> List[int]:
     parser = configparser.ConfigParser()
     parser.optionxform = str
@@ -390,6 +429,7 @@ class GroundingDinoDetector:
         self.max_box_area = max_box_area
         self.min_box_side = min_box_side
         self.use_amp = use_amp and device.startswith("cuda")
+        self._warned_topk_runtime_error = False
         self.processor = AutoProcessor.from_pretrained(model_id)
         self.model = AutoModelForZeroShotObjectDetection.from_pretrained(model_id).to(device).eval()
 
@@ -401,11 +441,23 @@ class GroundingDinoDetector:
             for key, value in processor_inputs.items()
         }
         with torch.inference_mode():
-            if self.use_amp:
-                with torch.autocast(device_type="cuda", dtype=torch.float16):
+            try:
+                if self.use_amp:
+                    with torch.autocast(device_type="cuda", dtype=torch.float16):
+                        outputs = self.model(**model_inputs)
+                else:
                     outputs = self.model(**model_inputs)
-            else:
-                outputs = self.model(**model_inputs)
+            except RuntimeError as exc:
+                if "selected index k out of range" not in str(exc):
+                    raise
+                if not self._warned_topk_runtime_error:
+                    height, width = image_bgr.shape[:2]
+                    print(
+                        "[WARN] GroundingDINO skipped an input with insufficient encoder proposals "
+                        f"for top-k selection (shape={width}x{height})."
+                    )
+                    self._warned_topk_runtime_error = True
+                return np.empty((0, 4), dtype=np.float32), np.empty((0,), dtype=np.float32), []
 
         post_process = self.processor.post_process_grounded_object_detection
         try:
@@ -597,22 +649,25 @@ class SingleBallTracker:
             return None
 
         height, width = frame_shape[:2]
-        crop_size = float(max(self.min_crop_size, max(self.smoothed_wh) * self.crop_expansion))
-        crop_size = float(min(crop_size, self.max_crop_size))
-        half = crop_size / 2.0
-        crop_xyxy = np.array(
-            [
-                self.prediction_center[0] - half,
-                self.prediction_center[1] - half,
-                self.prediction_center[0] + half,
-                self.prediction_center[1] + half,
-            ],
-            dtype=np.float32,
-        )
-        crop_xyxy = clip_xyxy(crop_xyxy, width=width, height=height)
-        if crop_xyxy[2] <= crop_xyxy[0] or crop_xyxy[3] <= crop_xyxy[1]:
+        if width <= 1 or height <= 1:
             return None
-        return crop_xyxy
+
+        crop_size = float(max(self.min_crop_size, max(self.smoothed_wh) * self.crop_expansion))
+        crop_size = float(min(crop_size, self.max_crop_size, width, height))
+        if crop_size <= 1.0:
+            return None
+
+        half = crop_size / 2.0
+        x1 = float(self.prediction_center[0] - half)
+        y1 = float(self.prediction_center[1] - half)
+        x1 = float(np.clip(x1, 0.0, max(0.0, width - crop_size)))
+        y1 = float(np.clip(y1, 0.0, max(0.0, height - crop_size)))
+        x2 = x1 + crop_size
+        y2 = y1 + crop_size
+
+        if x2 - x1 <= 1.0 or y2 - y1 <= 1.0:
+            return None
+        return np.array([x1, y1, x2, y2], dtype=np.float32)
 
     def commit(self, accepted: Optional[DetectionCandidate]) -> Tuple[Optional[np.ndarray], float, str]:
         if accepted is not None:
@@ -755,6 +810,38 @@ def evaluate_sequence(
         total_ms_avg=mean_or_zero(total_ms),
         runtime_fps=safe_div(1000.0, mean_or_zero(total_ms)),
     )
+
+
+def load_cached_sequence_result(
+    seq_dir: Path,
+    args: argparse.Namespace,
+    run_dir: Path,
+) -> Optional[Tuple[SequenceSummary, Path]]:
+    seq_output_dir = run_dir / seq_dir.name
+    prediction_path = seq_output_dir / "tracker_predictions.txt"
+    frame_trace_path = seq_output_dir / "frame_trace.csv"
+    if not prediction_path.exists() or not frame_trace_path.exists():
+        return None
+
+    frame_records = load_frame_records(frame_trace_path)
+    expected_frames = expected_image_count(seq_dir, args.max_frames_per_seq)
+    if expected_frames == 0 or len(frame_records) != expected_frames:
+        return None
+
+    gt_by_frame = load_ball_gt(seq_dir)
+    raw_pred_frames = sum(1 for record in frame_records if record.raw_candidate_count > 0)
+    final_pred_frames = sum(1 for record in frame_records if record.output_source != "none")
+    crop_recoveries = sum(1 for record in frame_records if record.output_source == "crop")
+    summary = evaluate_sequence(
+        sequence_name=seq_dir.name,
+        frame_records=frame_records,
+        gt_by_frame=gt_by_frame,
+        raw_pred_frames=raw_pred_frames,
+        final_pred_frames=final_pred_frames,
+        crop_recoveries=crop_recoveries,
+        match_iou=args.match_iou,
+    )
+    return summary, prediction_path
 
 
 def aggregate_sequence_summaries(summaries: Sequence[SequenceSummary]) -> Dict[str, float]:
@@ -1026,6 +1113,8 @@ def process_sequence(
         crop_recoveries=crop_recoveries,
         match_iou=args.match_iou,
     )
+    with (seq_output_dir / "sequence_summary.json").open("w", encoding="utf-8") as handle:
+        json.dump(asdict(summary), handle, indent=2)
     return summary, prediction_path
 
 
@@ -1105,17 +1194,22 @@ def main() -> None:
     summaries: List[SequenceSummary] = []
     prediction_paths: Dict[str, Path] = {}
     for seq_dir in sequence_dirs:
-        print(f"[INFO] Processing {seq_dir.name}")
-        summary, prediction_path = process_sequence(seq_dir, detector, args, run_dir)
+        cached = load_cached_sequence_result(seq_dir, args, run_dir)
+        if cached is not None:
+            print(f"[INFO] Skipping {seq_dir.name} (using cached results)")
+            summary, prediction_path = cached
+        else:
+            print(f"[INFO] Processing {seq_dir.name}")
+            summary, prediction_path = process_sequence(seq_dir, detector, args, run_dir)
         summaries.append(summary)
         prediction_paths[seq_dir.name] = prediction_path
+        csv_write_dicts(run_dir / "sequence_summary.csv", [asdict(item) for item in summaries])
         print(
             f"[INFO] {seq_dir.name}: raw_recall={summary.raw_recall:.4f}, "
             f"final_recall={summary.final_recall:.4f}, gap_bridged={summary.gap_bridged_frames}, "
             f"fps={summary.runtime_fps:.2f}"
         )
 
-    csv_write_dicts(run_dir / "sequence_summary.csv", [asdict(summary) for summary in summaries])
     aggregate = aggregate_sequence_summaries(summaries)
 
     trackeval_result: Dict[str, object] = {"status": "skipped", "reason": "disabled"}
