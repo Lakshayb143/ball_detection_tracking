@@ -37,7 +37,7 @@ from rfdetr import RFDETRMedium
 REPO_ROOT = Path(__file__).resolve().parents[1]
 
 # Dataset / run defaults
-DEFAULT_DATA_ROOT = Path("~/SoccerNet_tracking/tracking-2023/train").expanduser()
+DEFAULT_DATA_ROOT = Path("train").expanduser()
 DEFAULT_OUTPUT_ROOT = REPO_ROOT / "outputs" / "rfdetr_outlier_gdino_fallback_tracking"
 DEFAULT_RUN_NAME = "rfdetr_outlier_gdino_fallback_v1"
 DEFAULT_SEQ_START = 60
@@ -46,7 +46,7 @@ DEFAULT_SEQ_LIST = ""
 DEFAULT_MAX_FRAMES_PER_SEQ = 0
 
 # RF-DETR defaults
-DEFAULT_BALL_MODEL_PATH = REPO_ROOT / "checkpoints" / "ball.pth"
+DEFAULT_BALL_MODEL_PATH = REPO_ROOT / "models" / "ball.pth"
 DEFAULT_BALL_CONFIDENCE = 0.7
 DEFAULT_BALL_CLASS_ID = 0
 DEFAULT_ENABLE_RFDETR_OPTIMIZE = True
@@ -396,6 +396,7 @@ class GroundingDinoDetector:
         self.max_box_area = max_box_area
         self.min_box_side = min_box_side
         self.use_amp = use_amp and device.startswith("cuda")
+        self._warned_topk_runtime_error = False
         self.processor = AutoProcessor.from_pretrained(model_id)
         self.model = AutoModelForZeroShotObjectDetection.from_pretrained(model_id).to(device).eval()
 
@@ -407,11 +408,23 @@ class GroundingDinoDetector:
             for key, value in processor_inputs.items()
         }
         with torch.inference_mode():
-            if self.use_amp:
-                with torch.autocast(device_type="cuda", dtype=torch.float16):
+            try:
+                if self.use_amp:
+                    with torch.autocast(device_type="cuda", dtype=torch.float16):
+                        outputs = self.model(**model_inputs)
+                else:
                     outputs = self.model(**model_inputs)
-            else:
-                outputs = self.model(**model_inputs)
+            except RuntimeError as exc:
+                if "selected index k out of range" not in str(exc):
+                    raise
+                if not self._warned_topk_runtime_error:
+                    height, width = image_bgr.shape[:2]
+                    print(
+                        "[WARN] GroundingDINO skipped an input with insufficient encoder proposals "
+                        f"for top-k selection (shape={width}x{height})."
+                    )
+                    self._warned_topk_runtime_error = True
+                return np.empty((0, 4), dtype=np.float32), np.empty((0,), dtype=np.float32), []
 
         post_process = self.processor.post_process_grounded_object_detection
         try:

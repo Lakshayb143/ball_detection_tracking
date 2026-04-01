@@ -36,7 +36,7 @@ from rfdetr import RFDETRMedium
 REPO_ROOT = Path(__file__).resolve().parents[1]
 
 # Dataset / run defaults
-DEFAULT_DATA_ROOT = Path("~/SoccerNet_tracking/tracking-2023/train").expanduser()
+DEFAULT_DATA_ROOT = Path("train").expanduser()
 DEFAULT_OUTPUT_ROOT = REPO_ROOT / "outputs" / "rfdetr_groundingdino_fallback_tracking"
 DEFAULT_RUN_NAME = "rfdetr_gdino_fallback_v1"
 DEFAULT_SEQ_START = 60
@@ -45,8 +45,8 @@ DEFAULT_SEQ_LIST = ""
 DEFAULT_MAX_FRAMES_PER_SEQ = 0
 
 # RF-DETR defaults
-DEFAULT_BALL_MODEL_PATH = REPO_ROOT / "checkpoints" / "ball.pth"
-DEFAULT_PLAYER_MODEL_PATH = REPO_ROOT / "checkpoints" / "player.pth"
+DEFAULT_BALL_MODEL_PATH = REPO_ROOT / "models" / "ball.pth"
+DEFAULT_PLAYER_MODEL_PATH = REPO_ROOT / "models" / "player.pth"
 DEFAULT_BALL_CONFIDENCE = 0.7
 DEFAULT_PLAYER_CONFIDENCE = 0.5
 DEFAULT_BALL_CLASS_ID = 0
@@ -437,6 +437,7 @@ class GroundingDinoDetector:
         self.max_box_area = max_box_area
         self.min_box_side = min_box_side
         self.use_amp = use_amp and device.startswith("cuda")
+        self._warned_topk_runtime_error = False
         self.processor = AutoProcessor.from_pretrained(model_id)
         self.model = AutoModelForZeroShotObjectDetection.from_pretrained(model_id).to(device).eval()
 
@@ -448,11 +449,23 @@ class GroundingDinoDetector:
             for key, value in processor_inputs.items()
         }
         with torch.inference_mode():
-            if self.use_amp:
-                with torch.autocast(device_type="cuda", dtype=torch.float16):
+            try:
+                if self.use_amp:
+                    with torch.autocast(device_type="cuda", dtype=torch.float16):
+                        outputs = self.model(**model_inputs)
+                else:
                     outputs = self.model(**model_inputs)
-            else:
-                outputs = self.model(**model_inputs)
+            except RuntimeError as exc:
+                if "selected index k out of range" not in str(exc):
+                    raise
+                if not self._warned_topk_runtime_error:
+                    height, width = image_bgr.shape[:2]
+                    print(
+                        "[WARN] GroundingDINO skipped an input with insufficient encoder proposals "
+                        f"for top-k selection (shape={width}x{height})."
+                    )
+                    self._warned_topk_runtime_error = True
+                return np.empty((0, 4), dtype=np.float32), np.empty((0,), dtype=np.float32), []
 
         post_process = self.processor.post_process_grounded_object_detection
         try:
@@ -822,22 +835,25 @@ class RFDETRGroundingDinoTracker:
         if self.predicted_position is None or self.last_box_wh is None:
             return None
         height, width = frame_shape[:2]
-        crop_size = float(max(self.args.gdino_min_crop_size, max(self.last_box_wh) * self.args.gdino_crop_expansion))
-        crop_size = float(min(crop_size, self.args.gdino_max_crop_size))
-        half = crop_size / 2.0
-        crop_xyxy = np.array(
-            [
-                self.predicted_position[0] - half,
-                self.predicted_position[1] - half,
-                self.predicted_position[0] + half,
-                self.predicted_position[1] + half,
-            ],
-            dtype=np.float32,
-        )
-        crop_xyxy = clip_xyxy(crop_xyxy, width=width, height=height)
-        if crop_xyxy[2] <= crop_xyxy[0] or crop_xyxy[3] <= crop_xyxy[1]:
+        if width <= 1 or height <= 1:
             return None
-        return crop_xyxy
+
+        crop_size = float(max(self.args.gdino_min_crop_size, max(self.last_box_wh) * self.args.gdino_crop_expansion))
+        crop_size = float(min(crop_size, self.args.gdino_max_crop_size, width, height))
+        if crop_size <= 1.0:
+            return None
+
+        half = crop_size / 2.0
+        x1 = float(self.predicted_position[0] - half)
+        y1 = float(self.predicted_position[1] - half)
+        x1 = float(np.clip(x1, 0.0, max(0.0, width - crop_size)))
+        y1 = float(np.clip(y1, 0.0, max(0.0, height - crop_size)))
+        x2 = x1 + crop_size
+        y2 = y1 + crop_size
+
+        if x2 - x1 <= 1.0 or y2 - y1 <= 1.0:
+            return None
+        return np.array([x1, y1, x2, y2], dtype=np.float32)
 
 
 def exclude_candidates_in_boxes(candidates: Sequence[DetectionCandidate], boxes: np.ndarray) -> List[DetectionCandidate]:
