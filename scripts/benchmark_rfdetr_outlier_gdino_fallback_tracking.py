@@ -30,6 +30,7 @@ from typing import Dict, Iterable, List, Optional, Sequence, Tuple
 import cv2
 import numpy as np
 import torch
+from transformers import BertModel
 from PIL import Image
 from rfdetr import RFDETRMedium
 
@@ -83,6 +84,16 @@ DEFAULT_TRACKEVAL_ROOT = REPO_ROOT / "external" / "TrackEval"
 GROUNDING_DINO_ROOT = REPO_ROOT / "GroundingDINO"
 if str(GROUNDING_DINO_ROOT) not in sys.path:
     sys.path.insert(0, str(GROUNDING_DINO_ROOT))
+
+if not hasattr(BertModel, "get_head_mask"):
+    raise RuntimeError(
+        "This GroundingDINO code is not compatible with the installed transformers package.\n"
+        "GroundingDINO in this repo expects BertModel.get_head_mask, which is missing in newer transformers releases.\n"
+        "Recommended fix on your Linux box:\n"
+        "  pip uninstall -y transformers\n"
+        "  pip install 'transformers>=4.37,<5'\n"
+        "GroundingDINO issue reference: https://github.com/IDEA-Research/GroundingDINO/issues/446"
+    )
 
 import groundingdino.datasets.transforms as T  # type: ignore  # noqa: E402
 from groundingdino.models import build_model  # type: ignore  # noqa: E402
