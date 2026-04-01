@@ -33,7 +33,7 @@ from PIL import Image
 REPO_ROOT = Path(__file__).resolve().parents[1]
 
 # Dataset / run defaults
-DEFAULT_DATA_ROOT = Path("~/SoccerNet_tracking/tracking-2023/train").expanduser()
+DEFAULT_DATA_ROOT = Path("train").expanduser()
 DEFAULT_OUTPUT_ROOT = REPO_ROOT / "outputs" / "groundingdino_ball_tracking"
 DEFAULT_RUN_NAME = "groundingdino_gap_bridge_v1"
 DEFAULT_SEQ_START = 60
