@@ -29,8 +29,7 @@ import cv2
 import numpy as np
 import supervision as sv
 import torch
-from transformers import BertModel
-from PIL import Image
+from transformers import AutoModelForZeroShotObjectDetection, AutoProcessor
 from rfdetr import RFDETRMedium
 
 
@@ -67,14 +66,10 @@ DEFAULT_OUTLIER_WAIT_FRAMES = 4
 DEFAULT_OUTLIER_RESET_FRAMES = 3
 
 # GroundingDINO fallback defaults
-DEFAULT_DINO_CONFIG = REPO_ROOT / "GroundingDINO" / "groundingdino" / "config" / "GroundingDINO_SwinT_OGC.py"
-DEFAULT_DINO_CHECKPOINT = REPO_ROOT / "checkpoints" / "groundingdino_swint_ogc.pth"
-DEFAULT_DINO_CHECKPOINT_PRIMARY_URL = "https://github.com/IDEA-Research/GroundingDINO/releases/download/v0.1.0-alpha/groundingdino_swint_ogc.pth"
-DEFAULT_DINO_CHECKPOINT_FALLBACK_URL = "https://huggingface.co/ShilongLiu/GroundingDINO/resolve/main/groundingdino_swint_ogc.pth"
+DEFAULT_DINO_MODEL_ID = "IDEA-Research/grounding-dino-base"
 DEFAULT_TEXT_PROMPT = "soccer ball . football . ball ."
 DEFAULT_DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 DEFAULT_USE_AMP = True
-DEFAULT_AUTO_DOWNLOAD_CHECKPOINT = True
 DEFAULT_DINO_BOX_THRESHOLD = 0.18
 DEFAULT_DINO_TEXT_THRESHOLD = 0.12
 DEFAULT_DINO_MIN_BOX_AREA = 4.0
@@ -89,42 +84,6 @@ DEFAULT_GDINO_FULL_FRAME_ON_RESET = False
 # Evaluation defaults
 DEFAULT_MATCH_IOU = 0.5
 DEFAULT_TRACKEVAL_ROOT = REPO_ROOT / "external" / "TrackEval"
-
-
-GROUNDING_DINO_ROOT = REPO_ROOT / "GroundingDINO"
-if str(GROUNDING_DINO_ROOT) not in sys.path:
-    sys.path.insert(0, str(GROUNDING_DINO_ROOT))
-
-if not hasattr(BertModel, "get_head_mask"):
-    raise RuntimeError(
-        "This GroundingDINO code is not compatible with the installed transformers package.\n"
-        "GroundingDINO in this repo expects BertModel.get_head_mask, which is missing in newer transformers releases.\n"
-        "Recommended fix on your Linux box:\n"
-        "  pip uninstall -y transformers\n"
-        "  pip install 'transformers>=4.37,<5'\n"
-        "GroundingDINO issue reference: https://github.com/IDEA-Research/GroundingDINO/issues/446"
-    )
-
-import groundingdino.datasets.transforms as T  # type: ignore  # noqa: E402
-from groundingdino.models import build_model  # type: ignore  # noqa: E402
-from groundingdino.util.misc import clean_state_dict  # type: ignore  # noqa: E402
-from groundingdino.util.slconfig import SLConfig  # type: ignore  # noqa: E402
-from groundingdino.util.utils import get_phrases_from_posmap  # type: ignore  # noqa: E402
-try:
-    from groundingdino import _C as _groundingdino_ext  # type: ignore  # noqa: F401,E402
-except Exception as exc:  # noqa: E402
-    raise RuntimeError(
-        "GroundingDINO custom C++/CUDA ops are not available.\n"
-        "This usually means GroundingDINO was not installed/built correctly for your CUDA environment.\n"
-        "Recommended fix on your Linux box:\n"
-        "  cd GroundingDINO\n"
-        "  export CUDA_HOME=$(dirname $(dirname $(which nvcc)))\n"
-        "  pip install -e .\n"
-        "Then verify with:\n"
-        "  python -c \"from groundingdino import _C; print('ok')\"\n"
-        "GroundingDINO README reference: it explicitly calls out NameError: '_C' is not defined when install steps are not followed."
-    ) from exc
-
 
 @dataclass
 class DetectionCandidate:
@@ -345,47 +304,6 @@ def csv_write_dicts(path: Path, rows: Iterable[dict]) -> None:
         writer.writerows(rows)
 
 
-def download_file(url: str, destination: Path) -> None:
-    ensure_dir(destination.parent)
-    with urllib.request.urlopen(url) as response, destination.open("wb") as handle:
-        shutil.copyfileobj(response, handle)
-
-
-def ensure_groundingdino_checkpoint(
-    checkpoint_path: Path,
-    auto_download: bool,
-    download_urls: Sequence[str],
-) -> Path:
-    if checkpoint_path.exists():
-        return checkpoint_path
-
-    if not auto_download:
-        raise FileNotFoundError(
-            f"GroundingDINO checkpoint not found: {checkpoint_path}\n"
-            "Enable auto-download or place the checkpoint at this path."
-        )
-
-    last_error: Optional[Exception] = None
-    for url in download_urls:
-        if not url:
-            continue
-        try:
-            print(f"[INFO] Downloading GroundingDINO checkpoint from {url}")
-            download_file(url, checkpoint_path)
-            print(f"[INFO] Saved checkpoint to {checkpoint_path}")
-            return checkpoint_path
-        except (urllib.error.URLError, OSError) as exc:
-            last_error = exc
-            if checkpoint_path.exists():
-                checkpoint_path.unlink()
-            print(f"[WARN] Failed to download from {url}: {exc}")
-
-    raise FileNotFoundError(
-        f"GroundingDINO checkpoint not found and automatic download failed: {checkpoint_path}\n"
-        f"Last error: {last_error}"
-    )
-
-
 def find_ball_track_ids(gameinfo_path: Path) -> List[int]:
     parser = configparser.ConfigParser()
     parser.optionxform = str
@@ -500,8 +418,7 @@ def fragmentation_count(match_series: Sequence[bool]) -> int:
 class GroundingDinoDetector:
     def __init__(
         self,
-        config_path: Path,
-        checkpoint_path: Path,
+        model_id: str,
         device: str,
         prompt: str,
         box_threshold: float,
@@ -513,71 +430,63 @@ class GroundingDinoDetector:
     ) -> None:
         self.device = device
         self.prompt = prompt_with_period(prompt)
+        self.model_id = model_id
         self.box_threshold = box_threshold
         self.text_threshold = text_threshold
         self.min_box_area = min_box_area
         self.max_box_area = max_box_area
         self.min_box_side = min_box_side
         self.use_amp = use_amp and device.startswith("cuda")
-        self.transform = T.Compose(
-            [
-                T.RandomResize([800], max_size=1333),
-                T.ToTensor(),
-                T.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225]),
-            ]
-        )
+        self.processor = AutoProcessor.from_pretrained(model_id)
+        self.model = AutoModelForZeroShotObjectDetection.from_pretrained(model_id).to(device).eval()
 
-        if not config_path.exists():
-            raise FileNotFoundError(f"GroundingDINO config not found: {config_path}")
-
-        model_args = SLConfig.fromfile(str(config_path))
-        model_args.device = device
-        model = build_model(model_args)
-        checkpoint = torch.load(str(checkpoint_path), map_location="cpu")
-        state_dict = checkpoint["model"] if isinstance(checkpoint, dict) and "model" in checkpoint else checkpoint
-        model.load_state_dict(clean_state_dict(state_dict), strict=False)
-        self.model = model.to(device).eval()
-
-    def _preprocess(self, image_bgr: np.ndarray) -> torch.Tensor:
+    def _run_model(self, image_bgr: np.ndarray) -> Tuple[np.ndarray, np.ndarray, List[str]]:
         image_rgb = cv2.cvtColor(image_bgr, cv2.COLOR_BGR2RGB)
-        image_pil = Image.fromarray(image_rgb)
-        tensor, _ = self.transform(image_pil, None)
-        return tensor
-
-    def _run_model(self, image_bgr: np.ndarray) -> Tuple[torch.Tensor, torch.Tensor, List[str]]:
-        image_tensor = self._preprocess(image_bgr).to(self.device)
+        processor_inputs = self.processor(images=image_rgb, text=self.prompt, return_tensors="pt")
+        model_inputs = {
+            key: value.to(self.device) if hasattr(value, "to") else value
+            for key, value in processor_inputs.items()
+        }
         with torch.inference_mode():
             if self.use_amp:
                 with torch.autocast(device_type="cuda", dtype=torch.float16):
-                    outputs = self.model(image_tensor[None], captions=[self.prompt])
+                    outputs = self.model(**model_inputs)
             else:
-                outputs = self.model(image_tensor[None], captions=[self.prompt])
+                outputs = self.model(**model_inputs)
 
-        prediction_logits = outputs["pred_logits"].sigmoid()[0].float().cpu()
-        prediction_boxes = outputs["pred_boxes"][0].float().cpu()
-        keep = prediction_logits.max(dim=1)[0] > self.box_threshold
-        logits = prediction_logits[keep]
-        boxes = prediction_boxes[keep]
+        post_process = self.processor.post_process_grounded_object_detection
+        try:
+            results = post_process(
+                outputs,
+                model_inputs["input_ids"],
+                box_threshold=self.box_threshold,
+                text_threshold=self.text_threshold,
+                target_sizes=[image_bgr.shape[:2]],
+            )[0]
+        except TypeError:
+            results = post_process(
+                outputs,
+                model_inputs["input_ids"],
+                threshold=self.box_threshold,
+                text_threshold=self.text_threshold,
+                target_sizes=[image_bgr.shape[:2]],
+            )[0]
 
-        tokenizer = self.model.tokenizer
-        tokenized = tokenizer(self.prompt)
-        phrases = [
-            get_phrases_from_posmap(logit > self.text_threshold, tokenized, tokenizer).replace(".", "").strip()
-            for logit in logits
-        ]
-        return boxes, logits.max(dim=1)[0], phrases
+        boxes = results["boxes"].detach().cpu().numpy() if len(results["boxes"]) else np.empty((0, 4), dtype=np.float32)
+        scores = results["scores"].detach().cpu().numpy() if len(results["scores"]) else np.empty((0,), dtype=np.float32)
+        raw_labels = results.get("text_labels", results.get("labels", []))
+        phrases = [str(label).strip() for label in raw_labels]
+        return boxes, scores, phrases
 
     def predict_candidates(self, image_bgr: np.ndarray, source: str = "detector") -> List[DetectionCandidate]:
         height, width = image_bgr.shape[:2]
-        boxes, logits, phrases = self._run_model(image_bgr)
-        if boxes.numel() == 0:
+        boxes, scores, phrases = self._run_model(image_bgr)
+        if len(boxes) == 0:
             return []
 
-        scaled = boxes * torch.tensor([width, height, width, height], dtype=torch.float32)
-        xyxy_boxes = cxcywh_to_xyxy(scaled)
         candidates: List[DetectionCandidate] = []
-        for box, score, phrase in zip(xyxy_boxes, logits, phrases):
-            xyxy = clip_xyxy(box.numpy(), width=width, height=height)
+        for index, (box, score) in enumerate(zip(boxes, scores)):
+            xyxy = clip_xyxy(np.asarray(box, dtype=np.float32), width=width, height=height)
             wh = xyxy_wh(xyxy)
             area = area_of(xyxy)
             if wh[0] < self.min_box_side or wh[1] < self.min_box_side:
@@ -587,8 +496,8 @@ class GroundingDinoDetector:
             candidates.append(
                 DetectionCandidate(
                     xyxy=xyxy,
-                    score=float(score.item()),
-                    phrase=phrase or "ball",
+                    score=float(score),
+                    phrase=phrases[index] if index < len(phrases) and phrases[index] else "ball",
                     source=source,
                 )
             )
@@ -1357,11 +1266,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--outlier_wait_frames", type=int, default=DEFAULT_OUTLIER_WAIT_FRAMES)
     parser.add_argument("--outlier_reset_frames", type=int, default=DEFAULT_OUTLIER_RESET_FRAMES)
 
-    parser.add_argument("--dino_config", type=Path, default=DEFAULT_DINO_CONFIG)
-    parser.add_argument("--dino_checkpoint", type=Path, default=DEFAULT_DINO_CHECKPOINT)
-    parser.add_argument("--auto_download_checkpoint", type=str2bool, default=DEFAULT_AUTO_DOWNLOAD_CHECKPOINT)
-    parser.add_argument("--dino_checkpoint_primary_url", type=str, default=DEFAULT_DINO_CHECKPOINT_PRIMARY_URL)
-    parser.add_argument("--dino_checkpoint_fallback_url", type=str, default=DEFAULT_DINO_CHECKPOINT_FALLBACK_URL)
+    parser.add_argument("--dino_model_id", type=str, default=DEFAULT_DINO_MODEL_ID)
     parser.add_argument("--text_prompt", type=str, default=DEFAULT_TEXT_PROMPT)
     parser.add_argument("--device", type=str, default=DEFAULT_DEVICE)
     parser.add_argument("--use_amp", type=str2bool, default=DEFAULT_USE_AMP)
@@ -1389,19 +1294,8 @@ def main() -> None:
     args.output_root = args.output_root.expanduser().resolve()
     args.ball_model_path = args.ball_model_path.expanduser().resolve()
     args.player_model_path = args.player_model_path.expanduser().resolve()
-    args.dino_config = args.dino_config.expanduser().resolve()
-    args.dino_checkpoint = args.dino_checkpoint.expanduser().resolve()
     args.trackeval_root = args.trackeval_root.expanduser().resolve()
     args.player_class_ids = parse_int_list(args.player_class_ids)
-    if args.enable_gdino_fallback:
-        args.dino_checkpoint = ensure_groundingdino_checkpoint(
-            checkpoint_path=args.dino_checkpoint,
-            auto_download=args.auto_download_checkpoint,
-            download_urls=[
-                args.dino_checkpoint_primary_url,
-                args.dino_checkpoint_fallback_url,
-            ],
-        )
 
     run_dir = ensure_dir(args.output_root / args.run_name)
     sequence_dirs = resolve_sequences(
@@ -1430,8 +1324,7 @@ def main() -> None:
     gdino_detector: Optional[GroundingDinoDetector] = None
     if args.enable_gdino_fallback:
         gdino_detector = GroundingDinoDetector(
-            config_path=args.dino_config,
-            checkpoint_path=args.dino_checkpoint,
+            model_id=args.dino_model_id,
             device=args.device,
             prompt=args.text_prompt,
             box_threshold=args.dino_box_threshold,
