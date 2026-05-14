@@ -27,21 +27,22 @@ The 369 TP row is the target to beat or match with fewer FPs.
 
 ## Steps
 
-### 🔄 Step 1 — v5: Fix v4's two bugs
-**File:** `ball_outlier_interpolator_v5.py` (to be created)
-**Changes:**
+### ✅ Step 1 — v5: Fix v4's two bugs
+**File:** `ball_outlier_interpolator_v5.py`
+**Changes applied:**
 1. `frame_count = 0` → start at 1. v4 is 0-indexed; COCO GT is 1-indexed.
    Causes a 1-frame misalignment across all clips.
-2. Reset spatial cap: when `OutlierConfirmer` fires, only accept the reset if
-   the candidate is within `RESET_MAX_DISTANCE = 300px` of last known position.
-   Prevents the 715px teleport (run #8, 14 FP frames) seen in v4 diagnostics.
+2. Reset spatial cap (`RESET_MAX_DISTANCE = 300px`): when `OutlierConfirmer`
+   fires after 4 consecutive outlier frames, only accept the reset if the
+   candidate is within 300px of last KF position. Prevents the 715px teleport
+   (run #8, 14 FP frames) seen in v4 diagnostics.
 
 **What to measure:**
 - TP, Missed, FP (GT), No-GT on clip1 + RANSAC v2 online10
 - Compare directly against v4+RANSAC (369/32/69/10)
 - Expect: FP should drop (teleport run removed), TP should stay near 369
 
-**Status:** Not started.
+**Status:** Code done. Pending benchmark run.
 
 ---
 

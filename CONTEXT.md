@@ -273,14 +273,16 @@ Remote: Tesla T4 GPU, CUDA available.
 - **Real numbers > guesses.** "It should work" doesn't count. Run the eval.
 - **Ask before assuming.** When a decision point arises (matching criterion,
   format ambiguity, metric definition), ask the user. Don't pick silently.
+- **Commit every change.** After each file edit or meaningful step, commit with
+  a message of 5–10 words describing the change.
 
 ## Key references
 - Airborne detector: tuned across 8 clips. Macro recall 0.86, precision 0.67.
   Two state machine fixes applied (cooldown + landing streak=2). Remaining FPs
   are mostly GT labeling gaps, not system errors.
 
-- Ground tracking: active work in `TODO.md`. v6 done (reset spatial cap fix,
-  no measurable clip1 impact). Next: v7 (reduce max_gap from 13 → ~6).
+- Ground tracking: active work in `TODO.md`. Next: benchmark v5 (v4 + frame
+  index fix + reset spatial cap) against v4+RANSAC baseline (369/32/69/10).
 
 - Ground tracker benchmark command:
   ```bash
