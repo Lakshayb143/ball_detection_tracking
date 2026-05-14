@@ -1,0 +1,20 @@
+{
+    "fps": 30,
+    "events": [
+        {
+            "start_frame": 51,
+            "end_frame": 121,
+            "action": "airborne"
+        },
+        {
+            "start_frame": 464,
+            "end_frame": 510,
+            "action": "airborne"
+        },
+        {
+            "start_frame": 817,
+            "end_frame": 890,
+            "action": "airborne"
+        }
+    ]
+}

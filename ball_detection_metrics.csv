@@ -1,0 +1,6 @@
+variant,tp_iou_ge_0_01,missed_detections,false_positive_count,no_gt_count,distance_le_pred_bbox_threshold_count,f1_score
+v5,369,32,69,10,27,0.8796
+v4_with_interpolation,350,32,88,10,23,0.8537
+v4_no_interpolation,349,121,0,0,0,0.8523
+old_version,316,70,84,10,30,0.8041
+v6_ransac_v2_online10,352,118,0,0,0,0.8564

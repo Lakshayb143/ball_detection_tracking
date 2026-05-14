@@ -32,11 +32,24 @@ import torch
 from transformers import AutoModelForZeroShotObjectDetection, AutoProcessor
 from rfdetr import RFDETRMedium
 
+from ball_detection_metrics import (
+    BALL_CATEGORY_ID,
+    build_detection_record,
+    evaluate_detections,
+    write_benchmark_metrics_csv,
+    write_detection_export,
+)
+from benchmark_dataset import (
+    BenchmarkSequence,
+    default_annotation_path,
+    resolve_sequences as resolve_dataset_sequences,
+)
+
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 
 # Dataset / run defaults
-DEFAULT_DATA_ROOT = Path("train").expanduser()
+DEFAULT_DATA_ROOT = Path("test").expanduser()
 DEFAULT_OUTPUT_ROOT = REPO_ROOT / "outputs" / "rfdetr_groundingdino_fallback_tracking"
 DEFAULT_RUN_NAME = "rfdetr_gdino_fallback_v1"
 DEFAULT_SEQ_START = 60
@@ -46,6 +59,7 @@ DEFAULT_MAX_FRAMES_PER_SEQ = 0
 
 # RF-DETR defaults
 DEFAULT_BALL_MODEL_PATH = REPO_ROOT / "models" / "ball.pth"
+DEFAULT_BALL_MODEL_RESOLUTION = 0
 DEFAULT_PLAYER_MODEL_PATH = REPO_ROOT / "models" / "player.pth"
 DEFAULT_BALL_CONFIDENCE = 0.7
 DEFAULT_PLAYER_CONFIDENCE = 0.5
@@ -82,7 +96,8 @@ DEFAULT_GDINO_MAX_CROP_SIZE = 640
 DEFAULT_GDINO_FULL_FRAME_ON_RESET = False
 
 # Evaluation defaults
-DEFAULT_MATCH_IOU = 0.5
+DEFAULT_MATCH_IOU = 0.01
+DEFAULT_EVAL_SCORE_THRESHOLD = 0.0
 DEFAULT_TRACKEVAL_ROOT = REPO_ROOT / "external" / "TrackEval"
 
 @dataclass
@@ -120,33 +135,20 @@ class SequenceSummary:
     gt_frames: int
     raw_pred_frames: int
     final_pred_frames: int
+    raw_eval_detections: int
     raw_tp: int
     raw_fp: int
     raw_fn: int
     raw_precision: float
     raw_recall: float
-    raw_mota: float
     raw_mean_iou: float
-    raw_zero_candidate_gt_frames: int
-    raw_miss_streak_count: int
-    raw_mean_miss_streak: float
-    raw_max_miss_streak: int
-    raw_recovered_miss_rate: float
-    raw_fragments: int
+    final_eval_detections: int
     final_tp: int
     final_fp: int
     final_fn: int
     final_precision: float
     final_recall: float
-    final_mota: float
     final_mean_iou: float
-    final_miss_streak_count: int
-    final_mean_miss_streak: float
-    final_max_miss_streak: int
-    final_recovered_miss_rate: float
-    final_fragments: int
-    gap_bridged_frames: int
-    zero_candidate_gap_bridged_frames: int
     fallback_recoveries: int
     primary_ms_avg: float
     fallback_ms_avg: float
@@ -272,26 +274,20 @@ def parse_sequence_list(seq_list: str) -> List[str]:
     return [normalized_sequence_name(item) for item in seq_list.split(",") if item.strip()]
 
 
-def resolve_sequences(data_root: Path, seq_start: int, seq_end: int, seq_list: str) -> List[Path]:
-    if seq_list.strip():
-        names = parse_sequence_list(seq_list)
-    else:
-        if seq_end < seq_start:
-            raise ValueError(f"seq_end ({seq_end}) must be >= seq_start ({seq_start})")
-        names = [f"SNMOT-{seq_id:03d}" for seq_id in range(seq_start, seq_end + 1)]
-
-    paths: List[Path] = []
-    missing: List[str] = []
-    for name in names:
-        seq_dir = data_root / name
-        if seq_dir.exists():
-            paths.append(seq_dir)
-        else:
-            missing.append(name)
-
-    if missing:
-        raise FileNotFoundError(f"Missing sequence folders under {data_root}: {', '.join(missing)}")
-    return paths
+def resolve_sequences(
+    data_root: Path,
+    seq_start: int,
+    seq_end: int,
+    seq_list: str,
+    max_frames_per_seq: int = 0,
+) -> List[BenchmarkSequence]:
+    return resolve_dataset_sequences(
+        data_root=data_root,
+        seq_start=seq_start,
+        seq_end=seq_end,
+        seq_list=seq_list,
+        max_frames_per_seq=max_frames_per_seq,
+    )
 
 
 def csv_write_dicts(path: Path, rows: Iterable[dict]) -> None:
@@ -368,8 +364,10 @@ def is_point_in_boxes(point: np.ndarray, boxes: np.ndarray) -> bool:
     )
 
 
-def load_sequence_fps(seq_dir: Path, default_fps: float) -> float:
-    seqinfo_path = seq_dir / "seqinfo.ini"
+def load_sequence_fps(sequence: BenchmarkSequence, default_fps: float) -> float:
+    if sequence.source_dir is None:
+        return default_fps
+    seqinfo_path = sequence.source_dir / "seqinfo.ini"
     parser = configparser.ConfigParser()
     if not seqinfo_path.exists():
         return default_fps
@@ -547,6 +545,7 @@ class RFDetrDetector:
     def __init__(
         self,
         ball_model_path: Path,
+        ball_model_resolution: Optional[int],
         player_model_path: Path,
         ball_confidence: float,
         player_confidence: float,
@@ -566,7 +565,10 @@ class RFDetrDetector:
         self.player_class_ids = np.array(list(player_class_ids), dtype=np.int32)
         self.enable_player_exclusion = enable_player_exclusion
 
-        self.ball_model = RFDETRMedium(pretrain_weights=str(ball_model_path))
+        ball_model_kwargs = {"pretrain_weights": str(ball_model_path)}
+        if ball_model_resolution is not None and int(ball_model_resolution) > 0:
+            ball_model_kwargs["resolution"] = int(ball_model_resolution)
+        self.ball_model = RFDETRMedium(**ball_model_kwargs)
         self.player_model = RFDETRMedium(pretrain_weights=str(player_model_path)) if enable_player_exclusion else None
 
         if optimize_for_inference:
@@ -579,14 +581,66 @@ class RFDetrDetector:
                 except Exception as exc:
                     print(f"[WARN] Could not optimize RF-DETR {name} model: {exc}")
 
-    def _detections_to_candidates(self, detections: sv.Detections, source: str) -> List[DetectionCandidate]:
+    def _extract_detection_arrays(
+        self,
+        detections: sv.Detections,
+    ) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
+        if detections is None or len(detections) == 0:
+            return (
+                np.empty((0, 4), dtype=np.float32),
+                np.empty((0,), dtype=np.float32),
+                np.empty((0,), dtype=np.int32),
+            )
+
+        xyxy = np.asarray(detections.xyxy)
+        confidence = np.asarray(detections.confidence).reshape(-1)
+        class_ids = np.asarray(detections.class_id).reshape(-1)
+
+        if xyxy.ndim != 2 or xyxy.shape[1] != 4:
+            return (
+                np.empty((0, 4), dtype=np.float32),
+                np.empty((0,), dtype=np.float32),
+                np.empty((0,), dtype=np.int32),
+            )
+
+        num_boxes = xyxy.shape[0]
+        if confidence.size == 0:
+            confidence = np.zeros(num_boxes, dtype=np.float32)
+        elif confidence.size == 1 and num_boxes > 1:
+            confidence = np.repeat(confidence, num_boxes)
+
+        if class_ids.size == 0:
+            class_ids = np.full(num_boxes, -1, dtype=np.int32)
+        elif class_ids.size == 1 and num_boxes > 1:
+            class_ids = np.repeat(class_ids, num_boxes)
+
+        num_items = min(num_boxes, confidence.size, class_ids.size)
+        if num_items <= 0:
+            return (
+                np.empty((0, 4), dtype=np.float32),
+                np.empty((0,), dtype=np.float32),
+                np.empty((0,), dtype=np.int32),
+            )
+
+        return (
+            np.asarray(xyxy[:num_items], dtype=np.float32),
+            np.asarray(confidence[:num_items], dtype=np.float32),
+            np.asarray(class_ids[:num_items], dtype=np.int32),
+        )
+
+    def _detections_to_candidates(
+        self,
+        xyxy: np.ndarray,
+        confidence: np.ndarray,
+        source: str,
+    ) -> List[DetectionCandidate]:
         candidates: List[DetectionCandidate] = []
-        if len(detections) == 0:
+        if xyxy.size == 0 or confidence.size == 0:
             return candidates
-        for xyxy, score in zip(detections.xyxy, detections.confidence):
+        for box, score in zip(xyxy, confidence):
             candidates.append(
                 DetectionCandidate(
-                    xyxy=xyxy.astype(np.float32),
+                    xyxy=np.asarray(box, dtype=np.float32),
                     score=float(score),
                     phrase="ball",
                     source=source,
@@ -600,27 +654,38 @@ class RFDetrDetector:
         if self.enable_player_exclusion and self.player_model is not None:
             player_detections = self.player_model.predict(image_bgr, confidence=self.player_confidence)
             if len(player_detections) > 0:
-                class_id = np.asarray(player_detections.class_id)
-                keep = np.isin(class_id, self.player_class_ids)
-                player_detections = player_detections[keep]
-                player_boxes = player_detections.xyxy.astype(np.float32) if len(player_detections) > 0 else player_boxes
+                player_xyxy, _player_confidence, player_class_ids = self._extract_detection_arrays(player_detections)
+                keep = np.isin(player_class_ids, self.player_class_ids)
+                if np.any(keep):
+                    player_boxes = np.asarray(player_xyxy[keep], dtype=np.float32)
 
         ball_detections = self.ball_model.predict(image_bgr, confidence=self.ball_confidence)
         if len(ball_detections) == 0:
             return [], player_boxes
 
-        class_id = np.asarray(ball_detections.class_id)
-        keep_ball = class_id == self.ball_class_id
-        ball_detections = ball_detections[keep_ball]
-        if len(ball_detections) == 0:
+        ball_xyxy, ball_confidence, ball_class_ids = self._extract_detection_arrays(ball_detections)
+        keep_ball = ball_class_ids == self.ball_class_id
+        if not np.any(keep_ball):
             return [], player_boxes
+        ball_xyxy = np.asarray(ball_xyxy[keep_ball], dtype=np.float32)
+        ball_confidence = np.asarray(ball_confidence[keep_ball], dtype=np.float32)
 
         if self.enable_player_exclusion and player_boxes.size > 0:
-            centers = ball_detections.get_anchors_coordinates(sv.Position.CENTER)
-            valid_indices = [index for index, center in enumerate(centers) if not is_point_in_boxes(center, player_boxes)]
-            ball_detections = ball_detections[valid_indices]
+            centers = np.column_stack(
+                (
+                    (ball_xyxy[:, 0] + ball_xyxy[:, 2]) / 2.0,
+                    (ball_xyxy[:, 1] + ball_xyxy[:, 3]) / 2.0,
+                )
+            )
+            valid_indices = [
+                index
+                for index, center in enumerate(centers)
+                if not is_point_in_boxes(center, player_boxes)
+            ]
+            ball_xyxy = ball_xyxy[valid_indices]
+            ball_confidence = ball_confidence[valid_indices]
 
-        return self._detections_to_candidates(ball_detections, source="rfdetr"), player_boxes
+        return self._detections_to_candidates(ball_xyxy, ball_confidence, source="rfdetr"), player_boxes
 
 
 class AdaptiveKalmanFilter:
@@ -976,14 +1041,14 @@ def aggregate_sequence_summaries(summaries: Sequence[SequenceSummary]) -> Dict[s
         "gt_frames": 0.0,
         "raw_pred_frames": 0.0,
         "final_pred_frames": 0.0,
+        "raw_eval_detections": 0.0,
         "raw_tp": 0.0,
         "raw_fp": 0.0,
         "raw_fn": 0.0,
+        "final_eval_detections": 0.0,
         "final_tp": 0.0,
         "final_fp": 0.0,
         "final_fn": 0.0,
-        "gap_bridged_frames": 0.0,
-        "zero_candidate_gap_bridged_frames": 0.0,
         "fallback_recoveries": 0.0,
     }
 
@@ -993,10 +1058,16 @@ def aggregate_sequence_summaries(summaries: Sequence[SequenceSummary]) -> Dict[s
 
     totals["raw_precision"] = safe_div(totals["raw_tp"], totals["raw_tp"] + totals["raw_fp"])
     totals["raw_recall"] = safe_div(totals["raw_tp"], totals["gt_frames"])
-    totals["raw_mota"] = 1.0 - safe_div(totals["raw_fn"] + totals["raw_fp"], totals["gt_frames"])
+    totals["raw_mean_iou"] = safe_div(
+        sum(item.raw_mean_iou * item.raw_tp for item in summaries),
+        totals["raw_tp"],
+    )
     totals["final_precision"] = safe_div(totals["final_tp"], totals["final_tp"] + totals["final_fp"])
     totals["final_recall"] = safe_div(totals["final_tp"], totals["gt_frames"])
-    totals["final_mota"] = 1.0 - safe_div(totals["final_fn"] + totals["final_fp"], totals["gt_frames"])
+    totals["final_mean_iou"] = safe_div(
+        sum(item.final_mean_iou * item.final_tp for item in summaries),
+        totals["final_tp"],
+    )
     totals["primary_ms_avg"] = mean_or_zero([item.primary_ms_avg for item in summaries])
     totals["fallback_ms_avg"] = mean_or_zero([item.fallback_ms_avg for item in summaries])
     totals["tracking_ms_avg"] = mean_or_zero([item.tracking_ms_avg for item in summaries])
@@ -1121,23 +1192,18 @@ def run_trackeval(
 
 
 def process_sequence(
-    seq_dir: Path,
+    sequence: BenchmarkSequence,
     rfdetr_detector: RFDetrDetector,
     gdino_detector: Optional[GroundingDinoDetector],
     args: argparse.Namespace,
     run_dir: Path,
-) -> Tuple[SequenceSummary, Path]:
-    seq_name = seq_dir.name
-    image_dir = seq_dir / "img1"
-    image_paths = sorted(path for path in image_dir.iterdir() if path.suffix.lower() in {".jpg", ".jpeg", ".png"})
+) -> Tuple[SequenceSummary, Path, List[dict]]:
+    seq_name = sequence.name
+    image_paths = sequence.image_paths
     if not image_paths:
-        raise FileNotFoundError(f"No frames found in {image_dir}")
+        raise FileNotFoundError(f"No frames found for {seq_name}")
 
-    if args.max_frames_per_seq > 0:
-        image_paths = image_paths[: args.max_frames_per_seq]
-
-    gt_by_frame = load_ball_gt(seq_dir)
-    tracker = RFDETRGroundingDinoTracker(fps=load_sequence_fps(seq_dir, args.fps), args=args)
+    tracker = RFDETRGroundingDinoTracker(fps=load_sequence_fps(sequence, args.fps), args=args)
 
     seq_output_dir = ensure_dir(run_dir / seq_name)
     prediction_path = seq_output_dir / "tracker_predictions.txt"
@@ -1145,6 +1211,7 @@ def process_sequence(
 
     frame_records: List[FrameRecord] = []
     predictions: List[Tuple[int, np.ndarray, float]] = []
+    detection_records: List[dict] = []
     raw_pred_frames = 0
     final_pred_frames = 0
     fallback_recoveries = 0
@@ -1159,9 +1226,21 @@ def process_sequence(
         raw_candidates, player_boxes = rfdetr_detector.predict_ball_candidates(image)
         primary_ms = (time.perf_counter() - primary_start) * 1000.0
         raw_best = raw_candidates[0] if raw_candidates else None
-        raw_best_box = raw_best.xyxy if raw_best is not None else None
         if raw_best is not None:
             raw_pred_frames += 1
+            detection_records.append(
+                build_detection_record(
+                    sequence=seq_name,
+                    frame_index=frame_id,
+                    original_frame=sequence.original_frames_by_frame[frame_id],
+                    file_name=sequence.file_names_by_frame[frame_id],
+                    image_id=sequence.image_ids_by_frame[frame_id],
+                    bbox_xyxy=raw_best.xyxy,
+                    score=raw_best.score,
+                    stage="raw",
+                    source=raw_best.source,
+                )
+            )
 
         tracking_start = time.perf_counter()
         predicted_position = tracker.predict()
@@ -1210,18 +1289,27 @@ def process_sequence(
             output_box = clip_xyxy(output_box, width=image.shape[1], height=image.shape[0])
             predictions.append((frame_id, output_box, output_score))
             final_pred_frames += 1
-
-        gt_boxes = gt_by_frame.get(frame_id, [])
-        gt_iou_raw = best_iou_against_gt(raw_best_box, gt_boxes)
-        gt_iou_final = best_iou_against_gt(output_box, gt_boxes)
+            detection_records.append(
+                build_detection_record(
+                    sequence=seq_name,
+                    frame_index=frame_id,
+                    original_frame=sequence.original_frames_by_frame[frame_id],
+                    file_name=sequence.file_names_by_frame[frame_id],
+                    image_id=sequence.image_ids_by_frame[frame_id],
+                    bbox_xyxy=output_box,
+                    score=output_score,
+                    stage="final",
+                    source=output_source,
+                )
+            )
         total_ms = (time.perf_counter() - total_start) * 1000.0
 
         frame_records.append(
             FrameRecord(
                 frame=frame_id,
-                gt_exists=bool(gt_boxes),
-                gt_iou_raw=gt_iou_raw,
-                gt_iou_final=gt_iou_final,
+                gt_exists=False,
+                gt_iou_raw=0.0,
+                gt_iou_final=0.0,
                 raw_candidate_count=len(raw_candidates),
                 fallback_candidate_count=len(fallback_candidates),
                 raw_best_score=raw_best.score if raw_best is not None else 0.0,
@@ -1239,16 +1327,34 @@ def process_sequence(
 
     write_track_predictions(prediction_path, predictions)
     csv_write_dicts(frame_trace_path, [asdict(record) for record in frame_records])
-    summary = evaluate_sequence(
-        sequence_name=seq_name,
-        frame_records=frame_records,
-        gt_by_frame=gt_by_frame,
+    summary = SequenceSummary(
+        sequence=seq_name,
+        frames_total=len(frame_records),
+        gt_frames=0,
         raw_pred_frames=raw_pred_frames,
         final_pred_frames=final_pred_frames,
+        raw_eval_detections=0,
+        raw_tp=0,
+        raw_fp=0,
+        raw_fn=0,
+        raw_precision=0.0,
+        raw_recall=0.0,
+        raw_mean_iou=0.0,
+        final_eval_detections=0,
+        final_tp=0,
+        final_fp=0,
+        final_fn=0,
+        final_precision=0.0,
+        final_recall=0.0,
+        final_mean_iou=0.0,
         fallback_recoveries=fallback_recoveries,
-        match_iou=args.match_iou,
+        primary_ms_avg=mean_or_zero([item.primary_ms for item in frame_records]),
+        fallback_ms_avg=mean_or_zero([item.fallback_ms for item in frame_records]),
+        tracking_ms_avg=mean_or_zero([item.tracking_ms for item in frame_records]),
+        total_ms_avg=mean_or_zero([item.total_ms for item in frame_records]),
+        runtime_fps=safe_div(1000.0, mean_or_zero([item.total_ms for item in frame_records])),
     )
-    return summary, prediction_path
+    return summary, prediction_path, detection_records
 
 
 def build_arg_parser() -> argparse.ArgumentParser:
@@ -1264,6 +1370,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--max_frames_per_seq", type=int, default=DEFAULT_MAX_FRAMES_PER_SEQ)
 
     parser.add_argument("--ball_model_path", type=Path, default=DEFAULT_BALL_MODEL_PATH)
+    parser.add_argument("--ball_model_resolution", type=int, default=DEFAULT_BALL_MODEL_RESOLUTION)
     parser.add_argument("--player_model_path", type=Path, default=DEFAULT_PLAYER_MODEL_PATH)
     parser.add_argument("--ball_confidence", type=float, default=DEFAULT_BALL_CONFIDENCE)
     parser.add_argument("--player_confidence", type=float, default=DEFAULT_PLAYER_CONFIDENCE)
@@ -1297,9 +1404,10 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--gdino_max_crop_size", type=int, default=DEFAULT_GDINO_MAX_CROP_SIZE)
     parser.add_argument("--gdino_full_frame_on_reset", type=str2bool, default=DEFAULT_GDINO_FULL_FRAME_ON_RESET)
 
+    parser.add_argument("--annotations", type=Path, default=None)
     parser.add_argument("--match_iou", type=float, default=DEFAULT_MATCH_IOU)
-    parser.add_argument("--trackeval_root", type=Path, default=DEFAULT_TRACKEVAL_ROOT)
-    parser.add_argument("--run_trackeval", type=str2bool, default=True)
+    parser.add_argument("--eval_score_threshold", type=float, default=DEFAULT_EVAL_SCORE_THRESHOLD)
+    parser.add_argument("--ball_category_id", type=int, default=BALL_CATEGORY_ID)
     return parser
 
 
@@ -1310,25 +1418,31 @@ def main() -> None:
     args.output_root = args.output_root.expanduser().resolve()
     args.ball_model_path = args.ball_model_path.expanduser().resolve()
     args.player_model_path = args.player_model_path.expanduser().resolve()
-    args.trackeval_root = args.trackeval_root.expanduser().resolve()
     args.player_class_ids = parse_int_list(args.player_class_ids)
+    if args.annotations is not None:
+        args.annotations = args.annotations.expanduser().resolve()
 
     run_dir = ensure_dir(args.output_root / args.run_name)
-    sequence_dirs = resolve_sequences(
+    sequences = resolve_sequences(
         data_root=args.data_root,
         seq_start=args.seq_start,
         seq_end=args.seq_end,
         seq_list=args.seq_list,
+        max_frames_per_seq=args.max_frames_per_seq,
     )
+    annotations_path = args.annotations or default_annotation_path(args.data_root)
 
     print(f"[INFO] Run dir: {run_dir}")
-    print(f"[INFO] Sequences: {', '.join(seq_dir.name for seq_dir in sequence_dirs)}")
+    print(f"[INFO] Sequences: {', '.join(sequence.name for sequence in sequences)}")
     print(f"[INFO] Device: {args.device}")
     print(f"[INFO] RF-DETR player exclusion: {args.enable_player_exclusion}")
     print(f"[INFO] GroundingDINO fallback enabled: {args.enable_gdino_fallback}")
+    if annotations_path is not None:
+        print(f"[INFO] Evaluation annotations: {annotations_path}")
 
     rfdetr_detector = RFDetrDetector(
         ball_model_path=args.ball_model_path,
+        ball_model_resolution=int(args.ball_model_resolution) if int(args.ball_model_resolution) > 0 else None,
         player_model_path=args.player_model_path,
         ball_confidence=args.ball_confidence,
         player_confidence=args.player_confidence,
@@ -1352,42 +1466,106 @@ def main() -> None:
         )
 
     summaries: List[SequenceSummary] = []
-    prediction_paths: Dict[str, Path] = {}
-    for seq_dir in sequence_dirs:
-        print(f"[INFO] Processing {seq_dir.name}")
-        summary, prediction_path = process_sequence(seq_dir, rfdetr_detector, gdino_detector, args, run_dir)
+    all_detections: List[dict] = []
+    for sequence in sequences:
+        print(f"[INFO] Processing {sequence.name}")
+        summary, _prediction_path, sequence_detections = process_sequence(
+            sequence,
+            rfdetr_detector,
+            gdino_detector,
+            args,
+            run_dir,
+        )
         summaries.append(summary)
-        prediction_paths[seq_dir.name] = prediction_path
+        all_detections.extend(sequence_detections)
         print(
-            f"[INFO] {seq_dir.name}: raw_recall={summary.raw_recall:.4f}, "
-            f"final_recall={summary.final_recall:.4f}, gap_bridged={summary.gap_bridged_frames}, "
+            f"[INFO] {sequence.name}: raw_predictions={summary.raw_pred_frames}, "
+            f"final_predictions={summary.final_pred_frames}, fallback_recoveries={summary.fallback_recoveries}, "
             f"fps={summary.runtime_fps:.2f}"
         )
 
+    detections_path = run_dir / "detections.json"
+    write_detection_export(
+        path=detections_path,
+        run_name=args.run_name,
+        data_root=args.data_root,
+        detections=all_detections,
+        config={key: str(value) if isinstance(value, Path) else value for key, value in vars(args).items()},
+        annotations_path=annotations_path,
+    )
+
+    evaluation_summary: Dict[str, object] = {"status": "skipped", "reason": "annotations not found"}
+    if annotations_path is not None and annotations_path.exists():
+        raw_metrics = evaluate_detections(
+            detections=all_detections,
+            annotations_path=annotations_path,
+            stage="raw",
+            iou_threshold=args.match_iou,
+            score_threshold=args.eval_score_threshold,
+            ball_category_id=args.ball_category_id,
+        )
+        final_metrics = evaluate_detections(
+            detections=all_detections,
+            annotations_path=annotations_path,
+            stage="final",
+            iou_threshold=args.match_iou,
+            score_threshold=args.eval_score_threshold,
+            ball_category_id=args.ball_category_id,
+        )
+        raw_by_sequence = {row["sequence"]: row for row in raw_metrics["per_sequence"]}
+        final_by_sequence = {row["sequence"]: row for row in final_metrics["per_sequence"]}
+        for summary in summaries:
+            raw_row = raw_by_sequence.get(summary.sequence, {})
+            final_row = final_by_sequence.get(summary.sequence, {})
+            summary.gt_frames = int(raw_row.get("gt_count", 0.0))
+            summary.raw_eval_detections = int(raw_row.get("detection_count", 0.0))
+            summary.raw_tp = int(raw_row.get("tp", 0.0))
+            summary.raw_fp = int(raw_row.get("fp", 0.0))
+            summary.raw_fn = int(raw_row.get("fn", 0.0))
+            summary.raw_precision = float(raw_row.get("precision", 0.0))
+            summary.raw_recall = float(raw_row.get("recall", 0.0))
+            summary.raw_mean_iou = float(raw_row.get("mean_matched_iou", 0.0))
+            summary.final_eval_detections = int(final_row.get("detection_count", 0.0))
+            summary.final_tp = int(final_row.get("tp", 0.0))
+            summary.final_fp = int(final_row.get("fp", 0.0))
+            summary.final_fn = int(final_row.get("fn", 0.0))
+            summary.final_precision = float(final_row.get("precision", 0.0))
+            summary.final_recall = float(final_row.get("recall", 0.0))
+            summary.final_mean_iou = float(final_row.get("mean_matched_iou", 0.0))
+
+        evaluation_summary = {
+            "status": "ok",
+            "annotations_path": str(annotations_path),
+            "ball_category_id": args.ball_category_id,
+            "iou_threshold": args.match_iou,
+            "score_threshold": args.eval_score_threshold,
+            "raw": raw_metrics,
+            "final": final_metrics,
+        }
+
     csv_write_dicts(run_dir / "sequence_summary.csv", [asdict(summary) for summary in summaries])
     aggregate = aggregate_sequence_summaries(summaries)
-
-    trackeval_result: Dict[str, object] = {"status": "skipped", "reason": "disabled"}
-    if args.run_trackeval:
-        trackeval_result = run_trackeval(
-            trackeval_root=args.trackeval_root,
-            work_dir=ensure_dir(run_dir / "trackeval_work"),
-            sequence_dirs=sequence_dirs,
-            prediction_paths=prediction_paths,
-        )
+    write_benchmark_metrics_csv(
+        run_dir / "benchmark_metrics.csv",
+        precision=aggregate.get("final_precision", 0.0),
+        recall=aggregate.get("final_recall", 0.0),
+        latency_ms=aggregate.get("total_ms_avg", 0.0),
+    )
 
     experiment_summary = {
         "run_name": args.run_name,
         "data_root": str(args.data_root),
-        "sequences": [seq_dir.name for seq_dir in sequence_dirs],
+        "sequences": [sequence.name for sequence in sequences],
         "config": {key: str(value) if isinstance(value, Path) else value for key, value in vars(args).items()},
+        "detections_path": str(detections_path),
+        "evaluation": evaluation_summary,
         "aggregate": aggregate,
-        "trackeval": trackeval_result,
     }
     with (run_dir / "experiment_summary.json").open("w", encoding="utf-8") as handle:
         json.dump(experiment_summary, handle, indent=2)
 
     print(f"[INFO] Sequence summary written to {run_dir / 'sequence_summary.csv'}")
+    print(f"[INFO] Benchmark metrics written to {run_dir / 'benchmark_metrics.csv'}")
     print(f"[INFO] Experiment summary written to {run_dir / 'experiment_summary.json'}")
 
 

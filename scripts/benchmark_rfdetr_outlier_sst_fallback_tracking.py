@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-RF-DETR ball-only + outlier rejection + SST fallback benchmark runner.
+RF-DETR ball-only + outlier rejection + SST full-frame fallback benchmark runner.
 
-This mirrors the RF-DETR outlier-only + GroundingDINO fallback experiment, but
+This mirrors the RF-DETR outlier-only + GroundingDINO full-frame fallback experiment, but
 uses SST as the fallback detector.
 """
 
@@ -17,10 +17,21 @@ from typing import Dict, List, Optional, Tuple
 import cv2
 import time
 
+from ball_detection_metrics import (
+    BALL_CATEGORY_ID,
+    build_detection_record,
+    evaluate_detections,
+    write_benchmark_metrics_csv,
+    write_detection_export,
+)
+from benchmark_dataset import BenchmarkSequence, default_annotation_path
+
 from benchmark_rfdetr_outlier_gdino_fallback_tracking import (
     DEFAULT_BALL_CLASS_ID,
     DEFAULT_BALL_CONFIDENCE,
+    DEFAULT_BALL_MODEL_RESOLUTION,
     DEFAULT_DATA_ROOT,
+    DEFAULT_EVAL_SCORE_THRESHOLD,
     DEFAULT_ENABLE_RFDETR_OPTIMIZE,
     DEFAULT_MATCH_IOU,
     DEFAULT_MAX_ACTIVE_GAP,
@@ -32,7 +43,6 @@ from benchmark_rfdetr_outlier_gdino_fallback_tracking import (
     DEFAULT_SEQ_END,
     DEFAULT_SEQ_LIST,
     DEFAULT_SEQ_START,
-    DEFAULT_TRACKEVAL_ROOT,
     DEFAULT_VELOCITY_THRESHOLD,
     DetectionCandidate,
     FrameRecord,
@@ -40,14 +50,12 @@ from benchmark_rfdetr_outlier_gdino_fallback_tracking import (
     RFDetrBallDetector,
     SequenceSummary,
     aggregate_sequence_summaries,
-    best_iou_against_gt,
     clip_xyxy,
     csv_write_dicts,
     ensure_dir,
-    evaluate_sequence,
-    load_ball_gt,
+    mean_or_zero,
     resolve_sequences,
-    run_trackeval,
+    safe_div,
     str2bool,
     write_track_predictions,
 )
@@ -76,22 +84,17 @@ DEFAULT_ENABLE_SST_FALLBACK = True
 
 
 def process_sequence(
-    seq_dir: Path,
+    sequence: BenchmarkSequence,
     rfdetr_detector: RFDetrBallDetector,
     sst_detector: Optional[SSTBallDetector],
     args: argparse.Namespace,
     run_dir: Path,
-) -> Tuple[SequenceSummary, Path]:
-    seq_name = seq_dir.name
-    image_dir = seq_dir / "img1"
-    image_paths = sorted(path for path in image_dir.iterdir() if path.suffix.lower() in {".jpg", ".jpeg", ".png"})
+) -> Tuple[SequenceSummary, Path, List[dict]]:
+    seq_name = sequence.name
+    image_paths = sequence.image_paths
     if not image_paths:
-        raise FileNotFoundError(f"No frames found in {image_dir}")
+        raise FileNotFoundError(f"No frames found for {seq_name}")
 
-    if args.max_frames_per_seq > 0:
-        image_paths = image_paths[: args.max_frames_per_seq]
-
-    gt_by_frame = load_ball_gt(seq_dir)
     tracker = OutlierOnlyTracker(args=args)
 
     seq_output_dir = ensure_dir(run_dir / seq_name)
@@ -100,6 +103,7 @@ def process_sequence(
 
     frame_records: List[FrameRecord] = []
     predictions: List[Tuple[int, object, float]] = []
+    detection_records: List[dict] = []
     raw_pred_frames = 0
     final_pred_frames = 0
     fallback_recoveries = 0
@@ -114,9 +118,21 @@ def process_sequence(
         raw_candidates = rfdetr_detector.predict_ball_candidates(image)
         primary_ms = (time.perf_counter() - primary_start) * 1000.0
         raw_best = raw_candidates[0] if raw_candidates else None
-        raw_best_box = raw_best.xyxy if raw_best is not None else None
         if raw_best is not None:
             raw_pred_frames += 1
+            detection_records.append(
+                build_detection_record(
+                    sequence=seq_name,
+                    frame_index=frame_id,
+                    original_frame=sequence.original_frames_by_frame[frame_id],
+                    file_name=sequence.file_names_by_frame[frame_id],
+                    image_id=sequence.image_ids_by_frame[frame_id],
+                    bbox_xyxy=raw_best.xyxy,
+                    score=raw_best.score,
+                    stage="raw",
+                    source=raw_best.source,
+                )
+            )
 
         tracking_start = time.perf_counter()
         accepted: Optional[DetectionCandidate] = None
@@ -158,18 +174,27 @@ def process_sequence(
             output_box = clip_xyxy(output_box, width=image.shape[1], height=image.shape[0])
             predictions.append((frame_id, output_box, output_score))
             final_pred_frames += 1
-
-        gt_boxes = gt_by_frame.get(frame_id, [])
-        gt_iou_raw = best_iou_against_gt(raw_best_box, gt_boxes)
-        gt_iou_final = best_iou_against_gt(output_box, gt_boxes)
+            detection_records.append(
+                build_detection_record(
+                    sequence=seq_name,
+                    frame_index=frame_id,
+                    original_frame=sequence.original_frames_by_frame[frame_id],
+                    file_name=sequence.file_names_by_frame[frame_id],
+                    image_id=sequence.image_ids_by_frame[frame_id],
+                    bbox_xyxy=output_box,
+                    score=output_score,
+                    stage="final",
+                    source=output_source,
+                )
+            )
         total_ms = (time.perf_counter() - total_start) * 1000.0
 
         frame_records.append(
             FrameRecord(
                 frame=frame_id,
-                gt_exists=bool(gt_boxes),
-                gt_iou_raw=gt_iou_raw,
-                gt_iou_final=gt_iou_final,
+                gt_exists=False,
+                gt_iou_raw=0.0,
+                gt_iou_final=0.0,
                 raw_candidate_count=len(raw_candidates),
                 fallback_candidate_count=len(fallback_candidates),
                 raw_best_score=raw_best.score if raw_best is not None else 0.0,
@@ -187,21 +212,39 @@ def process_sequence(
 
     write_track_predictions(prediction_path, predictions)
     csv_write_dicts(frame_trace_path, [asdict(record) for record in frame_records])
-    summary = evaluate_sequence(
-        sequence_name=seq_name,
-        frame_records=frame_records,
-        gt_by_frame=gt_by_frame,
+    summary = SequenceSummary(
+        sequence=seq_name,
+        frames_total=len(frame_records),
+        gt_frames=0,
         raw_pred_frames=raw_pred_frames,
         final_pred_frames=final_pred_frames,
+        raw_eval_detections=0,
+        raw_tp=0,
+        raw_fp=0,
+        raw_fn=0,
+        raw_precision=0.0,
+        raw_recall=0.0,
+        raw_mean_iou=0.0,
+        final_eval_detections=0,
+        final_tp=0,
+        final_fp=0,
+        final_fn=0,
+        final_precision=0.0,
+        final_recall=0.0,
+        final_mean_iou=0.0,
         fallback_recoveries=fallback_recoveries,
-        match_iou=args.match_iou,
+        primary_ms_avg=mean_or_zero([item.primary_ms for item in frame_records]),
+        fallback_ms_avg=mean_or_zero([item.fallback_ms for item in frame_records]),
+        tracking_ms_avg=mean_or_zero([item.tracking_ms for item in frame_records]),
+        total_ms_avg=mean_or_zero([item.total_ms for item in frame_records]),
+        runtime_fps=safe_div(1000.0, mean_or_zero([item.total_ms for item in frame_records])),
     )
-    return summary, prediction_path
+    return summary, prediction_path, detection_records
 
 
 def build_arg_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="RF-DETR ball-only + outlier rejection + SST fallback benchmark runner."
+        description="RF-DETR ball-only + outlier rejection + SST full-frame fallback benchmark runner."
     )
     parser.add_argument("--data_root", type=Path, default=DEFAULT_DATA_ROOT)
     parser.add_argument("--output_root", type=Path, default=DEFAULT_OUTPUT_ROOT)
@@ -212,6 +255,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--max_frames_per_seq", type=int, default=DEFAULT_MAX_FRAMES_PER_SEQ)
 
     parser.add_argument("--ball_model_path", type=Path, default=DEFAULT_BALL_MODEL_PATH)
+    parser.add_argument("--ball_model_resolution", type=int, default=DEFAULT_BALL_MODEL_RESOLUTION)
     parser.add_argument("--ball_confidence", type=float, default=DEFAULT_BALL_CONFIDENCE)
     parser.add_argument("--ball_class_id", type=int, default=DEFAULT_BALL_CLASS_ID)
     parser.add_argument("--enable_rfdetr_optimize", type=str2bool, default=DEFAULT_ENABLE_RFDETR_OPTIMIZE)
@@ -236,9 +280,10 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--use_amp", type=str2bool, default=DEFAULT_SST_USE_AMP)
     parser.add_argument("--enable_sst_fallback", type=str2bool, default=DEFAULT_ENABLE_SST_FALLBACK)
 
+    parser.add_argument("--annotations", type=Path, default=None)
     parser.add_argument("--match_iou", type=float, default=DEFAULT_MATCH_IOU)
-    parser.add_argument("--trackeval_root", type=Path, default=DEFAULT_TRACKEVAL_ROOT)
-    parser.add_argument("--run_trackeval", type=str2bool, default=True)
+    parser.add_argument("--eval_score_threshold", type=float, default=DEFAULT_EVAL_SCORE_THRESHOLD)
+    parser.add_argument("--ball_category_id", type=int, default=BALL_CATEGORY_ID)
     return parser
 
 
@@ -249,24 +294,30 @@ def main() -> None:
     args.output_root = args.output_root.expanduser().resolve()
     args.ball_model_path = args.ball_model_path.expanduser().resolve()
     args.sst_checkpoint = args.sst_checkpoint.expanduser().resolve()
-    args.trackeval_root = args.trackeval_root.expanduser().resolve()
+    if args.annotations is not None:
+        args.annotations = args.annotations.expanduser().resolve()
 
     run_dir = ensure_dir(args.output_root / args.run_name)
-    sequence_dirs = resolve_sequences(
+    sequences = resolve_sequences(
         data_root=args.data_root,
         seq_start=args.seq_start,
         seq_end=args.seq_end,
         seq_list=args.seq_list,
+        max_frames_per_seq=args.max_frames_per_seq,
     )
+    annotations_path = args.annotations or default_annotation_path(args.data_root)
 
     print(f"[INFO] Run dir: {run_dir}")
-    print(f"[INFO] Sequences: {', '.join(seq_dir.name for seq_dir in sequence_dirs)}")
+    print(f"[INFO] Sequences: {', '.join(sequence.name for sequence in sequences)}")
     print(f"[INFO] Device: {args.device}")
     print("[INFO] RF-DETR primary: ball model only")
-    print(f"[INFO] SST fallback enabled: {args.enable_sst_fallback}")
+    print(f"[INFO] SST full-frame fallback enabled: {args.enable_sst_fallback}")
+    if annotations_path is not None:
+        print(f"[INFO] Evaluation annotations: {annotations_path}")
 
     rfdetr_detector = RFDetrBallDetector(
         ball_model_path=args.ball_model_path,
+        ball_model_resolution=int(args.ball_model_resolution) if int(args.ball_model_resolution) > 0 else None,
         ball_confidence=args.ball_confidence,
         ball_class_id=args.ball_class_id,
         optimize_for_inference=args.enable_rfdetr_optimize,
@@ -288,42 +339,114 @@ def main() -> None:
         )
 
     summaries: List[SequenceSummary] = []
-    prediction_paths: Dict[str, Path] = {}
-    for seq_dir in sequence_dirs:
-        print(f"[INFO] Processing {seq_dir.name}")
-        summary, prediction_path = process_sequence(seq_dir, rfdetr_detector, sst_detector, args, run_dir)
+    all_detections: List[dict] = []
+    for sequence in sequences:
+        print(f"[INFO] Processing {sequence.name}")
+        summary, _prediction_path, sequence_detections = process_sequence(
+            sequence,
+            rfdetr_detector,
+            sst_detector,
+            args,
+            run_dir,
+        )
         summaries.append(summary)
-        prediction_paths[seq_dir.name] = prediction_path
+        all_detections.extend(sequence_detections)
         print(
-            f"[INFO] {seq_dir.name}: raw_recall={summary.raw_recall:.4f}, "
-            f"final_recall={summary.final_recall:.4f}, gap_bridged={summary.gap_bridged_frames}, "
+            f"[INFO] {sequence.name}: raw_predictions={summary.raw_pred_frames}, "
+            f"final_predictions={summary.final_pred_frames}, fallback_recoveries={summary.fallback_recoveries}, "
             f"fps={summary.runtime_fps:.2f}"
         )
 
+    detections_path = run_dir / "detections.json"
+    write_detection_export(
+        path=detections_path,
+        run_name=args.run_name,
+        data_root=args.data_root,
+        detections=all_detections,
+        config={key: str(value) if isinstance(value, Path) else value for key, value in vars(args).items()},
+        annotations_path=annotations_path,
+    )
+
+    evaluation_summary: Dict[str, object] = {"status": "skipped", "reason": "annotations not found"}
+    if annotations_path is not None and annotations_path.exists():
+        raw_metrics = evaluate_detections(
+            detections=all_detections,
+            annotations_path=annotations_path,
+            stage="raw",
+            iou_threshold=args.match_iou,
+            score_threshold=args.eval_score_threshold,
+            ball_category_id=args.ball_category_id,
+        )
+        final_metrics = evaluate_detections(
+            detections=all_detections,
+            annotations_path=annotations_path,
+            stage="final",
+            iou_threshold=args.match_iou,
+            score_threshold=args.eval_score_threshold,
+            ball_category_id=args.ball_category_id,
+        )
+        raw_by_sequence = {row["sequence"]: row for row in raw_metrics["per_sequence"]}
+        final_by_sequence = {row["sequence"]: row for row in final_metrics["per_sequence"]}
+        for summary in summaries:
+            raw_row = raw_by_sequence.get(summary.sequence, {})
+            final_row = final_by_sequence.get(summary.sequence, {})
+            summary.gt_frames = int(raw_row.get("gt_count", 0.0))
+            summary.raw_eval_detections = int(raw_row.get("detection_count", 0.0))
+            summary.raw_tp = int(raw_row.get("tp", 0.0))
+            summary.raw_fp = int(raw_row.get("fp", 0.0))
+            summary.raw_fn = int(raw_row.get("fn", 0.0))
+            summary.raw_precision = float(raw_row.get("precision", 0.0))
+            summary.raw_recall = float(raw_row.get("recall", 0.0))
+            summary.raw_mean_iou = float(raw_row.get("mean_matched_iou", 0.0))
+            summary.final_eval_detections = int(final_row.get("detection_count", 0.0))
+            summary.final_tp = int(final_row.get("tp", 0.0))
+            summary.final_fp = int(final_row.get("fp", 0.0))
+            summary.final_fn = int(final_row.get("fn", 0.0))
+            summary.final_precision = float(final_row.get("precision", 0.0))
+            summary.final_recall = float(final_row.get("recall", 0.0))
+            summary.final_mean_iou = float(final_row.get("mean_matched_iou", 0.0))
+
+        evaluation_summary = {
+            "status": "ok",
+            "annotations_path": str(annotations_path),
+            "ball_category_id": args.ball_category_id,
+            "iou_threshold": args.match_iou,
+            "score_threshold": args.eval_score_threshold,
+            "raw": raw_metrics,
+            "final": final_metrics,
+        }
+
     csv_write_dicts(run_dir / "sequence_summary.csv", [asdict(summary) for summary in summaries])
     aggregate = aggregate_sequence_summaries(summaries)
-
-    trackeval_result: Dict[str, object] = {"status": "skipped", "reason": "disabled"}
-    if args.run_trackeval:
-        trackeval_result = run_trackeval(
-            trackeval_root=args.trackeval_root,
-            work_dir=ensure_dir(run_dir / "trackeval_work"),
-            sequence_dirs=sequence_dirs,
-            prediction_paths=prediction_paths,
-        )
+    write_benchmark_metrics_csv(
+        run_dir / "benchmark_metrics.csv",
+        precision=aggregate.get("final_precision", 0.0),
+        recall=aggregate.get("final_recall", 0.0),
+        latency_ms=aggregate.get("total_ms_avg", 0.0),
+    )
+    fresh_metrics_path = args.output_root / f"{args.run_name}_benchmark_metrics.csv"
+    write_benchmark_metrics_csv(
+        fresh_metrics_path,
+        precision=aggregate.get("final_precision", 0.0),
+        recall=aggregate.get("final_recall", 0.0),
+        latency_ms=aggregate.get("total_ms_avg", 0.0),
+    )
 
     experiment_summary = {
         "run_name": args.run_name,
         "data_root": str(args.data_root),
-        "sequences": [seq_dir.name for seq_dir in sequence_dirs],
+        "sequences": [sequence.name for sequence in sequences],
         "config": {key: str(value) if isinstance(value, Path) else value for key, value in vars(args).items()},
+        "detections_path": str(detections_path),
+        "evaluation": evaluation_summary,
         "aggregate": aggregate,
-        "trackeval": trackeval_result,
     }
     with (run_dir / "experiment_summary.json").open("w", encoding="utf-8") as handle:
         json.dump(experiment_summary, handle, indent=2)
 
     print(f"[INFO] Sequence summary written to {run_dir / 'sequence_summary.csv'}")
+    print(f"[INFO] Benchmark metrics written to {run_dir / 'benchmark_metrics.csv'}")
+    print(f"[INFO] Fresh metrics CSV written to {fresh_metrics_path}")
     print(f"[INFO] Experiment summary written to {run_dir / 'experiment_summary.json'}")
 
 

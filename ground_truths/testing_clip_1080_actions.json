@@ -1,0 +1,55 @@
+{
+    "fps": 30,
+    "events": [
+        {
+            "start_frame": 788,
+            "end_frame": 902,
+            "action": "airborne"
+        },
+        {
+            "start_frame": 903,
+            "end_frame": 948,
+            "action": "airborne"
+        },
+        {
+            "start_frame": 1169,
+            "end_frame": 1192,
+            "action": "airborne"
+        },
+        {
+            "start_frame": 1376,
+            "end_frame": 1467,
+            "action": "airborne"
+        },
+        {
+            "start_frame": 1468,
+            "end_frame": 1590,
+            "action": "airborne"
+        },
+        {
+            "start_frame": 2694,
+            "end_frame": 2794,
+            "action": "airborne"
+        },
+        {
+            "start_frame": 2884,
+            "end_frame": 2944,
+            "action": "airborne"
+        },
+        {
+            "start_frame": 2947,
+            "end_frame": 3000,
+            "action": "airborne"
+        },
+        {
+            "start_frame": 3123,
+            "end_frame": 3213,
+            "action": "airborne"
+        },
+        {
+            "start_frame": 3713,
+            "end_frame": 3762,
+            "action": "airborne"
+        }
+    ]
+}

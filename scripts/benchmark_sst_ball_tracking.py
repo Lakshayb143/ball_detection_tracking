@@ -21,6 +21,13 @@ import numpy as np
 import torch
 import torchvision.transforms.functional as TVF
 
+from ball_detection_metrics import (
+    BALL_CATEGORY_ID,
+    evaluate_detections,
+    write_benchmark_metrics_csv,
+    write_detection_export,
+)
+from benchmark_dataset import default_annotation_path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 SST_SRC_ROOT = REPO_ROOT / "SST" / "src"
@@ -35,6 +42,7 @@ from benchmark_groundingdino_ball_tracking import (  # noqa: E402
     DEFAULT_BRIDGE_SCORE_DECAY,
     DEFAULT_CROP_EXPANSION,
     DEFAULT_ENABLE_CROP_REDETECT,
+    DEFAULT_EVAL_SCORE_THRESHOLD,
     DEFAULT_GATE_GROWTH_PER_MISS,
     DEFAULT_INIT_CONFIDENCE,
     DEFAULT_MATCH_IOU,
@@ -47,7 +55,6 @@ from benchmark_groundingdino_ball_tracking import (  # noqa: E402
     DEFAULT_SEQ_END,
     DEFAULT_SEQ_LIST,
     DEFAULT_SEQ_START,
-    DEFAULT_TRACKEVAL_ROOT,
     DEFAULT_DATA_ROOT,
     DetectionCandidate,
     SequenceSummary,
@@ -58,7 +65,6 @@ from benchmark_groundingdino_ball_tracking import (  # noqa: E402
     ensure_dir,
     process_sequence,
     resolve_sequences,
-    run_trackeval,
     str2bool,
     xyxy_wh,
 )
@@ -242,9 +248,10 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--bridge_score_decay", type=float, default=DEFAULT_BRIDGE_SCORE_DECAY)
     parser.add_argument("--min_bridge_score", type=float, default=DEFAULT_MIN_BRIDGE_SCORE)
 
+    parser.add_argument("--annotations", type=Path, default=None)
     parser.add_argument("--match_iou", type=float, default=DEFAULT_MATCH_IOU)
-    parser.add_argument("--trackeval_root", type=Path, default=DEFAULT_TRACKEVAL_ROOT)
-    parser.add_argument("--run_trackeval", type=str2bool, default=True)
+    parser.add_argument("--eval_score_threshold", type=float, default=DEFAULT_EVAL_SCORE_THRESHOLD)
+    parser.add_argument("--ball_category_id", type=int, default=BALL_CATEGORY_ID)
     return parser
 
 
@@ -254,20 +261,25 @@ def main() -> None:
     args.data_root = args.data_root.expanduser().resolve()
     args.output_root = args.output_root.expanduser().resolve()
     args.sst_checkpoint = args.sst_checkpoint.expanduser().resolve()
-    args.trackeval_root = args.trackeval_root.expanduser().resolve()
+    if args.annotations is not None:
+        args.annotations = args.annotations.expanduser().resolve()
 
     run_dir = ensure_dir(args.output_root / args.run_name)
-    sequence_dirs = resolve_sequences(
+    sequences = resolve_sequences(
         data_root=args.data_root,
         seq_start=args.seq_start,
         seq_end=args.seq_end,
         seq_list=args.seq_list,
+        max_frames_per_seq=args.max_frames_per_seq,
     )
+    annotations_path = args.annotations or default_annotation_path(args.data_root)
 
     print(f"[INFO] Run dir: {run_dir}")
-    print(f"[INFO] Sequences: {', '.join(seq_dir.name for seq_dir in sequence_dirs)}")
+    print(f"[INFO] Sequences: {', '.join(sequence.name for sequence in sequences)}")
     print(f"[INFO] Device: {args.device}")
     print(f"[INFO] Crop re-detect enabled: {args.enable_crop_redetect}")
+    if annotations_path is not None:
+        print(f"[INFO] Evaluation annotations: {annotations_path}")
 
     detector = SSTBallDetector(
         checkpoint_path=args.sst_checkpoint,
@@ -284,42 +296,100 @@ def main() -> None:
     )
 
     summaries: List[SequenceSummary] = []
-    prediction_paths: Dict[str, Path] = {}
-    for seq_dir in sequence_dirs:
-        print(f"[INFO] Processing {seq_dir.name}")
-        summary, prediction_path = process_sequence(seq_dir, detector, args, run_dir)
+    all_detections: List[dict] = []
+    for sequence in sequences:
+        print(f"[INFO] Processing {sequence.name}")
+        summary, _prediction_path, sequence_detections = process_sequence(sequence, detector, args, run_dir)
         summaries.append(summary)
-        prediction_paths[seq_dir.name] = prediction_path
+        all_detections.extend(sequence_detections)
         print(
-            f"[INFO] {seq_dir.name}: raw_recall={summary.raw_recall:.4f}, "
-            f"final_recall={summary.final_recall:.4f}, gap_bridged={summary.gap_bridged_frames}, "
+            f"[INFO] {sequence.name}: raw_predictions={summary.raw_pred_frames}, "
+            f"final_predictions={summary.final_pred_frames}, crop_recoveries={summary.crop_recoveries}, "
             f"fps={summary.runtime_fps:.2f}"
         )
 
+    detections_path = run_dir / "detections.json"
+    write_detection_export(
+        path=detections_path,
+        run_name=args.run_name,
+        data_root=args.data_root,
+        detections=all_detections,
+        config={key: str(value) if isinstance(value, Path) else value for key, value in vars(args).items()},
+        annotations_path=annotations_path,
+    )
+
+    evaluation_summary: Dict[str, object] = {"status": "skipped", "reason": "annotations not found"}
+    if annotations_path is not None and annotations_path.exists():
+        raw_metrics = evaluate_detections(
+            detections=all_detections,
+            annotations_path=annotations_path,
+            stage="raw",
+            iou_threshold=args.match_iou,
+            score_threshold=args.eval_score_threshold,
+            ball_category_id=args.ball_category_id,
+        )
+        final_metrics = evaluate_detections(
+            detections=all_detections,
+            annotations_path=annotations_path,
+            stage="final",
+            iou_threshold=args.match_iou,
+            score_threshold=args.eval_score_threshold,
+            ball_category_id=args.ball_category_id,
+        )
+        raw_by_sequence = {row["sequence"]: row for row in raw_metrics["per_sequence"]}
+        final_by_sequence = {row["sequence"]: row for row in final_metrics["per_sequence"]}
+        for summary in summaries:
+            raw_row = raw_by_sequence.get(summary.sequence, {})
+            final_row = final_by_sequence.get(summary.sequence, {})
+            summary.gt_frames = int(raw_row.get("gt_count", 0.0))
+            summary.raw_eval_detections = int(raw_row.get("detection_count", 0.0))
+            summary.raw_tp = int(raw_row.get("tp", 0.0))
+            summary.raw_fp = int(raw_row.get("fp", 0.0))
+            summary.raw_fn = int(raw_row.get("fn", 0.0))
+            summary.raw_precision = float(raw_row.get("precision", 0.0))
+            summary.raw_recall = float(raw_row.get("recall", 0.0))
+            summary.raw_mean_iou = float(raw_row.get("mean_matched_iou", 0.0))
+            summary.final_eval_detections = int(final_row.get("detection_count", 0.0))
+            summary.final_tp = int(final_row.get("tp", 0.0))
+            summary.final_fp = int(final_row.get("fp", 0.0))
+            summary.final_fn = int(final_row.get("fn", 0.0))
+            summary.final_precision = float(final_row.get("precision", 0.0))
+            summary.final_recall = float(final_row.get("recall", 0.0))
+            summary.final_mean_iou = float(final_row.get("mean_matched_iou", 0.0))
+
+        evaluation_summary = {
+            "status": "ok",
+            "annotations_path": str(annotations_path),
+            "ball_category_id": args.ball_category_id,
+            "iou_threshold": args.match_iou,
+            "score_threshold": args.eval_score_threshold,
+            "raw": raw_metrics,
+            "final": final_metrics,
+        }
+
     csv_write_dicts(run_dir / "sequence_summary.csv", [asdict(summary) for summary in summaries])
     aggregate = aggregate_sequence_summaries(summaries)
-
-    trackeval_result: Dict[str, object] = {"status": "skipped", "reason": "disabled"}
-    if args.run_trackeval:
-        trackeval_result = run_trackeval(
-            trackeval_root=args.trackeval_root,
-            work_dir=ensure_dir(run_dir / "trackeval_work"),
-            sequence_dirs=sequence_dirs,
-            prediction_paths=prediction_paths,
-        )
+    write_benchmark_metrics_csv(
+        run_dir / "benchmark_metrics.csv",
+        precision=aggregate.get("final_precision", 0.0),
+        recall=aggregate.get("final_recall", 0.0),
+        latency_ms=aggregate.get("total_ms_avg", 0.0),
+    )
 
     experiment_summary = {
         "run_name": args.run_name,
         "data_root": str(args.data_root),
-        "sequences": [seq_dir.name for seq_dir in sequence_dirs],
+        "sequences": [sequence.name for sequence in sequences],
         "config": {key: str(value) if isinstance(value, Path) else value for key, value in vars(args).items()},
+        "detections_path": str(detections_path),
+        "evaluation": evaluation_summary,
         "aggregate": aggregate,
-        "trackeval": trackeval_result,
     }
     with (run_dir / "experiment_summary.json").open("w", encoding="utf-8") as handle:
         json.dump(experiment_summary, handle, indent=2)
 
     print(f"[INFO] Sequence summary written to {run_dir / 'sequence_summary.csv'}")
+    print(f"[INFO] Benchmark metrics written to {run_dir / 'benchmark_metrics.csv'}")
     print(f"[INFO] Experiment summary written to {run_dir / 'experiment_summary.json'}")
 
 
