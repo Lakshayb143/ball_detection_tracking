@@ -42,7 +42,27 @@ The 369 TP row is the target to beat or match with fewer FPs.
 - Compare directly against v4+RANSAC (369/32/69/10)
 - Expect: FP should drop (teleport run removed), TP should stay near 369
 
-**Status:** Code done. Pending benchmark run.
+**Results on clip1 (v5 + RANSAC v2 online10):**
+
+| Metric | v4+RANSAC (old best) | v5+RANSAC |
+|---|---|---|
+| TP | 369 | **378** |
+| Missed | 32 | 44 |
+| FP (GT frames) | 69 | **48** |
+| No-GT predicted | 10 | 10 |
+| F1 | 0.8796 | **0.8915** |
+
+TP up +9, FP down -21. Missed increased +12 (v4's 2-stage pipeline was more
+aggressive gap-filling). Since wrong position > miss for possession, this is the
+right direction.
+
+Root causes fixed:
+- Frame index: aligning to COCO GT 1-indexed removed phantom FP/TP swaps.
+- RESET_MAX_DISTANCE: cap never triggered on clip1 (no 300px+ jump in this clip).
+- KF positions saved to JSON: RANSAC v2 now sees 436 anchors (vs 340 before),
+  repaired 31 bad interpolations.
+
+**Status:** Done.
 
 ---
 

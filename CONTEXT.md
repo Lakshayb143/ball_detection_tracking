@@ -63,15 +63,18 @@ using trajectory-only (pose not wired into feature extraction).
 
 **On-ground tracking: in progress.** See `TODO.md` for active task tracker.
 
-Current tracker: `ball_outlier_interpolator_v4.py` (KF + Mahalanobis gate).
-Best clip1 result with RANSAC v2 online10: TP=369, Missed=32, FP=69, No-GT=10.
+Current tracker: `ball_outlier_interpolator_v5.py` (KF + Mahalanobis gate).
+Best clip1 result with RANSAC v2 online10: TP=378, Missed=44, FP=48, No-GT=10,
+F1=0.8915. Run: `clip1_fresh_runs/v5_then_ransac_v2_online10__clip1/`.
 
 **Version history note:** `ball_outlier_interpolator_v4_no_interpolation.py` was
 an experiment (previously named v5) that stripped KF from v4 to isolate its
 contribution. It was a dead end — no-interp + RANSAC only reaches TP=352,
 Missed=118. v6 and v7 were built on that dead-end branch and have been deleted.
-Next work (v5) applies two bug fixes directly to v4: frame indexing (0→1) and
-a reset spatial cap (300px) to prevent catastrophic teleports.
+
+v5 fixes over v4: (1) frame_count 0→1 to align with COCO GT, (2) RESET_MAX_DISTANCE
+300px cap to prevent teleports, (3) KF-interpolated positions saved to JSON so
+RANSAC v2 can repair bad physics fits.
 
 ---
 
