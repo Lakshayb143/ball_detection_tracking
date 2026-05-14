@@ -485,16 +485,28 @@ class VideoProcessor:
             )
         return frame
 
-    def _build_detection_record(self, frame_idx, accepted_detection):
-        if accepted_detection is None or len(accepted_detection.xyxy) == 0:
-            return {"frame_idx": int(frame_idx), "x": None, "y": None, "confidence": None}
-        center = accepted_detection.get_anchors_coordinates(sv.Position.CENTER)[0]
-        return {
-            "frame_idx": int(frame_idx),
-            "x": float(center[0]),
-            "y": float(center[1]),
-            "confidence": float(accepted_detection.confidence[0]),
-        }
+    def _build_detection_record(self, frame_idx, accepted_detection, output_position=None, is_interpolated=False):
+        if accepted_detection is not None and len(accepted_detection.xyxy) > 0:
+            center = accepted_detection.get_anchors_coordinates(sv.Position.CENTER)[0]
+            return {
+                "frame_idx": int(frame_idx),
+                "x": float(center[0]),
+                "y": float(center[1]),
+                "confidence": float(accepted_detection.confidence[0]),
+                "source": "accepted_detection",
+                "interpolated": False,
+            }
+        if is_interpolated and output_position is not None:
+            # Fix 3: save KF-predicted position so RANSAC v2 can use and repair it.
+            return {
+                "frame_idx": int(frame_idx),
+                "x": float(output_position[0]),
+                "y": float(output_position[1]),
+                "confidence": None,
+                "source": "interpolation",
+                "interpolated": True,
+            }
+        return {"frame_idx": int(frame_idx), "x": None, "y": None, "confidence": None, "source": "none", "interpolated": False}
 
     def run(self):
         fourcc = cv2.VideoWriter_fourcc(*"mp4v")
@@ -526,7 +538,9 @@ class VideoProcessor:
             annotated = self._annotate(
                 frame.copy(), output_position, is_interpolated, accepted, player_bboxes
             )
-            detection_records.append(self._build_detection_record(frame_count, accepted))
+            detection_records.append(
+                self._build_detection_record(frame_count, accepted, output_position, is_interpolated)
+            )
             out_writer.write(annotated)
             frame_count += 1
 
