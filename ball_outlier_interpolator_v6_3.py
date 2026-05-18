@@ -15,8 +15,8 @@ from rfdetr import RFDETRMedium
 MODEL_PATH = "checkpoints/ball_samy_1120.pth"
 PLAYER_MODEL_PATH = "checkpoints/player.pth"
 VIDEO_PATH = "/home/lakshay/lx/ball_detection_tracking/clips/clip1.mp4"
-OUTPUT_PATH = "/home/lakshay/lx/ball_detection_tracking/clip1_output_v6_1.mp4"
-DETECTION_JSON_PATH = "/home/lakshay/lx/ball_detection_tracking/clip1_v6_1.json"
+OUTPUT_PATH = "/home/lakshay/lx/ball_detection_tracking/clip1_output_v6_3.mp4"
+DETECTION_JSON_PATH = "/home/lakshay/lx/ball_detection_tracking/clip1_v6_3.json"
 ACTIONS_JSON_PATH = "/home/lakshay/lx/ball_detection_tracking/ground_truths/clip1_actions.json"
 
 CONFIDENCE = 0.01
@@ -48,11 +48,13 @@ GRAVITY_PX_PER_S2 = 789.0
 # travel, so 300px is tight but fair.
 RESET_MAX_DISTANCE = 300
 
-# V6: green-ground rejection for interpolated positions.
-# If the full bbox around an interpolated position is ≥ 80% grass-green pixels,
-# the position is suppressed (recorded as "none").
+# V6_3: green-ground rejection using actual ball size from nearby accepted detections.
+# Crop radius = 1.5 × (last accepted ball bbox radius). With the ball filling ~44%
+# of that crop, a 95% green threshold safely separates empty grass from ball-present.
 ENABLE_GREEN_FILTER = True
 GREEN_FILTER_THRESHOLD = 0.95
+GREEN_CROP_MARGIN = 1.5       # crop radius = margin × (max(bw, bh) / 2)
+GREEN_CROP_FALLBACK_RADIUS = 10.0  # used until first accepted detection seen
 # HSV ranges for clip1 grass (OpenCV H in 0-180).
 # H 35-85 covers yellow-green → pure green; S≥40 avoids grays; V 40-200 avoids
 # pure-black shadows and blown-out whites.
@@ -275,13 +277,13 @@ def detection_inside_any_player(det_center, player_bboxes) -> bool:
 
 
 # ============================================================
-# V6: green-ground filter
+# V6_3: green-ground filter with dynamic crop radius
 # ============================================================
-def is_green_ground(frame: np.ndarray, position, crop_size: float = 10.0) -> bool:
-    """Return True if ≥ GREEN_FILTER_THRESHOLD fraction of the center 10×10 crop is grass-green."""
+def is_green_ground(frame: np.ndarray, position, crop_radius: float) -> bool:
+    """Return True if ≥ GREEN_FILTER_THRESHOLD of the crop (sized to the ball) is grass-green."""
     x, y = int(round(float(position[0]))), int(round(float(position[1])))
     h, w = frame.shape[:2]
-    half = int(crop_size / 2)
+    half = max(1, int(round(crop_radius)))
     x1, y1 = max(0, x - half), max(0, y - half)
     x2, y2 = min(w, x + half), min(h, y + half)
     patch = frame[y1:y2, x1:x2]
@@ -340,6 +342,9 @@ class VideoProcessor:
         self.phase1_active_frames = 0
         self.reset_rejections = 0
         self.green_rejections = 0
+
+        # V6_3: tracks crop radius from last accepted detection bbox
+        self.last_ball_crop_radius = GREEN_CROP_FALLBACK_RADIUS
 
     def _apply_regime(self, frame_count):
         regime = self.action_timeline.get_regime(frame_count)
@@ -568,12 +573,19 @@ class VideoProcessor:
             )
             output_position, is_interpolated, accepted = self._step(best_detection, frame_count)
 
-            # V6: suppress interpolated positions that land on green grass.
+            # V6_3: update crop radius from accepted detection bbox.
+            if accepted is not None and len(accepted.xyxy) > 0:
+                x1, y1, x2, y2 = accepted.xyxy[0]
+                bw, bh = float(x2 - x1), float(y2 - y1)
+                self.last_ball_crop_radius = max(bw, bh) / 2.0 * GREEN_CROP_MARGIN
+
+            # V6_3: suppress interpolated positions that land on green grass.
             if ENABLE_GREEN_FILTER and is_interpolated and output_position is not None:
-                if is_green_ground(frame, output_position):
+                if is_green_ground(frame, output_position, self.last_ball_crop_radius):
                     print(
                         f"Frame {frame_count}: GREEN REJECT interpolated at "
-                        f"{output_position.round(1)}"
+                        f"{output_position.round(1)} "
+                        f"(crop_r={self.last_ball_crop_radius:.1f}px)"
                     )
                     self.green_rejections += 1
                     output_position = None
