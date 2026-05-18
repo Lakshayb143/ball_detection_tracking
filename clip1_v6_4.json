@@ -1,0 +1,3850 @@
+[
+  {
+    "frame_idx": 1,
+    "x": 1677.78271484375,
+    "y": 508.91796875,
+    "confidence": 0.7489769458770752,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 2,
+    "x": 1680.9625244140625,
+    "y": 509.05682373046875,
+    "confidence": 0.723639965057373,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 3,
+    "x": 1684.291259765625,
+    "y": 509.11065673828125,
+    "confidence": 0.7754824757575989,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 4,
+    "x": 1685.884765625,
+    "y": 509.2960205078125,
+    "confidence": 0.7497317790985107,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 5,
+    "x": 1689.25537109375,
+    "y": 509.32464599609375,
+    "confidence": 0.7456769943237305,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 6,
+    "x": 1694.111083984375,
+    "y": 509.450927734375,
+    "confidence": 0.7134356498718262,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 7,
+    "x": 1696.3443603515625,
+    "y": 509.575927734375,
+    "confidence": 0.729891836643219,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 8,
+    "x": 1700.3349609375,
+    "y": 509.54150390625,
+    "confidence": 0.7002877593040466,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 9,
+    "x": 1705.580810546875,
+    "y": 509.53399658203125,
+    "confidence": 0.6897489428520203,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 10,
+    "x": 1708.1993408203125,
+    "y": 509.4666442871094,
+    "confidence": 0.7257265448570251,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 11,
+    "x": 1714.434326171875,
+    "y": 510.0364074707031,
+    "confidence": 0.6721256375312805,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 12,
+    "x": 1721.91845703125,
+    "y": 511.0689392089844,
+    "confidence": 0.5867594480514526,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 13,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 14,
+    "x": 1732.652099609375,
+    "y": 514.62060546875,
+    "confidence": 0.5562045574188232,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 15,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 16,
+    "x": 1734.5306396484375,
+    "y": 505.7961730957031,
+    "confidence": 0.6394180655479431,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 17,
+    "x": 1699.357177734375,
+    "y": 493.0000915527344,
+    "confidence": 0.654528021812439,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 18,
+    "x": 1663.977294921875,
+    "y": 480.725830078125,
+    "confidence": 0.6586246490478516,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 19,
+    "x": 1646.381103515625,
+    "y": 474.5054931640625,
+    "confidence": 0.6784905791282654,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 20,
+    "x": 1616.787353515625,
+    "y": 464.0058898925781,
+    "confidence": 0.6425724625587463,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 21,
+    "x": 1590.1671142578125,
+    "y": 455.6997985839844,
+    "confidence": 0.6455547213554382,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 22,
+    "x": 1577.484619140625,
+    "y": 451.198974609375,
+    "confidence": 0.6539849042892456,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 23,
+    "x": 1553.045654296875,
+    "y": 442.88287353515625,
+    "confidence": 0.6035628914833069,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 24,
+    "x": 1529.549560546875,
+    "y": 435.8756103515625,
+    "confidence": 0.5322349667549133,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 25,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 26,
+    "x": 1499.169677734375,
+    "y": 428.4288330078125,
+    "confidence": 0.5330865383148193,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 27,
+    "x": 1480.47265625,
+    "y": 424.2546691894531,
+    "confidence": 0.5379015207290649,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 28,
+    "x": 1472.91748046875,
+    "y": 422.9334716796875,
+    "confidence": 0.5672196745872498,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 29,
+    "x": 1458.884765625,
+    "y": 419.5360412597656,
+    "confidence": 0.5241189002990723,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 30,
+    "x": 1445.710205078125,
+    "y": 416.9582214355469,
+    "confidence": 0.5933607816696167,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 31,
+    "x": 1439.689208984375,
+    "y": 415.9468994140625,
+    "confidence": 0.6653460264205933,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 32,
+    "x": 1428.8255615234375,
+    "y": 416.68798828125,
+    "confidence": 0.5654251575469971,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 33,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 34,
+    "x": 1411.60986328125,
+    "y": 419.09515380859375,
+    "confidence": 0.632173478603363,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 35,
+    "x": 1401.563232421875,
+    "y": 421.00927734375,
+    "confidence": 0.6646329760551453,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 36,
+    "x": 1392.447021484375,
+    "y": 422.8142395019531,
+    "confidence": 0.6916164755821228,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 37,
+    "x": 1387.2015380859375,
+    "y": 424.23052978515625,
+    "confidence": 0.6594067215919495,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 38,
+    "x": 1377.5977783203125,
+    "y": 428.30987548828125,
+    "confidence": 0.6704726219177246,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 39,
+    "x": 1366.425537109375,
+    "y": 433.7952880859375,
+    "confidence": 0.6768053770065308,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 40,
+    "x": 1361.15966796875,
+    "y": 437.45147705078125,
+    "confidence": 0.6511656641960144,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 41,
+    "x": 1347.6903076171875,
+    "y": 445.6877136230469,
+    "confidence": 0.6648260951042175,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 42,
+    "x": 1333.22314453125,
+    "y": 454.49127197265625,
+    "confidence": 0.6717643737792969,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 43,
+    "x": 1322.8040771484375,
+    "y": 459.4093933105469,
+    "confidence": 0.6774708032608032,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 44,
+    "x": 1300.24658203125,
+    "y": 471.10382080078125,
+    "confidence": 0.6726260185241699,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 45,
+    "x": 1271.4912109375,
+    "y": 483.5247497558594,
+    "confidence": 0.6517369747161865,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 46,
+    "x": 1257.574462890625,
+    "y": 489.89453125,
+    "confidence": 0.6902284622192383,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 47,
+    "x": 1225.77294921875,
+    "y": 503.5232849121094,
+    "confidence": 0.7032382488250732,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 48,
+    "x": 1193.08642578125,
+    "y": 519.1860961914062,
+    "confidence": 0.6974851489067078,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 49,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 50,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 51,
+    "x": 1184.91336295084,
+    "y": 559.2613931344113,
+    "confidence": null,
+    "source": "interpolation",
+    "interpolated": true
+  },
+  {
+    "frame_idx": 52,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 53,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 54,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 55,
+    "x": 1135.91015625,
+    "y": 531.1962890625,
+    "confidence": 0.575644314289093,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 56,
+    "x": 1133.028564453125,
+    "y": 530.0157470703125,
+    "confidence": 0.6762903332710266,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 57,
+    "x": 1129.3388671875,
+    "y": 528.718017578125,
+    "confidence": 0.6885823607444763,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 58,
+    "x": 1124.5108642578125,
+    "y": 528.400146484375,
+    "confidence": 0.6785892844200134,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 59,
+    "x": 1110.6759033203125,
+    "y": 528.1094970703125,
+    "confidence": 0.7067591547966003,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 60,
+    "x": 1091.8067626953125,
+    "y": 527.6312255859375,
+    "confidence": 0.6796256899833679,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 61,
+    "x": 1081.168701171875,
+    "y": 527.7354736328125,
+    "confidence": 0.6890871524810791,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 62,
+    "x": 1059.504150390625,
+    "y": 529.487548828125,
+    "confidence": 0.6850058436393738,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 63,
+    "x": 1038.4461669921875,
+    "y": 532.5985717773438,
+    "confidence": 0.700533390045166,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 64,
+    "x": 1029.841064453125,
+    "y": 535.0142822265625,
+    "confidence": 0.6821459531784058,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 65,
+    "x": 1015.0459594726562,
+    "y": 541.6611938476562,
+    "confidence": 0.6786541938781738,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 66,
+    "x": 1003.255126953125,
+    "y": 548.7576904296875,
+    "confidence": 0.700838029384613,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 67,
+    "x": 998.64794921875,
+    "y": 552.2443237304688,
+    "confidence": 0.6966907382011414,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 68,
+    "x": 993.6514892578125,
+    "y": 555.5162353515625,
+    "confidence": 0.7023780941963196,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 69,
+    "x": 990.4798583984375,
+    "y": 558.5650634765625,
+    "confidence": 0.6557074189186096,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 70,
+    "x": 989.209716796875,
+    "y": 559.4493408203125,
+    "confidence": 0.648435115814209,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 71,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 72,
+    "x": 978.969482421875,
+    "y": 567.898681640625,
+    "confidence": 0.6878558397293091,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 73,
+    "x": 976.4775390625,
+    "y": 570.8727416992188,
+    "confidence": 0.684393048286438,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 74,
+    "x": 971.0361938476562,
+    "y": 577.645263671875,
+    "confidence": 0.7035767436027527,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 75,
+    "x": 963.860107421875,
+    "y": 586.1365966796875,
+    "confidence": 0.6752273440361023,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 76,
+    "x": 960.87890625,
+    "y": 590.760986328125,
+    "confidence": 0.6846028566360474,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 77,
+    "x": 955.259765625,
+    "y": 601.41259765625,
+    "confidence": 0.6997663974761963,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 78,
+    "x": 952.1358642578125,
+    "y": 614.5501708984375,
+    "confidence": 0.6782782673835754,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 79,
+    "x": 950.6912841796875,
+    "y": 621.181884765625,
+    "confidence": 0.6678529381752014,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 80,
+    "x": 949.0425415039062,
+    "y": 637.2730712890625,
+    "confidence": 0.6757058501243591,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 81,
+    "x": 948.3849487304688,
+    "y": 653.0103149414062,
+    "confidence": 0.6924992203712463,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 82,
+    "x": 947.5283203125,
+    "y": 662.8978881835938,
+    "confidence": 0.6748825311660767,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 83,
+    "x": 945.2662353515625,
+    "y": 676.1986083984375,
+    "confidence": 0.6800206303596497,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 84,
+    "x": 946.5513305664062,
+    "y": 666.154296875,
+    "confidence": 0.6731238961219788,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 85,
+    "x": 948.8011474609375,
+    "y": 660.0006103515625,
+    "confidence": 0.6686939597129822,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 86,
+    "x": 983.922607421875,
+    "y": 638.909423828125,
+    "confidence": 0.6741740703582764,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 87,
+    "x": 1020.818115234375,
+    "y": 615.5973510742188,
+    "confidence": 0.5729785561561584,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 88,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 89,
+    "x": 1086.046630859375,
+    "y": 582.8703002929688,
+    "confidence": 0.6608076095581055,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 90,
+    "x": 1123.070556640625,
+    "y": 561.6064453125,
+    "confidence": 0.6558255553245544,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 91,
+    "x": 1144.987548828125,
+    "y": 549.1214599609375,
+    "confidence": 0.6159316897392273,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 92,
+    "x": 1185.1248779296875,
+    "y": 523.0758056640625,
+    "confidence": 0.5300359725952148,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 93,
+    "x": 1220.6068115234375,
+    "y": 500.78961181640625,
+    "confidence": 0.6917574405670166,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 94,
+    "x": 1237.54345703125,
+    "y": 491.06787109375,
+    "confidence": 0.6842864751815796,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 95,
+    "x": 1269.1416015625,
+    "y": 471.20892333984375,
+    "confidence": 0.6952788233757019,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 96,
+    "x": 1297.117431640625,
+    "y": 456.2328186035156,
+    "confidence": 0.6881191730499268,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 97,
+    "x": 1309.41552734375,
+    "y": 450.174072265625,
+    "confidence": 0.6716985702514648,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 98,
+    "x": 1328.2025146484375,
+    "y": 440.14569091796875,
+    "confidence": 0.6803748607635498,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 99,
+    "x": 1342.173828125,
+    "y": 431.6181640625,
+    "confidence": 0.6678091883659363,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 100,
+    "x": 1348.1417236328125,
+    "y": 427.08062744140625,
+    "confidence": 0.6861361265182495,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 101,
+    "x": 1360.8477783203125,
+    "y": 418.53466796875,
+    "confidence": 0.6570675373077393,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 102,
+    "x": 1370.288330078125,
+    "y": 409.2913818359375,
+    "confidence": 0.6959356069564819,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 103,
+    "x": 1374.370361328125,
+    "y": 405.87109375,
+    "confidence": 0.6726198792457581,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 104,
+    "x": 1383.5628662109375,
+    "y": 398.3169250488281,
+    "confidence": 0.6716545224189758,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 105,
+    "x": 1391.6865234375,
+    "y": 390.79669189453125,
+    "confidence": 0.6826299428939819,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 106,
+    "x": 1395.083984375,
+    "y": 388.0601806640625,
+    "confidence": 0.719199538230896,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 107,
+    "x": 1402.597900390625,
+    "y": 383.2559814453125,
+    "confidence": 0.6781221032142639,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 108,
+    "x": 1410.77587890625,
+    "y": 378.9524841308594,
+    "confidence": 0.678255558013916,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 109,
+    "x": 1414.7301025390625,
+    "y": 377.9061279296875,
+    "confidence": 0.6703190207481384,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 110,
+    "x": 1424.015869140625,
+    "y": 377.15570068359375,
+    "confidence": 0.8045467734336853,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 111,
+    "x": 1432.7935791015625,
+    "y": 376.9996643066406,
+    "confidence": 0.7375931739807129,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 112,
+    "x": 1437.633544921875,
+    "y": 377.2190246582031,
+    "confidence": 0.8184401392936707,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 113,
+    "x": 1447.8040771484375,
+    "y": 378.7674255371094,
+    "confidence": 0.7705276608467102,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 114,
+    "x": 1458.24365234375,
+    "y": 381.2195129394531,
+    "confidence": 0.7282693386077881,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 115,
+    "x": 1463.284423828125,
+    "y": 382.746826171875,
+    "confidence": 0.667338490486145,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 116,
+    "x": 1472.72021484375,
+    "y": 385.62335205078125,
+    "confidence": 0.8243727684020996,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 117,
+    "x": 1481.307373046875,
+    "y": 390.6681213378906,
+    "confidence": 0.8179879784584045,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 118,
+    "x": 1485.33447265625,
+    "y": 392.6067810058594,
+    "confidence": 0.7377086281776428,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 119,
+    "x": 1494.0701904296875,
+    "y": 398.78173828125,
+    "confidence": 0.7102660536766052,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 120,
+    "x": 1500.44287109375,
+    "y": 405.6451721191406,
+    "confidence": 0.7493990659713745,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 121,
+    "x": 1503.946533203125,
+    "y": 408.9498291015625,
+    "confidence": 0.7626987099647522,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 122,
+    "x": 1511.450927734375,
+    "y": 416.1817321777344,
+    "confidence": 0.6915972232818604,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 123,
+    "x": 1517.981201171875,
+    "y": 426.14349365234375,
+    "confidence": 0.6916555762290955,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 124,
+    "x": 1521.5218505859375,
+    "y": 431.3113708496094,
+    "confidence": 0.6664987802505493,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 125,
+    "x": 1527.51025390625,
+    "y": 441.5256042480469,
+    "confidence": 0.7011768817901611,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 126,
+    "x": 1533.093017578125,
+    "y": 454.7038879394531,
+    "confidence": 0.6815169453620911,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 127,
+    "x": 1535.9530029296875,
+    "y": 460.58599853515625,
+    "confidence": 0.6893861889839172,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 128,
+    "x": 1532.93994140625,
+    "y": 460.5234680175781,
+    "confidence": 0.6302318572998047,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 129,
+    "x": 1521.002685546875,
+    "y": 436.1462707519531,
+    "confidence": 0.6137652397155762,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 130,
+    "x": 1515.2138671875,
+    "y": 426.0030212402344,
+    "confidence": 0.6849578022956848,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 131,
+    "x": 1500.082275390625,
+    "y": 403.5347900390625,
+    "confidence": 0.6732217669487,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 132,
+    "x": 1484.8336181640625,
+    "y": 380.5533142089844,
+    "confidence": 0.6807173490524292,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 133,
+    "x": 1476.528076171875,
+    "y": 371.05517578125,
+    "confidence": 0.6837179064750671,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 134,
+    "x": 1459.7376708984375,
+    "y": 351.87518310546875,
+    "confidence": 0.6734015345573425,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 135,
+    "x": 1441.9425048828125,
+    "y": 335.18084716796875,
+    "confidence": 0.6892162561416626,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 136,
+    "x": 1432.42822265625,
+    "y": 327.0291442871094,
+    "confidence": 0.6720741987228394,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 137,
+    "x": 1412.22216796875,
+    "y": 312.609619140625,
+    "confidence": 0.6051493287086487,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 138,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 139,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 140,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 141,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 142,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 143,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 144,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 145,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 146,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 147,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 148,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 149,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 150,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 151,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 152,
+    "x": 1251.499267578125,
+    "y": 232.096435546875,
+    "confidence": 0.5474176406860352,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 153,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 154,
+    "x": 1251.499267578125,
+    "y": 233.84976888020833,
+    "confidence": null,
+    "source": "interpolation",
+    "interpolated": true
+  },
+  {
+    "frame_idx": 155,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 156,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 157,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 158,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 159,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 160,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 161,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 162,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 163,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 164,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 165,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 166,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 167,
+    "x": 1221.471923828125,
+    "y": 330.23089599609375,
+    "confidence": 0.6016148328781128,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 168,
+    "x": 1221.6876220703125,
+    "y": 348.7000732421875,
+    "confidence": 0.6475096344947815,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 169,
+    "x": 1222.558837890625,
+    "y": 358.6719970703125,
+    "confidence": 0.6856066584587097,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 170,
+    "x": 1224.1337890625,
+    "y": 376.4019775390625,
+    "confidence": 0.6786984801292419,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 171,
+    "x": 1226.1943359375,
+    "y": 396.04736328125,
+    "confidence": 0.6735288500785828,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 172,
+    "x": 1227.415771484375,
+    "y": 406.63055419921875,
+    "confidence": 0.6610773205757141,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 173,
+    "x": 1230.8641357421875,
+    "y": 428.5081787109375,
+    "confidence": 0.6785961985588074,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 174,
+    "x": 1234.4306640625,
+    "y": 451.070556640625,
+    "confidence": 0.6924336552619934,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 175,
+    "x": 1236.751953125,
+    "y": 463.01171875,
+    "confidence": 0.6933296918869019,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 176,
+    "x": 1240.21044921875,
+    "y": 487.2366943359375,
+    "confidence": 0.6887729167938232,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 177,
+    "x": 1242.8203125,
+    "y": 512.4118041992188,
+    "confidence": 0.6777450442314148,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 178,
+    "x": 1244.046875,
+    "y": 525.0665893554688,
+    "confidence": 0.6873942017555237,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 179,
+    "x": 1244.03857421875,
+    "y": 551.031494140625,
+    "confidence": 0.6274898648262024,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 180,
+    "x": 1246.736083984375,
+    "y": 570.6187133789062,
+    "confidence": 0.6750124096870422,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 181,
+    "x": 1255.625244140625,
+    "y": 561.5525512695312,
+    "confidence": 0.6958144307136536,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 182,
+    "x": 1275.291259765625,
+    "y": 540.5245361328125,
+    "confidence": 0.7075200080871582,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 183,
+    "x": 1295.5478515625,
+    "y": 519.359619140625,
+    "confidence": 0.7047723531723022,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 184,
+    "x": 1304.6322021484375,
+    "y": 510.54510498046875,
+    "confidence": 0.7080755829811096,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 185,
+    "x": 1327.4412841796875,
+    "y": 492.900146484375,
+    "confidence": 0.6859934329986572,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 186,
+    "x": 1347.14892578125,
+    "y": 476.4879150390625,
+    "confidence": 0.6770772337913513,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 187,
+    "x": 1356.9228515625,
+    "y": 467.04852294921875,
+    "confidence": 0.6779227256774902,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 188,
+    "x": 1374.932373046875,
+    "y": 452.0313720703125,
+    "confidence": 0.6860330700874329,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 189,
+    "x": 1390.3980712890625,
+    "y": 436.9931335449219,
+    "confidence": 0.6675156950950623,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 190,
+    "x": 1396.91259765625,
+    "y": 428.47613525390625,
+    "confidence": 0.6956424117088318,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 191,
+    "x": 1408.724853515625,
+    "y": 415.5874938964844,
+    "confidence": 0.6777563095092773,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 192,
+    "x": 1418.3612060546875,
+    "y": 403.5728454589844,
+    "confidence": 0.6674790382385254,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 193,
+    "x": 1422.76708984375,
+    "y": 398.48822021484375,
+    "confidence": 0.6767989993095398,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 194,
+    "x": 1429.5467529296875,
+    "y": 389.35406494140625,
+    "confidence": 0.6899935603141785,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 195,
+    "x": 1435.810302734375,
+    "y": 381.5477294921875,
+    "confidence": 0.6747543811798096,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 196,
+    "x": 1438.85302734375,
+    "y": 378.00469970703125,
+    "confidence": 0.7713633179664612,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 197,
+    "x": 1443.6790771484375,
+    "y": 374.7059326171875,
+    "confidence": 0.6703085899353027,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 198,
+    "x": 1444.842041015625,
+    "y": 372.05523681640625,
+    "confidence": 0.6490196585655212,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 199,
+    "x": 1444.218017578125,
+    "y": 371.265625,
+    "confidence": 0.6662665009498596,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 200,
+    "x": 1439.7998046875,
+    "y": 370.41455078125,
+    "confidence": 0.645099401473999,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 201,
+    "x": 1433.513427734375,
+    "y": 370.8325500488281,
+    "confidence": 0.6623386740684509,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 202,
+    "x": 1430.2056884765625,
+    "y": 370.94635009765625,
+    "confidence": 0.7756864428520203,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 203,
+    "x": 1421.2607421875,
+    "y": 372.5447082519531,
+    "confidence": 0.65956050157547,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 204,
+    "x": 1413.23486328125,
+    "y": 374.63983154296875,
+    "confidence": 0.7346723079681396,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 205,
+    "x": 1409.12353515625,
+    "y": 376.5914306640625,
+    "confidence": 0.7152796983718872,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 206,
+    "x": 1405.080810546875,
+    "y": 378.9498291015625,
+    "confidence": 0.7237477898597717,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 207,
+    "x": 1402.586669921875,
+    "y": 383.5166931152344,
+    "confidence": 0.6842291951179504,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 208,
+    "x": 1401.353759765625,
+    "y": 386.8656311035156,
+    "confidence": 0.6899463534355164,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 209,
+    "x": 1399.986083984375,
+    "y": 393.20623779296875,
+    "confidence": 0.6808748841285706,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 210,
+    "x": 1402.2784423828125,
+    "y": 401.1019287109375,
+    "confidence": 0.6893243193626404,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 211,
+    "x": 1404.15771484375,
+    "y": 405.93896484375,
+    "confidence": 0.6980517506599426,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 212,
+    "x": 1409.314208984375,
+    "y": 417.42498779296875,
+    "confidence": 0.6803373098373413,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 213,
+    "x": 1415.3033447265625,
+    "y": 430.29681396484375,
+    "confidence": 0.670752763748169,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 214,
+    "x": 1418.409423828125,
+    "y": 437.28619384765625,
+    "confidence": 0.658932089805603,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 215,
+    "x": 1426.5576171875,
+    "y": 450.012451171875,
+    "confidence": 0.6885196566581726,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 216,
+    "x": 1432.84521484375,
+    "y": 465.11383056640625,
+    "confidence": 0.6748635768890381,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 217,
+    "x": 1435.906982421875,
+    "y": 472.5780944824219,
+    "confidence": 0.6727076768875122,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 218,
+    "x": 1441.830810546875,
+    "y": 487.94464111328125,
+    "confidence": 0.6995131373405457,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 219,
+    "x": 1449.235107421875,
+    "y": 503.6480712890625,
+    "confidence": 0.6912923455238342,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 220,
+    "x": 1454.32080078125,
+    "y": 513.1051025390625,
+    "confidence": 0.6772974729537964,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 221,
+    "x": 1463.2562255859375,
+    "y": 530.738525390625,
+    "confidence": 0.6877148747444153,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 222,
+    "x": 1473.9822998046875,
+    "y": 549.22265625,
+    "confidence": 0.6821025013923645,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 223,
+    "x": 1478.3751220703125,
+    "y": 556.48486328125,
+    "confidence": 0.6578052639961243,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 224,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 225,
+    "x": 1439.74609375,
+    "y": 523.594482421875,
+    "confidence": 0.6934090852737427,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 226,
+    "x": 1424.3623046875,
+    "y": 508.392333984375,
+    "confidence": 0.6745264530181885,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 227,
+    "x": 1394.5048828125,
+    "y": 478.76739501953125,
+    "confidence": 0.6934646368026733,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 228,
+    "x": 1365.0966796875,
+    "y": 452.751953125,
+    "confidence": 0.6832025051116943,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 229,
+    "x": 1351.1953125,
+    "y": 439.93023681640625,
+    "confidence": 0.6387181878089905,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 230,
+    "x": 1323.90185546875,
+    "y": 413.65283203125,
+    "confidence": 0.689607560634613,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 231,
+    "x": 1299.560546875,
+    "y": 388.6844482421875,
+    "confidence": 0.6884976029396057,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 232,
+    "x": 1288.5645751953125,
+    "y": 376.03411865234375,
+    "confidence": 0.6858481168746948,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 233,
+    "x": 1267.90966796875,
+    "y": 354.0859680175781,
+    "confidence": 0.6882346272468567,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 234,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 235,
+    "x": 1242.334716796875,
+    "y": 321.75244140625,
+    "confidence": 0.6580290198326111,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 236,
+    "x": 1227.7069091796875,
+    "y": 303.156982421875,
+    "confidence": 0.5996086597442627,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 237,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 238,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 239,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 240,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 241,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 242,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 243,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 244,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 245,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 246,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 247,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 248,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 249,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 250,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 251,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 252,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 253,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 254,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 255,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 256,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 257,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 258,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 259,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 260,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 261,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 262,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 263,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 264,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 265,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 266,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 267,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 268,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 269,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 270,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 271,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 272,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 273,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 274,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 275,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 276,
+    "x": 819.732177734375,
+    "y": 248.93707275390625,
+    "confidence": 0.6536905169487,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 277,
+    "x": 811.279296875,
+    "y": 258.5765075683594,
+    "confidence": 0.6133198738098145,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 278,
+    "x": 792.6480712890625,
+    "y": 276.73291015625,
+    "confidence": 0.6703596711158752,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 279,
+    "x": 771.99169921875,
+    "y": 297.35028076171875,
+    "confidence": 0.6705846786499023,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 280,
+    "x": 762.0625,
+    "y": 305.8746643066406,
+    "confidence": 0.6497598886489868,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 281,
+    "x": 741.58837890625,
+    "y": 328.56884765625,
+    "confidence": 0.6580831408500671,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 282,
+    "x": 720.476806640625,
+    "y": 353.05908203125,
+    "confidence": 0.6415222883224487,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 283,
+    "x": 709.6513671875,
+    "y": 365.51678466796875,
+    "confidence": 0.6450546383857727,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 284,
+    "x": 686.6434326171875,
+    "y": 394.69915771484375,
+    "confidence": 0.6907671093940735,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 285,
+    "x": 662.43212890625,
+    "y": 421.6936340332031,
+    "confidence": 0.6948125958442688,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 286,
+    "x": 651.3421630859375,
+    "y": 436.4933166503906,
+    "confidence": 0.7009475231170654,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 287,
+    "x": 625.65966796875,
+    "y": 466.80010986328125,
+    "confidence": 0.6963114142417908,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 288,
+    "x": 599.39453125,
+    "y": 498.67462158203125,
+    "confidence": 0.6947791576385498,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 289,
+    "x": 585.3326416015625,
+    "y": 514.1801147460938,
+    "confidence": 0.6917792558670044,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 290,
+    "x": 557.3277587890625,
+    "y": 547.3370971679688,
+    "confidence": 0.65318763256073,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 291,
+    "x": 529.2745361328125,
+    "y": 580.055419921875,
+    "confidence": 0.6893635988235474,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 292,
+    "x": 513.5632934570312,
+    "y": 597.63427734375,
+    "confidence": 0.6509581208229065,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 293,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 294,
+    "x": 449.8775634765625,
+    "y": 672.9965209960938,
+    "confidence": 0.716601550579071,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 295,
+    "x": 436.51983642578125,
+    "y": 690.9288330078125,
+    "confidence": 0.7252224683761597,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 296,
+    "x": 411.2713928222656,
+    "y": 727.48681640625,
+    "confidence": 0.5470014214515686,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 297,
+    "x": 408.8074951171875,
+    "y": 717.318115234375,
+    "confidence": 0.6928524374961853,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 298,
+    "x": 408.4479675292969,
+    "y": 712.243408203125,
+    "confidence": 0.6895567178726196,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 299,
+    "x": 408.65081787109375,
+    "y": 702.101806640625,
+    "confidence": 0.6931189894676208,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 300,
+    "x": 410.25091552734375,
+    "y": 693.5225830078125,
+    "confidence": 0.7135668992996216,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 301,
+    "x": 411.17816162109375,
+    "y": 689.5628662109375,
+    "confidence": 0.7136122584342957,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 302,
+    "x": 412.70391845703125,
+    "y": 682.5914306640625,
+    "confidence": 0.578904926776886,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 303,
+    "x": 413.5833740234375,
+    "y": 677.1422729492188,
+    "confidence": 0.7112389802932739,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 304,
+    "x": 414.36614990234375,
+    "y": 675.1802368164062,
+    "confidence": 0.5841628909111023,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 305,
+    "x": 417.16558837890625,
+    "y": 669.998046875,
+    "confidence": 0.6786177158355713,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 306,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 307,
+    "x": 421.09375,
+    "y": 666.2026977539062,
+    "confidence": 0.6384291052818298,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 308,
+    "x": 422.4322204589844,
+    "y": 665.4705810546875,
+    "confidence": 0.6036167740821838,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 309,
+    "x": 423.834228515625,
+    "y": 665.157470703125,
+    "confidence": 0.5267749428749084,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 310,
+    "x": 424.94805908203125,
+    "y": 665.782470703125,
+    "confidence": 0.6950126886367798,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 311,
+    "x": 427.96270751953125,
+    "y": 666.6746826171875,
+    "confidence": 0.6891993284225464,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 312,
+    "x": 429.4244689941406,
+    "y": 670.34228515625,
+    "confidence": 0.698976993560791,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 313,
+    "x": 430.484619140625,
+    "y": 672.8303833007812,
+    "confidence": 0.6918134093284607,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 314,
+    "x": 432.79638671875,
+    "y": 679.3436889648438,
+    "confidence": 0.6941006183624268,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 315,
+    "x": 435.17681884765625,
+    "y": 686.7691650390625,
+    "confidence": 0.6893364191055298,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 316,
+    "x": 436.5632629394531,
+    "y": 690.37548828125,
+    "confidence": 0.6744077205657959,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 317,
+    "x": 438.1205749511719,
+    "y": 698.5299072265625,
+    "confidence": 0.6476191282272339,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 318,
+    "x": 440.37945556640625,
+    "y": 707.746337890625,
+    "confidence": 0.6485950350761414,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 319,
+    "x": 441.3446960449219,
+    "y": 712.2679443359375,
+    "confidence": 0.5300436019897461,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 320,
+    "x": 439.7576660999653,
+    "y": 727.7926234440747,
+    "confidence": null,
+    "source": "interpolation",
+    "interpolated": true
+  },
+  {
+    "frame_idx": 321,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 322,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 323,
+    "x": 444.7762756347656,
+    "y": 759.6892700195312,
+    "confidence": 0.5325706601142883,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 324,
+    "x": 451.255615234375,
+    "y": 755.4373779296875,
+    "confidence": 0.5743792653083801,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 325,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 326,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 327,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 328,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 329,
+    "x": 390.1395263671875,
+    "y": 715.7794799804688,
+    "confidence": 0.5837116241455078,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 330,
+    "x": 378.21673583984375,
+    "y": 710.802001953125,
+    "confidence": 0.6970999836921692,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 331,
+    "x": 372.10333251953125,
+    "y": 707.9583740234375,
+    "confidence": 0.6928565502166748,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 332,
+    "x": 360.6385498046875,
+    "y": 702.22705078125,
+    "confidence": 0.698874831199646,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 333,
+    "x": 350.5956726074219,
+    "y": 698.7486572265625,
+    "confidence": 0.6474780440330505,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 334,
+    "x": 346.17535400390625,
+    "y": 697.3239135742188,
+    "confidence": 0.690345287322998,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 335,
+    "x": 337.3531799316406,
+    "y": 695.196533203125,
+    "confidence": 0.6865161061286926,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 336,
+    "x": 328.46685791015625,
+    "y": 693.7665405273438,
+    "confidence": 0.7162129878997803,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 337,
+    "x": 325.11419677734375,
+    "y": 694.2235107421875,
+    "confidence": 0.706373393535614,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 338,
+    "x": 318.38018798828125,
+    "y": 690.169677734375,
+    "confidence": 0.7059539556503296,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 339,
+    "x": 314.412841796875,
+    "y": 682.84375,
+    "confidence": 0.6769333481788635,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 340,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 341,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 342,
+    "x": 308.4571533203125,
+    "y": 666.2810668945312,
+    "confidence": 0.6963157653808594,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 343,
+    "x": 308.35223388671875,
+    "y": 664.0562133789062,
+    "confidence": 0.656491219997406,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 344,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 345,
+    "x": 311.34783935546875,
+    "y": 664.406005859375,
+    "confidence": 0.6654343605041504,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 346,
+    "x": 314.3124694824219,
+    "y": 660.7783813476562,
+    "confidence": 0.6214318871498108,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 347,
+    "x": 321.799072265625,
+    "y": 652.853515625,
+    "confidence": 0.6885518431663513,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 348,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 349,
+    "x": 333.7740478515625,
+    "y": 644.1827392578125,
+    "confidence": 0.6149916648864746,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 350,
+    "x": 341.30914306640625,
+    "y": 639.582763671875,
+    "confidence": 0.6509817242622375,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 351,
+    "x": 348.90728759765625,
+    "y": 635.8797607421875,
+    "confidence": 0.6782734394073486,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 352,
+    "x": 353.46160888671875,
+    "y": 634.23046875,
+    "confidence": 0.6720479726791382,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 353,
+    "x": 362.27264404296875,
+    "y": 633.555419921875,
+    "confidence": 0.6519665122032166,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 354,
+    "x": 370.52874755859375,
+    "y": 632.546875,
+    "confidence": 0.6564285755157471,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 355,
+    "x": 374.5212097167969,
+    "y": 632.4981079101562,
+    "confidence": 0.6510113477706909,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 356,
+    "x": 381.4346923828125,
+    "y": 632.8536987304688,
+    "confidence": 0.6657099723815918,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 357,
+    "x": 388.6567077636719,
+    "y": 634.7561645507812,
+    "confidence": 0.6613348722457886,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 358,
+    "x": 390.81451416015625,
+    "y": 635.9747314453125,
+    "confidence": 0.6823092103004456,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 359,
+    "x": 395.8488464355469,
+    "y": 639.2625732421875,
+    "confidence": 0.6744440793991089,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 360,
+    "x": 401.7806091308594,
+    "y": 644.3079833984375,
+    "confidence": 0.7129926681518555,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 361,
+    "x": 404.08575439453125,
+    "y": 646.9598388671875,
+    "confidence": 0.6866825819015503,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 362,
+    "x": 409.4241638183594,
+    "y": 654.596435546875,
+    "confidence": 0.7018886804580688,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 363,
+    "x": 414.895263671875,
+    "y": 662.6978149414062,
+    "confidence": 0.7070519924163818,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 364,
+    "x": 422.09320068359375,
+    "y": 660.7459716796875,
+    "confidence": 0.6752597689628601,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 365,
+    "x": 426.691162109375,
+    "y": 658.29150390625,
+    "confidence": 0.6996270418167114,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 366,
+    "x": 428.8447265625,
+    "y": 657.2794189453125,
+    "confidence": 0.7063635587692261,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 367,
+    "x": 432.35345458984375,
+    "y": 655.96923828125,
+    "confidence": 0.714460551738739,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 368,
+    "x": 436.06103515625,
+    "y": 656.0211181640625,
+    "confidence": 0.6969782710075378,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 369,
+    "x": 437.5372314453125,
+    "y": 656.2386474609375,
+    "confidence": 0.6981554627418518,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 370,
+    "x": 440.9884338378906,
+    "y": 657.3101806640625,
+    "confidence": 0.7090182900428772,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 371,
+    "x": 444.616455078125,
+    "y": 659.8858642578125,
+    "confidence": 0.6949924826622009,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 372,
+    "x": 446.75592041015625,
+    "y": 660.9649658203125,
+    "confidence": 0.6920979022979736,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 373,
+    "x": 449.6797790527344,
+    "y": 664.509033203125,
+    "confidence": 0.6880614161491394,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 374,
+    "x": 452.37677001953125,
+    "y": 669.7485961914062,
+    "confidence": 0.6894074082374573,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 375,
+    "x": 453.6875,
+    "y": 670.82080078125,
+    "confidence": 0.6879715919494629,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 376,
+    "x": 456.56732177734375,
+    "y": 668.3878173828125,
+    "confidence": 0.7060545086860657,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 377,
+    "x": 459.03668212890625,
+    "y": 666.2943115234375,
+    "confidence": 0.7090127468109131,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 378,
+    "x": 460.3743591308594,
+    "y": 665.55908203125,
+    "confidence": 0.7137372493743896,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 379,
+    "x": 461.747802734375,
+    "y": 665.6546630859375,
+    "confidence": 0.7177757024765015,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 380,
+    "x": 463.46875,
+    "y": 667.5608520507812,
+    "confidence": 0.705855131149292,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 381,
+    "x": 464.0533447265625,
+    "y": 668.5145263671875,
+    "confidence": 0.698037326335907,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 382,
+    "x": 465.849853515625,
+    "y": 670.5280151367188,
+    "confidence": 0.689863383769989,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 383,
+    "x": 467.11956787109375,
+    "y": 669.8624267578125,
+    "confidence": 0.6629266738891602,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 384,
+    "x": 469.156494140625,
+    "y": 669.4178466796875,
+    "confidence": 0.6318929195404053,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 385,
+    "x": 501.18994140625,
+    "y": 665.696533203125,
+    "confidence": 0.6433802843093872,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 386,
+    "x": 538.8866577148438,
+    "y": 662.569580078125,
+    "confidence": 0.7174058556556702,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 387,
+    "x": 557.2012939453125,
+    "y": 660.74169921875,
+    "confidence": 0.7113420367240906,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 388,
+    "x": 593.8497314453125,
+    "y": 658.996337890625,
+    "confidence": 0.7112406492233276,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 389,
+    "x": 627.787353515625,
+    "y": 654.9498291015625,
+    "confidence": 0.7042558789253235,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 390,
+    "x": 644.3894653320312,
+    "y": 652.7914428710938,
+    "confidence": 0.6934177875518799,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 391,
+    "x": 675.1633911132812,
+    "y": 649.2720336914062,
+    "confidence": 0.7132185101509094,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 392,
+    "x": 706.299560546875,
+    "y": 647.442138671875,
+    "confidence": 0.7081224322319031,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 393,
+    "x": 721.494873046875,
+    "y": 646.8212890625,
+    "confidence": 0.6996882557868958,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 394,
+    "x": 748.9689331054688,
+    "y": 643.1688232421875,
+    "confidence": 0.6942635178565979,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 395,
+    "x": 775.048828125,
+    "y": 640.203857421875,
+    "confidence": 0.7259132266044617,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 396,
+    "x": 787.6171264648438,
+    "y": 638.2781982421875,
+    "confidence": 0.728646457195282,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 397,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 398,
+    "x": 838.085205078125,
+    "y": 632.1015625,
+    "confidence": 0.6913841366767883,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 399,
+    "x": 849.1090087890625,
+    "y": 631.646728515625,
+    "confidence": 0.7062596678733826,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 400,
+    "x": 869.1627197265625,
+    "y": 628.3756103515625,
+    "confidence": 0.7090274095535278,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 401,
+    "x": 891.7445068359375,
+    "y": 624.9635009765625,
+    "confidence": 0.7225080728530884,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 402,
+    "x": 902.1611328125,
+    "y": 624.25390625,
+    "confidence": 0.7251021265983582,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 403,
+    "x": 922.6632080078125,
+    "y": 622.9853515625,
+    "confidence": 0.8646374344825745,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 404,
+    "x": 941.348388671875,
+    "y": 619.6671142578125,
+    "confidence": 0.7477542757987976,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 405,
+    "x": 949.8057861328125,
+    "y": 617.8570556640625,
+    "confidence": 0.7507086992263794,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 406,
+    "x": 967.2572631835938,
+    "y": 615.193359375,
+    "confidence": 0.7518126368522644,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 407,
+    "x": 984.9036865234375,
+    "y": 613.6357421875,
+    "confidence": 0.7362878322601318,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 408,
+    "x": 993.1846923828125,
+    "y": 613.0501098632812,
+    "confidence": 0.8825136423110962,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 409,
+    "x": 1009.1844482421875,
+    "y": 610.6033935546875,
+    "confidence": 0.7842212915420532,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 410,
+    "x": 1023.7235107421875,
+    "y": 608.1090087890625,
+    "confidence": 0.7142646312713623,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 411,
+    "x": 1031.30078125,
+    "y": 607.2481689453125,
+    "confidence": 0.8968388438224792,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 412,
+    "x": 1045.19775390625,
+    "y": 605.8843994140625,
+    "confidence": 0.8576794266700745,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 413,
+    "x": 1059.07275390625,
+    "y": 604.572021484375,
+    "confidence": 0.8870158195495605,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 414,
+    "x": 1064.8023681640625,
+    "y": 603.403076171875,
+    "confidence": 0.8794612288475037,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 415,
+    "x": 1076.6324462890625,
+    "y": 601.0865478515625,
+    "confidence": 0.875177800655365,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 416,
+    "x": 1088.2945556640625,
+    "y": 599.619384765625,
+    "confidence": 0.8207903504371643,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 417,
+    "x": 1093.228515625,
+    "y": 599.11962890625,
+    "confidence": 0.7491359710693359,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 418,
+    "x": 1103.3262939453125,
+    "y": 597.6859130859375,
+    "confidence": 0.7239885926246643,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 419,
+    "x": 1104.6771240234375,
+    "y": 596.26123046875,
+    "confidence": 0.600830614566803,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 420,
+    "x": 1102.31640625,
+    "y": 595.201171875,
+    "confidence": 0.6052771806716919,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 421,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 422,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 423,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 424,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 425,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 426,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 427,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 428,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 429,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 430,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 431,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 432,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 433,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 434,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 435,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 436,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 437,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 438,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 439,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 440,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 441,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 442,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 443,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 444,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 445,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 446,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 447,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 448,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 449,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 450,
+    "x": 977.0884399414062,
+    "y": 571.4268798828125,
+    "confidence": 0.5651358962059021,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 451,
+    "x": 973.5999755859375,
+    "y": 572.8759765625,
+    "confidence": 0.6787870526313782,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 452,
+    "x": 969.0914306640625,
+    "y": 572.9385986328125,
+    "confidence": 0.7017977833747864,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 453,
+    "x": 967.4617919921875,
+    "y": 572.5219116210938,
+    "confidence": 0.5829019546508789,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 454,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 455,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 456,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 457,
+    "x": 1097.23291015625,
+    "y": 576.15185546875,
+    "confidence": 0.5910400748252869,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 458,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 459,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 460,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 461,
+    "x": 910.1756591796875,
+    "y": 539.4803466796875,
+    "confidence": 0.652000367641449,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 462,
+    "x": 907.5924682617188,
+    "y": 537.552978515625,
+    "confidence": 0.6903303861618042,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 463,
+    "x": 900.63671875,
+    "y": 533.3487548828125,
+    "confidence": 0.7595219016075134,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 464,
+    "x": 894.1827392578125,
+    "y": 529.2638549804688,
+    "confidence": 0.7606678009033203,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 465,
+    "x": 890.611083984375,
+    "y": 527.76708984375,
+    "confidence": 0.7705338001251221,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 466,
+    "x": 883.794677734375,
+    "y": 524.5971069335938,
+    "confidence": 0.8457686901092529,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 467,
+    "x": 877.7619018554688,
+    "y": 521.1072998046875,
+    "confidence": 0.7596849799156189,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 468,
+    "x": 874.7855834960938,
+    "y": 519.916748046875,
+    "confidence": 0.770348846912384,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 469,
+    "x": 868.88525390625,
+    "y": 517.71142578125,
+    "confidence": 0.8275979161262512,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 470,
+    "x": 863.864501953125,
+    "y": 515.60546875,
+    "confidence": 0.8029419779777527,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 471,
+    "x": 860.882568359375,
+    "y": 514.6380615234375,
+    "confidence": 0.875527024269104,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 472,
+    "x": 855.620361328125,
+    "y": 512.9808349609375,
+    "confidence": 0.8396176099777222,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 473,
+    "x": 850.5487060546875,
+    "y": 511.5627746582031,
+    "confidence": 0.8187603950500488,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 474,
+    "x": 848.0030517578125,
+    "y": 511.08502197265625,
+    "confidence": 0.8750852346420288,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 475,
+    "x": 843.09130859375,
+    "y": 509.55999755859375,
+    "confidence": 0.8560605049133301,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 476,
+    "x": 837.705322265625,
+    "y": 507.73675537109375,
+    "confidence": 0.8773365020751953,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 477,
+    "x": 835.0794677734375,
+    "y": 507.0343017578125,
+    "confidence": 0.8608086705207825,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 478,
+    "x": 830.2620849609375,
+    "y": 505.75030517578125,
+    "confidence": 0.8582622408866882,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 479,
+    "x": 825.4383544921875,
+    "y": 504.9647521972656,
+    "confidence": 0.8534859418869019,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 480,
+    "x": 822.8203735351562,
+    "y": 504.306396484375,
+    "confidence": 0.8283015489578247,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 481,
+    "x": 818.7247314453125,
+    "y": 503.74169921875,
+    "confidence": 0.8644917011260986,
+    "source": "accepted_detection",
+    "interpolated": false
+  }
+]
