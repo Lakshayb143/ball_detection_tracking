@@ -61,11 +61,44 @@ Latest eval run: `outputs/airborne_eval_v5/` (detections from `detections_v5/`)
 Pose features precomputed, weighted-score rule supports them, but currently
 using trajectory-only (pose not wired into feature extraction).
 
-**On-ground tracking: in progress.** See `TODO.md` for active task tracker.
+**On-ground tracking: v6 green-filter experiments (May 2026).**
 
-Current tracker: `ball_outlier_interpolator_v5.py` (KF + Mahalanobis gate).
-Best clip1 result with RANSAC v2 online10: TP=378, Missed=44, FP=48, No-GT=10,
-F1=0.8915. Run: `clip1_fresh_runs/v5_then_ransac_v2_online10__clip1/`.
+Baseline: `ball_outlier_interpolator_v5.py` (KF + Mahalanobis gate).
+Best: TP=378, Missed=44, FP=48, No-GT=10, F1=0.8915. 
+Run: `clip1_fresh_runs/v5_then_ransac_v2_online10__clip1/`.
+
+**v6 experiments: green-ground rejection for interpolated positions.**
+
+Rationale: analysis of v5 FPs showed many come from KF-interpolated positions
+landing on empty grass (ball ocluded by field geometry or simply not detected).
+Approach: when interpolated position lands on grass-colored pixels (HSV h∈35–85,
+s≥40, v∈40–200), suppress it.
+
+Variants tested:
+- **v6** (80% full 20×20 bbox): 57 rejections → TP=362, Missed=94, FP=18, F1=0.8715
+- **v6_1** (80% center 10×10): 59 rejections → TP=362, Missed=96, FP=12, F1=0.8712
+- **v6_2** (95% full 20×20): 57 rejections → TP=362, Missed=94, FP=14, F1=0.8715
+- **v6_3** (95% adaptive crop, sized from last accepted detection): 51 rejections 
+  → TP=363, Missed=89, FP=18, F1=0.8715
+
+Best: **v6_3** (adaptive crop radius). Still 0.02 F1 below v5 baseline — FP 
+reduction (48→18) cannot offset the miss regression (44→89). Root cause: ball 
+is ~10px diameter; even a 20–26px adaptive crop is mostly grass when ball is 
+present. Color-based discrimination at this bbox scale is too weak. The filter 
+is removing valid interpolations alongside the FPs.
+
+**Diagnostic findings:**
+- v5 has 48 FP (GT frames). v6_3 rejects 51 interpolated positions, of which ~40 
+  are genuine FPs on grass but ~11 are valid interpolations where the ball is 
+  too small relative to the search window.
+- 89 misses in v6_3 (vs 44 in v5): mostly cascades from rejected interpolations 
+  disrupting the KF track in the subsequent frames.
+- Visual inspection: FP and miss frames saved in `v6_3-visuals/fps/` (18 frames) 
+  and `v6_3-visuals/misses/` (89 frames) for manual review.
+
+**Conclusion:** green filter approach is a dead end at current ball detection 
+scale. Next direction: diagnose the 48 v5 FPs directly rather than trying to 
+filter them blindly.
 
 **Version history note:** `ball_outlier_interpolator_v4_no_interpolation.py` was
 an experiment (previously named v5) that stripped KF from v4 to isolate its
@@ -284,17 +317,22 @@ Remote: Tesla T4 GPU, CUDA available.
   Two state machine fixes applied (cooldown + landing streak=2). Remaining FPs
   are mostly GT labeling gaps, not system errors.
 
-- Ground tracking: active work in `TODO.md`. Next: benchmark v5 (v4 + frame
-  index fix + reset spatial cap) against v4+RANSAC baseline (369/32/69/10).
+- Ground tracking: v5 baseline TP=378, Missed=44, FP=48, F1=0.8915 is current best.
+  v6 family (green filter) does not improve; F1 drops to 0.8715. Next: analyze 
+  the 48 v5 FPs to identify alternate improvement direction.
 
 - Ground tracker benchmark command:
   ```bash
+  uv run python ball_outlier_interpolator_v5.py --video clips/clip1.mp4 \
+      --output-json clip1_v5.json --output-video clip1_v5.mp4
   uv run scripts/benchmark_physics_ransac_v2_clip1.py \
-      --tracker_json <output.json> \
+      --tracker_json clip1_v5.json \
       --airborne_json ground_truths/clip1_actions.json \
-      --run_name <run_name> \
+      --run_name my_run_name \
       --online_lookahead_frames 10
   ```
 
-- Metrics logged to: `ball_detection_metrics.csv`
+- Metrics logged to: `ball_detection_metrics.csv` (all variants)
+- Visualizations: `v6_3-visuals/fps/` (18 FP frames), `v6_3-visuals/misses/` 
+  (89 miss frames) show ground-truth (green) and predictions (red) for manual review.
 - Active task tracker: `TODO.md`
