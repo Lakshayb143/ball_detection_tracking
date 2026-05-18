@@ -25,6 +25,12 @@ france_vs_argentina/
 clips
 rf-detr
 coco_detections/
+FootAndBall/
 *.tar
 *.pth
 *.pt
+*.jpg
+*.mp4
+*.avi
+*.png
+FootAndBall

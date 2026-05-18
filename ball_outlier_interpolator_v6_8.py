@@ -15,8 +15,8 @@ from rfdetr import RFDETRMedium
 MODEL_PATH = "checkpoints/ball_samy_1120.pth"
 PLAYER_MODEL_PATH = "checkpoints/player.pth"
 VIDEO_PATH = "/home/lakshay/lx/ball_detection_tracking/clips/clip1.mp4"
-OUTPUT_PATH = "/home/lakshay/lx/ball_detection_tracking/clip1_output_v6_6.mp4"
-DETECTION_JSON_PATH = "/home/lakshay/lx/ball_detection_tracking/clip1_v6_6.json"
+OUTPUT_PATH = "/home/lakshay/lx/ball_detection_tracking/clip1_output_v6_8.mp4"
+DETECTION_JSON_PATH = "/home/lakshay/lx/ball_detection_tracking/clip1_v6_8.json"
 ACTIONS_JSON_PATH = "/home/lakshay/lx/ball_detection_tracking/ground_truths/clip1_actions.json"
 
 CONFIDENCE = 0.01
@@ -63,6 +63,12 @@ SAT_CROP_FALLBACK_RADIUS = 10.0    # used until first accepted detection seen
 # shows the ball barely moved (<5px), zero velocity before interpolating.
 ENABLE_STATIONARY_BALL_DETECTION = True
 STATIONARY_THRESHOLD_PX = 5.0  # if last movement < this, ball is stationary
+
+# V6_8: cap extrapolation distance during gaps.
+# If KF predicts a position too far from last known position, reject interpolation.
+# Catches big drift FPs where KF extrapolates in wrong direction.
+ENABLE_EXTRAPOLATION_CAP = True
+EXTRAPOLATION_MAX_DISTANCE_PX = 100.0  # reject if interpolation > this from last_position
 
 
 # ============================================================
@@ -344,6 +350,7 @@ class VideoProcessor:
         self.reset_rejections = 0
         self.saturation_rejections = 0
         self.stationary_ball_detections = 0
+        self.extrapolation_rejections = 0
 
         # V6_5: tracks crop radius from last accepted detection bbox
         self.last_ball_crop_radius = SAT_CROP_FALLBACK_RADIUS
@@ -457,6 +464,18 @@ class VideoProcessor:
                 self.outlier_confirmer.reset()
                 print(f"Frame {frame_count}: track lost - gap exceeded {max_gap} frames")
                 return None, False, None
+
+            # V6_8: check extrapolation distance cap
+            if ENABLE_EXTRAPOLATION_CAP and self.last_position is not None and predicted_pos is not None:
+                dist_from_last = float(np.linalg.norm(predicted_pos - self.last_position))
+                if dist_from_last > EXTRAPOLATION_MAX_DISTANCE_PX:
+                    print(
+                        f"Frame {frame_count}: EXTRAPOLATION REJECT at {predicted_pos.round(1)} "
+                        f"(distance {dist_from_last:.0f}px > {EXTRAPOLATION_MAX_DISTANCE_PX}px)"
+                    )
+                    self.extrapolation_rejections += 1
+                    return None, False, None
+
             print(
                 f"Frame {frame_count}: INTERPOLATED at {predicted_pos.round(1)} "
                 f"(gap={self.frames_since_detection}/{max_gap})"
@@ -646,6 +665,10 @@ class VideoProcessor:
         print(
             f"V6_6 stationary ball: detected {self.stationary_ball_detections} stationary position(s) "
             f"(zeroed velocity, threshold={STATIONARY_THRESHOLD_PX}px)"
+        )
+        print(
+            f"V6_8 extrapolation cap: rejected {self.extrapolation_rejections} interpolated position(s) "
+            f"(max distance={EXTRAPOLATION_MAX_DISTANCE_PX}px)"
         )
         print(f"Detection JSON written to {DETECTION_JSON_PATH}")
 

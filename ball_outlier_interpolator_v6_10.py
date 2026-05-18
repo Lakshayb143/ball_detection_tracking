@@ -15,8 +15,8 @@ from rfdetr import RFDETRMedium
 MODEL_PATH = "checkpoints/ball_samy_1120.pth"
 PLAYER_MODEL_PATH = "checkpoints/player.pth"
 VIDEO_PATH = "/home/lakshay/lx/ball_detection_tracking/clips/clip1.mp4"
-OUTPUT_PATH = "/home/lakshay/lx/ball_detection_tracking/clip1_output_v6_6.mp4"
-DETECTION_JSON_PATH = "/home/lakshay/lx/ball_detection_tracking/clip1_v6_6.json"
+OUTPUT_PATH = "/home/lakshay/lx/ball_detection_tracking/clip1_output_v6_10.mp4"
+DETECTION_JSON_PATH = "/home/lakshay/lx/ball_detection_tracking/clip1_v6_10.json"
 ACTIONS_JSON_PATH = "/home/lakshay/lx/ball_detection_tracking/ground_truths/clip1_actions.json"
 
 CONFIDENCE = 0.01
@@ -54,9 +54,14 @@ RESET_MAX_DISTANCE = 300
 # Reject if crop has high average saturation (>100), accept if low (<80).
 ENABLE_SATURATION_FILTER = True
 SATURATION_REJECT_THRESHOLD = 100  # reject if avg saturation > this
-SATURATION_ACCEPT_THRESHOLD = 80   # accept if avg saturation < this
 SAT_CROP_MARGIN = 1.5              # crop radius = margin × (max(bw, bh) / 2)
 SAT_CROP_FALLBACK_RADIUS = 10.0    # used until first accepted detection seen
+
+# V6_10: color variance check for uniform patches (no ball).
+# When crop has very low color variance, it's uniform empty grass (no ball visible).
+# Combine with saturation: reject if HIGH saturation OR LOW color variance.
+ENABLE_COLOR_VARIANCE_CHECK = True
+COLOR_VARIANCE_REJECT_THRESHOLD = 15.0  # reject if color std dev < this (uniform patch)
 
 # V6_6: detect stationary ball and zero velocity during gaps.
 # When player stops the ball, KF keeps extrapolating. If the last detection
@@ -280,10 +285,10 @@ def detection_inside_any_player(det_center, player_bboxes) -> bool:
 
 
 # ============================================================
-# V6_5: saturation-based filter for interpolated positions
+# V6_5+V6_10: saturation + color variance filter for interpolated positions
 # ============================================================
-def is_high_saturation(frame: np.ndarray, position, crop_radius: float) -> bool:
-    """Return True if crop has high average saturation (likely FP on colored object)."""
+def should_reject_interpolation(frame: np.ndarray, position, crop_radius: float) -> bool:
+    """Return True if should reject interpolation (high saturation OR low color variance)."""
     x, y = int(round(float(position[0]))), int(round(float(position[1])))
     h, w = frame.shape[:2]
     half = max(1, int(round(crop_radius)))
@@ -292,10 +297,23 @@ def is_high_saturation(frame: np.ndarray, position, crop_radius: float) -> bool:
     patch = frame[y1:y2, x1:x2]
     if patch.size == 0:
         return False
+
+    # Check saturation
     hsv = cv2.cvtColor(patch, cv2.COLOR_BGR2HSV)
     saturation = hsv[:, :, 1].astype(float)
     avg_saturation = float(np.mean(saturation))
-    return avg_saturation > SATURATION_REJECT_THRESHOLD
+
+    if avg_saturation > SATURATION_REJECT_THRESHOLD:
+        return True  # High saturation → colored object → reject
+
+    # Check color variance (uniformity)
+    if ENABLE_COLOR_VARIANCE_CHECK:
+        # Calculate color variance across all channels in BGR
+        color_std = float(np.std(patch.astype(float)))
+        if color_std < COLOR_VARIANCE_REJECT_THRESHOLD:
+            return True  # Very uniform color → no ball → reject
+
+    return False
 
 
 # ============================================================
@@ -598,13 +616,13 @@ class VideoProcessor:
                 bw, bh = float(x2 - x1), float(y2 - y1)
                 self.last_ball_crop_radius = max(bw, bh) / 2.0 * SAT_CROP_MARGIN
 
-            # V6_5: suppress interpolated positions with high saturation (likely FP on colored object).
+            # V6_5+V6_10: suppress interpolated positions with high saturation OR low color variance.
             if ENABLE_SATURATION_FILTER and is_interpolated and output_position is not None:
-                if is_high_saturation(frame, output_position, self.last_ball_crop_radius):
+                if should_reject_interpolation(frame, output_position, self.last_ball_crop_radius):
                     print(
-                        f"Frame {frame_count}: SAT REJECT interpolated at "
+                        f"Frame {frame_count}: COLOR REJECT interpolated at "
                         f"{output_position.round(1)} "
-                        f"(crop_r={self.last_ball_crop_radius:.1f}px)"
+                        f"(crop_r={self.last_ball_crop_radius:.1f}px, high_sat or low_var)"
                     )
                     self.saturation_rejections += 1
                     output_position = None

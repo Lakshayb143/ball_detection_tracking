@@ -97,11 +97,11 @@
   },
   {
     "frame_idx": 13,
-    "x": 1706.1835791843116,
-    "y": 537.9068877693134,
+    "x": null,
+    "y": null,
     "confidence": null,
-    "source": "interpolation",
-    "interpolated": true
+    "source": "none",
+    "interpolated": false
   },
   {
     "frame_idx": 14,
@@ -113,11 +113,11 @@
   },
   {
     "frame_idx": 15,
-    "x": 1718.1318593144067,
-    "y": 545.3345235732758,
+    "x": null,
+    "y": null,
     "confidence": null,
-    "source": "interpolation",
-    "interpolated": true
+    "source": "none",
+    "interpolated": false
   },
   {
     "frame_idx": 16,
@@ -385,19 +385,19 @@
   },
   {
     "frame_idx": 49,
-    "x": 1245.6219153113955,
-    "y": 503.6845165576184,
+    "x": null,
+    "y": null,
     "confidence": null,
-    "source": "interpolation",
-    "interpolated": true
+    "source": "none",
+    "interpolated": false
   },
   {
     "frame_idx": 50,
-    "x": 1239.8185038959953,
-    "y": 510.54573170283027,
+    "x": null,
+    "y": null,
     "confidence": null,
-    "source": "interpolation",
-    "interpolated": true
+    "source": "none",
+    "interpolated": false
   },
   {
     "frame_idx": 51,
@@ -697,11 +697,11 @@
   },
   {
     "frame_idx": 88,
-    "x": 960.0650887018999,
-    "y": 698.0008928948758,
+    "x": null,
+    "y": null,
     "confidence": null,
-    "source": "interpolation",
-    "interpolated": true
+    "source": "none",
+    "interpolated": false
   },
   {
     "frame_idx": 89,
@@ -1097,107 +1097,107 @@
   },
   {
     "frame_idx": 138,
-    "x": 1439.9620377140448,
-    "y": 362.098647640424,
+    "x": null,
+    "y": null,
     "confidence": null,
-    "source": "interpolation",
-    "interpolated": true
+    "source": "none",
+    "interpolated": false
   },
   {
     "frame_idx": 139,
-    "x": 1432.6624460500122,
-    "y": 361.22242298972134,
+    "x": null,
+    "y": null,
     "confidence": null,
-    "source": "interpolation",
-    "interpolated": true
+    "source": "none",
+    "interpolated": false
   },
   {
     "frame_idx": 140,
-    "x": 1425.359877487782,
-    "y": 361.1853408026154,
+    "x": null,
+    "y": null,
     "confidence": null,
-    "source": "interpolation",
-    "interpolated": true
+    "source": "none",
+    "interpolated": false
   },
   {
     "frame_idx": 141,
-    "x": 1418.054332027354,
-    "y": 361.98740107910623,
+    "x": null,
+    "y": null,
     "confidence": null,
-    "source": "interpolation",
-    "interpolated": true
+    "source": "none",
+    "interpolated": false
   },
   {
     "frame_idx": 142,
-    "x": 1410.745809668728,
-    "y": 363.6286038191938,
+    "x": null,
+    "y": null,
     "confidence": null,
-    "source": "interpolation",
-    "interpolated": true
+    "source": "none",
+    "interpolated": false
   },
   {
     "frame_idx": 143,
-    "x": 1403.4343104119043,
-    "y": 366.1089490228781,
+    "x": null,
+    "y": null,
     "confidence": null,
-    "source": "interpolation",
-    "interpolated": true
+    "source": "none",
+    "interpolated": false
   },
   {
     "frame_idx": 144,
-    "x": 1396.119834256883,
-    "y": 369.4284366901591,
+    "x": null,
+    "y": null,
     "confidence": null,
-    "source": "interpolation",
-    "interpolated": true
+    "source": "none",
+    "interpolated": false
   },
   {
     "frame_idx": 145,
-    "x": 1388.8023812036638,
-    "y": 373.5870668210369,
+    "x": null,
+    "y": null,
     "confidence": null,
-    "source": "interpolation",
-    "interpolated": true
+    "source": "none",
+    "interpolated": false
   },
   {
     "frame_idx": 146,
-    "x": 1381.4819512522467,
-    "y": 378.5848394155114,
+    "x": null,
+    "y": null,
     "confidence": null,
-    "source": "interpolation",
-    "interpolated": true
+    "source": "none",
+    "interpolated": false
   },
   {
     "frame_idx": 147,
-    "x": 1374.158544402632,
-    "y": 384.4217544735826,
+    "x": null,
+    "y": null,
     "confidence": null,
-    "source": "interpolation",
-    "interpolated": true
+    "source": "none",
+    "interpolated": false
   },
   {
     "frame_idx": 148,
-    "x": 1366.8321606548195,
-    "y": 391.0978119952506,
+    "x": null,
+    "y": null,
     "confidence": null,
-    "source": "interpolation",
-    "interpolated": true
+    "source": "none",
+    "interpolated": false
   },
   {
     "frame_idx": 149,
-    "x": 1359.5028000088091,
-    "y": 398.6130119805153,
+    "x": null,
+    "y": null,
     "confidence": null,
-    "source": "interpolation",
-    "interpolated": true
+    "source": "none",
+    "interpolated": false
   },
   {
     "frame_idx": 150,
-    "x": 1352.170462464601,
-    "y": 406.96735442937677,
+    "x": null,
+    "y": null,
     "confidence": null,
-    "source": "interpolation",
-    "interpolated": true
+    "source": "none",
+    "interpolated": false
   },
   {
     "frame_idx": 151,
@@ -1217,107 +1217,107 @@
   },
   {
     "frame_idx": 153,
-    "x": null,
-    "y": null,
+    "x": 1251.499267578125,
+    "y": 232.53476888020833,
     "confidence": null,
-    "source": "none",
-    "interpolated": false
+    "source": "interpolation",
+    "interpolated": true
   },
   {
     "frame_idx": 154,
-    "x": null,
-    "y": null,
+    "x": 1251.499267578125,
+    "y": 232.97310221354167,
     "confidence": null,
-    "source": "none",
-    "interpolated": false
+    "source": "interpolation",
+    "interpolated": true
   },
   {
     "frame_idx": 155,
-    "x": null,
-    "y": null,
+    "x": 1251.499267578125,
+    "y": 233.411435546875,
     "confidence": null,
-    "source": "none",
-    "interpolated": false
+    "source": "interpolation",
+    "interpolated": true
   },
   {
     "frame_idx": 156,
-    "x": null,
-    "y": null,
+    "x": 1251.499267578125,
+    "y": 233.84976888020833,
     "confidence": null,
-    "source": "none",
-    "interpolated": false
+    "source": "interpolation",
+    "interpolated": true
   },
   {
     "frame_idx": 157,
-    "x": null,
-    "y": null,
+    "x": 1251.499267578125,
+    "y": 234.28810221354166,
     "confidence": null,
-    "source": "none",
-    "interpolated": false
+    "source": "interpolation",
+    "interpolated": true
   },
   {
     "frame_idx": 158,
-    "x": null,
-    "y": null,
+    "x": 1251.499267578125,
+    "y": 234.726435546875,
     "confidence": null,
-    "source": "none",
-    "interpolated": false
+    "source": "interpolation",
+    "interpolated": true
   },
   {
     "frame_idx": 159,
-    "x": null,
-    "y": null,
+    "x": 1251.499267578125,
+    "y": 235.16476888020833,
     "confidence": null,
-    "source": "none",
-    "interpolated": false
+    "source": "interpolation",
+    "interpolated": true
   },
   {
     "frame_idx": 160,
-    "x": null,
-    "y": null,
+    "x": 1251.499267578125,
+    "y": 235.60310221354166,
     "confidence": null,
-    "source": "none",
-    "interpolated": false
+    "source": "interpolation",
+    "interpolated": true
   },
   {
     "frame_idx": 161,
-    "x": null,
-    "y": null,
+    "x": 1251.499267578125,
+    "y": 236.041435546875,
     "confidence": null,
-    "source": "none",
-    "interpolated": false
+    "source": "interpolation",
+    "interpolated": true
   },
   {
     "frame_idx": 162,
-    "x": null,
-    "y": null,
+    "x": 1251.499267578125,
+    "y": 236.47976888020833,
     "confidence": null,
-    "source": "none",
-    "interpolated": false
+    "source": "interpolation",
+    "interpolated": true
   },
   {
     "frame_idx": 163,
-    "x": null,
-    "y": null,
+    "x": 1251.499267578125,
+    "y": 236.91810221354166,
     "confidence": null,
-    "source": "none",
-    "interpolated": false
+    "source": "interpolation",
+    "interpolated": true
   },
   {
     "frame_idx": 164,
-    "x": null,
-    "y": null,
+    "x": 1251.499267578125,
+    "y": 237.356435546875,
     "confidence": null,
-    "source": "none",
-    "interpolated": false
+    "source": "interpolation",
+    "interpolated": true
   },
   {
     "frame_idx": 165,
-    "x": null,
-    "y": null,
+    "x": 1251.499267578125,
+    "y": 238.671435546875,
     "confidence": null,
-    "source": "none",
-    "interpolated": false
+    "source": "interpolation",
+    "interpolated": true
   },
   {
     "frame_idx": 166,
@@ -1905,83 +1905,83 @@
   },
   {
     "frame_idx": 239,
-    "x": 1210.747836937256,
-    "y": 361.9720028594754,
+    "x": null,
+    "y": null,
     "confidence": null,
-    "source": "interpolation",
-    "interpolated": true
+    "source": "none",
+    "interpolated": false
   },
   {
     "frame_idx": 240,
-    "x": 1196.1821783562561,
-    "y": 359.024456513157,
+    "x": null,
+    "y": null,
     "confidence": null,
-    "source": "interpolation",
-    "interpolated": true
+    "source": "none",
+    "interpolated": false
   },
   {
     "frame_idx": 241,
-    "x": 1181.6099290441834,
-    "y": 356.9388772046552,
+    "x": null,
+    "y": null,
     "confidence": null,
-    "source": "interpolation",
-    "interpolated": true
+    "source": "none",
+    "interpolated": false
   },
   {
     "frame_idx": 242,
-    "x": 1167.0310890010376,
-    "y": 355.71526493397005,
+    "x": null,
+    "y": null,
     "confidence": null,
-    "source": "interpolation",
-    "interpolated": true
+    "source": "none",
+    "interpolated": false
   },
   {
     "frame_idx": 243,
-    "x": 1152.4456582268188,
-    "y": 355.3536197011015,
+    "x": null,
+    "y": null,
     "confidence": null,
-    "source": "interpolation",
-    "interpolated": true
+    "source": "none",
+    "interpolated": false
   },
   {
     "frame_idx": 244,
-    "x": 1137.853636721527,
-    "y": 355.8539415060495,
+    "x": null,
+    "y": null,
     "confidence": null,
-    "source": "interpolation",
-    "interpolated": true
+    "source": "none",
+    "interpolated": false
   },
   {
     "frame_idx": 245,
-    "x": 1123.255024485162,
-    "y": 357.2162303488142,
+    "x": null,
+    "y": null,
     "confidence": null,
-    "source": "interpolation",
-    "interpolated": true
+    "source": "none",
+    "interpolated": false
   },
   {
     "frame_idx": 246,
-    "x": 1108.6498215177241,
-    "y": 359.44048622939545,
+    "x": null,
+    "y": null,
     "confidence": null,
-    "source": "interpolation",
-    "interpolated": true
+    "source": "none",
+    "interpolated": false
   },
   {
     "frame_idx": 247,
-    "x": 1094.0380278192133,
-    "y": 362.5267091477933,
+    "x": null,
+    "y": null,
     "confidence": null,
-    "source": "interpolation",
-    "interpolated": true
+    "source": "none",
+    "interpolated": false
   },
   {
     "frame_idx": 248,
-    "x": 1079.4196433896293,
-    "y": 366.4748991040078,
+    "x": null,
+    "y": null,
     "confidence": null,
-    "source": "interpolation",
-    "interpolated": true
+    "source": "none",
+    "interpolated": false
   },
   {
     "frame_idx": 249,
@@ -2337,11 +2337,11 @@
   },
   {
     "frame_idx": 293,
-    "x": 525.8956327901211,
-    "y": 613.5617738622342,
+    "x": null,
+    "y": null,
     "confidence": null,
-    "source": "interpolation",
-    "interpolated": true
+    "source": "none",
+    "interpolated": false
   },
   {
     "frame_idx": 294,
@@ -2601,27 +2601,27 @@
   },
   {
     "frame_idx": 326,
-    "x": null,
-    "y": null,
+    "x": 448.21863539508036,
+    "y": 758.1238527556458,
     "confidence": null,
-    "source": "none",
-    "interpolated": false
+    "source": "interpolation",
+    "interpolated": true
   },
   {
     "frame_idx": 327,
-    "x": null,
-    "y": null,
+    "x": 448.2197476180953,
+    "y": 758.5588044724212,
     "confidence": null,
-    "source": "none",
-    "interpolated": false
+    "source": "interpolation",
+    "interpolated": true
   },
   {
     "frame_idx": 328,
-    "x": null,
-    "y": null,
+    "x": 448.22085984111027,
+    "y": 758.9937561891967,
     "confidence": null,
-    "source": "none",
-    "interpolated": false
+    "source": "interpolation",
+    "interpolated": true
   },
   {
     "frame_idx": 329,
@@ -2713,19 +2713,19 @@
   },
   {
     "frame_idx": 340,
-    "x": 306.1976277286218,
-    "y": 702.7735766458018,
+    "x": null,
+    "y": null,
     "confidence": null,
-    "source": "interpolation",
-    "interpolated": true
+    "source": "none",
+    "interpolated": false
   },
   {
     "frame_idx": 341,
-    "x": 298.6321827797822,
-    "y": 706.6401458619689,
+    "x": null,
+    "y": null,
     "confidence": null,
-    "source": "interpolation",
-    "interpolated": true
+    "source": "none",
+    "interpolated": false
   },
   {
     "frame_idx": 342,
@@ -2745,11 +2745,11 @@
   },
   {
     "frame_idx": 344,
-    "x": 288.93405099939497,
-    "y": 693.4859647701828,
+    "x": null,
+    "y": null,
     "confidence": null,
-    "source": "interpolation",
-    "interpolated": true
+    "source": "none",
+    "interpolated": false
   },
   {
     "frame_idx": 345,
@@ -2777,11 +2777,11 @@
   },
   {
     "frame_idx": 348,
-    "x": 295.0268688244948,
-    "y": 681.445270048593,
+    "x": null,
+    "y": null,
     "confidence": null,
-    "source": "interpolation",
-    "interpolated": true
+    "source": "none",
+    "interpolated": false
   },
   {
     "frame_idx": 349,
@@ -3385,11 +3385,11 @@
   },
   {
     "frame_idx": 424,
-    "x": 1174.134134897878,
-    "y": 642.1683398092633,
+    "x": null,
+    "y": null,
     "confidence": null,
-    "source": "interpolation",
-    "interpolated": true
+    "source": "none",
+    "interpolated": false
   },
   {
     "frame_idx": 425,
@@ -3409,59 +3409,59 @@
   },
   {
     "frame_idx": 427,
-    "x": 1206.4389162799187,
-    "y": 670.140687118808,
+    "x": null,
+    "y": null,
     "confidence": null,
-    "source": "interpolation",
-    "interpolated": true
+    "source": "none",
+    "interpolated": false
   },
   {
     "frame_idx": 428,
-    "x": 1217.2260888746812,
-    "y": 681.1373064574179,
+    "x": null,
+    "y": null,
     "confidence": null,
-    "source": "interpolation",
-    "interpolated": true
+    "source": "none",
+    "interpolated": false
   },
   {
     "frame_idx": 429,
-    "x": 1228.022717536485,
-    "y": 692.9701775804086,
+    "x": null,
+    "y": null,
     "confidence": null,
-    "source": "interpolation",
-    "interpolated": true
+    "source": "none",
+    "interpolated": false
   },
   {
     "frame_idx": 430,
-    "x": 1238.82880226533,
-    "y": 705.6393004877801,
+    "x": null,
+    "y": null,
     "confidence": null,
-    "source": "interpolation",
-    "interpolated": true
+    "source": "none",
+    "interpolated": false
   },
   {
     "frame_idx": 431,
-    "x": 1249.6443430612162,
-    "y": 719.1446751795324,
+    "x": null,
+    "y": null,
     "confidence": null,
-    "source": "interpolation",
-    "interpolated": true
+    "source": "none",
+    "interpolated": false
   },
   {
     "frame_idx": 432,
-    "x": 1260.4693399241437,
-    "y": 733.4863016556657,
+    "x": null,
+    "y": null,
     "confidence": null,
-    "source": "interpolation",
-    "interpolated": true
+    "source": "none",
+    "interpolated": false
   },
   {
     "frame_idx": 433,
-    "x": 1271.3037928541123,
-    "y": 748.6641799161797,
+    "x": null,
+    "y": null,
     "confidence": null,
-    "source": "interpolation",
-    "interpolated": true
+    "source": "none",
+    "interpolated": false
   },
   {
     "frame_idx": 434,

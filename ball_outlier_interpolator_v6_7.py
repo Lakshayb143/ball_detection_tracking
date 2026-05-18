@@ -15,8 +15,8 @@ from rfdetr import RFDETRMedium
 MODEL_PATH = "checkpoints/ball_samy_1120.pth"
 PLAYER_MODEL_PATH = "checkpoints/player.pth"
 VIDEO_PATH = "/home/lakshay/lx/ball_detection_tracking/clips/clip1.mp4"
-OUTPUT_PATH = "/home/lakshay/lx/ball_detection_tracking/clip1_output_v6_6.mp4"
-DETECTION_JSON_PATH = "/home/lakshay/lx/ball_detection_tracking/clip1_v6_6.json"
+OUTPUT_PATH = "/home/lakshay/lx/ball_detection_tracking/clip1_output_v6_7.mp4"
+DETECTION_JSON_PATH = "/home/lakshay/lx/ball_detection_tracking/clip1_v6_7.json"
 ACTIONS_JSON_PATH = "/home/lakshay/lx/ball_detection_tracking/ground_truths/clip1_actions.json"
 
 CONFIDENCE = 0.01
@@ -48,17 +48,20 @@ GRAVITY_PX_PER_S2 = 789.0
 # travel, so 300px is tight but fair.
 RESET_MAX_DISTANCE = 300
 
-# V6_5: saturation-based rejection for interpolated positions.
-# Blue jerseys and bright yellow sunlit grass have HIGH saturation.
-# White ball + worn grass patches have LOW saturation.
-# Reject if crop has high average saturation (>100), accept if low (<80).
-ENABLE_SATURATION_FILTER = True
-SATURATION_REJECT_THRESHOLD = 100  # reject if avg saturation > this
-SATURATION_ACCEPT_THRESHOLD = 80   # accept if avg saturation < this
-SAT_CROP_MARGIN = 1.5              # crop radius = margin × (max(bw, bh) / 2)
-SAT_CROP_FALLBACK_RADIUS = 10.0    # used until first accepted detection seen
+# V6_3: green-ground rejection using actual ball size from nearby accepted detections.
+# Crop radius = 1.5 × (last accepted ball bbox radius). With the ball filling ~44%
+# of that crop, a 95% green threshold safely separates empty grass from ball-present.
+ENABLE_GREEN_FILTER = True
+GREEN_FILTER_THRESHOLD = 0.85
+GREEN_CROP_MARGIN = 1.5       # crop radius = margin × (max(bw, bh) / 2)
+GREEN_CROP_FALLBACK_RADIUS = 10.0  # used until first accepted detection seen
+# HSV ranges for clip1 grass (OpenCV H in 0-180).
+# H 35-85 covers yellow-green → pure green; S≥40 avoids grays; V 40-200 avoids
+# pure-black shadows and blown-out whites.
+GREEN_HSV_LOWER = (35, 40, 40)
+GREEN_HSV_UPPER = (85, 255, 200)
 
-# V6_6: detect stationary ball and zero velocity during gaps.
+# V6_7: detect stationary ball and zero velocity during gaps.
 # When player stops the ball, KF keeps extrapolating. If the last detection
 # shows the ball barely moved (<5px), zero velocity before interpolating.
 ENABLE_STATIONARY_BALL_DETECTION = True
@@ -280,10 +283,10 @@ def detection_inside_any_player(det_center, player_bboxes) -> bool:
 
 
 # ============================================================
-# V6_5: saturation-based filter for interpolated positions
+# V6_3: green-ground filter with dynamic crop radius
 # ============================================================
-def is_high_saturation(frame: np.ndarray, position, crop_radius: float) -> bool:
-    """Return True if crop has high average saturation (likely FP on colored object)."""
+def is_green_ground(frame: np.ndarray, position, crop_radius: float) -> bool:
+    """Return True if ≥ GREEN_FILTER_THRESHOLD of the crop (sized to the ball) is grass-green."""
     x, y = int(round(float(position[0]))), int(round(float(position[1])))
     h, w = frame.shape[:2]
     half = max(1, int(round(crop_radius)))
@@ -293,9 +296,11 @@ def is_high_saturation(frame: np.ndarray, position, crop_radius: float) -> bool:
     if patch.size == 0:
         return False
     hsv = cv2.cvtColor(patch, cv2.COLOR_BGR2HSV)
-    saturation = hsv[:, :, 1].astype(float)
-    avg_saturation = float(np.mean(saturation))
-    return avg_saturation > SATURATION_REJECT_THRESHOLD
+    lower = np.array(GREEN_HSV_LOWER, dtype=np.uint8)
+    upper = np.array(GREEN_HSV_UPPER, dtype=np.uint8)
+    mask = cv2.inRange(hsv, lower, upper)
+    green_fraction = float(np.count_nonzero(mask)) / float(mask.size)
+    return green_fraction >= GREEN_FILTER_THRESHOLD
 
 
 # ============================================================
@@ -342,13 +347,13 @@ class VideoProcessor:
         self.phase1_rejections = 0
         self.phase1_active_frames = 0
         self.reset_rejections = 0
-        self.saturation_rejections = 0
+        self.green_rejections = 0
         self.stationary_ball_detections = 0
 
-        # V6_5: tracks crop radius from last accepted detection bbox
-        self.last_ball_crop_radius = SAT_CROP_FALLBACK_RADIUS
+        # V6_3: tracks crop radius from last accepted detection bbox
+        self.last_ball_crop_radius = GREEN_CROP_FALLBACK_RADIUS
 
-        # V6_6: tracks previous position to detect stationary ball
+        # V6_7: tracks previous position to detect stationary ball
         self.last_position = None
 
     def _apply_regime(self, frame_count):
@@ -429,13 +434,12 @@ class VideoProcessor:
         return {"center": centers[idx], "sv": filtered[idx : idx + 1], "in_gate": False}
 
     def _step(self, best_detection, frame_count):
-        # V6_6: detect stationary ball before predicting
+        # V6_7: detect stationary ball before predicting
         if self.track_initialized and self.last_position is not None and ENABLE_STATIONARY_BALL_DETECTION:
             current_pos = self.kf.position()
             movement = float(np.linalg.norm(current_pos - self.last_position))
             if movement < STATIONARY_THRESHOLD_PX:
                 # Ball barely moved; zero velocity to prevent extrapolation
-                vel = self.kf.velocity()
                 self.kf.x_hat[2:4] = np.zeros((2, 1))
                 self.stationary_ball_detections += 1
                 print(f"Frame {frame_count}: STATIONARY BALL detected (movement={movement:.1f}px), zeroed velocity")
@@ -592,21 +596,21 @@ class VideoProcessor:
             )
             output_position, is_interpolated, accepted = self._step(best_detection, frame_count)
 
-            # V6_5: update crop radius from accepted detection bbox.
+            # V6_3: update crop radius from accepted detection bbox.
             if accepted is not None and len(accepted.xyxy) > 0:
                 x1, y1, x2, y2 = accepted.xyxy[0]
                 bw, bh = float(x2 - x1), float(y2 - y1)
-                self.last_ball_crop_radius = max(bw, bh) / 2.0 * SAT_CROP_MARGIN
+                self.last_ball_crop_radius = max(bw, bh) / 2.0 * GREEN_CROP_MARGIN
 
-            # V6_5: suppress interpolated positions with high saturation (likely FP on colored object).
-            if ENABLE_SATURATION_FILTER and is_interpolated and output_position is not None:
-                if is_high_saturation(frame, output_position, self.last_ball_crop_radius):
+            # V6_3: suppress interpolated positions that land on green grass.
+            if ENABLE_GREEN_FILTER and is_interpolated and output_position is not None:
+                if is_green_ground(frame, output_position, self.last_ball_crop_radius):
                     print(
-                        f"Frame {frame_count}: SAT REJECT interpolated at "
+                        f"Frame {frame_count}: GREEN REJECT interpolated at "
                         f"{output_position.round(1)} "
                         f"(crop_r={self.last_ball_crop_radius:.1f}px)"
                     )
-                    self.saturation_rejections += 1
+                    self.green_rejections += 1
                     output_position = None
                     is_interpolated = False
 
@@ -640,11 +644,11 @@ class VideoProcessor:
             f"(candidate exceeded {RESET_MAX_DISTANCE}px cap)"
         )
         print(
-            f"V6_5 saturation filter: rejected {self.saturation_rejections} interpolated position(s) "
-            f"(threshold={SATURATION_REJECT_THRESHOLD})"
+            f"V6_3 green filter: rejected {self.green_rejections} interpolated position(s) "
+            f"(threshold={GREEN_FILTER_THRESHOLD:.0%})"
         )
         print(
-            f"V6_6 stationary ball: detected {self.stationary_ball_detections} stationary position(s) "
+            f"V6_7 stationary ball: detected {self.stationary_ball_detections} stationary position(s) "
             f"(zeroed velocity, threshold={STATIONARY_THRESHOLD_PX}px)"
         )
         print(f"Detection JSON written to {DETECTION_JSON_PATH}")
