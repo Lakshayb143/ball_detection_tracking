@@ -1,0 +1,7210 @@
+[
+  {
+    "frame_idx": 1,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 2,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 3,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 4,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 5,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 6,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 7,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 8,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 9,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 10,
+    "x": 993.632080078125,
+    "y": 889.1849975585938,
+    "confidence": 0.5686003565788269,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 11,
+    "x": 993.604248046875,
+    "y": 890.1427001953125,
+    "confidence": 0.6053726077079773,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 12,
+    "x": 993.2393798828125,
+    "y": 890.187255859375,
+    "confidence": 0.5909983515739441,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 13,
+    "x": 993.1544189453125,
+    "y": 890.8321533203125,
+    "confidence": 0.6335756182670593,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 14,
+    "x": 993.358154296875,
+    "y": 891.7534790039062,
+    "confidence": 0.6351061463356018,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 15,
+    "x": 993.3093872070312,
+    "y": 891.789794921875,
+    "confidence": 0.6251525282859802,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 16,
+    "x": 993.4469604492188,
+    "y": 892.0159301757812,
+    "confidence": 0.563144862651825,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 17,
+    "x": 993.97021484375,
+    "y": 893.158203125,
+    "confidence": 0.5520150065422058,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 18,
+    "x": 994.012451171875,
+    "y": 893.3758544921875,
+    "confidence": 0.5406865477561951,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 19,
+    "x": 994.092529296875,
+    "y": 893.8184814453125,
+    "confidence": 0.6097984313964844,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 20,
+    "x": 994.578125,
+    "y": 893.9569091796875,
+    "confidence": 0.6206569075584412,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 21,
+    "x": 994.885498046875,
+    "y": 893.6961669921875,
+    "confidence": 0.6197844743728638,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 22,
+    "x": 995.4620361328125,
+    "y": 893.1419677734375,
+    "confidence": 0.6214038729667664,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 23,
+    "x": 995.882080078125,
+    "y": 892.357177734375,
+    "confidence": 0.6189863085746765,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 24,
+    "x": 996.2026977539062,
+    "y": 891.84326171875,
+    "confidence": 0.6026964783668518,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 25,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 26,
+    "x": 996.9990844726562,
+    "y": 889.4368896484375,
+    "confidence": 0.6295226216316223,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 27,
+    "x": 996.8488159179688,
+    "y": 888.11865234375,
+    "confidence": 0.5702431201934814,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 28,
+    "x": 997.54931640625,
+    "y": 886.2052001953125,
+    "confidence": 0.6516216993331909,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 29,
+    "x": 997.7457275390625,
+    "y": 884.418212890625,
+    "confidence": 0.6407618522644043,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 30,
+    "x": 998.142578125,
+    "y": 883.2526245117188,
+    "confidence": 0.6074392199516296,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 31,
+    "x": 997.2076655711559,
+    "y": 892.5369191809644,
+    "confidence": null,
+    "source": "interpolation",
+    "interpolated": true
+  },
+  {
+    "frame_idx": 32,
+    "x": 999.0645751953125,
+    "y": 876.7093505859375,
+    "confidence": 0.6177651286125183,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 33,
+    "x": 998.7920532226562,
+    "y": 874.22607421875,
+    "confidence": 0.6493387222290039,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 34,
+    "x": 998.5686645507812,
+    "y": 869.412841796875,
+    "confidence": 0.7128884196281433,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 35,
+    "x": 997.8157958984375,
+    "y": 861.8953247070312,
+    "confidence": 0.6887348890304565,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 36,
+    "x": 997.9959716796875,
+    "y": 858.27978515625,
+    "confidence": 0.6750390529632568,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 37,
+    "x": 996.8872680664062,
+    "y": 850.000732421875,
+    "confidence": 0.5629737377166748,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 38,
+    "x": 993.85888671875,
+    "y": 842.6241455078125,
+    "confidence": 0.6511270403862,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 39,
+    "x": 991.08544921875,
+    "y": 838.5634155273438,
+    "confidence": 0.5354733467102051,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 40,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 41,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 42,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 43,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 44,
+    "x": 963.406982421875,
+    "y": 843.8309326171875,
+    "confidence": 0.6605851650238037,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 45,
+    "x": 961.0442504882812,
+    "y": 847.3636474609375,
+    "confidence": 0.6007847785949707,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 46,
+    "x": 962.48095703125,
+    "y": 855.5645751953125,
+    "confidence": 0.5393632650375366,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 47,
+    "x": 972.0205688476562,
+    "y": 858.5371704101562,
+    "confidence": 0.5810858011245728,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 48,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 49,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 50,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 51,
+    "x": 1059.8623046875,
+    "y": 810.8199462890625,
+    "confidence": 0.684071958065033,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 52,
+    "x": 1105.3621826171875,
+    "y": 796.4678344726562,
+    "confidence": 0.7204545140266418,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 53,
+    "x": 1146.82568359375,
+    "y": 784.0186157226562,
+    "confidence": 0.6850711703300476,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 54,
+    "x": 1168.314208984375,
+    "y": 777.3758544921875,
+    "confidence": 0.6542195677757263,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 55,
+    "x": 1205.87548828125,
+    "y": 765.5916137695312,
+    "confidence": 0.7043164968490601,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 56,
+    "x": 1241.8594970703125,
+    "y": 756.4774169921875,
+    "confidence": 0.6837332248687744,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 57,
+    "x": 1258.5291748046875,
+    "y": 752.6239013671875,
+    "confidence": 0.697953462600708,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 58,
+    "x": 1287.084228515625,
+    "y": 743.8350219726562,
+    "confidence": 0.6826058030128479,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 59,
+    "x": 1311.12255859375,
+    "y": 737.03515625,
+    "confidence": 0.6943994164466858,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 60,
+    "x": 1320.866943359375,
+    "y": 733.349853515625,
+    "confidence": 0.7050236463546753,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 61,
+    "x": 1336.61376953125,
+    "y": 729.2354736328125,
+    "confidence": 0.704507052898407,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 62,
+    "x": 1346.3458251953125,
+    "y": 724.9159545898438,
+    "confidence": 0.7697213292121887,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 63,
+    "x": 1349.3271484375,
+    "y": 723.5123291015625,
+    "confidence": 0.7847098112106323,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 64,
+    "x": 1352.704345703125,
+    "y": 720.15771484375,
+    "confidence": 0.7233542203903198,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 65,
+    "x": 1354.5177001953125,
+    "y": 719.190673828125,
+    "confidence": 0.7845759391784668,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 66,
+    "x": 1354.61083984375,
+    "y": 719.561767578125,
+    "confidence": 0.7258765697479248,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 67,
+    "x": 1354.7874755859375,
+    "y": 722.760986328125,
+    "confidence": 0.6934695243835449,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 68,
+    "x": 1358.322998046875,
+    "y": 726.8876953125,
+    "confidence": 0.6633031368255615,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 69,
+    "x": 1360.417724609375,
+    "y": 729.6393432617188,
+    "confidence": 0.670738697052002,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 70,
+    "x": 1419.8588658866784,
+    "y": 735.7616001100357,
+    "confidence": null,
+    "source": "interpolation",
+    "interpolated": true
+  },
+  {
+    "frame_idx": 71,
+    "x": 1433.1085334963268,
+    "y": 739.9458155514603,
+    "confidence": null,
+    "source": "interpolation",
+    "interpolated": true
+  },
+  {
+    "frame_idx": 72,
+    "x": 1379.816650390625,
+    "y": 743.18798828125,
+    "confidence": 0.6371830701828003,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 73,
+    "x": 1385.325927734375,
+    "y": 748.9676513671875,
+    "confidence": 0.63528972864151,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 74,
+    "x": 1392.609375,
+    "y": 755.5822143554688,
+    "confidence": 0.6782459020614624,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 75,
+    "x": 1396.7017822265625,
+    "y": 758.85986328125,
+    "confidence": 0.6922867894172668,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 76,
+    "x": 1406.7928466796875,
+    "y": 764.850830078125,
+    "confidence": 0.6813638210296631,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 77,
+    "x": 1418.1669921875,
+    "y": 775.00390625,
+    "confidence": 0.6858888864517212,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 78,
+    "x": 1424.8773193359375,
+    "y": 779.09619140625,
+    "confidence": 0.7030478715896606,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 79,
+    "x": 1441.617431640625,
+    "y": 789.7678833007812,
+    "confidence": 0.6783950328826904,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 80,
+    "x": 1460.224853515625,
+    "y": 799.283935546875,
+    "confidence": 0.7013102769851685,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 81,
+    "x": 1472.2811279296875,
+    "y": 805.7802734375,
+    "confidence": 0.7069380879402161,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 82,
+    "x": 1492.166259765625,
+    "y": 816.881103515625,
+    "confidence": 0.6971022486686707,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 83,
+    "x": 1514.464111328125,
+    "y": 829.010498046875,
+    "confidence": 0.6905524134635925,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 84,
+    "x": 1524.722412109375,
+    "y": 835.348388671875,
+    "confidence": 0.6937069296836853,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 85,
+    "x": 1542.941650390625,
+    "y": 848.28125,
+    "confidence": 0.6958028674125671,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 86,
+    "x": 1559.0989990234375,
+    "y": 862.325439453125,
+    "confidence": 0.7057048082351685,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 87,
+    "x": 1566.9730224609375,
+    "y": 870.6552734375,
+    "confidence": 0.7189964652061462,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 88,
+    "x": 1578.8382568359375,
+    "y": 885.3854370117188,
+    "confidence": 0.7225788235664368,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 89,
+    "x": 1584.33203125,
+    "y": 891.0888671875,
+    "confidence": 0.7084145545959473,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 90,
+    "x": 1583.0859375,
+    "y": 881.4620361328125,
+    "confidence": 0.691686749458313,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 91,
+    "x": 1576.84375,
+    "y": 861.6654663085938,
+    "confidence": 0.7128060460090637,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 92,
+    "x": 1566.4443359375,
+    "y": 844.753662109375,
+    "confidence": 0.6896457076072693,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 93,
+    "x": 1560.3094482421875,
+    "y": 836.9588623046875,
+    "confidence": 0.6725005507469177,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 94,
+    "x": 1546.57763671875,
+    "y": 820.2315673828125,
+    "confidence": 0.6999554634094238,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 95,
+    "x": 1532.100341796875,
+    "y": 804.583251953125,
+    "confidence": 0.7037161588668823,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 96,
+    "x": 1524.637939453125,
+    "y": 797.3934326171875,
+    "confidence": 0.6968899965286255,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 97,
+    "x": 1510.98193359375,
+    "y": 784.5827026367188,
+    "confidence": 0.7047234773635864,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 98,
+    "x": 1500.48828125,
+    "y": 775.5928955078125,
+    "confidence": 0.7331826686859131,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 99,
+    "x": 1496.40673828125,
+    "y": 771.6378173828125,
+    "confidence": 0.6844829320907593,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 100,
+    "x": 1490.789794921875,
+    "y": 765.1832275390625,
+    "confidence": 0.7197617292404175,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 101,
+    "x": 1487.167236328125,
+    "y": 762.3463745117188,
+    "confidence": 0.7941499948501587,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 102,
+    "x": 1486.555908203125,
+    "y": 761.1051635742188,
+    "confidence": 0.7715943455696106,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 103,
+    "x": 1485.688232421875,
+    "y": 759.1357421875,
+    "confidence": 0.7938048243522644,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 104,
+    "x": 1487.103271484375,
+    "y": 759.3116455078125,
+    "confidence": 0.8096888661384583,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 105,
+    "x": 1488.013916015625,
+    "y": 759.4314575195312,
+    "confidence": 0.820626974105835,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 106,
+    "x": 1489.5552978515625,
+    "y": 759.540283203125,
+    "confidence": 0.7987323999404907,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 107,
+    "x": 1491.5810546875,
+    "y": 760.3237915039062,
+    "confidence": 0.8180937170982361,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 108,
+    "x": 1493.7877197265625,
+    "y": 760.51708984375,
+    "confidence": 0.816506028175354,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 109,
+    "x": 1498.060791015625,
+    "y": 761.4606323242188,
+    "confidence": 0.7564886212348938,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 110,
+    "x": 1502.69091796875,
+    "y": 764.0383911132812,
+    "confidence": 0.7293184995651245,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 111,
+    "x": 1505.103271484375,
+    "y": 766.184326171875,
+    "confidence": 0.7250273823738098,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 112,
+    "x": 1511.4512939453125,
+    "y": 770.8607177734375,
+    "confidence": 0.7150427103042603,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 113,
+    "x": 1517.15478515625,
+    "y": 775.960205078125,
+    "confidence": 0.6950835585594177,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 114,
+    "x": 1521.0294189453125,
+    "y": 779.3487548828125,
+    "confidence": 0.6478438973426819,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 115,
+    "x": 1527.75439453125,
+    "y": 788.0780029296875,
+    "confidence": 0.6290280222892761,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 116,
+    "x": 1533.377685546875,
+    "y": 797.4444580078125,
+    "confidence": 0.6797429919242859,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 117,
+    "x": 1535.792724609375,
+    "y": 802.1435546875,
+    "confidence": 0.690291166305542,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 118,
+    "x": 1541.833251953125,
+    "y": 811.4279174804688,
+    "confidence": 0.7077991366386414,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 119,
+    "x": 1544.54736328125,
+    "y": 800.1800537109375,
+    "confidence": 0.683504581451416,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 120,
+    "x": 1545.056640625,
+    "y": 795.4183349609375,
+    "confidence": 0.6868588924407959,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 121,
+    "x": 1545.707275390625,
+    "y": 787.3087768554688,
+    "confidence": 0.7053430080413818,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 122,
+    "x": 1545.505615234375,
+    "y": 778.5186767578125,
+    "confidence": 0.7278619408607483,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 123,
+    "x": 1545.141357421875,
+    "y": 774.355712890625,
+    "confidence": 0.6847869157791138,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 124,
+    "x": 1546.2529296875,
+    "y": 766.972412109375,
+    "confidence": 0.7126973271369934,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 125,
+    "x": 1546.4263916015625,
+    "y": 760.6275634765625,
+    "confidence": 0.6983423233032227,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 126,
+    "x": 1546.42578125,
+    "y": 758.2053833007812,
+    "confidence": 0.6897684335708618,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 127,
+    "x": 1548.45654296875,
+    "y": 753.6007080078125,
+    "confidence": 0.730525553226471,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 128,
+    "x": 1550.421142578125,
+    "y": 751.2027587890625,
+    "confidence": 0.6952582597732544,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 129,
+    "x": 1551.3560791015625,
+    "y": 749.9830322265625,
+    "confidence": 0.7147563695907593,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 130,
+    "x": 1554.1844482421875,
+    "y": 748.75048828125,
+    "confidence": 0.7370895743370056,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 131,
+    "x": 1556.654541015625,
+    "y": 748.7958374023438,
+    "confidence": 0.7470257878303528,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 132,
+    "x": 1558.291259765625,
+    "y": 749.1513671875,
+    "confidence": 0.7412393093109131,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 133,
+    "x": 1561.8818359375,
+    "y": 751.4247436523438,
+    "confidence": 0.7346338629722595,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 134,
+    "x": 1566.402099609375,
+    "y": 753.9556274414062,
+    "confidence": 0.7279176712036133,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 135,
+    "x": 1568.5771484375,
+    "y": 756.170654296875,
+    "confidence": 0.7875365614891052,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 136,
+    "x": 1573.822998046875,
+    "y": 759.8198852539062,
+    "confidence": 0.6833092570304871,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 137,
+    "x": 1577.989013671875,
+    "y": 765.04443359375,
+    "confidence": 0.6763849258422852,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 138,
+    "x": 1580.5408935546875,
+    "y": 768.4849243164062,
+    "confidence": 0.7068184614181519,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 139,
+    "x": 1585.953125,
+    "y": 776.34375,
+    "confidence": 0.6979960799217224,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 140,
+    "x": 1591.7706298828125,
+    "y": 770.610107421875,
+    "confidence": 0.6991117000579834,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 141,
+    "x": 1594.70068359375,
+    "y": 767.6300048828125,
+    "confidence": 0.6848937273025513,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 142,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 143,
+    "x": 1575.760986328125,
+    "y": 755.8529052734375,
+    "confidence": 0.6716444492340088,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 144,
+    "x": 1570.9619140625,
+    "y": 753.8742065429688,
+    "confidence": 0.6774354577064514,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 145,
+    "x": 1562.0263671875,
+    "y": 750.802490234375,
+    "confidence": 0.693719208240509,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 146,
+    "x": 1553.69775390625,
+    "y": 748.027587890625,
+    "confidence": 0.6848825216293335,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 147,
+    "x": 1549.7347412109375,
+    "y": 747.241943359375,
+    "confidence": 0.6823115944862366,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 148,
+    "x": 1542.87158203125,
+    "y": 746.1768188476562,
+    "confidence": 0.6925917863845825,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 149,
+    "x": 1536.86669921875,
+    "y": 745.7876586914062,
+    "confidence": 0.6895884275436401,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 150,
+    "x": 1534.276123046875,
+    "y": 746.406005859375,
+    "confidence": 0.6881987452507019,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 151,
+    "x": 1530.7823486328125,
+    "y": 747.361083984375,
+    "confidence": 0.7263831496238708,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 152,
+    "x": 1528.348876953125,
+    "y": 750.087158203125,
+    "confidence": 0.7063019275665283,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 153,
+    "x": 1527.564697265625,
+    "y": 751.8156127929688,
+    "confidence": 0.6829963326454163,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 154,
+    "x": 1529.376953125,
+    "y": 753.0628662109375,
+    "confidence": 0.7635999321937561,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 155,
+    "x": 1536.2802734375,
+    "y": 747.8467407226562,
+    "confidence": 0.6943012475967407,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 156,
+    "x": 1540.2830810546875,
+    "y": 745.8970336914062,
+    "confidence": 0.6814867258071899,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 157,
+    "x": 1548.40087890625,
+    "y": 743.0177001953125,
+    "confidence": 0.7370867133140564,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 158,
+    "x": 1556.5693359375,
+    "y": 740.6402587890625,
+    "confidence": 0.7003163695335388,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 159,
+    "x": 1559.97119140625,
+    "y": 740.8870849609375,
+    "confidence": 0.7037681341171265,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 160,
+    "x": 1567.7689208984375,
+    "y": 740.6044921875,
+    "confidence": 0.7175398468971252,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 161,
+    "x": 1574.4267578125,
+    "y": 741.2985229492188,
+    "confidence": 0.7174356579780579,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 162,
+    "x": 1577.6566162109375,
+    "y": 741.7535400390625,
+    "confidence": 0.664413332939148,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 163,
+    "x": 1584.527587890625,
+    "y": 745.422607421875,
+    "confidence": 0.6813603639602661,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 164,
+    "x": 1590.51708984375,
+    "y": 748.5475463867188,
+    "confidence": 0.7063448429107666,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 165,
+    "x": 1593.734130859375,
+    "y": 747.47265625,
+    "confidence": 0.72952800989151,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 166,
+    "x": 1599.645751953125,
+    "y": 744.3917236328125,
+    "confidence": 0.7157570123672485,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 167,
+    "x": 1604.064208984375,
+    "y": 742.3544921875,
+    "confidence": 0.7343407869338989,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 168,
+    "x": 1606.185546875,
+    "y": 741.6724853515625,
+    "confidence": 0.731866180896759,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 169,
+    "x": 1609.82958984375,
+    "y": 741.4861450195312,
+    "confidence": 0.6877816319465637,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 170,
+    "x": 1613.8709716796875,
+    "y": 741.983154296875,
+    "confidence": 0.687157392501831,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 171,
+    "x": 1615.795166015625,
+    "y": 743.17529296875,
+    "confidence": 0.7011917233467102,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 172,
+    "x": 1620.1806640625,
+    "y": 744.6918334960938,
+    "confidence": 0.7423349022865295,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 173,
+    "x": 1625.229248046875,
+    "y": 743.984130859375,
+    "confidence": 0.7791165709495544,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 174,
+    "x": 1627.4744873046875,
+    "y": 743.2317504882812,
+    "confidence": 0.7376824021339417,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 175,
+    "x": 1632.305419921875,
+    "y": 743.2620849609375,
+    "confidence": 0.740240752696991,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 176,
+    "x": 1637.4688720703125,
+    "y": 744.3414306640625,
+    "confidence": 0.6979568600654602,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 177,
+    "x": 1639.98193359375,
+    "y": 744.8736572265625,
+    "confidence": 0.7179659605026245,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 178,
+    "x": 1645.359375,
+    "y": 743.9524536132812,
+    "confidence": 0.7228199243545532,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 179,
+    "x": 1650.642578125,
+    "y": 743.1865234375,
+    "confidence": 0.7405322194099426,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 180,
+    "x": 1652.733642578125,
+    "y": 742.8781127929688,
+    "confidence": 0.7266291379928589,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 181,
+    "x": 1657.8607177734375,
+    "y": 742.3734130859375,
+    "confidence": 0.7072072625160217,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 182,
+    "x": 1656.599609375,
+    "y": 740.931640625,
+    "confidence": 0.6591453552246094,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 183,
+    "x": 1649.4407958984375,
+    "y": 739.4615478515625,
+    "confidence": 0.7161429524421692,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 184,
+    "x": 1637.65576171875,
+    "y": 735.1525268554688,
+    "confidence": 0.6830902695655823,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 185,
+    "x": 1627.855224609375,
+    "y": 733.770751953125,
+    "confidence": 0.7154577970504761,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 186,
+    "x": 1622.335693359375,
+    "y": 732.877685546875,
+    "confidence": 0.7447049021720886,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 187,
+    "x": 1613.509033203125,
+    "y": 730.961181640625,
+    "confidence": 0.7133185863494873,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 188,
+    "x": 1607.4205322265625,
+    "y": 729.2975463867188,
+    "confidence": 0.7086331844329834,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 189,
+    "x": 1604.122314453125,
+    "y": 728.3076171875,
+    "confidence": 0.7516098022460938,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 190,
+    "x": 1599.411865234375,
+    "y": 727.4429931640625,
+    "confidence": 0.7253020405769348,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 191,
+    "x": 1594.39892578125,
+    "y": 727.0718994140625,
+    "confidence": 0.7537299990653992,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 192,
+    "x": 1592.8570556640625,
+    "y": 726.654052734375,
+    "confidence": 0.8086110353469849,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 193,
+    "x": 1591.761962890625,
+    "y": 725.6529541015625,
+    "confidence": 0.8026749491691589,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 194,
+    "x": 1591.491455078125,
+    "y": 724.1383056640625,
+    "confidence": 0.7991992831230164,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 195,
+    "x": 1591.5281982421875,
+    "y": 723.3736572265625,
+    "confidence": 0.7945931553840637,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 196,
+    "x": 1591.29052734375,
+    "y": 722.2500610351562,
+    "confidence": 0.7918096780776978,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 197,
+    "x": 1590.9609375,
+    "y": 719.310546875,
+    "confidence": 0.7237387299537659,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 198,
+    "x": 1590.913818359375,
+    "y": 717.8157348632812,
+    "confidence": 0.7401760816574097,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 199,
+    "x": 1590.674072265625,
+    "y": 715.013916015625,
+    "confidence": 0.8113541007041931,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 200,
+    "x": 1590.4990234375,
+    "y": 713.1466064453125,
+    "confidence": 0.7502506971359253,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 201,
+    "x": 1590.446044921875,
+    "y": 711.9430541992188,
+    "confidence": 0.7402053475379944,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 202,
+    "x": 1591.192626953125,
+    "y": 710.7053833007812,
+    "confidence": 0.8075782060623169,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 203,
+    "x": 1592.031005859375,
+    "y": 709.3960571289062,
+    "confidence": 0.8009575009346008,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 204,
+    "x": 1592.7890625,
+    "y": 708.97265625,
+    "confidence": 0.7983205914497375,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 205,
+    "x": 1594.77783203125,
+    "y": 708.0765380859375,
+    "confidence": 0.8151089549064636,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 206,
+    "x": 1596.37353515625,
+    "y": 706.775634765625,
+    "confidence": 0.7265782952308655,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 207,
+    "x": 1597.409912109375,
+    "y": 705.9000854492188,
+    "confidence": 0.7372447848320007,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 208,
+    "x": 1599.673583984375,
+    "y": 703.667724609375,
+    "confidence": 0.7602178454399109,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 209,
+    "x": 1601.313232421875,
+    "y": 701.46435546875,
+    "confidence": 0.748818039894104,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 210,
+    "x": 1602.20361328125,
+    "y": 700.0986328125,
+    "confidence": 0.7275134325027466,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 211,
+    "x": 1605.2998046875,
+    "y": 697.3508911132812,
+    "confidence": 0.7846985459327698,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 212,
+    "x": 1609.072021484375,
+    "y": 696.0361328125,
+    "confidence": 0.7559571862220764,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 213,
+    "x": 1611.055419921875,
+    "y": 695.907470703125,
+    "confidence": 0.751168429851532,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 214,
+    "x": 1615.2156982421875,
+    "y": 695.2181396484375,
+    "confidence": 0.7683804035186768,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 215,
+    "x": 1621.314453125,
+    "y": 694.2711181640625,
+    "confidence": 0.8052383661270142,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 216,
+    "x": 1624.6015625,
+    "y": 693.398193359375,
+    "confidence": 0.8319345116615295,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 217,
+    "x": 1629.6920166015625,
+    "y": 691.8385009765625,
+    "confidence": 0.7739496231079102,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 218,
+    "x": 1634.914794921875,
+    "y": 690.5157470703125,
+    "confidence": 0.7541193962097168,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 219,
+    "x": 1637.063232421875,
+    "y": 690.380126953125,
+    "confidence": 0.7382509112358093,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 220,
+    "x": 1641.2457275390625,
+    "y": 689.6697998046875,
+    "confidence": 0.7344558238983154,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 221,
+    "x": 1643.869873046875,
+    "y": 687.7426147460938,
+    "confidence": 0.7281363010406494,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 222,
+    "x": 1644.831787109375,
+    "y": 687.1885986328125,
+    "confidence": 0.7490320801734924,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 223,
+    "x": 1644.651123046875,
+    "y": 685.91552734375,
+    "confidence": 0.7632233500480652,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 224,
+    "x": 1643.3255615234375,
+    "y": 683.7760009765625,
+    "confidence": 0.7998597025871277,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 225,
+    "x": 1642.859130859375,
+    "y": 682.6622314453125,
+    "confidence": 0.813639223575592,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 226,
+    "x": 1639.77099609375,
+    "y": 679.3490600585938,
+    "confidence": 0.7793492078781128,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 227,
+    "x": 1636.982666015625,
+    "y": 676.3304443359375,
+    "confidence": 0.7780085206031799,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 228,
+    "x": 1635.9560546875,
+    "y": 675.0054931640625,
+    "confidence": 0.7499229907989502,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 229,
+    "x": 1633.6973876953125,
+    "y": 672.3642578125,
+    "confidence": 0.733035683631897,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 230,
+    "x": 1632.9228515625,
+    "y": 669.197265625,
+    "confidence": 0.7331818342208862,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 231,
+    "x": 1632.903564453125,
+    "y": 667.5830078125,
+    "confidence": 0.7851239442825317,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 232,
+    "x": 1634.0048828125,
+    "y": 664.5484008789062,
+    "confidence": 0.8162197470664978,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 233,
+    "x": 1636.3759765625,
+    "y": 662.2073974609375,
+    "confidence": 0.7830601930618286,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 234,
+    "x": 1638.1806640625,
+    "y": 661.4366455078125,
+    "confidence": 0.7542795538902283,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 235,
+    "x": 1642.41015625,
+    "y": 659.2742919921875,
+    "confidence": 0.7306505441665649,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 236,
+    "x": 1646.616455078125,
+    "y": 656.0238647460938,
+    "confidence": 0.7346554398536682,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 237,
+    "x": 1649.1453857421875,
+    "y": 655.47607421875,
+    "confidence": 0.716728925704956,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 238,
+    "x": 1644.91845703125,
+    "y": 651.849609375,
+    "confidence": 0.6989120244979858,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 239,
+    "x": 1612.370849609375,
+    "y": 644.0325317382812,
+    "confidence": 0.7215414643287659,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 240,
+    "x": 1595.154296875,
+    "y": 637.9281616210938,
+    "confidence": 0.7082040309906006,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 241,
+    "x": 1561.576171875,
+    "y": 628.1909790039062,
+    "confidence": 0.7203943729400635,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 242,
+    "x": 1530.2822265625,
+    "y": 619.96484375,
+    "confidence": 0.6950364112854004,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 243,
+    "x": 1514.643798828125,
+    "y": 616.0731811523438,
+    "confidence": 0.7216402292251587,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 244,
+    "x": 1483.03955078125,
+    "y": 607.0,
+    "confidence": 0.7184351682662964,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 245,
+    "x": 1455.759521484375,
+    "y": 595.937255859375,
+    "confidence": 0.7164334654808044,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 246,
+    "x": 1443.032958984375,
+    "y": 591.271240234375,
+    "confidence": 0.6922767758369446,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 247,
+    "x": 1418.313232421875,
+    "y": 584.218505859375,
+    "confidence": 0.7302131056785583,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 248,
+    "x": 1395.6640625,
+    "y": 581.89453125,
+    "confidence": 0.737472414970398,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 249,
+    "x": 1385.461669921875,
+    "y": 580.0067749023438,
+    "confidence": 0.7214702367782593,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 250,
+    "x": 1367.40380859375,
+    "y": 575.068115234375,
+    "confidence": 0.76372230052948,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 251,
+    "x": 1351.127197265625,
+    "y": 568.8839721679688,
+    "confidence": 0.6992883086204529,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 252,
+    "x": 1342.129150390625,
+    "y": 566.0830078125,
+    "confidence": 0.7129607200622559,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 253,
+    "x": 1327.06298828125,
+    "y": 562.4373779296875,
+    "confidence": 0.7427635192871094,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 254,
+    "x": 1311.684814453125,
+    "y": 559.3482055664062,
+    "confidence": 0.7903192639350891,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 255,
+    "x": 1305.19970703125,
+    "y": 556.08935546875,
+    "confidence": 0.8351227045059204,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 256,
+    "x": 1295.640869140625,
+    "y": 549.2550048828125,
+    "confidence": 0.8496633172035217,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 257,
+    "x": 1285.221435546875,
+    "y": 542.2813720703125,
+    "confidence": 0.7774132490158081,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 258,
+    "x": 1279.759765625,
+    "y": 539.188720703125,
+    "confidence": 0.7690156698226929,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 259,
+    "x": 1270.5677490234375,
+    "y": 535.7581787109375,
+    "confidence": 0.7685617208480835,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 260,
+    "x": 1262.3037109375,
+    "y": 533.6688232421875,
+    "confidence": 0.7627629637718201,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 261,
+    "x": 1258.4139404296875,
+    "y": 531.3695068359375,
+    "confidence": 0.8266437649726868,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 262,
+    "x": 1251.792724609375,
+    "y": 526.9345703125,
+    "confidence": 0.8644903302192688,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 263,
+    "x": 1245.554931640625,
+    "y": 524.4996948242188,
+    "confidence": 0.8944297432899475,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 264,
+    "x": 1242.4254150390625,
+    "y": 523.614013671875,
+    "confidence": 0.8618583083152771,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 265,
+    "x": 1237.0777587890625,
+    "y": 522.492919921875,
+    "confidence": 0.8511512279510498,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 266,
+    "x": 1232.270751953125,
+    "y": 518.9235229492188,
+    "confidence": 0.8010908365249634,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 267,
+    "x": 1230.5233154296875,
+    "y": 517.3282470703125,
+    "confidence": 0.7892939448356628,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 268,
+    "x": 1226.64990234375,
+    "y": 514.7794799804688,
+    "confidence": 0.8353703618049622,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 269,
+    "x": 1224.112060546875,
+    "y": 513.2146606445312,
+    "confidence": 0.8240835666656494,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 270,
+    "x": 1223.205322265625,
+    "y": 512.4528198242188,
+    "confidence": 0.8549546599388123,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 271,
+    "x": 1222.90673828125,
+    "y": 509.5574951171875,
+    "confidence": 0.8625220060348511,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 272,
+    "x": 1223.6435546875,
+    "y": 505.7801513671875,
+    "confidence": 0.8508087992668152,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 273,
+    "x": 1223.9744873046875,
+    "y": 504.44439697265625,
+    "confidence": 0.8420210480690002,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 274,
+    "x": 1225.2265625,
+    "y": 502.9359130859375,
+    "confidence": 0.8462302684783936,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 275,
+    "x": 1226.42138671875,
+    "y": 502.31805419921875,
+    "confidence": 0.8046314716339111,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 276,
+    "x": 1227.030517578125,
+    "y": 502.28167724609375,
+    "confidence": 0.8082215785980225,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 277,
+    "x": 1228.7913818359375,
+    "y": 501.63519287109375,
+    "confidence": 0.8013405799865723,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 278,
+    "x": 1230.735107421875,
+    "y": 499.036376953125,
+    "confidence": 0.8152577877044678,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 279,
+    "x": 1231.308837890625,
+    "y": 497.59210205078125,
+    "confidence": 0.7879619002342224,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 280,
+    "x": 1233.624267578125,
+    "y": 496.4946594238281,
+    "confidence": 0.7894508838653564,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 281,
+    "x": 1236.626220703125,
+    "y": 495.9916076660156,
+    "confidence": 0.8138213157653809,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 282,
+    "x": 1237.91162109375,
+    "y": 495.8902282714844,
+    "confidence": 0.8263726830482483,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 283,
+    "x": 1241.688720703125,
+    "y": 495.1844787597656,
+    "confidence": 0.824897825717926,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 284,
+    "x": 1244.002685546875,
+    "y": 493.08380126953125,
+    "confidence": 0.8351090550422668,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 285,
+    "x": 1245.7548828125,
+    "y": 492.2100830078125,
+    "confidence": 0.8473150730133057,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 286,
+    "x": 1248.967041015625,
+    "y": 491.0335998535156,
+    "confidence": 0.8090433478355408,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 287,
+    "x": 1253.113525390625,
+    "y": 490.42462158203125,
+    "confidence": 0.8020564317703247,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 288,
+    "x": 1255.0531005859375,
+    "y": 490.0759582519531,
+    "confidence": 0.821526050567627,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 289,
+    "x": 1259.277587890625,
+    "y": 488.52117919921875,
+    "confidence": 0.784820556640625,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 290,
+    "x": 1264.542724609375,
+    "y": 488.01959228515625,
+    "confidence": 0.8104756474494934,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 291,
+    "x": 1266.873046875,
+    "y": 487.40118408203125,
+    "confidence": 0.7786028385162354,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 292,
+    "x": 1271.639892578125,
+    "y": 486.72845458984375,
+    "confidence": 0.7962251901626587,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 293,
+    "x": 1276.7421875,
+    "y": 485.92803955078125,
+    "confidence": 0.8497281670570374,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 294,
+    "x": 1279.376953125,
+    "y": 485.892822265625,
+    "confidence": 0.8300578594207764,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 295,
+    "x": 1285.125,
+    "y": 486.091064453125,
+    "confidence": 0.8111261129379272,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 296,
+    "x": 1290.5693359375,
+    "y": 486.6033020019531,
+    "confidence": 0.7798914313316345,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 297,
+    "x": 1293.562744140625,
+    "y": 486.78680419921875,
+    "confidence": 0.7691171765327454,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 298,
+    "x": 1298.710693359375,
+    "y": 486.2127685546875,
+    "confidence": 0.8278969526290894,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 299,
+    "x": 1303.91943359375,
+    "y": 486.1947021484375,
+    "confidence": 0.832093358039856,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 300,
+    "x": 1306.881103515625,
+    "y": 486.5986633300781,
+    "confidence": 0.824942946434021,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 301,
+    "x": 1312.6416015625,
+    "y": 486.72802734375,
+    "confidence": 0.787156343460083,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 302,
+    "x": 1318.30908203125,
+    "y": 486.1722106933594,
+    "confidence": 0.7865161299705505,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 303,
+    "x": 1321.068359375,
+    "y": 486.0213928222656,
+    "confidence": 0.7928439974784851,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 304,
+    "x": 1326.529052734375,
+    "y": 485.67822265625,
+    "confidence": 0.7689502835273743,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 305,
+    "x": 1332.23876953125,
+    "y": 485.85107421875,
+    "confidence": 0.7944290041923523,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 306,
+    "x": 1335.3460693359375,
+    "y": 485.7024230957031,
+    "confidence": 0.819326639175415,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 307,
+    "x": 1341.367431640625,
+    "y": 485.224853515625,
+    "confidence": 0.7902016043663025,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 308,
+    "x": 1347.81640625,
+    "y": 485.1532897949219,
+    "confidence": 0.7942671179771423,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 309,
+    "x": 1351.7001953125,
+    "y": 485.5895080566406,
+    "confidence": 0.800768256187439,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 310,
+    "x": 1357.2840576171875,
+    "y": 486.5539855957031,
+    "confidence": 0.8095939755439758,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 311,
+    "x": 1364.0164794921875,
+    "y": 486.1195983886719,
+    "confidence": 0.7759554386138916,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 312,
+    "x": 1366.9183349609375,
+    "y": 486.5323181152344,
+    "confidence": 0.7735504508018494,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 313,
+    "x": 1373.8389892578125,
+    "y": 487.4669494628906,
+    "confidence": 0.7701421976089478,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 314,
+    "x": 1380.280029296875,
+    "y": 488.554931640625,
+    "confidence": 0.7681251764297485,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 315,
+    "x": 1383.4490966796875,
+    "y": 488.67584228515625,
+    "confidence": 0.8422030806541443,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 316,
+    "x": 1389.30908203125,
+    "y": 488.6557922363281,
+    "confidence": 0.7870440483093262,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 317,
+    "x": 1395.544921875,
+    "y": 488.5750732421875,
+    "confidence": 0.7527672648429871,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 318,
+    "x": 1398.789306640625,
+    "y": 489.12994384765625,
+    "confidence": 0.7257046103477478,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 319,
+    "x": 1407.958984375,
+    "y": 490.32659912109375,
+    "confidence": 0.6801209449768066,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 320,
+    "x": 1408.882080078125,
+    "y": 492.62994384765625,
+    "confidence": 0.6588985323905945,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 321,
+    "x": 1408.365478515625,
+    "y": 493.5574951171875,
+    "confidence": 0.6935240030288696,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 322,
+    "x": 1406.6083984375,
+    "y": 494.76873779296875,
+    "confidence": 0.7364793419837952,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 323,
+    "x": 1407.482177734375,
+    "y": 497.4110107421875,
+    "confidence": 0.7835407853126526,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 324,
+    "x": 1407.7989501953125,
+    "y": 498.71307373046875,
+    "confidence": 0.7665867805480957,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 325,
+    "x": 1408.797607421875,
+    "y": 499.930419921875,
+    "confidence": 0.7917624115943909,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 326,
+    "x": 1410.201171875,
+    "y": 500.79681396484375,
+    "confidence": 0.7977352142333984,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 327,
+    "x": 1410.857177734375,
+    "y": 501.1764831542969,
+    "confidence": 0.8117139339447021,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 328,
+    "x": 1411.8154296875,
+    "y": 502.3704833984375,
+    "confidence": 0.8159178495407104,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 329,
+    "x": 1413.15576171875,
+    "y": 502.97381591796875,
+    "confidence": 0.8086697459220886,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 330,
+    "x": 1413.6397705078125,
+    "y": 503.4556884765625,
+    "confidence": 0.7973911762237549,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 331,
+    "x": 1415.489013671875,
+    "y": 503.77301025390625,
+    "confidence": 0.7486181259155273,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 332,
+    "x": 1416.8570556640625,
+    "y": 504.8798828125,
+    "confidence": 0.707951545715332,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 333,
+    "x": 1418.46630859375,
+    "y": 505.272216796875,
+    "confidence": 0.7144102454185486,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 334,
+    "x": 1421.3953857421875,
+    "y": 505.59124755859375,
+    "confidence": 0.7600201368331909,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 335,
+    "x": 1423.528564453125,
+    "y": 504.9638977050781,
+    "confidence": 0.7507534027099609,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 336,
+    "x": 1424.323486328125,
+    "y": 504.92724609375,
+    "confidence": 0.695370614528656,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 337,
+    "x": 1427.481201171875,
+    "y": 504.5390625,
+    "confidence": 0.7357679605484009,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 338,
+    "x": 1429.752197265625,
+    "y": 504.0660705566406,
+    "confidence": 0.7009505033493042,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 339,
+    "x": 1430.745361328125,
+    "y": 503.81207275390625,
+    "confidence": 0.7115994095802307,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 340,
+    "x": 1433.5076904296875,
+    "y": 502.80072021484375,
+    "confidence": 0.7161932587623596,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 341,
+    "x": 1435.946533203125,
+    "y": 501.2899169921875,
+    "confidence": 0.730651319026947,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 342,
+    "x": 1436.7467041015625,
+    "y": 500.95428466796875,
+    "confidence": 0.6991825699806213,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 343,
+    "x": 1438.4775390625,
+    "y": 499.9472351074219,
+    "confidence": 0.6523470878601074,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 344,
+    "x": 1440.845703125,
+    "y": 499.783203125,
+    "confidence": 0.5498204827308655,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 345,
+    "x": 1441.1968389001165,
+    "y": 527.0185568647843,
+    "confidence": null,
+    "source": "interpolation",
+    "interpolated": true
+  },
+  {
+    "frame_idx": 346,
+    "x": 1442.8395526622637,
+    "y": 533.0229520624025,
+    "confidence": null,
+    "source": "interpolation",
+    "interpolated": true
+  },
+  {
+    "frame_idx": 347,
+    "x": 1433.354736328125,
+    "y": 498.8267517089844,
+    "confidence": 0.571774423122406,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 348,
+    "x": 1442.1159497193,
+    "y": 532.3489279208411,
+    "confidence": null,
+    "source": "interpolation",
+    "interpolated": true
+  },
+  {
+    "frame_idx": 349,
+    "x": 1443.3376747777777,
+    "y": 538.8530367256323,
+    "confidence": null,
+    "source": "interpolation",
+    "interpolated": true
+  },
+  {
+    "frame_idx": 350,
+    "x": 1444.559541940649,
+    "y": 546.0398121116649,
+    "confidence": null,
+    "source": "interpolation",
+    "interpolated": true
+  },
+  {
+    "frame_idx": 351,
+    "x": 1445.7815512079144,
+    "y": 553.9092540789392,
+    "confidence": null,
+    "source": "interpolation",
+    "interpolated": true
+  },
+  {
+    "frame_idx": 352,
+    "x": 1447.0037025795734,
+    "y": 562.461362627455,
+    "confidence": null,
+    "source": "interpolation",
+    "interpolated": true
+  },
+  {
+    "frame_idx": 353,
+    "x": 1448.2259960556264,
+    "y": 571.6961377572122,
+    "confidence": null,
+    "source": "interpolation",
+    "interpolated": true
+  },
+  {
+    "frame_idx": 354,
+    "x": 1449.448431636073,
+    "y": 581.613579468211,
+    "confidence": null,
+    "source": "interpolation",
+    "interpolated": true
+  },
+  {
+    "frame_idx": 355,
+    "x": 1450.6710093209138,
+    "y": 592.2136877604513,
+    "confidence": null,
+    "source": "interpolation",
+    "interpolated": true
+  },
+  {
+    "frame_idx": 356,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 357,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 358,
+    "x": 1426.477294921875,
+    "y": 477.1142578125,
+    "confidence": 0.6623423099517822,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 359,
+    "x": 1422.81005859375,
+    "y": 472.7035827636719,
+    "confidence": 0.6722428798675537,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 360,
+    "x": 1422.95849609375,
+    "y": 471.19635009765625,
+    "confidence": 0.6754792928695679,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 361,
+    "x": 1422.8392333984375,
+    "y": 468.193603515625,
+    "confidence": 0.7813860177993774,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 362,
+    "x": 1420.30126953125,
+    "y": 465.274658203125,
+    "confidence": 0.8239209055900574,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 363,
+    "x": 1419.15283203125,
+    "y": 463.4091796875,
+    "confidence": 0.7670423984527588,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 364,
+    "x": 1418.0159912109375,
+    "y": 460.54498291015625,
+    "confidence": 0.6860390305519104,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 365,
+    "x": 1417.7833251953125,
+    "y": 458.24249267578125,
+    "confidence": 0.769656240940094,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 366,
+    "x": 1417.2855224609375,
+    "y": 457.46514892578125,
+    "confidence": 0.7129250168800354,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 367,
+    "x": 1416.017578125,
+    "y": 455.5849609375,
+    "confidence": 0.7020635604858398,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 368,
+    "x": 1413.2720947265625,
+    "y": 453.6099853515625,
+    "confidence": 0.7834681272506714,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 369,
+    "x": 1412.045166015625,
+    "y": 452.28802490234375,
+    "confidence": 0.7985409498214722,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 370,
+    "x": 1408.246337890625,
+    "y": 448.01324462890625,
+    "confidence": 0.8289440870285034,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 371,
+    "x": 1403.563720703125,
+    "y": 444.98876953125,
+    "confidence": 0.8364497423171997,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 372,
+    "x": 1400.944580078125,
+    "y": 444.14141845703125,
+    "confidence": 0.791353166103363,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 373,
+    "x": 1396.074951171875,
+    "y": 443.69366455078125,
+    "confidence": 0.7708830237388611,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 374,
+    "x": 1391.33349609375,
+    "y": 443.3814697265625,
+    "confidence": 0.7481458783149719,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 375,
+    "x": 1389.098388671875,
+    "y": 442.85772705078125,
+    "confidence": 0.7828871607780457,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 376,
+    "x": 1384.0521240234375,
+    "y": 441.40447998046875,
+    "confidence": 0.8394030332565308,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 377,
+    "x": 1379.469970703125,
+    "y": 439.25299072265625,
+    "confidence": 0.8387810587882996,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 378,
+    "x": 1376.8228759765625,
+    "y": 438.7375793457031,
+    "confidence": 0.8487370610237122,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 379,
+    "x": 1370.788818359375,
+    "y": 437.4037780761719,
+    "confidence": 0.8055620789527893,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 380,
+    "x": 1363.89892578125,
+    "y": 434.7509765625,
+    "confidence": 0.8645115494728088,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 381,
+    "x": 1359.9892578125,
+    "y": 433.7891540527344,
+    "confidence": 0.8704268336296082,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 382,
+    "x": 1352.42041015625,
+    "y": 431.25677490234375,
+    "confidence": 0.8246862292289734,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 383,
+    "x": 1343.03955078125,
+    "y": 430.0252380371094,
+    "confidence": 0.7859625816345215,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 384,
+    "x": 1338.48583984375,
+    "y": 429.3219299316406,
+    "confidence": 0.8050838112831116,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 385,
+    "x": 1329.02294921875,
+    "y": 427.86004638671875,
+    "confidence": 0.8376727104187012,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 386,
+    "x": 1319.32177734375,
+    "y": 425.75628662109375,
+    "confidence": 0.7954162955284119,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 387,
+    "x": 1314.261962890625,
+    "y": 425.03753662109375,
+    "confidence": 0.7689061760902405,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 388,
+    "x": 1304.6368408203125,
+    "y": 423.29010009765625,
+    "confidence": 0.8651137948036194,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 389,
+    "x": 1296.471923828125,
+    "y": 422.70965576171875,
+    "confidence": 0.8586565256118774,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 390,
+    "x": 1291.3956298828125,
+    "y": 421.994140625,
+    "confidence": 0.787489116191864,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 391,
+    "x": 1282.5465087890625,
+    "y": 419.1035461425781,
+    "confidence": 0.8127070665359497,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 392,
+    "x": 1274.3369140625,
+    "y": 417.57623291015625,
+    "confidence": 0.8184584975242615,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 393,
+    "x": 1269.9473876953125,
+    "y": 417.12213134765625,
+    "confidence": 0.8103466629981995,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 394,
+    "x": 1262.208251953125,
+    "y": 416.9256896972656,
+    "confidence": 0.7100251317024231,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 395,
+    "x": 1253.365478515625,
+    "y": 414.457763671875,
+    "confidence": 0.7143192887306213,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 396,
+    "x": 1249.6285400390625,
+    "y": 413.9566650390625,
+    "confidence": 0.8058649301528931,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 397,
+    "x": 1243.46533203125,
+    "y": 412.27117919921875,
+    "confidence": 0.739840567111969,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 398,
+    "x": 1237.905517578125,
+    "y": 411.36260986328125,
+    "confidence": 0.7972016930580139,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 399,
+    "x": 1235.443603515625,
+    "y": 410.585205078125,
+    "confidence": 0.7260704636573792,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 400,
+    "x": 1230.18505859375,
+    "y": 408.6146240234375,
+    "confidence": 0.7310449481010437,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 401,
+    "x": 1226.182373046875,
+    "y": 406.7026672363281,
+    "confidence": 0.688256561756134,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 402,
+    "x": 1224.677734375,
+    "y": 405.764892578125,
+    "confidence": 0.7213557958602905,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 403,
+    "x": 1219.3123779296875,
+    "y": 404.117431640625,
+    "confidence": 0.7393781542778015,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 404,
+    "x": 1214.251708984375,
+    "y": 402.7193603515625,
+    "confidence": 0.6779732704162598,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 405,
+    "x": 1211.45556640625,
+    "y": 401.42547607421875,
+    "confidence": 0.7015044093132019,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 406,
+    "x": 1207.459228515625,
+    "y": 398.84039306640625,
+    "confidence": 0.7020784020423889,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 407,
+    "x": 1201.782470703125,
+    "y": 397.9474182128906,
+    "confidence": 0.6793763637542725,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 408,
+    "x": 1198.111328125,
+    "y": 397.96630859375,
+    "confidence": 0.6279719471931458,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 409,
+    "x": 1190.794921875,
+    "y": 397.82183837890625,
+    "confidence": 0.6485489010810852,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 410,
+    "x": 1183.729248046875,
+    "y": 396.6397705078125,
+    "confidence": 0.6864523887634277,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 411,
+    "x": 1180.6376953125,
+    "y": 396.7845153808594,
+    "confidence": 0.6937870979309082,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 412,
+    "x": 1173.268310546875,
+    "y": 397.3610534667969,
+    "confidence": 0.6796188950538635,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 413,
+    "x": 1168.745849609375,
+    "y": 399.8477783203125,
+    "confidence": 0.7023951411247253,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 414,
+    "x": 1167.05859375,
+    "y": 400.246826171875,
+    "confidence": 0.6970247626304626,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 415,
+    "x": 1165.675048828125,
+    "y": 401.40008544921875,
+    "confidence": 0.7235968112945557,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 416,
+    "x": 1164.63525390625,
+    "y": 402.18829345703125,
+    "confidence": 0.7716648578643799,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 417,
+    "x": 1164.442626953125,
+    "y": 402.464111328125,
+    "confidence": 0.7149435877799988,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 418,
+    "x": 1162.6177978515625,
+    "y": 403.34075927734375,
+    "confidence": 0.7777403593063354,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 419,
+    "x": 1160.760009765625,
+    "y": 402.72174072265625,
+    "confidence": 0.7097352743148804,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 420,
+    "x": 1159.746826171875,
+    "y": 402.7199401855469,
+    "confidence": 0.6991243958473206,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 421,
+    "x": 1157.0194091796875,
+    "y": 402.212646484375,
+    "confidence": 0.7260972261428833,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 422,
+    "x": 1154.5009765625,
+    "y": 402.85650634765625,
+    "confidence": 0.7675461173057556,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 423,
+    "x": 1153.7728271484375,
+    "y": 402.95562744140625,
+    "confidence": 0.7746657729148865,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 424,
+    "x": 1152.8516845703125,
+    "y": 402.93682861328125,
+    "confidence": 0.6927272081375122,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 425,
+    "x": 1151.474365234375,
+    "y": 402.7574768066406,
+    "confidence": 0.7099059224128723,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 426,
+    "x": 1150.7286376953125,
+    "y": 403.14495849609375,
+    "confidence": 0.6919646263122559,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 427,
+    "x": 1149.7960205078125,
+    "y": 403.0034484863281,
+    "confidence": 0.698809802532196,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 428,
+    "x": 1148.999755859375,
+    "y": 403.54296875,
+    "confidence": 0.7344720959663391,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 429,
+    "x": 1150.006591796875,
+    "y": 403.4354248046875,
+    "confidence": 0.6901209354400635,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 430,
+    "x": 1152.0712890625,
+    "y": 403.21820068359375,
+    "confidence": 0.7088726758956909,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 431,
+    "x": 1154.7109375,
+    "y": 402.86370849609375,
+    "confidence": 0.6865913271903992,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 432,
+    "x": 1157.258056640625,
+    "y": 403.1477355957031,
+    "confidence": 0.6991206407546997,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 433,
+    "x": 1160.363525390625,
+    "y": 402.7021789550781,
+    "confidence": 0.6825460195541382,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 434,
+    "x": 1163.257080078125,
+    "y": 402.8075866699219,
+    "confidence": 0.6749024987220764,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 435,
+    "x": 1164.81103515625,
+    "y": 401.86053466796875,
+    "confidence": 0.6265215277671814,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 436,
+    "x": 1165.1707763671875,
+    "y": 402.1261291503906,
+    "confidence": 0.6804831027984619,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 437,
+    "x": 1166.24267578125,
+    "y": 401.67108154296875,
+    "confidence": 0.6754165887832642,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 438,
+    "x": 1167.1923828125,
+    "y": 402.0638732910156,
+    "confidence": 0.6717770099639893,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 439,
+    "x": 1168.97021484375,
+    "y": 402.6307373046875,
+    "confidence": 0.6859596967697144,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 440,
+    "x": 1172.0089111328125,
+    "y": 402.9582824707031,
+    "confidence": 0.6608731150627136,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 441,
+    "x": 1172.75634765625,
+    "y": 402.4619140625,
+    "confidence": 0.6806881427764893,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 442,
+    "x": 1169.18408203125,
+    "y": 401.81787109375,
+    "confidence": 0.626769483089447,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 443,
+    "x": 1148.905029296875,
+    "y": 396.4812927246094,
+    "confidence": 0.6437250971794128,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 444,
+    "x": 1140.20458984375,
+    "y": 395.02960205078125,
+    "confidence": 0.6791588068008423,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 445,
+    "x": 1124.0697021484375,
+    "y": 393.105224609375,
+    "confidence": 0.671837329864502,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 446,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 447,
+    "x": 1095.6156005859375,
+    "y": 391.08746337890625,
+    "confidence": 0.6487665176391602,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 448,
+    "x": 1081.9423828125,
+    "y": 391.2369384765625,
+    "confidence": 0.7098119854927063,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 449,
+    "x": 1066.86376953125,
+    "y": 389.3439025878906,
+    "confidence": 0.6303079128265381,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 450,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 451,
+    "x": 1042.328369140625,
+    "y": 389.4556579589844,
+    "confidence": 0.6783384084701538,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 452,
+    "x": 1030.7003173828125,
+    "y": 387.63037109375,
+    "confidence": 0.7535924315452576,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 453,
+    "x": 1024.400146484375,
+    "y": 387.2704162597656,
+    "confidence": 0.7864443063735962,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 454,
+    "x": 1013.4591064453125,
+    "y": 386.50384521484375,
+    "confidence": 0.7103517055511475,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 455,
+    "x": 1002.482666015625,
+    "y": 386.4638977050781,
+    "confidence": 0.8576653599739075,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 456,
+    "x": 997.9181518554688,
+    "y": 386.6830749511719,
+    "confidence": 0.8117796182632446,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 457,
+    "x": 986.5872802734375,
+    "y": 386.57745361328125,
+    "confidence": 0.7228198051452637,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 458,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 459,
+    "x": 971.2464599609375,
+    "y": 382.22918701171875,
+    "confidence": 0.6713904142379761,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 460,
+    "x": 962.6905517578125,
+    "y": 380.3295593261719,
+    "confidence": 0.6916423439979553,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 461,
+    "x": 954.3707885742188,
+    "y": 379.76788330078125,
+    "confidence": 0.6220755577087402,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 462,
+    "x": 939.0904047723876,
+    "y": 400.949448803517,
+    "confidence": null,
+    "source": "interpolation",
+    "interpolated": true
+  },
+  {
+    "frame_idx": 463,
+    "x": 928.3118569308447,
+    "y": 405.2718040738985,
+    "confidence": null,
+    "source": "interpolation",
+    "interpolated": true
+  },
+  {
+    "frame_idx": 464,
+    "x": 1005.8702392578125,
+    "y": 365.4974670410156,
+    "confidence": 0.6321486830711365,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 465,
+    "x": 1026.95947265625,
+    "y": 360.6118469238281,
+    "confidence": 0.6335154175758362,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 466,
+    "x": 961.4593811047207,
+    "y": 390.4433340391537,
+    "confidence": null,
+    "source": "interpolation",
+    "interpolated": true
+  },
+  {
+    "frame_idx": 467,
+    "x": 1116.55908203125,
+    "y": 340.458984375,
+    "confidence": 0.5100513100624084,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 468,
+    "x": 1139.373779296875,
+    "y": 334.60101318359375,
+    "confidence": 0.6300739645957947,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 469,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 470,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 471,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 472,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 473,
+    "x": 1072.9721954900758,
+    "y": 379.19168705478,
+    "confidence": null,
+    "source": "interpolation",
+    "interpolated": true
+  },
+  {
+    "frame_idx": 474,
+    "x": 1078.3129357741454,
+    "y": 383.43669077884346,
+    "confidence": null,
+    "source": "interpolation",
+    "interpolated": true
+  },
+  {
+    "frame_idx": 475,
+    "x": 1083.6627482565195,
+    "y": 388.24598091187187,
+    "confidence": null,
+    "source": "interpolation",
+    "interpolated": true
+  },
+  {
+    "frame_idx": 476,
+    "x": 1089.0216329371979,
+    "y": 393.61955745386524,
+    "confidence": null,
+    "source": "interpolation",
+    "interpolated": true
+  },
+  {
+    "frame_idx": 477,
+    "x": 1094.3895898161804,
+    "y": 399.5574204048236,
+    "confidence": null,
+    "source": "interpolation",
+    "interpolated": true
+  },
+  {
+    "frame_idx": 478,
+    "x": 1099.7666188934672,
+    "y": 406.05956976474687,
+    "confidence": null,
+    "source": "interpolation",
+    "interpolated": true
+  },
+  {
+    "frame_idx": 479,
+    "x": 1105.1527201690585,
+    "y": 413.1260055336351,
+    "confidence": null,
+    "source": "interpolation",
+    "interpolated": true
+  },
+  {
+    "frame_idx": 480,
+    "x": 1381.239013671875,
+    "y": 305.4091796875,
+    "confidence": 0.5219598412513733,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 481,
+    "x": 1389.15283203125,
+    "y": 307.6793212890625,
+    "confidence": 0.5263469219207764,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 482,
+    "x": 1379.5408795474782,
+    "y": 325.288615081184,
+    "confidence": null,
+    "source": "interpolation",
+    "interpolated": true
+  },
+  {
+    "frame_idx": 483,
+    "x": 1394.4014892578125,
+    "y": 314.031005859375,
+    "confidence": 0.5457033514976501,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 484,
+    "x": 1396.5345458984375,
+    "y": 319.21405029296875,
+    "confidence": 0.6576040983200073,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 485,
+    "x": 1396.5419921875,
+    "y": 319.21392822265625,
+    "confidence": 0.6568755507469177,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 486,
+    "x": 1396.406494140625,
+    "y": 324.65277099609375,
+    "confidence": 0.6545353531837463,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 487,
+    "x": 1396.058837890625,
+    "y": 327.6280822753906,
+    "confidence": 0.5295158624649048,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 488,
+    "x": 1454.8008332863335,
+    "y": 333.1175040062466,
+    "confidence": null,
+    "source": "interpolation",
+    "interpolated": true
+  },
+  {
+    "frame_idx": 489,
+    "x": 1385.666015625,
+    "y": 342.44525146484375,
+    "confidence": 0.6543160080909729,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 490,
+    "x": 1381.4466552734375,
+    "y": 345.8616027832031,
+    "confidence": 0.6385415196418762,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 491,
+    "x": 1369.728515625,
+    "y": 353.6134033203125,
+    "confidence": 0.621849536895752,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 492,
+    "x": 1359.87744140625,
+    "y": 362.50921630859375,
+    "confidence": 0.6769658923149109,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 493,
+    "x": 1355.070556640625,
+    "y": 363.47064208984375,
+    "confidence": 0.6982572078704834,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 494,
+    "x": 1343.1402587890625,
+    "y": 350.13311767578125,
+    "confidence": 0.6233176589012146,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 495,
+    "x": 1333.7099609375,
+    "y": 338.1201171875,
+    "confidence": 0.6569226384162903,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 496,
+    "x": 1330.92578125,
+    "y": 333.7480163574219,
+    "confidence": 0.6708574295043945,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 497,
+    "x": 1327.26708984375,
+    "y": 324.4565734863281,
+    "confidence": 0.7029746174812317,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 498,
+    "x": 1326.54345703125,
+    "y": 317.67071533203125,
+    "confidence": 0.6775489449501038,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 499,
+    "x": 1326.584716796875,
+    "y": 314.44439697265625,
+    "confidence": 0.6962250471115112,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 500,
+    "x": 1327.91259765625,
+    "y": 310.40679931640625,
+    "confidence": 0.657251238822937,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 501,
+    "x": 1329.69580078125,
+    "y": 305.16583251953125,
+    "confidence": 0.6605672240257263,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 502,
+    "x": 1330.28955078125,
+    "y": 303.40301513671875,
+    "confidence": 0.7057471871376038,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 503,
+    "x": 1330.9293212890625,
+    "y": 299.755859375,
+    "confidence": 0.7030319571495056,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 504,
+    "x": 1332.741455078125,
+    "y": 299.68988037109375,
+    "confidence": 0.7395765781402588,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 505,
+    "x": 1333.8780517578125,
+    "y": 300.67205810546875,
+    "confidence": 0.7664391398429871,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 506,
+    "x": 1336.769775390625,
+    "y": 305.16253662109375,
+    "confidence": 0.7135522961616516,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 507,
+    "x": 1340.76025390625,
+    "y": 313.44915771484375,
+    "confidence": 0.5881824493408203,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 508,
+    "x": 1343.5181884765625,
+    "y": 316.3920593261719,
+    "confidence": 0.6424040198326111,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 509,
+    "x": 1347.9833984375,
+    "y": 323.0932312011719,
+    "confidence": 0.6517787575721741,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 510,
+    "x": 1352.35595703125,
+    "y": 329.51885986328125,
+    "confidence": 0.7104036808013916,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 511,
+    "x": 1354.506591796875,
+    "y": 331.78216552734375,
+    "confidence": 0.6606811881065369,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 512,
+    "x": 1357.996826171875,
+    "y": 337.2967529296875,
+    "confidence": 0.6558588743209839,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 513,
+    "x": 1360.71484375,
+    "y": 343.5235595703125,
+    "confidence": 0.7046156525611877,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 514,
+    "x": 1362.255859375,
+    "y": 347.1761474609375,
+    "confidence": 0.719682514667511,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 515,
+    "x": 1364.75390625,
+    "y": 357.5311279296875,
+    "confidence": 0.7099425792694092,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 516,
+    "x": 1369.3487548828125,
+    "y": 365.1875,
+    "confidence": 0.7210424542427063,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 517,
+    "x": 1372.003173828125,
+    "y": 362.80999755859375,
+    "confidence": 0.7313215732574463,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 518,
+    "x": 1378.722900390625,
+    "y": 356.4584045410156,
+    "confidence": 0.7588491439819336,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 519,
+    "x": 1384.7393798828125,
+    "y": 352.7503967285156,
+    "confidence": 0.7471627593040466,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 520,
+    "x": 1388.1181640625,
+    "y": 351.464111328125,
+    "confidence": 0.6965968608856201,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 521,
+    "x": 1396.153564453125,
+    "y": 349.34033203125,
+    "confidence": 0.7130672931671143,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 522,
+    "x": 1402.5830078125,
+    "y": 348.71807861328125,
+    "confidence": 0.7198097109794617,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 523,
+    "x": 1406.013671875,
+    "y": 348.36688232421875,
+    "confidence": 0.7020609974861145,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 524,
+    "x": 1412.8641357421875,
+    "y": 347.49090576171875,
+    "confidence": 0.6742945313453674,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 525,
+    "x": 1420.695068359375,
+    "y": 347.24444580078125,
+    "confidence": 0.6748310923576355,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 526,
+    "x": 1424.68212890625,
+    "y": 347.2188415527344,
+    "confidence": 0.6714226007461548,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 527,
+    "x": 1432.793701171875,
+    "y": 348.1993103027344,
+    "confidence": 0.7393860220909119,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 528,
+    "x": 1440.92041015625,
+    "y": 350.5528564453125,
+    "confidence": 0.6801729202270508,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 529,
+    "x": 1446.09130859375,
+    "y": 352.11383056640625,
+    "confidence": 0.7172496318817139,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 530,
+    "x": 1454.8677978515625,
+    "y": 357.06512451171875,
+    "confidence": 0.7008541226387024,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 531,
+    "x": 1463.51171875,
+    "y": 362.3446960449219,
+    "confidence": 0.788390576839447,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 532,
+    "x": 1466.5869140625,
+    "y": 365.35247802734375,
+    "confidence": 0.7070374488830566,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 533,
+    "x": 1474.2225341796875,
+    "y": 371.6401062011719,
+    "confidence": 0.6876964569091797,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 534,
+    "x": 1482.13720703125,
+    "y": 372.51263427734375,
+    "confidence": 0.7801329493522644,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 535,
+    "x": 1486.689453125,
+    "y": 370.17669677734375,
+    "confidence": 0.7787678837776184,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 536,
+    "x": 1494.1878662109375,
+    "y": 366.386474609375,
+    "confidence": 0.7208537459373474,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 537,
+    "x": 1501.8167724609375,
+    "y": 364.420654296875,
+    "confidence": 0.7534196972846985,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 538,
+    "x": 1506.191162109375,
+    "y": 364.29833984375,
+    "confidence": 0.7692487239837646,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 539,
+    "x": 1514.03515625,
+    "y": 364.974853515625,
+    "confidence": 0.6715983748435974,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 540,
+    "x": 1509.9957275390625,
+    "y": 364.5639953613281,
+    "confidence": 0.6455166935920715,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 541,
+    "x": 1504.177978515625,
+    "y": 364.0142517089844,
+    "confidence": 0.7116208076477051,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 542,
+    "x": 1494.3245849609375,
+    "y": 362.159423828125,
+    "confidence": 0.6629348993301392,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 543,
+    "x": 1483.02490234375,
+    "y": 361.75872802734375,
+    "confidence": 0.656109094619751,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 544,
+    "x": 1478.0255126953125,
+    "y": 361.2042236328125,
+    "confidence": 0.6857103109359741,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 545,
+    "x": 1468.029052734375,
+    "y": 361.65155029296875,
+    "confidence": 0.6978522539138794,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 546,
+    "x": 1459.47216796875,
+    "y": 363.56396484375,
+    "confidence": 0.7084600329399109,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 547,
+    "x": 1454.872314453125,
+    "y": 364.5584716796875,
+    "confidence": 0.6893090605735779,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 548,
+    "x": 1446.7215576171875,
+    "y": 368.05108642578125,
+    "confidence": 0.6975781917572021,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 549,
+    "x": 1438.39306640625,
+    "y": 371.8511962890625,
+    "confidence": 0.7371236085891724,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 550,
+    "x": 1433.752197265625,
+    "y": 374.2379150390625,
+    "confidence": 0.7000135183334351,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 551,
+    "x": 1424.2716064453125,
+    "y": 378.6536865234375,
+    "confidence": 0.7016146779060364,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 552,
+    "x": 1415.2161865234375,
+    "y": 383.43914794921875,
+    "confidence": 0.7088217735290527,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 553,
+    "x": 1410.3148193359375,
+    "y": 386.6720886230469,
+    "confidence": 0.6922540664672852,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 554,
+    "x": 1401.3756103515625,
+    "y": 393.31695556640625,
+    "confidence": 0.7432007789611816,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 555,
+    "x": 1394.61279296875,
+    "y": 391.9529724121094,
+    "confidence": 0.7747873067855835,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 556,
+    "x": 1392.39306640625,
+    "y": 390.3668518066406,
+    "confidence": 0.6850932836532593,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 557,
+    "x": 1386.658447265625,
+    "y": 386.8948669433594,
+    "confidence": 0.780906617641449,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 558,
+    "x": 1382.452880859375,
+    "y": 384.2449951171875,
+    "confidence": 0.6786444187164307,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 559,
+    "x": 1379.5655517578125,
+    "y": 384.22039794921875,
+    "confidence": 0.6873575448989868,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 560,
+    "x": 1374.03369140625,
+    "y": 383.054443359375,
+    "confidence": 0.7960823774337769,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 561,
+    "x": 1369.078369140625,
+    "y": 383.04327392578125,
+    "confidence": 0.8010247349739075,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 562,
+    "x": 1366.89013671875,
+    "y": 383.5921630859375,
+    "confidence": 0.8071341514587402,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 563,
+    "x": 1362.149169921875,
+    "y": 384.618896484375,
+    "confidence": 0.7543503046035767,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 564,
+    "x": 1357.795654296875,
+    "y": 386.9213562011719,
+    "confidence": 0.7709247469902039,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 565,
+    "x": 1355.51171875,
+    "y": 388.0401916503906,
+    "confidence": 0.7384957075119019,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 566,
+    "x": 1351.472900390625,
+    "y": 391.60662841796875,
+    "confidence": 0.8022686243057251,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 567,
+    "x": 1347.2794189453125,
+    "y": 392.38079833984375,
+    "confidence": 0.8221821784973145,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 568,
+    "x": 1345.202392578125,
+    "y": 391.30841064453125,
+    "confidence": 0.8120343685150146,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 569,
+    "x": 1339.724609375,
+    "y": 387.5769958496094,
+    "confidence": 0.7547825574874878,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 570,
+    "x": 1334.053955078125,
+    "y": 386.45697021484375,
+    "confidence": 0.7382085919380188,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 571,
+    "x": 1331.73095703125,
+    "y": 386.595458984375,
+    "confidence": 0.8097933530807495,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 572,
+    "x": 1326.5650634765625,
+    "y": 387.071044921875,
+    "confidence": 0.801469624042511,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 573,
+    "x": 1321.48193359375,
+    "y": 388.91461181640625,
+    "confidence": 0.7611661553382874,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 574,
+    "x": 1319.184814453125,
+    "y": 389.9925842285156,
+    "confidence": 0.7927682399749756,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 575,
+    "x": 1314.23388671875,
+    "y": 391.682861328125,
+    "confidence": 0.7505857348442078,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 576,
+    "x": 1309.832763671875,
+    "y": 390.3713684082031,
+    "confidence": 0.7714333534240723,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 577,
+    "x": 1307.8916015625,
+    "y": 390.02197265625,
+    "confidence": 0.7996927499771118,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 578,
+    "x": 1303.71826171875,
+    "y": 389.8058776855469,
+    "confidence": 0.8504560589790344,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 579,
+    "x": 1300.7547607421875,
+    "y": 390.0494689941406,
+    "confidence": 0.8198323845863342,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 580,
+    "x": 1299.073974609375,
+    "y": 390.17498779296875,
+    "confidence": 0.7966262102127075,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 581,
+    "x": 1296.2791748046875,
+    "y": 390.2185974121094,
+    "confidence": 0.7486602663993835,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 582,
+    "x": 1293.15478515625,
+    "y": 390.168212890625,
+    "confidence": 0.7843671441078186,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 583,
+    "x": 1291.7901611328125,
+    "y": 390.29388427734375,
+    "confidence": 0.7948655486106873,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 584,
+    "x": 1288.9708251953125,
+    "y": 389.9711608886719,
+    "confidence": 0.8004807829856873,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 585,
+    "x": 1285.974365234375,
+    "y": 389.833251953125,
+    "confidence": 0.7915840744972229,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 586,
+    "x": 1284.479248046875,
+    "y": 389.78369140625,
+    "confidence": 0.7763453722000122,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 587,
+    "x": 1280.564208984375,
+    "y": 388.90325927734375,
+    "confidence": 0.7801691293716431,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 588,
+    "x": 1276.387451171875,
+    "y": 388.72064208984375,
+    "confidence": 0.8307860493659973,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 589,
+    "x": 1274.073486328125,
+    "y": 388.80267333984375,
+    "confidence": 0.8181975483894348,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 590,
+    "x": 1268.869873046875,
+    "y": 388.427001953125,
+    "confidence": 0.7189099788665771,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 591,
+    "x": 1262.2181396484375,
+    "y": 389.81854248046875,
+    "confidence": 0.645469605922699,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 592,
+    "x": 1258.45556640625,
+    "y": 389.4005126953125,
+    "confidence": 0.696566104888916,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 593,
+    "x": 1260.0107421875,
+    "y": 388.51458740234375,
+    "confidence": 0.6261416077613831,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 594,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 595,
+    "x": 1266.2127685546875,
+    "y": 392.4219970703125,
+    "confidence": 0.6652941703796387,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 596,
+    "x": 1273.3170166015625,
+    "y": 394.353515625,
+    "confidence": 0.7120804190635681,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 597,
+    "x": 1277.083740234375,
+    "y": 397.19976806640625,
+    "confidence": 0.728644073009491,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 598,
+    "x": 1278.94140625,
+    "y": 399.48651123046875,
+    "confidence": 0.7596648335456848,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 599,
+    "x": 1281.609375,
+    "y": 404.830810546875,
+    "confidence": 0.7837467789649963,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 600,
+    "x": 1285.421142578125,
+    "y": 410.1663818359375,
+    "confidence": 0.7442691922187805,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 601,
+    "x": 1286.927734375,
+    "y": 414.04193115234375,
+    "confidence": 0.7169939875602722,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 602,
+    "x": 1291.140380859375,
+    "y": 422.5338134765625,
+    "confidence": 0.7282196283340454,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 603,
+    "x": 1295.54052734375,
+    "y": 432.26904296875,
+    "confidence": 0.7120846509933472,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 604,
+    "x": 1297.84033203125,
+    "y": 437.152587890625,
+    "confidence": 0.7420408129692078,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 605,
+    "x": 1302.59326171875,
+    "y": 448.06005859375,
+    "confidence": 0.7314078211784363,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 606,
+    "x": 1308.02099609375,
+    "y": 460.022216796875,
+    "confidence": 0.7186053395271301,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 607,
+    "x": 1310.819580078125,
+    "y": 465.7442626953125,
+    "confidence": 0.7793136239051819,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 608,
+    "x": 1315.372314453125,
+    "y": 464.756591796875,
+    "confidence": 0.8148524761199951,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 609,
+    "x": 1319.385498046875,
+    "y": 462.51324462890625,
+    "confidence": 0.8266862630844116,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 610,
+    "x": 1321.7503662109375,
+    "y": 461.8683776855469,
+    "confidence": 0.825715184211731,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 611,
+    "x": 1325.865966796875,
+    "y": 460.7342529296875,
+    "confidence": 0.8274109959602356,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 612,
+    "x": 1328.928955078125,
+    "y": 461.399658203125,
+    "confidence": 0.8655354976654053,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 613,
+    "x": 1330.4266357421875,
+    "y": 461.9794616699219,
+    "confidence": 0.8389149904251099,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 614,
+    "x": 1333.9549560546875,
+    "y": 464.342041015625,
+    "confidence": 0.8820100426673889,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 615,
+    "x": 1336.450927734375,
+    "y": 467.229248046875,
+    "confidence": 0.8683658838272095,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 616,
+    "x": 1337.955078125,
+    "y": 469.02716064453125,
+    "confidence": 0.8516614437103271,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 617,
+    "x": 1341.261962890625,
+    "y": 473.3370056152344,
+    "confidence": 0.8146703839302063,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 618,
+    "x": 1344.955810546875,
+    "y": 479.50634765625,
+    "confidence": 0.785859227180481,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 619,
+    "x": 1347.0257568359375,
+    "y": 483.9522705078125,
+    "confidence": 0.7504115104675293,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 620,
+    "x": 1351.219970703125,
+    "y": 493.756591796875,
+    "confidence": 0.805799663066864,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 621,
+    "x": 1354.95947265625,
+    "y": 505.9328308105469,
+    "confidence": 0.8182740807533264,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 622,
+    "x": 1356.473388671875,
+    "y": 509.2384338378906,
+    "confidence": 0.875480592250824,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 623,
+    "x": 1358.037109375,
+    "y": 506.1526794433594,
+    "confidence": 0.8375681042671204,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 624,
+    "x": 1360.44921875,
+    "y": 504.907958984375,
+    "confidence": 0.8524290919303894,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 625,
+    "x": 1361.6180419921875,
+    "y": 504.5787353515625,
+    "confidence": 0.8455114960670471,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 626,
+    "x": 1364.065185546875,
+    "y": 504.24212646484375,
+    "confidence": 0.8384203910827637,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 627,
+    "x": 1367.6788330078125,
+    "y": 505.3141784667969,
+    "confidence": 0.8405437469482422,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 628,
+    "x": 1370.049072265625,
+    "y": 506.4754943847656,
+    "confidence": 0.8396202921867371,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 629,
+    "x": 1377.0460205078125,
+    "y": 510.33837890625,
+    "confidence": 0.8313928842544556,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 630,
+    "x": 1385.990478515625,
+    "y": 516.249267578125,
+    "confidence": 0.7952413558959961,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 631,
+    "x": 1391.140625,
+    "y": 519.4776611328125,
+    "confidence": 0.8379350304603577,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 632,
+    "x": 1403.0152587890625,
+    "y": 527.1103515625,
+    "confidence": 0.7558423280715942,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 633,
+    "x": 1417.7271728515625,
+    "y": 536.2838134765625,
+    "confidence": 0.7102084159851074,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 634,
+    "x": 1425.23388671875,
+    "y": 540.1484375,
+    "confidence": 0.721356987953186,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 635,
+    "x": 1442.410400390625,
+    "y": 551.215087890625,
+    "confidence": 0.8324745297431946,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 636,
+    "x": 1458.9478759765625,
+    "y": 559.4920654296875,
+    "confidence": 0.8717201948165894,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 637,
+    "x": 1466.4002685546875,
+    "y": 559.16943359375,
+    "confidence": 0.8865911364555359,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 638,
+    "x": 1482.1357421875,
+    "y": 559.47265625,
+    "confidence": 0.8259198069572449,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 639,
+    "x": 1499.3223876953125,
+    "y": 560.39599609375,
+    "confidence": 0.8503762483596802,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 640,
+    "x": 1508.1461181640625,
+    "y": 561.39990234375,
+    "confidence": 0.8192691206932068,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 641,
+    "x": 1525.5155029296875,
+    "y": 563.64892578125,
+    "confidence": 0.7476522922515869,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 642,
+    "x": 1542.453125,
+    "y": 566.3471069335938,
+    "confidence": 0.7148716449737549,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 643,
+    "x": 1551.49169921875,
+    "y": 567.9825439453125,
+    "confidence": 0.7206524610519409,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 644,
+    "x": 1569.74609375,
+    "y": 573.5206298828125,
+    "confidence": 0.7565534114837646,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 645,
+    "x": 1587.8585205078125,
+    "y": 579.428955078125,
+    "confidence": 0.8136683106422424,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 646,
+    "x": 1597.71142578125,
+    "y": 579.25830078125,
+    "confidence": 0.870506227016449,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 647,
+    "x": 1617.0152587890625,
+    "y": 580.3740844726562,
+    "confidence": 0.8223545551300049,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 648,
+    "x": 1636.924560546875,
+    "y": 583.2646484375,
+    "confidence": 0.7204905152320862,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 649,
+    "x": 1647.118408203125,
+    "y": 585.77734375,
+    "confidence": 0.7239050269126892,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 650,
+    "x": 1666.7869873046875,
+    "y": 591.2137451171875,
+    "confidence": 0.7176297307014465,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 651,
+    "x": 1679.9940185546875,
+    "y": 594.97607421875,
+    "confidence": 0.6977829337120056,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 652,
+    "x": 1677.130615234375,
+    "y": 594.9684448242188,
+    "confidence": 0.6880114078521729,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 653,
+    "x": 1672.076416015625,
+    "y": 594.443603515625,
+    "confidence": 0.733412504196167,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 654,
+    "x": 1665.94873046875,
+    "y": 593.5573120117188,
+    "confidence": 0.7262085676193237,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 655,
+    "x": 1663.846435546875,
+    "y": 592.92578125,
+    "confidence": 0.7255004644393921,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 656,
+    "x": 1658.4691162109375,
+    "y": 590.4251708984375,
+    "confidence": 0.7338783740997314,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 657,
+    "x": 1653.1566162109375,
+    "y": 588.98779296875,
+    "confidence": 0.786436915397644,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 658,
+    "x": 1651.2374267578125,
+    "y": 588.4535522460938,
+    "confidence": 0.8168781995773315,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 659,
+    "x": 1646.10107421875,
+    "y": 587.6513671875,
+    "confidence": 0.7752587199211121,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 660,
+    "x": 1642.0791015625,
+    "y": 586.0325927734375,
+    "confidence": 0.7459033131599426,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 661,
+    "x": 1640.8316650390625,
+    "y": 585.4256591796875,
+    "confidence": 0.7775859236717224,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 662,
+    "x": 1638.5224609375,
+    "y": 584.248046875,
+    "confidence": 0.7693414092063904,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 663,
+    "x": 1636.608154296875,
+    "y": 582.9197998046875,
+    "confidence": 0.7867558598518372,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 664,
+    "x": 1636.8277587890625,
+    "y": 583.0632934570312,
+    "confidence": 0.7501661777496338,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 665,
+    "x": 1637.314453125,
+    "y": 582.2312622070312,
+    "confidence": 0.7492446303367615,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 666,
+    "x": 1637.623779296875,
+    "y": 581.1809692382812,
+    "confidence": 0.7944621443748474,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 667,
+    "x": 1637.769287109375,
+    "y": 579.9864501953125,
+    "confidence": 0.717620313167572,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 668,
+    "x": 1638.486328125,
+    "y": 579.4876708984375,
+    "confidence": 0.857744574546814,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 669,
+    "x": 1638.851318359375,
+    "y": 578.109375,
+    "confidence": 0.8199802041053772,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 670,
+    "x": 1639.37158203125,
+    "y": 577.2884521484375,
+    "confidence": 0.7757582664489746,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 671,
+    "x": 1639.107666015625,
+    "y": 574.5511474609375,
+    "confidence": 0.8196094036102295,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 672,
+    "x": 1638.572021484375,
+    "y": 571.06005859375,
+    "confidence": 0.7739953398704529,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 673,
+    "x": 1639.1824951171875,
+    "y": 570.171630859375,
+    "confidence": 0.8289579749107361,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 674,
+    "x": 1639.59619140625,
+    "y": 567.5952758789062,
+    "confidence": 0.7429214715957642,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 675,
+    "x": 1639.374755859375,
+    "y": 565.0740966796875,
+    "confidence": 0.7869535088539124,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 676,
+    "x": 1639.4471435546875,
+    "y": 564.6170654296875,
+    "confidence": 0.7256119847297668,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 677,
+    "x": 1639.713134765625,
+    "y": 562.79248046875,
+    "confidence": 0.7407891154289246,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 678,
+    "x": 1639.8236083984375,
+    "y": 560.8569946289062,
+    "confidence": 0.7416189908981323,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 679,
+    "x": 1640.29296875,
+    "y": 560.1690673828125,
+    "confidence": 0.730189323425293,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 680,
+    "x": 1639.8740234375,
+    "y": 557.9193115234375,
+    "confidence": 0.7318009734153748,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 681,
+    "x": 1639.5615234375,
+    "y": 555.537109375,
+    "confidence": 0.7295800447463989,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 682,
+    "x": 1639.3720703125,
+    "y": 555.12841796875,
+    "confidence": 0.7303638458251953,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 683,
+    "x": 1636.979248046875,
+    "y": 554.3591918945312,
+    "confidence": 0.7470090985298157,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 684,
+    "x": 1629.1953125,
+    "y": 555.759521484375,
+    "confidence": 0.7403428554534912,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 685,
+    "x": 1624.27880859375,
+    "y": 555.8563232421875,
+    "confidence": 0.777547299861908,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 686,
+    "x": 1616.361328125,
+    "y": 556.9251708984375,
+    "confidence": 0.7778775095939636,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 687,
+    "x": 1608.319091796875,
+    "y": 557.9930419921875,
+    "confidence": 0.7837409973144531,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 688,
+    "x": 1604.73486328125,
+    "y": 558.3583984375,
+    "confidence": 0.8311660289764404,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 689,
+    "x": 1597.5078125,
+    "y": 557.8771362304688,
+    "confidence": 0.8120906352996826,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 690,
+    "x": 1590.176513671875,
+    "y": 557.7161865234375,
+    "confidence": 0.8014929294586182,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 691,
+    "x": 1587.918212890625,
+    "y": 557.4282836914062,
+    "confidence": 0.7713534235954285,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 692,
+    "x": 1582.0638427734375,
+    "y": 556.9335327148438,
+    "confidence": 0.828070878982544,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 693,
+    "x": 1576.928466796875,
+    "y": 556.2120361328125,
+    "confidence": 0.8552166223526001,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 694,
+    "x": 1574.8291015625,
+    "y": 555.8698120117188,
+    "confidence": 0.8499268293380737,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 695,
+    "x": 1569.82666015625,
+    "y": 554.974365234375,
+    "confidence": 0.8302921652793884,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 696,
+    "x": 1563.8616943359375,
+    "y": 553.8816528320312,
+    "confidence": 0.8061455488204956,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 697,
+    "x": 1561.482177734375,
+    "y": 553.3143310546875,
+    "confidence": 0.7456414699554443,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 698,
+    "x": 1555.745361328125,
+    "y": 552.02197265625,
+    "confidence": 0.7817710041999817,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 699,
+    "x": 1549.749267578125,
+    "y": 551.4334716796875,
+    "confidence": 0.7239540815353394,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 700,
+    "x": 1546.497802734375,
+    "y": 551.030029296875,
+    "confidence": 0.7750115394592285,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 701,
+    "x": 1539.1763916015625,
+    "y": 550.148681640625,
+    "confidence": 0.8104358315467834,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 702,
+    "x": 1532.43115234375,
+    "y": 549.5057373046875,
+    "confidence": 0.7965148687362671,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 703,
+    "x": 1529.0478515625,
+    "y": 548.64404296875,
+    "confidence": 0.8325790166854858,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 704,
+    "x": 1522.683349609375,
+    "y": 546.7225952148438,
+    "confidence": 0.8561829328536987,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 705,
+    "x": 1516.3466796875,
+    "y": 543.9668579101562,
+    "confidence": 0.7686134576797485,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 706,
+    "x": 1513.6400146484375,
+    "y": 543.0712890625,
+    "confidence": 0.7740427851676941,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 707,
+    "x": 1507.1993408203125,
+    "y": 541.1385498046875,
+    "confidence": 0.7252512574195862,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 708,
+    "x": 1501.96923828125,
+    "y": 540.510986328125,
+    "confidence": 0.7448153495788574,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 709,
+    "x": 1498.885498046875,
+    "y": 539.8778076171875,
+    "confidence": 0.7540313005447388,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 710,
+    "x": 1492.567138671875,
+    "y": 539.0272827148438,
+    "confidence": 0.6996785402297974,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 711,
+    "x": 1486.5833740234375,
+    "y": 538.531005859375,
+    "confidence": 0.7196112275123596,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 712,
+    "x": 1484.308837890625,
+    "y": 538.1019287109375,
+    "confidence": 0.7020927667617798,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 713,
+    "x": 1478.2801513671875,
+    "y": 537.5715942382812,
+    "confidence": 0.7267285585403442,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 714,
+    "x": 1472.883056640625,
+    "y": 536.094482421875,
+    "confidence": 0.7166693210601807,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 715,
+    "x": 1470.00048828125,
+    "y": 534.9720458984375,
+    "confidence": 0.6876266002655029,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 716,
+    "x": 1464.721923828125,
+    "y": 533.294189453125,
+    "confidence": 0.7015486359596252,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 717,
+    "x": 1459.22607421875,
+    "y": 531.6344604492188,
+    "confidence": 0.7161808609962463,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 718,
+    "x": 1456.6492919921875,
+    "y": 530.1533203125,
+    "confidence": 0.7231175899505615,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 719,
+    "x": 1450.550537109375,
+    "y": 527.59130859375,
+    "confidence": 0.7158710360527039,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 720,
+    "x": 1444.89208984375,
+    "y": 524.40576171875,
+    "confidence": 0.7114407420158386,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 721,
+    "x": 1442.21240234375,
+    "y": 522.901611328125,
+    "confidence": 0.7027080059051514,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 722,
+    "x": 1435.931640625,
+    "y": 520.35498046875,
+    "confidence": 0.695724606513977,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 723,
+    "x": 1430.5377197265625,
+    "y": 518.4904174804688,
+    "confidence": 0.747739315032959,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 724,
+    "x": 1428.971923828125,
+    "y": 517.596435546875,
+    "confidence": 0.7360607981681824,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 725,
+    "x": 1422.9952392578125,
+    "y": 515.9686279296875,
+    "confidence": 0.7324019074440002,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 726,
+    "x": 1418.738037109375,
+    "y": 515.08349609375,
+    "confidence": 0.7774239182472229,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 727,
+    "x": 1416.73291015625,
+    "y": 514.2537841796875,
+    "confidence": 0.7673494815826416,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 728,
+    "x": 1412.4443359375,
+    "y": 513.1461181640625,
+    "confidence": 0.7162859439849854,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 729,
+    "x": 1407.8740234375,
+    "y": 511.922119140625,
+    "confidence": 0.7099068760871887,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 730,
+    "x": 1402.310546875,
+    "y": 509.55816650390625,
+    "confidence": 0.7063995003700256,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 731,
+    "x": 1398.2230224609375,
+    "y": 508.383056640625,
+    "confidence": 0.729308009147644,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 732,
+    "x": 1396.9931640625,
+    "y": 507.7283935546875,
+    "confidence": 0.7355146408081055,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 733,
+    "x": 1394.0224609375,
+    "y": 505.8496398925781,
+    "confidence": 0.6904193758964539,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 734,
+    "x": 1391.311279296875,
+    "y": 503.953369140625,
+    "confidence": 0.69298255443573,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 735,
+    "x": 1389.306884765625,
+    "y": 503.7333679199219,
+    "confidence": 0.6776158213615417,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 736,
+    "x": 1386.187744140625,
+    "y": 502.1889343261719,
+    "confidence": 0.6978113651275635,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 737,
+    "x": 1383.84521484375,
+    "y": 500.759033203125,
+    "confidence": 0.6890547871589661,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 738,
+    "x": 1383.0511474609375,
+    "y": 499.61761474609375,
+    "confidence": 0.6864021420478821,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 739,
+    "x": 1380.295166015625,
+    "y": 498.047607421875,
+    "confidence": 0.6915276646614075,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 740,
+    "x": 1376.7906494140625,
+    "y": 497.8538818359375,
+    "confidence": 0.696993350982666,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 741,
+    "x": 1376.252685546875,
+    "y": 497.33477783203125,
+    "confidence": 0.6923563480377197,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 742,
+    "x": 1373.6456298828125,
+    "y": 497.3414306640625,
+    "confidence": 0.696104109287262,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 743,
+    "x": 1361.2581787109375,
+    "y": 499.60943603515625,
+    "confidence": 0.6843309998512268,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 744,
+    "x": 1354.472900390625,
+    "y": 499.86297607421875,
+    "confidence": 0.6949304342269897,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 745,
+    "x": 1338.71240234375,
+    "y": 501.7209777832031,
+    "confidence": 0.7531794309616089,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 746,
+    "x": 1323.709716796875,
+    "y": 504.61871337890625,
+    "confidence": 0.7264782190322876,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 747,
+    "x": 1315.149169921875,
+    "y": 505.8336486816406,
+    "confidence": 0.720493495464325,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 748,
+    "x": 1300.619873046875,
+    "y": 508.07147216796875,
+    "confidence": 0.7417100071907043,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 749,
+    "x": 1285.53955078125,
+    "y": 507.3680419921875,
+    "confidence": 0.7018461227416992,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 750,
+    "x": 1278.236083984375,
+    "y": 506.531494140625,
+    "confidence": 0.7062659859657288,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 751,
+    "x": 1264.94775390625,
+    "y": 506.1477355957031,
+    "confidence": 0.8548163771629333,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 752,
+    "x": 1252.61865234375,
+    "y": 507.70562744140625,
+    "confidence": 0.8380351662635803,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 753,
+    "x": 1246.8974609375,
+    "y": 508.4552307128906,
+    "confidence": 0.8152395486831665,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 754,
+    "x": 1238.9315185546875,
+    "y": 509.94915771484375,
+    "confidence": 0.8535235524177551,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 755,
+    "x": 1231.147705078125,
+    "y": 512.1041870117188,
+    "confidence": 0.7980629205703735,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 756,
+    "x": 1226.99267578125,
+    "y": 513.4762573242188,
+    "confidence": 0.8537895679473877,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 757,
+    "x": 1217.606689453125,
+    "y": 515.7391357421875,
+    "confidence": 0.7807461023330688,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 758,
+    "x": 1207.765869140625,
+    "y": 517.59619140625,
+    "confidence": 0.7495905756950378,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 759,
+    "x": 1201.799072265625,
+    "y": 518.4865112304688,
+    "confidence": 0.7979865074157715,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 760,
+    "x": 1189.815185546875,
+    "y": 519.679931640625,
+    "confidence": 0.7840532660484314,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 761,
+    "x": 1176.8199462890625,
+    "y": 520.9274291992188,
+    "confidence": 0.8542662262916565,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 762,
+    "x": 1170.638671875,
+    "y": 521.6776123046875,
+    "confidence": 0.8292242288589478,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 763,
+    "x": 1158.7537841796875,
+    "y": 522.1122436523438,
+    "confidence": 0.8059219121932983,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 764,
+    "x": 1148.068359375,
+    "y": 522.7174072265625,
+    "confidence": 0.749759316444397,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 765,
+    "x": 1142.7503662109375,
+    "y": 523.1998291015625,
+    "confidence": 0.7381086945533752,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 766,
+    "x": 1130.5710655223613,
+    "y": 537.8788594562135,
+    "confidence": null,
+    "source": "interpolation",
+    "interpolated": true
+  },
+  {
+    "frame_idx": 767,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 768,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 769,
+    "x": 1126.482177734375,
+    "y": 522.1634521484375,
+    "confidence": 0.6062917709350586,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 770,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 771,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 772,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 773,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 774,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 775,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 776,
+    "x": 1137.7493896484375,
+    "y": 517.58544921875,
+    "confidence": 0.6590666174888611,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 777,
+    "x": 1138.1572265625,
+    "y": 517.4305419921875,
+    "confidence": 0.6834972500801086,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 778,
+    "x": 1139.432373046875,
+    "y": 515.0067749023438,
+    "confidence": 0.6676673889160156,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 779,
+    "x": 1140.71435546875,
+    "y": 514.2041015625,
+    "confidence": 0.6829461455345154,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 780,
+    "x": 1141.8314208984375,
+    "y": 513.9832153320312,
+    "confidence": 0.6893249154090881,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 781,
+    "x": 1144.3359375,
+    "y": 513.1046142578125,
+    "confidence": 0.6600565314292908,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 782,
+    "x": 1146.4068603515625,
+    "y": 511.8046875,
+    "confidence": 0.7003166675567627,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 783,
+    "x": 1147.035888671875,
+    "y": 511.49468994140625,
+    "confidence": 0.7047418355941772,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 784,
+    "x": 1148.49658203125,
+    "y": 511.568359375,
+    "confidence": 0.7009083032608032,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 785,
+    "x": 1149.410888671875,
+    "y": 511.15008544921875,
+    "confidence": 0.7073000073432922,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 786,
+    "x": 1149.86962890625,
+    "y": 510.5634765625,
+    "confidence": 0.7072439193725586,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 787,
+    "x": 1150.57958984375,
+    "y": 508.2930908203125,
+    "confidence": 0.6761094927787781,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 788,
+    "x": 1151.8486328125,
+    "y": 508.4956359863281,
+    "confidence": 0.669553279876709,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 789,
+    "x": 1151.301025390625,
+    "y": 507.612060546875,
+    "confidence": 0.6795695424079895,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 790,
+    "x": 1151.52294921875,
+    "y": 506.84332275390625,
+    "confidence": 0.6938570737838745,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 791,
+    "x": 1155.210205078125,
+    "y": 504.61053466796875,
+    "confidence": 0.6915888786315918,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 792,
+    "x": 1155.8260498046875,
+    "y": 503.45263671875,
+    "confidence": 0.6787525415420532,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 793,
+    "x": 1160.1163330078125,
+    "y": 499.45880126953125,
+    "confidence": 0.674290657043457,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 794,
+    "x": 1164.1588134765625,
+    "y": 498.2666320800781,
+    "confidence": 0.677719235420227,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 795,
+    "x": 1166.6024169921875,
+    "y": 497.49603271484375,
+    "confidence": 0.6728107929229736,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 796,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 797,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 798,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 799,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 800,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 801,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 802,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 803,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 804,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 805,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 806,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 807,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 808,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 809,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 810,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 811,
+    "x": 1214.9677734375,
+    "y": 515.5835571289062,
+    "confidence": 0.635587751865387,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 812,
+    "x": 1218.67041015625,
+    "y": 515.6861572265625,
+    "confidence": 0.6888431906700134,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 813,
+    "x": 1220.399169921875,
+    "y": 515.8609619140625,
+    "confidence": 0.6826606392860413,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 814,
+    "x": 1223.52685546875,
+    "y": 517.4915161132812,
+    "confidence": 0.6145145893096924,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 815,
+    "x": 1216.1361618254102,
+    "y": 518.1973861569759,
+    "confidence": null,
+    "source": "interpolation",
+    "interpolated": true
+  },
+  {
+    "frame_idx": 816,
+    "x": 1175.4046630859375,
+    "y": 496.08197021484375,
+    "confidence": 0.7080031037330627,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 817,
+    "x": 1192.9134521484375,
+    "y": 511.4295349121094,
+    "confidence": 0.6520617604255676,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 818,
+    "x": 1068.2354736328125,
+    "y": 447.8568420410156,
+    "confidence": 0.6851674318313599,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 819,
+    "x": 1041.9388427734375,
+    "y": 437.5936279296875,
+    "confidence": 0.7045763731002808,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 820,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 821,
+    "x": 1158.36701774072,
+    "y": 513.0566026944222,
+    "confidence": null,
+    "source": "interpolation",
+    "interpolated": true
+  },
+  {
+    "frame_idx": 822,
+    "x": 1152.4534074637631,
+    "y": 517.2924421524181,
+    "confidence": null,
+    "source": "interpolation",
+    "interpolated": true
+  },
+  {
+    "frame_idx": 823,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 824,
+    "x": 832.5875244140625,
+    "y": 349.1953125,
+    "confidence": 0.6232374906539917,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 825,
+    "x": 812.2493896484375,
+    "y": 341.8345947265625,
+    "confidence": 0.682227611541748,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 826,
+    "x": 775.1737670898438,
+    "y": 327.365966796875,
+    "confidence": 0.6976782083511353,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 827,
+    "x": 743.6467895507812,
+    "y": 315.95306396484375,
+    "confidence": 0.6909510493278503,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 828,
+    "x": 730.8660888671875,
+    "y": 311.5923156738281,
+    "confidence": 0.6618737578392029,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 829,
+    "x": 705.6802978515625,
+    "y": 303.04217529296875,
+    "confidence": 0.6701582670211792,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 830,
+    "x": 683.643798828125,
+    "y": 296.7528076171875,
+    "confidence": 0.6720009446144104,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 831,
+    "x": 674.10009765625,
+    "y": 293.69854736328125,
+    "confidence": 0.7049147486686707,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 832,
+    "x": 657.794921875,
+    "y": 288.5963134765625,
+    "confidence": 0.691079318523407,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 833,
+    "x": 646.2781982421875,
+    "y": 284.0509033203125,
+    "confidence": 0.7487922310829163,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 834,
+    "x": 641.017578125,
+    "y": 282.9107666015625,
+    "confidence": 0.7525906562805176,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 835,
+    "x": 635.1028442382812,
+    "y": 280.794921875,
+    "confidence": 0.7447335720062256,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 836,
+    "x": 633.4171142578125,
+    "y": 280.09521484375,
+    "confidence": 0.7870333790779114,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 837,
+    "x": 634.0446166992188,
+    "y": 279.94720458984375,
+    "confidence": 0.7483351230621338,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 838,
+    "x": 637.375,
+    "y": 280.31878662109375,
+    "confidence": 0.7076177000999451,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 839,
+    "x": 643.4818725585938,
+    "y": 280.5010681152344,
+    "confidence": 0.6744274497032166,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 840,
+    "x": 647.5083618164062,
+    "y": 280.8873291015625,
+    "confidence": 0.6790252923965454,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 841,
+    "x": 656.8137817382812,
+    "y": 280.87628173828125,
+    "confidence": 0.6324785947799683,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 842,
+    "x": 670.3250732421875,
+    "y": 279.3525390625,
+    "confidence": 0.6490458250045776,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 843,
+    "x": 676.1295166015625,
+    "y": 278.6580810546875,
+    "confidence": 0.6498360633850098,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 844,
+    "x": 616.536840341918,
+    "y": 295.88861329548587,
+    "confidence": null,
+    "source": "interpolation",
+    "interpolated": true
+  },
+  {
+    "frame_idx": 845,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 846,
+    "x": 600.6788533301163,
+    "y": 304.84007709118816,
+    "confidence": null,
+    "source": "interpolation",
+    "interpolated": true
+  },
+  {
+    "frame_idx": 847,
+    "x": 592.7486827731813,
+    "y": 310.62833569023843,
+    "confidence": null,
+    "source": "interpolation",
+    "interpolated": true
+  },
+  {
+    "frame_idx": 848,
+    "x": 584.8177275155567,
+    "y": 317.2916120900881,
+    "confidence": null,
+    "source": "interpolation",
+    "interpolated": true
+  },
+  {
+    "frame_idx": 849,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 850,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 851,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 852,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 853,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 854,
+    "x": 681.4832763671875,
+    "y": 292.26513671875,
+    "confidence": 0.5836992263793945,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 855,
+    "x": 679.263427734375,
+    "y": 295.34515380859375,
+    "confidence": 0.6360973715782166,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 856,
+    "x": 677.8199462890625,
+    "y": 299.74462890625,
+    "confidence": 0.6499059200286865,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 857,
+    "x": 678.174072265625,
+    "y": 305.1076965332031,
+    "confidence": 0.5945636630058289,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 858,
+    "x": 678.8797607421875,
+    "y": 308.80706787109375,
+    "confidence": 0.6069678664207458,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 859,
+    "x": 682.516845703125,
+    "y": 317.0539855957031,
+    "confidence": 0.6577818989753723,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 860,
+    "x": 689.6552734375,
+    "y": 326.4167785644531,
+    "confidence": 0.6343139410018921,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 861,
+    "x": 693.8133544921875,
+    "y": 329.9210205078125,
+    "confidence": 0.6034837961196899,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 862,
+    "x": 701.2444458007812,
+    "y": 339.4458923339844,
+    "confidence": 0.571771502494812,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 863,
+    "x": 711.291015625,
+    "y": 347.545654296875,
+    "confidence": 0.6979836821556091,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 864,
+    "x": 716.8426513671875,
+    "y": 352.71270751953125,
+    "confidence": 0.6688701510429382,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 865,
+    "x": 727.728271484375,
+    "y": 363.57501220703125,
+    "confidence": 0.6693813800811768,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 866,
+    "x": 739.2005615234375,
+    "y": 374.75238037109375,
+    "confidence": 0.69704669713974,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 867,
+    "x": 744.744384765625,
+    "y": 381.6453857421875,
+    "confidence": 0.6708986163139343,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 868,
+    "x": 754.1233520507812,
+    "y": 392.924560546875,
+    "confidence": 0.6585387587547302,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 869,
+    "x": 760.848388671875,
+    "y": 405.1265563964844,
+    "confidence": 0.6611080169677734,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 870,
+    "x": 763.8035888671875,
+    "y": 410.93109130859375,
+    "confidence": 0.6899029016494751,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 871,
+    "x": 767.4418334960938,
+    "y": 424.51153564453125,
+    "confidence": 0.6595265865325928,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 872,
+    "x": 769.363037109375,
+    "y": 439.7308349609375,
+    "confidence": 0.6787877082824707,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 873,
+    "x": 769.9107055664062,
+    "y": 447.06182861328125,
+    "confidence": 0.6592732071876526,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 874,
+    "x": 768.7447509765625,
+    "y": 464.47296142578125,
+    "confidence": 0.6695221662521362,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 875,
+    "x": 766.9508666992188,
+    "y": 483.10906982421875,
+    "confidence": 0.661181628704071,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 876,
+    "x": 766.2962036132812,
+    "y": 491.49810791015625,
+    "confidence": 0.6535138487815857,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 877,
+    "x": 767.2799072265625,
+    "y": 487.35809326171875,
+    "confidence": 0.689986526966095,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 878,
+    "x": 769.361572265625,
+    "y": 477.03961181640625,
+    "confidence": 0.6955437660217285,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 879,
+    "x": 770.8968505859375,
+    "y": 472.9932861328125,
+    "confidence": 0.6071822047233582,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 880,
+    "x": 773.1756591796875,
+    "y": 463.9836120605469,
+    "confidence": 0.6521739363670349,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 881,
+    "x": 775.4671630859375,
+    "y": 455.445068359375,
+    "confidence": 0.6358630657196045,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 882,
+    "x": 776.7545776367188,
+    "y": 451.4427795410156,
+    "confidence": 0.685971736907959,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 883,
+    "x": 778.7228393554688,
+    "y": 443.65057373046875,
+    "confidence": 0.6890765428543091,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 884,
+    "x": 780.5626220703125,
+    "y": 437.3411865234375,
+    "confidence": 0.695602536201477,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 885,
+    "x": 780.671875,
+    "y": 434.14141845703125,
+    "confidence": 0.655340313911438,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 886,
+    "x": 781.03759765625,
+    "y": 428.3494873046875,
+    "confidence": 0.7651373147964478,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 887,
+    "x": 780.956298828125,
+    "y": 424.6685791015625,
+    "confidence": 0.7966269850730896,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 888,
+    "x": 780.251708984375,
+    "y": 423.2940673828125,
+    "confidence": 0.7772247195243835,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 889,
+    "x": 779.228759765625,
+    "y": 421.5919494628906,
+    "confidence": 0.8261604309082031,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 890,
+    "x": 777.4344482421875,
+    "y": 420.7309875488281,
+    "confidence": 0.7990988492965698,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 891,
+    "x": 776.3150634765625,
+    "y": 420.66644287109375,
+    "confidence": 0.7790586948394775,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 892,
+    "x": 773.4573974609375,
+    "y": 420.34820556640625,
+    "confidence": 0.7655417323112488,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 893,
+    "x": 769.5665283203125,
+    "y": 419.7589111328125,
+    "confidence": 0.7411335110664368,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 894,
+    "x": 767.6171875,
+    "y": 419.5396728515625,
+    "confidence": 0.7440052032470703,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 895,
+    "x": 762.7910766601562,
+    "y": 420.29095458984375,
+    "confidence": 0.7539412975311279,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 896,
+    "x": 757.854248046875,
+    "y": 421.3728942871094,
+    "confidence": 0.7083587646484375,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 897,
+    "x": 754.69091796875,
+    "y": 422.7974853515625,
+    "confidence": 0.7099037170410156,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 898,
+    "x": 748.2381591796875,
+    "y": 425.40283203125,
+    "confidence": 0.6874622702598572,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 899,
+    "x": 741.8236083984375,
+    "y": 427.760498046875,
+    "confidence": 0.5679163932800293,
+    "source": "accepted_detection",
+    "interpolated": false
+  },
+  {
+    "frame_idx": 900,
+    "x": 751.7098317452876,
+    "y": 445.3990386207508,
+    "confidence": null,
+    "source": "interpolation",
+    "interpolated": true
+  },
+  {
+    "frame_idx": 901,
+    "x": null,
+    "y": null,
+    "confidence": null,
+    "source": "none",
+    "interpolated": false
+  }
+]
