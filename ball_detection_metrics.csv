@@ -4,10 +4,12 @@ v5_with_ransac,378,44,48,10,26,0.8915
 v4_with_ransac,369,32,69,10,27,0.8796
 v4_with_interpolation,350,32,88,10,23,0.8537
 v4_no_interpolation,349,121,0,0,0,0.8523
-old_version,316,70,84,10,30,0.8041
+v2_no_ransac,316,70,84,10,30,0.8041
 v6_5_with_ransac,370,69,31,3,11,0.8804
 v6_6_with_ransac,370,68,32,7,12,0.8810
 v6_7_with_ransac,364,89,17,3,14,0.8729
 v6_8_with_ransac,368,84,18,3,11,0.8783
 v6_9_with_ransac,356,92,22,3,12,0.8620
 v6_10_with_ransac,368,68,34,3,12,0.8783
+v6_11_with_ransac,367,91,12,6,7,0.8770
+original_version,314,84,72,10,30,0.8010
