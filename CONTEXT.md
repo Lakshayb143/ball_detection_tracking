@@ -333,13 +333,44 @@ unstable relative to rolling deque median. When baseline shifts between frames,
 landing-distance check (requires `|ball_y - baseline_y| < 50px`) fails to trigger
 at the right time, causing ball to linger in AIRBORNE state and exit via `max_duration`.
 
-### Next step: v3_1 hybrid approach
+### V3_1 hybrid baseline — Deque primary + player fallback (May 2026, completed)
 
-Instead of replacing deque with player baseline, use player baseline **only as a
-validation signal** when deque is uninitialized or diverges significantly from
-player baseline (indicating camera pan). Adds fallback paths without disrupting
-stable-camera clips. Alternatively, add velocity-stationarity check to landing rule
-(high `|dy|` → ball is still moving, can't have landed) without requiring lookahead.
+### Implementation
+
+Keep v2's rolling deque as primary baseline. Use player-feet detection (90th percentile y2)
+only as fallback initialization when deque is empty (first ~5 frames of clip). Once deque
+builds, proceed as v2.
+
+- `airborne_state_machine_v3_1.py` — adds `_baseline_source` tracking (deque vs player)
+- Feature extractor reuses v3's `extract_trajectory_features_with_players_v3.py`
+- `run_airborne_eval_v3_1.py` — batch eval runner
+
+### Results: v3_1 vs v2
+
+| Metric            | clip1 | clip2  | testing_1080 |
+| ---               | ---   | ---    | ---          |
+| v2 recall         | 1.0   | 1.0    | 0.6          |
+| v3_1 recall       | 1.0   | 1.0    | 0.6          |
+| v2 mean_end_err   | 27.0  | 18.67  | 106.0        |
+| v3_1 mean_end_err | 27.0  | 18.67  | 106.0        |
+
+**v3_1 preserves v2 exactly** — no regression risk. Safe hybrid foundation.
+However, does not fix testing_clip_1080's stale-baseline (106f end error persists).
+
+### Why v3_1 didn't solve testing_clip_1080
+
+Deque initializes from first ground detections (early frames) and that median becomes
+fixed for the entire clip. When camera pans to different ground level for later event,
+deque baseline no longer applies. Player baseline fallback only initializes deque in
+first ~5 frames; it doesn't reset/adjust mid-clip. Fixing stale baseline requires
+per-frame reset logic (detect camera pan, reset deque) — larger change.
+
+### Path forward
+
+- **Option B (velocity-stationarity landing)**: Require `|dy| < 2px/frame` for N frames
+  PLUS ball near baseline. Fully causal, should help with premature landings (clip10 case).
+- **Deeper baseline fix**: Implement per-frame baseline reset on large divergence between
+  deque and player baseline (indicates camera pan). More complex but solves testing_clip_1080.
 
 ---
 
