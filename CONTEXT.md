@@ -298,6 +298,51 @@ longer used for behavior — everything is just "airborne yes/no."
 ## Hardware
 Remote: Tesla T4 GPU, CUDA available.
 
+## Airborne detection v3 — Player-feet ground baseline (May 2026, WIP)
+
+### Goal
+
+Fix stale-baseline problem in clips with camera pans/zooms (e.g., testing_clip_1080),
+where the rolling deque of ground detections averages y across multiple distinct ground
+levels, producing incorrect landing detection. Alternative: use per-frame player-feet
+(y2 bbox coordinate) as direct ground estimate.
+
+### Implementation
+
+- **New component**: `precompute_player_detections.py` → `player_detections_v5/<clip>.json`
+- **New extractor**: `extract_trajectory_features_with_players_v3.py` adds column `player_ground_baseline_y`
+  (90th percentile of player bbox y2 coordinates per frame)
+- **New state machine**: `airborne_state_machine_v3.py` uses player baseline in `_update_ground_baseline()`
+  with fallback to deque median if no players detected.
+
+### Results (v3 on clip1, clip2)
+
+| Metric            | v2    | v3    | Change           |
+| ---               | ---:  | ---:  | ---              |
+| clip1 recall      | 1.0   | 0.667 | ↓ (REGRESSION)   |
+| clip1 start_error | 35.67 | 83.5  | ↑ (worse)        |
+| clip1 end_error   | 27.0  | 37.0  | ↑ (worse)        |
+| clip2 recall      | 1.0   | 1.0   | —                |
+| clip2 start_error | 10.0  | 10.0  | —                |
+| clip2 end_error   | 18.67 | 95.3  | ↑ (much worse)   |
+
+### Root cause of regression
+
+Per-frame player baseline (even smoothed with 90th percentile) is too noisy and
+unstable relative to rolling deque median. When baseline shifts between frames,
+landing-distance check (requires `|ball_y - baseline_y| < 50px`) fails to trigger
+at the right time, causing ball to linger in AIRBORNE state and exit via `max_duration`.
+
+### Next step: v3_1 hybrid approach
+
+Instead of replacing deque with player baseline, use player baseline **only as a
+validation signal** when deque is uninitialized or diverges significantly from
+player baseline (indicating camera pan). Adds fallback paths without disrupting
+stable-camera clips. Alternatively, add velocity-stationarity check to landing rule
+(high `|dy|` → ball is still moving, can't have landed) without requiring lookahead.
+
+---
+
 ## Working style
 
 - **Brainstorm before coding.** Don't write code from a one-line request.
