@@ -365,12 +365,43 @@ deque baseline no longer applies. Player baseline fallback only initializes dequ
 first ~5 frames; it doesn't reset/adjust mid-clip. Fixing stale baseline requires
 per-frame reset logic (detect camera pan, reset deque) — larger change.
 
+### V3_2: Velocity-stationarity landing (May 2026, FAILED)
+
+**Approach**: Extend v3_1 with Option A: require landing to trigger only when BOTH:
+- Ball is near baseline (distance < 50px), AND
+- Velocity is stationary: `|dy| < threshold` for last N frames
+
+Tested two parameter sets:
+- **Strict**: 5-frame window, 2.0 px/frame threshold
+- **Relaxed**: 3-frame window, 4.0 px/frame threshold
+
+**Results (Relaxed params)**:
+
+| Metric          | v3_1  | v3_2  | Change            |
+| ---             | ---:  | ---:  | ---               |
+| clip1 recall    | 1.0   | 0.667 | ↓ (lost 1 event) |
+| clip1 end_error | 27.0  | 31.0  | ↑ (worse)        |
+| clip2 recall    | 1.0   | 1.0   | —                |
+| clip2 end_error | 18.67 | 49.0  | ↑↑ (+30f worse)  |
+| clip4 recall    | 0.0   | 0.0   | — (still broken) |
+| MACRO recall    | 1.0   | 0.656 | ↓ (-0.344)       |
+| MACRO end_error | 22.8  | 57.4  | ↑ (+34.6f)       |
+
+**Verdict: REJECTED.** Velocity-stationarity constraint is too strict, causing FALSE NEGATIVES.
+When the check fails on legitimate landings (ball has residual velocity noise), landing never fires
+→ state machine falls back to max_duration → huge end errors (49f on clip2 vs 18.67f in v3_1).
+
+Root cause: Real falling balls don't smoothly decelerate; they have velocity noise and
+micro-bounces. Requiring all N frames below threshold is unrealistic.
+
 ### Path forward
 
-- **Option B (velocity-stationarity landing)**: Require `|dy| < 2px/frame` for N frames
-  PLUS ball near baseline. Fully causal, should help with premature landings (clip10 case).
-- **Deeper baseline fix**: Implement per-frame baseline reset on large divergence between
-  deque and player baseline (indicates camera pan). More complex but solves testing_clip_1080.
+- **Option B (camera-pan baseline reset)**: Detect when player-baseline diverges >100px from
+  deque-median. Reset deque to player baseline for that frame (restart smoothing). Complex but
+  solves testing_clip_1080's stale-baseline problem.
+- **Option C (adaptive landing gate)**: Use clips' natural properties (detection density, ascent
+  ratio) to set landing distance dynamically per clip. May not be worth the complexity given
+  v3_1 is already stable.
 
 ---
 
