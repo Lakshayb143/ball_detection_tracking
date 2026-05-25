@@ -1,0 +1,53 @@
+preprocess:
+  source: ../dataset_soccernet
+  output: ../dataset_soccernet
+  sigma: 3.0
+  force: false
+  workers: 16
+
+train:
+  model: v4                         # v2 or v4
+  gpus: 2
+  data: ../dataset_soccernet
+  resume: null
+  split: 0.8
+  seed: 42
+  batch: 16
+  epochs: 30
+  workers: 8
+  device: cuda
+  optimizer: Adadelta
+  lr: null
+  wd: 0
+  scheduler: ReduceLROnPlateau
+  factor: 0.5
+  patience: 3
+  min_lr: 0.000001
+  out: outputs
+  name: soccernet_ball_v4
+  dropout: 0.2
+
+  wandb:
+    enabled: true
+    project: tracknet-v4-soccernet
+    entity: null                    # set to your wandb team/user, or null for default
+    tags: ["soccernet", "ball-tracking", "tracknet-v4"]
+
+test:
+  model: best_model.pth
+  data: ../dataset_soccernet
+  batch: 4
+  threshold: 0.5
+  tolerance: 4
+  device: auto
+  out: test_results
+  report: detailed
+  save_predictions: false
+
+predict:
+  model: null
+  input: null
+  output: null
+  threshold: 0.5
+  dot_size: 5
+  batch_size: 8
