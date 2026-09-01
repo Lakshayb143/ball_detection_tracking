@@ -130,11 +130,15 @@ class RFDetrBallOnlyDetector:
         confidence_threshold: float,
         resolution: Optional[int],
         optimize_for_inference: bool,
+        num_classes: Optional[int] = None,
+        extra_ball_class_ids: Optional[List[int]] = None,
     ) -> None:
         if not model_path.exists():
             raise FileNotFoundError(f"RF-DETR checkpoint not found: {model_path}")
 
-        self.ball_class_id = ball_class_id
+        self.accepted_class_ids: set = {ball_class_id}
+        if extra_ball_class_ids:
+            self.accepted_class_ids.update(extra_ball_class_ids)
         self.confidence_threshold = confidence_threshold
 
         from rfdetr import RFDETRMedium
@@ -142,6 +146,8 @@ class RFDetrBallOnlyDetector:
         model_kwargs = {"pretrain_weights": str(model_path)}
         if resolution is not None and int(resolution) > 0:
             model_kwargs["resolution"] = int(resolution)
+        if num_classes is not None:
+            model_kwargs["num_classes"] = int(num_classes)
         self.model = RFDETRMedium(**model_kwargs)
 
         if optimize_for_inference:
@@ -176,7 +182,7 @@ class RFDetrBallOnlyDetector:
 
         output: List[dict] = []
         for index in range(num_items):
-            if int(class_ids[index]) != self.ball_class_id:
+            if int(class_ids[index]) not in self.accepted_class_ids:
                 continue
             score = float(confidence[index])
             if score < float(self.confidence_threshold):
@@ -211,11 +217,15 @@ def build_arg_parser(
 
     parser.add_argument("--model_path", type=Path, default=default_model_path)
     parser.add_argument("--ball_class_id", type=int, default=DEFAULT_BALL_CLASS_ID)
+    parser.add_argument("--extra_ball_class_ids", type=int, nargs="*", default=[],
+                        help="Additional model class IDs to treat as ball (e.g. 1 for ball_out)")
     parser.add_argument("--ball_category_id", type=int, default=None)
     parser.add_argument("--confidence_threshold", type=float, default=DEFAULT_CONFIDENCE_THRESHOLD)
     parser.add_argument("--eval_iou", type=float, default=DEFAULT_EVAL_IOU)
     parser.add_argument("--eval_score_threshold", type=float, default=DEFAULT_EVAL_SCORE_THRESHOLD)
     parser.add_argument("--resolution", type=int, default=default_resolution or 0)
+    parser.add_argument("--num_classes", type=int, default=None,
+                        help="Override num_classes when loading RF-DETR (e.g. 2 for ball+ball_out)")
     parser.add_argument("--optimize_for_inference", type=str2bool, default=DEFAULT_OPTIMIZE_FOR_INFERENCE)
     return parser
 
@@ -272,6 +282,8 @@ def main(
         confidence_threshold=args.confidence_threshold,
         resolution=int(args.resolution) if int(args.resolution) > 0 else None,
         optimize_for_inference=args.optimize_for_inference,
+        num_classes=args.num_classes,
+        extra_ball_class_ids=args.extra_ball_class_ids or [],
     )
 
     all_detections: List[dict] = []
@@ -519,7 +531,7 @@ def main(
     }
     center_distance_bucket_threshold_px = resolve_center_distance_bucket_threshold_px(
         annotations_path=annotations_path if annotations_path is not None and annotations_path.exists() else None,
-        ball_category_id=int(args.eval_ball_category_id),
+        ball_category_id=int(args.ball_category_id) if args.ball_category_id is not None else resolved_ball_category_id,
         fallback_threshold_px=DEFAULT_CENTER_DISTANCE_BUCKET_THRESHOLD_PX,
     )
     distance_rule_summary = attach_distance_rule_summary(

@@ -1,0 +1,9 @@
+metric,ball_samy_1120,tracknet_v4
+TP,349,256
+Missed,121,159
+FP_all,0,56
+FP_wrong_location,0,55
+no_gt_predicted,0,1
+,,
+,,
+,,

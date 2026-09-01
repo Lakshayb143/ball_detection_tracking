@@ -421,6 +421,58 @@ def evaluate_detections(
     }
 
 
+def count_predictions_matched_by_category(
+    detections: Sequence[dict],
+    annotations_path: Path,
+    alt_category_id: int,
+    iou_threshold: float,
+    score_threshold: float,
+    stage: str,
+    allowed_image_ids: Optional[Sequence[int]] = None,
+) -> int:
+    """Count frames where the top prediction (by score) matches any GT box of alt_category_id.
+
+    Used to measure how many model predictions landed on ball_out boxes (IoU >= iou_threshold)
+    even though the model was trained to detect only ball. Each frame is counted at most once.
+    """
+    alt_gt = load_coco_ball_ground_truth(annotations_path, ball_category_id=alt_category_id)
+    if allowed_image_ids is not None:
+        allowed_set = {int(i) for i in allowed_image_ids}
+        alt_gt = {k: v for k, v in alt_gt.items() if k in allowed_set}
+    alt_gt = {k: v for k, v in alt_gt.items() if v.boxes_xyxy}
+
+    image_id_by_file_name = {img.file_name: img_id for img_id, img in alt_gt.items()}
+
+    detections_by_image: Dict[int, List[dict]] = defaultdict(list)
+    for detection in detections:
+        if detection.get("stage") != stage:
+            continue
+        if float(detection.get("score", 0.0)) < score_threshold:
+            continue
+        image_id = detection.get("image_id")
+        if image_id is None:
+            image_id = image_id_by_file_name.get(str(detection.get("file_name", "")))
+        if image_id is None or int(image_id) not in alt_gt:
+            continue
+        detections_by_image[int(image_id)].append(detection)
+
+    count = 0
+    for image_id, image in alt_gt.items():
+        image_dets = sorted(
+            detections_by_image.get(image_id, []),
+            key=lambda d: float(d.get("score", 0.0)),
+            reverse=True,
+        )
+        if not image_dets:
+            continue
+        top_box = xywh_to_xyxy(image_dets[0]["bbox_xywh"])
+        for gt_box in image.boxes_xyxy:
+            if iou_xyxy(top_box, gt_box) >= iou_threshold:
+                count += 1
+                break
+    return count
+
+
 def evaluate_detection_export(
     detections_path: Path,
     annotations_path: Path,

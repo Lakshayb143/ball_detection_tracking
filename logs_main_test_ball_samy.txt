@@ -1,0 +1,45 @@
+[2026-06-04 10:46:53] [WARNING] rf-detr - Using a different number of positional encodings than DINOv2, which means we're not loading DINOv2 backbone weights. This is not a problem if finetuning a pretrained RF-DETR model.
+[2026-06-04 10:46:53] [WARNING] rf-detr - Using patch size 16 instead of 14, which means we're not loading DINOv2 backbone weights. This is not a problem if finetuning a pretrained RF-DETR model.
+[2026-06-04 10:46:55] [WARNING] rf-detr - Checkpoint has 1 classes but model is configured for 90. Using checkpoint class count (1). Pass num_classes=1 to suppress this warning.
+[transformers] `loss_type=None` was set in the config but it is unrecognized. Using the default loss: `ForCausalLMLoss`.
+/home/lakshay/lx/ball_detection_tracking/rf-detr/src/rfdetr/models/backbone/dinov2.py:212: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  assert x.shape[2] % block_size == 0 and x.shape[3] % block_size == 0, (
+[transformers] `use_return_dict` is deprecated! Use `return_dict` instead!
+/home/lakshay/lx/ball_detection_tracking/rf-detr/src/rfdetr/models/backbone/dinov2_with_windowed_attn.py:419: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if height % divisor != 0 or width % divisor != 0:
+/home/lakshay/lx/ball_detection_tracking/rf-detr/src/rfdetr/models/backbone/dinov2_with_windowed_attn.py:313: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if num_channels != self.num_channels:
+/home/lakshay/lx/ball_detection_tracking/rf-detr/src/rfdetr/models/backbone/dinov2.py:201: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if num_patches == num_positions and height == width:
+/home/lakshay/lx/ball_detection_tracking/rf-detr/src/rfdetr/models/transformer.py:283: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  topk = min(self.num_queries, enc_outputs_class_unselected_gidx.shape[-2])
+/home/lakshay/lx/ball_detection_tracking/rf-detr/src/rfdetr/models/transformer.py:57: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if pos_tensor.size(-1) == 2:
+/home/lakshay/lx/ball_detection_tracking/rf-detr/src/rfdetr/models/transformer.py:59: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  elif pos_tensor.size(-1) == 4:
+/home/lakshay/lx/ball_detection_tracking/.venv/lib/python3.10/site-packages/torch/__init__.py:2132: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  assert condition, message
+/home/lakshay/lx/ball_detection_tracking/rf-detr/src/rfdetr/models/ops/modules/ms_deform_attn.py:153: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if reference_points.shape[-1] == 2:
+/home/lakshay/lx/ball_detection_tracking/rf-detr/src/rfdetr/models/ops/modules/ms_deform_attn.py:159: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  elif reference_points.shape[-1] == 4:
+UserWarning: Direct use of `@deprecated` on class `MeanAveragePrecision` is deprecated since `v0.6.0`. Use `@deprecated_class(...)` instead. This will become a `TypeError` in a future release.
+Loading model: /home/lakshay/lx/ball_detection_tracking/checkpoints/ball_samy_1120.pth
+Model optimized for inference.
+Input : clips/main_test.mp4  (852x480 @ 30.0 fps, 5884 frames)
+Output: output_main_test_ball_samy_viz.mp4
+  frame 500/5884  (3.4 fps)
+  frame 1000/5884  (3.4 fps)
+  frame 1500/5884  (3.4 fps)
+  frame 2000/5884  (3.4 fps)
+  frame 2500/5884  (3.5 fps)
+  frame 3000/5884  (3.5 fps)
+  frame 3500/5884  (3.5 fps)
+  frame 4000/5884  (3.5 fps)
+  frame 4500/5884  (3.5 fps)
+  frame 5000/5884  (3.5 fps)
+  frame 5500/5884  (3.5 fps)
+
+Done. 5884 frames in 1700.7s (3.5 fps)
+  Frames with ball: 3645
+  Output saved to : output_main_test_ball_samy_viz.mp4

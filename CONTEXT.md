@@ -20,8 +20,8 @@ of the ball. Decomposes into two subproblems:
     for all clips missing one. Flags: `--clips N [N…]`, `--force`.
   - `ball_detection_metrics.py`, `benchmark_*.py` — eval infra
   - `checkpoints/ball_samy_1120.pth` — current ball model (RF-DETR Medium @ 1120)
-  - `checkpoints/player.pth` — player model (RF-DETR Medium)
-    - class map: {0: parent_class, 1: goalkeeper, 2: player, 3: referee}
+  - `checkpoints/player.pth` — player model (RF-DETR Medium);
+    class map: {0: parent_class, 1: goalkeeper, 2: player, 3: referee}
 
 - `/home/lakshay/lx/ball_detection_tracking/event_detection/` — airborne work
   - `extract_trajectory_features.py` — per-frame trajectory features over a
@@ -58,52 +58,41 @@ Latest eval run: `outputs/airborne_eval_v5/` (detections from `detections_v5/`)
 | testing_clip_1080 | 8 | 10 | 0.875 | 0.70 | 0.58 |
 | **MACRO** | — | — | **0.86** | **0.67** | **0.64** |
 
-Pose features precomputed, weighted-score rule supports them, but currently
-using trajectory-only (pose not wired into feature extraction).
+Pose features precomputed; trajectory-only in use (pose not wired into feature extraction).
 
 **On-ground tracking: v6 green-filter experiments (May 2026).**
 
 Baseline: `ball_outlier_interpolator_v5.py` (KF + Mahalanobis gate).
-Best: TP=378, Missed=44, FP=48, No-GT=10, F1=0.8915. 
+Best: TP=378, Missed=44, FP=48, No-GT=10, F1=0.8915.
 Run: `clip1_fresh_runs/v5_then_ransac_v2_online10__clip1/`.
 
 **v6 experiments: green-ground rejection for interpolated positions.**
 
-Rationale: analysis of v5 FPs showed many come from KF-interpolated positions
-landing on empty grass (ball ocluded by field geometry or simply not detected).
-Approach: when interpolated position lands on grass-colored pixels (HSV h∈35–85,
-s≥40, v∈40–200), suppress it.
+Rationale: v5 FPs showed many KF-interpolated positions landing on empty grass.
+Approach: suppress interpolated positions on grass-colored pixels (HSV h∈35–85, s≥40, v∈40–200).
 
-Variants tested:
-- **v6** (80% full 20×20 bbox): 57 rejections → TP=362, Missed=94, FP=18, F1=0.8715
-- **v6_1** (80% center 10×10): 59 rejections → TP=362, Missed=96, FP=12, F1=0.8712
-- **v6_2** (95% full 20×20): 57 rejections → TP=362, Missed=94, FP=14, F1=0.8715
-- **v6_3** (95% adaptive crop, sized from last accepted detection): 51 rejections 
-  → TP=363, Missed=89, FP=18, F1=0.8715
+| Variant | Coverage | Rejections | TP | Missed | FP | F1 |
+|---|---|---:|---:|---:|---:|---:|
+| v6 | 80% full 20×20 bbox | 57 | 362 | 94 | 18 | 0.8715 |
+| v6_1 | 80% center 10×10 | 59 | 362 | 96 | 12 | 0.8712 |
+| v6_2 | 95% full 20×20 | 57 | 362 | 94 | 14 | 0.8715 |
+| v6_3 | 95% adaptive crop (from last accepted detection) | 51 | 363 | 89 | 18 | 0.8715 |
 
-Best: **v6_3** (adaptive crop radius). Still 0.02 F1 below v5 baseline — FP 
-reduction (48→18) cannot offset the miss regression (44→89). Root cause: ball 
-is ~10px diameter; even a 20–26px adaptive crop is mostly grass when ball is 
-present. Color-based discrimination at this bbox scale is too weak. The filter 
-is removing valid interpolations alongside the FPs.
+Best: **v6_3**. Still 0.02 F1 below v5 — FP reduction (48→18) cannot offset miss regression (44→89).
 
-**Diagnostic findings:**
-- v5 has 48 FP (GT frames). v6_3 rejects 51 interpolated positions, of which ~40 
-  are genuine FPs on grass but ~11 are valid interpolations where the ball is 
-  too small relative to the search window.
-- 89 misses in v6_3 (vs 44 in v5): mostly cascades from rejected interpolations 
-  disrupting the KF track in the subsequent frames.
-- Visual inspection: FP and miss frames saved in `v6_3-visuals/fps/` (18 frames) 
-  and `v6_3-visuals/misses/` (89 frames) for manual review.
+**Diagnostic findings (v6_3):**
+- 51 rejections: ~40 genuine FPs on grass, ~11 valid interpolations where ball is
+  too small relative to search window.
+- 89 misses (vs 44 in v5): mostly cascades from rejected interpolations disrupting KF track.
+- Visuals: `v6_3-visuals/fps/` (18 frames), `v6_3-visuals/misses/` (89 frames).
 
-**Conclusion:** green filter approach is a dead end at current ball detection 
-scale. Next direction: diagnose the 48 v5 FPs directly rather than trying to 
-filter them blindly.
+**Conclusion:** Green filter is a dead end at current ball detection scale. Color-based
+discrimination at 20–26px bbox is too weak — removes valid interpolations alongside FPs.
+Next: diagnose the 48 v5 FPs directly.
 
-**Version history note:** `ball_outlier_interpolator_v4_no_interpolation.py` was
-an experiment (previously named v5) that stripped KF from v4 to isolate its
-contribution. It was a dead end — no-interp + RANSAC only reaches TP=352,
-Missed=118. v6 and v7 were built on that dead-end branch and have been deleted.
+**Version history note:** `ball_outlier_interpolator_v4_no_interpolation.py` (previously
+named v5) stripped KF from v4 to isolate its contribution — dead end, reaches only
+TP=352, Missed=118. v6/v7 built on that dead-end branch have been deleted.
 
 v5 fixes over v4: (1) frame_count 0→1 to align with COCO GT, (2) RESET_MAX_DISTANCE
 300px cap to prevent teleports, (3) KF-interpolated positions saved to JSON so
@@ -113,46 +102,35 @@ RANSAC v2 can repair bad physics fits.
 
 ## Ball tracking metrics contract
 
-For ball tracking benchmarks, use the event-style per-frame metrics from
-`scripts/ball_detection_metrics.py`, then add the distance bucket from
+Per-frame metrics from `scripts/ball_detection_metrics.py` + distance bucket from
 `scripts/distance_rule_adjustment.py`.
 
 **Four metrics to report by default:**
 
 1. `TP`: `event_tp`
-   - A GT ball exists in the frame.
-   - At least one prediction exists.
-   - The top-scored prediction matches the GT ball with `IoU >= match_iou`.
-   - Current RANSAC/v4 runs use `match_iou = 0.01`.
+   - GT ball exists; at least one prediction exists; top-scored prediction matches
+     GT with `IoU >= match_iou` (current runs use `match_iou = 0.01`).
 
 2. `Missed`: `missed_detection_count`
-   - A GT ball exists in the frame.
-   - No prediction exists for that frame.
+   - GT ball exists, no prediction for that frame.
 
 3. `FP (all)`: `false_positive_count + no_gt_predicted`
-   - `false_positive_count`: GT ball exists and a prediction exists, but the
-     top prediction does not match by IoU.
-   - `no_gt_predicted`: no GT ball exists, but the tracker still outputs a
-     prediction.
-   - Older score tables sometimes used `FP = false_positive_count` only. If
-     reporting that number, label it as `FP (GT frames)` to avoid ambiguity.
+   - `false_positive_count`: GT exists and prediction exists but top prediction
+     doesn't match by IoU.
+   - `no_gt_predicted`: no GT exists but tracker still outputs a prediction.
+   - Label `false_positive_count` alone as `FP (GT frames)` to avoid ambiguity.
 
 4. `Detection distance <= threshold`: `distance_le_threshold_px_count`
-   - This is a bucket for GT-frame FPs, not a fixed 50 px rule and not an
-     averaged GT-box rule.
-   - For each GT-frame FP:
-     - `distance = center_distance(gt_box, predicted_box)`
-     - `threshold = 2 * (predicted_bbox_width + predicted_bbox_height)`
-     - Count the frame if `distance <= threshold`.
-   - The threshold is computed from the predicted bbox for that same frame.
-     Do not average over GT boxes.
+   - For each GT-frame FP: `distance = center_distance(gt_box, predicted_box)`,
+     `threshold = 2 * (predicted_bbox_width + predicted_bbox_height)`.
+   - Threshold computed from predicted bbox for that frame. Do not average over GT boxes.
 
 Current best clip1 RANSAC/v4 v2 run:
 `clip1_fresh_runs/v4_then_ransac_v2_online10__clip1/`
 
-**Pipeline:** 
+**Pipeline:**
 1. `ball_outlier_interpolator_v4.py` (v4 baseline tracker)
-2. `scripts/benchmark_physics_ransac_v2_clip1.py` with `--online_lookahead_frames 10` (RANSAC v2 physics-based outlier removal)
+2. `scripts/benchmark_physics_ransac_v2_clip1.py --online_lookahead_frames 10`
 
 **To re-run:**
 ```bash
@@ -170,8 +148,7 @@ python scripts/benchmark_physics_ransac_v2_clip1.py \
 | FP (all) | 79 |
 | Detection distance <= predicted-box threshold | 27 |
 
-For this run, predicted boxes are `20x20`, so the per-frame distance threshold is
-`2 * (20 + 20) = 80 px`.
+Predicted boxes are `20x20`, so per-frame distance threshold = `2 * (20 + 20) = 80 px`.
 
 ---
 
@@ -205,53 +182,42 @@ detections_v5/<clip>.json
 ### What was tried and why
 
 **Config A (`min_density_for_ground = 0.3`):**
-- Clip 6 had 6 null frames before launch (frames 279–284). With gate=0.5, the two
-  strongest-velocity frames (286: dy=-12.35, 288: dy=-13.36) were blocked (density=0.4).
-  By frame 290 when density hit 0.5, velocity had dropped below the -8.0 threshold.
-  Lowering gate to 0.3 lets those frames through. Clip 6 went from 0 to 1.0 recall.
-- Macro recall: 0.73 → 0.86. Precision: 0.55 → 0.67.
+Clip 6 had 6 null frames before launch (279–284). With gate=0.5, the two
+strongest-velocity frames (286: dy=-12.35, 288: dy=-13.36) were blocked (density=0.4).
+By frame 290 when density hit 0.5, velocity had dropped below -8.0.
+Lowering to 0.3 lets those frames through → clip 6: 0→1.0 recall.
+Macro recall: 0.73→0.86. Precision: 0.55→0.67.
 
-**Configs B, C, D, E:** Tested. No meaningful improvement over A.
-- B (shorter ground_window=6): slight recall drop on some clips.
-- C (threshold=-6.0): same result as A; no new events unlocked.
-- D (fire_threshold=1.4): precision slightly better, but recall dropped. 1.2 is the sweet spot.
-- E (weight_sudden_gap=1.0): same result as A; clip4 still unrecoverable.
+**Configs B–E:** No meaningful improvement over A.
+- B (ground_window=6): slight recall drop on some clips.
+- C (threshold=-6.0): same as A; no new events unlocked.
+- D (fire_threshold=1.4): precision slightly better, recall dropped. 1.2 is sweet spot.
+- E (weight_sudden_gap=1.0): same as A; clip4 still unrecoverable.
 - fire_threshold tested at 1.0, 1.2, 1.4, 1.6: 1.2 is best.
 
 **Velocity-consistency check moved into state machine:**
-- Check existed in `detect_airborne_events_offline` but was absent from
-  `AirborneStateMachine.step()`. Added `_passes_consistency_check()` method.
-- Requires ≥2 of last 3 frames to have `dy_per_frame ≤ -3.0`.
-- Result: zero effect on current FPs — the FPs are sustained multi-frame motions,
-  not single-frame spikes.
+Added `_passes_consistency_check()` to `AirborneStateMachine.step()` (≥2 of last 3
+frames with `dy ≤ -3.0`). Zero effect on current FPs — they are sustained multi-frame
+motions, not single-frame spikes.
 
-**Post-event cooldown (15 frames) added to state machine:**
-- Two FPs (clip1 pred 181–218, clip2 pred 90–180) are re-fires immediately after
-  a prior event ends while the ball is still in flight or bouncing. A 15-frame
-  cooldown after every completed event suppresses these.
+**Post-event cooldown (15 frames):**
+Two FPs (clip1 pred 181–218, clip2 pred 90–180) re-fire immediately after a prior
+event ends. Cooldown after every completed event suppresses these.
 
-**`landing_consecutive_detections` lowered 3 → 2:**
-- Clip3 predicted event overshoots GT by 51 frames (pred ends at 291, GT at 240)
-  because the ball briefly touches ground and bounces — only 1–2 consecutive
-  near-ground frames, never reaching the streak=3 requirement. Event hits max_duration.
-  Lowering to 2 allows landing to be detected on the brief touch.
+**`landing_consecutive_detections` lowered 3→2:**
+Clip3 overshoots GT by 51 frames (pred ends at 291, GT at 240) — ball briefly touches
+ground but only 1–2 consecutive near-ground frames, never reaching streak=3. Lowering
+to 2 allows landing on the brief touch.
 
 ### Policy shift: precision-first
 
-After getting recall to 0.86 and precision to 0.67, the strategy was changed to
-"precision-first" — fix precision first, then push recall back up. The remaining
-FPs include "small ball bounces" during passes: ball briefly leaves ground at low
-height (20–60 px) but isn't a real airborne event in the soccer-commentary sense.
+After recall=0.86, precision=0.67: shift to precision-first. Remaining FPs include
+small ball bounces (ball briefly leaves ground 20–60 px) that aren't real events.
 
 **Precision filter `min_event_ascent_px = 80`:**
-- Velocity peaks momentarily even on small bounces, so the rule fires.
-- Discriminator is **peak ascent above ground baseline**, not velocity.
-- After every event completes (landing or max_duration), check
-  `ascent = baseline_y - min_y_during_airborne`. If `< min_event_ascent_px`,
-  drop the event silently; do NOT apply cooldown (so a real launch immediately
-  after a fake bounce is still allowed).
-- Default 80 matches `min_ascent_before_landing_px` for consistency. Raise to
-  100–120 for stricter precision.
+After event completes, check `ascent = baseline_y - min_y_during_airborne`. If
+`< min_event_ascent_px`, drop silently without cooldown (so a real launch immediately
+after a fake bounce is still allowed). Raise to 100–120 for stricter precision.
 
 ### FP analysis (current 7 FPs)
 
@@ -270,10 +236,9 @@ or GT boundary issues, not system errors).
 
 ### Clip 4 — unrecoverable with current detector
 
-All 4 GT events have zero or near-zero detection density during the event window.
-Events 3 and 4 have 20–200 consecutive null frames covering the entire window.
-No rule-level change can fix this — the ball detector simply doesn't see the ball
-in flight on this clip. Needs either a better detector or a different signal source.
+All 4 GT events have zero or near-zero detection density. Events 3 and 4 have 20–200
+consecutive null frames covering the entire window. Needs a better detector or different
+signal source.
 
 ## Ground truth format change (incoming)
 
@@ -282,17 +247,15 @@ Hand-labeled action JSONs are being upgraded:
 - New format: `{"start_frame": N, "end_frame": M, "action": "airborne"}` —
   measured spans, single class
 
-When loading actions from now on, support both formats. `event_type` is no
-longer used for behavior — everything is just "airborne yes/no."
+When loading actions, support both formats. `event_type` is no longer used for behavior.
 
 ## Test data
 - Videos: `clips/clip1.mp4` … `clips/clip7.mp4`, `clips/testing_clip_1080.mp4`
 - Ground-truth action labels: `ground_truths/<clip_name>_actions.json`
   (new format: `{start_frame, end_frame, action: "airborne"}`, both inclusive)
-- Detection JSONs (per-frame ball positions): `detections_v5/<clip_name>.json`
-  - All clips (1–7, testing_clip_1080) exist in detections_v5/
+- Detection JSONs: `detections_v5/<clip_name>.json` (all clips: 1–7, testing_clip_1080)
 - Annotated output videos: `outputs/videos/<clip_name>_v4.mp4`
-- COCO GT at `train/_annotations.coco.json`
+- COCO GT: `train/_annotations.coco.json`
 - Pose features cache: `clip1_pose_features.json`
 
 ## Hardware
@@ -303,131 +266,102 @@ Remote: Tesla T4 GPU, CUDA available.
 ### Goal
 
 Fix stale-baseline problem in clips with camera pans/zooms (e.g., testing_clip_1080),
-where the rolling deque of ground detections averages y across multiple distinct ground
-levels, producing incorrect landing detection. Alternative: use per-frame player-feet
-(y2 bbox coordinate) as direct ground estimate.
+where the rolling deque averages y across multiple distinct ground levels. Alternative:
+use per-frame player-feet (y2 bbox coordinate) as direct ground estimate.
 
 ### Implementation
 
-- **New component**: `precompute_player_detections.py` → `player_detections_v5/<clip>.json`
-- **New extractor**: `extract_trajectory_features_with_players_v3.py` adds column `player_ground_baseline_y`
-  (90th percentile of player bbox y2 coordinates per frame)
-- **New state machine**: `airborne_state_machine_v3.py` uses player baseline in `_update_ground_baseline()`
-  with fallback to deque median if no players detected.
+- `precompute_player_detections.py` → `player_detections_v5/<clip>.json`
+- `extract_trajectory_features_with_players_v3.py` — adds `player_ground_baseline_y`
+  (90th percentile of player bbox y2 per frame)
+- `airborne_state_machine_v3.py` — uses player baseline in `_update_ground_baseline()`
+  with deque-median fallback
 
 ### Results (v3 on clip1, clip2)
 
-| Metric            | v2    | v3    | Change           |
-| ---               | ---:  | ---:  | ---              |
-| clip1 recall      | 1.0   | 0.667 | ↓ (REGRESSION)   |
-| clip1 start_error | 35.67 | 83.5  | ↑ (worse)        |
-| clip1 end_error   | 27.0  | 37.0  | ↑ (worse)        |
-| clip2 recall      | 1.0   | 1.0   | —                |
-| clip2 start_error | 10.0  | 10.0  | —                |
-| clip2 end_error   | 18.67 | 95.3  | ↑ (much worse)   |
+| Metric | v2 | v3 | Change |
+|---|---:|---:|---|
+| clip1 recall | 1.0 | 0.667 | ↓ REGRESSION |
+| clip1 start_error | 35.67 | 83.5 | ↑ worse |
+| clip1 end_error | 27.0 | 37.0 | ↑ worse |
+| clip2 recall | 1.0 | 1.0 | — |
+| clip2 end_error | 18.67 | 95.3 | ↑↑ much worse |
 
-### Root cause of regression
+**Root cause:** Per-frame player baseline (even smoothed with 90th percentile) is too
+noisy. When baseline shifts between frames, landing-distance check
+(`|ball_y - baseline_y| < 50px`) fails to trigger → ball exits AIRBORNE via `max_duration`.
 
-Per-frame player baseline (even smoothed with 90th percentile) is too noisy and
-unstable relative to rolling deque median. When baseline shifts between frames,
-landing-distance check (requires `|ball_y - baseline_y| < 50px`) fails to trigger
-at the right time, causing ball to linger in AIRBORNE state and exit via `max_duration`.
+### V3_1 hybrid baseline — Deque primary + player fallback (May 2026)
 
-### V3_1 hybrid baseline — Deque primary + player fallback (May 2026, completed)
-
-### Implementation
-
-Keep v2's rolling deque as primary baseline. Use player-feet detection (90th percentile y2)
-only as fallback initialization when deque is empty (first ~5 frames of clip). Once deque
-builds, proceed as v2.
+Keep v2's rolling deque as primary. Use player-feet (90th percentile y2) only as
+fallback initialization when deque is empty (first ~5 frames). Once deque builds,
+proceed as v2.
 
 - `airborne_state_machine_v3_1.py` — adds `_baseline_source` tracking (deque vs player)
-- Feature extractor reuses v3's `extract_trajectory_features_with_players_v3.py`
 - `run_airborne_eval_v3_1.py` — batch eval runner
 
-### Results: v3_1 vs v2
+| Metric | clip1 | clip2 | testing_1080 |
+|---|---|---|---|
+| v2 recall | 1.0 | 1.0 | 0.6 |
+| v3_1 recall | 1.0 | 1.0 | 0.6 |
+| v2 mean_end_err | 27.0 | 18.67 | 106.0 |
+| v3_1 mean_end_err | 27.0 | 18.67 | 106.0 |
 
-| Metric            | clip1 | clip2  | testing_1080 |
-| ---               | ---   | ---    | ---          |
-| v2 recall         | 1.0   | 1.0    | 0.6          |
-| v3_1 recall       | 1.0   | 1.0    | 0.6          |
-| v2 mean_end_err   | 27.0  | 18.67  | 106.0        |
-| v3_1 mean_end_err | 27.0  | 18.67  | 106.0        |
-
-**v3_1 preserves v2 exactly** — no regression risk. Safe hybrid foundation.
-However, does not fix testing_clip_1080's stale-baseline (106f end error persists).
-
-### Why v3_1 didn't solve testing_clip_1080
-
-Deque initializes from first ground detections (early frames) and that median becomes
-fixed for the entire clip. When camera pans to different ground level for later event,
-deque baseline no longer applies. Player baseline fallback only initializes deque in
-first ~5 frames; it doesn't reset/adjust mid-clip. Fixing stale baseline requires
-per-frame reset logic (detect camera pan, reset deque) — larger change.
+**v3_1 preserves v2 exactly** — safe hybrid foundation. Does not fix testing_clip_1080
+stale-baseline (106f end error persists): deque initializes from early frames and becomes
+fixed; player fallback only initializes in first ~5 frames and doesn't reset mid-clip.
 
 ### V3_2: Velocity-stationarity landing (May 2026, FAILED)
 
-**Approach**: Extend v3_1 with Option A: require landing to trigger only when BOTH:
-- Ball is near baseline (distance < 50px), AND
-- Velocity is stationary: `|dy| < threshold` for last N frames
+**Approach:** Landing triggers only when BOTH ball is near baseline (distance < 50px)
+AND velocity is stationary (`|dy| < threshold` for last N frames).
 
-Tested two parameter sets:
+Two parameter sets tested:
 - **Strict**: 5-frame window, 2.0 px/frame threshold
 - **Relaxed**: 3-frame window, 4.0 px/frame threshold
 
-**Results (Relaxed params)**:
+**Results (Relaxed params):**
 
-| Metric          | v3_1  | v3_2  | Change            |
-| ---             | ---:  | ---:  | ---               |
-| clip1 recall    | 1.0   | 0.667 | ↓ (lost 1 event) |
-| clip1 end_error | 27.0  | 31.0  | ↑ (worse)        |
-| clip2 recall    | 1.0   | 1.0   | —                |
-| clip2 end_error | 18.67 | 49.0  | ↑↑ (+30f worse)  |
-| clip4 recall    | 0.0   | 0.0   | — (still broken) |
-| MACRO recall    | 1.0   | 0.656 | ↓ (-0.344)       |
-| MACRO end_error | 22.8  | 57.4  | ↑ (+34.6f)       |
+| Metric | v3_1 | v3_2 | Change |
+|---|---:|---:|---|
+| clip1 recall | 1.0 | 0.667 | ↓ lost 1 event |
+| clip1 end_error | 27.0 | 31.0 | ↑ worse |
+| clip2 recall | 1.0 | 1.0 | — |
+| clip2 end_error | 18.67 | 49.0 | ↑↑ +30f |
+| clip4 recall | 0.0 | 0.0 | — |
+| MACRO recall | 1.0 | 0.656 | ↓ -0.344 |
+| MACRO end_error | 22.8 | 57.4 | ↑ +34.6f |
 
-**Verdict: REJECTED.** Velocity-stationarity constraint is too strict, causing FALSE NEGATIVES.
-When the check fails on legitimate landings (ball has residual velocity noise), landing never fires
-→ state machine falls back to max_duration → huge end errors (49f on clip2 vs 18.67f in v3_1).
-
-Root cause: Real falling balls don't smoothly decelerate; they have velocity noise and
-micro-bounces. Requiring all N frames below threshold is unrealistic.
+**REJECTED.** Velocity-stationarity too strict. Real falling balls have velocity noise
+and micro-bounces — check fails on legitimate landings → state machine falls back to
+max_duration → huge end errors.
 
 ### Path forward
 
-- **Option B (camera-pan baseline reset)**: Detect when player-baseline diverges >100px from
-  deque-median. Reset deque to player baseline for that frame (restart smoothing). Complex but
-  solves testing_clip_1080's stale-baseline problem.
-- **Option C (adaptive landing gate)**: Use clips' natural properties (detection density, ascent
-  ratio) to set landing distance dynamically per clip. May not be worth the complexity given
-  v3_1 is already stable.
+- **Option B (camera-pan baseline reset):** Detect when player-baseline diverges >100px
+  from deque-median; reset deque to player baseline. Solves testing_clip_1080 stale-baseline
+  but complex.
+- **Option C (adaptive landing gate):** Use clip properties (detection density, ascent ratio)
+  to set landing distance dynamically. May not be worth complexity given v3_1 stability.
 
 ---
 
 ## Working style
 
 - **Brainstorm before coding.** Don't write code from a one-line request.
-- **Diagnose before fixing.** Past pattern: we kept layering changes before
-  understanding failure. Always ablate independently.
-- **Test on multiple clips.** Anything that improves clip 1 must be checked
-  on clip 2. Two-clip regression check is the minimum bar.
+- **Diagnose before fixing.** Always ablate independently.
+- **Test on multiple clips.** Minimum 2-clip regression check before accepting a change.
 - **Concise responses.** No over-explaining. No restating what I already know.
 - **Real numbers > guesses.** "It should work" doesn't count. Run the eval.
-- **Ask before assuming.** When a decision point arises (matching criterion,
-  format ambiguity, metric definition), ask the user. Don't pick silently.
-- **Commit every change.** After each file edit or meaningful step, commit with
-  a message of 5–10 words describing the change.
+- **Ask before assuming.** When a decision point arises, ask the user. Don't pick silently.
+- **Commit every change.** 5–10 word message per edit.
 
 ## Key references
-- Airborne detector: tuned across 8 clips. Macro recall 0.86, precision 0.67.
-  Two state machine fixes applied (cooldown + landing streak=2). Remaining FPs
-  are mostly GT labeling gaps, not system errors.
 
-- Ground tracking: v5 baseline TP=378, Missed=44, FP=48, F1=0.8915 is current best.
-  v6 family (green filter) does not improve; F1 drops to 0.8715. Next: analyze 
-  the 48 v5 FPs to identify alternate improvement direction.
-
+- Airborne detector: macro recall 0.86, precision 0.67 across 8 clips. State machine
+  fixes: cooldown (15f) + landing streak=2. Remaining FPs mostly GT labeling gaps.
+- Ground tracking: v5 baseline TP=378, Missed=44, FP=48, F1=0.8915. v6 family (green
+  filter) drops to F1=0.8715. Next: analyze the 48 v5 FPs.
 - Ground tracker benchmark command:
   ```bash
   uv run python ball_outlier_interpolator_v5.py --video clips/clip1.mp4 \
@@ -438,8 +372,6 @@ micro-bounces. Requiring all N frames below threshold is unrealistic.
       --run_name my_run_name \
       --online_lookahead_frames 10
   ```
-
-- Metrics logged to: `ball_detection_metrics.csv` (all variants)
-- Visualizations: `v6_3-visuals/fps/` (18 FP frames), `v6_3-visuals/misses/` 
-  (89 miss frames) show ground-truth (green) and predictions (red) for manual review.
+- Metrics logged to: `ball_detection_metrics.csv`
+- Visualizations: `v6_3-visuals/fps/` (18 FP frames), `v6_3-visuals/misses/` (89 miss frames)
 - Active task tracker: `TODO.md`

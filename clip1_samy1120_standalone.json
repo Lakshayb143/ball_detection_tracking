@@ -1,0 +1,5964 @@
+{
+  "format": "ball-benchmark-detections/v1",
+  "run_name": "rfdetr_samy_1120__train",
+  "data_root": "/home/lakshay/lx/ball_detection_tracking/train",
+  "annotations_path": "/home/lakshay/lx/ball_detection_tracking/train/_annotations.coco.json",
+  "config": {
+    "data_root": "train",
+    "annotations": null,
+    "output_root": "/tmp/rfdetr_samy_eval",
+    "run_name": "rfdetr_samy_1120__train",
+    "seq_start": 0,
+    "seq_end": 999,
+    "seq_list": "",
+    "max_frames_per_seq": 0,
+    "model_path": "/home/lakshay/lx/ball_detection_tracking/checkpoints/ball_samy_1120.pth",
+    "ball_class_id": 0,
+    "extra_ball_class_ids": [],
+    "ball_category_id": null,
+    "confidence_threshold": 0.01,
+    "eval_iou": 0.01,
+    "eval_score_threshold": 0.01,
+    "resolution": 1120,
+    "num_classes": null,
+    "optimize_for_inference": true
+  },
+  "detections": [
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 1,
+      "original_frame": 0,
+      "file_name": "frame_0001_png.rf.3BmHGP3Rbv3sGtGZWAQt.png",
+      "image_id": 440,
+      "bbox_xywh": [
+        1669.498779296875,
+        503.2710876464844,
+        16.5587158203125,
+        11.392364501953125
+      ],
+      "score": 0.7657560706138611,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 2,
+      "original_frame": 0,
+      "file_name": "frame_0002_png.rf.27kCYDsoLx9IBsGV2uuF.png",
+      "image_id": 439,
+      "bbox_xywh": [
+        1672.31103515625,
+        503.2319030761719,
+        17.3050537109375,
+        11.687896728515625
+      ],
+      "score": 0.7602167129516602,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 3,
+      "original_frame": 0,
+      "file_name": "frame_0003_png.rf.J7GRnd14DICI5uzfjeq3.png",
+      "image_id": 452,
+      "bbox_xywh": [
+        1675.635986328125,
+        503.39178466796875,
+        17.2296142578125,
+        11.5618896484375
+      ],
+      "score": 0.803543746471405,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 4,
+      "original_frame": 0,
+      "file_name": "frame_0004_png.rf.61DhXZofmcHCYGVPbOT8.png",
+      "image_id": 441,
+      "bbox_xywh": [
+        1677.337158203125,
+        503.5021057128906,
+        17.0986328125,
+        11.652252197265625
+      ],
+      "score": 0.787510097026825,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 5,
+      "original_frame": 0,
+      "file_name": "frame_0005_png.rf.niJyGsN1WxHKLj60SJfc.png",
+      "image_id": 471,
+      "bbox_xywh": [
+        1680.881591796875,
+        503.55914306640625,
+        16.7767333984375,
+        11.54571533203125
+      ],
+      "score": 0.7620852589607239,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 6,
+      "original_frame": 0,
+      "file_name": "frame_0006_png.rf.8d3JW2Vo7lUp6OcGhJV3.png",
+      "image_id": 447,
+      "bbox_xywh": [
+        1685.3079833984375,
+        503.61029052734375,
+        17.42822265625,
+        11.73077392578125
+      ],
+      "score": 0.7250195145606995,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 7,
+      "original_frame": 0,
+      "file_name": "frame_0007_png.rf.9pIarpvLr0DdC20ANDkU.png",
+      "image_id": 442,
+      "bbox_xywh": [
+        1687.7652587890625,
+        503.9679870605469,
+        17.1253662109375,
+        11.375579833984375
+      ],
+      "score": 0.7439705729484558,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 8,
+      "original_frame": 0,
+      "file_name": "frame_0008_png.rf.BInbWQ5ZuzUv5M8kSTw7.png",
+      "image_id": 449,
+      "bbox_xywh": [
+        1691.9752197265625,
+        503.8094787597656,
+        16.7763671875,
+        11.729766845703125
+      ],
+      "score": 0.7158870100975037,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 9,
+      "original_frame": 0,
+      "file_name": "frame_0009_png.rf.YNxDpFDdnrsKeJXkV7PW.png",
+      "image_id": 467,
+      "bbox_xywh": [
+        1696.9820556640625,
+        503.6603698730469,
+        17.2535400390625,
+        11.930084228515625
+      ],
+      "score": 0.7083989381790161,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 10,
+      "original_frame": 0,
+      "file_name": "frame_0010_png.rf.pN95vwVjVgHtyp9JUIql.png",
+      "image_id": 469,
+      "bbox_xywh": [
+        1699.7890625,
+        503.63214111328125,
+        16.8992919921875,
+        11.70184326171875
+      ],
+      "score": 0.7561488747596741,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 11,
+      "original_frame": 0,
+      "file_name": "frame_0011_png.rf.ROzYGfbE8rBku1XQJZt4.png",
+      "image_id": 458,
+      "bbox_xywh": [
+        1705.595947265625,
+        503.79669189453125,
+        18.1781005859375,
+        12.4449462890625
+      ],
+      "score": 0.6788005828857422,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 12,
+      "original_frame": 0,
+      "file_name": "frame_0012_png.rf.cBHayKdww0Q90ijoEYzT.png",
+      "image_id": 472,
+      "bbox_xywh": [
+        1712.0765380859375,
+        503.9500427246094,
+        19.9775390625,
+        14.097564697265625
+      ],
+      "score": 0.6088570952415466,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 16,
+      "original_frame": 0,
+      "file_name": "frame_0016_png.rf.LVoNFcMlST1pLP3q3vSm.png",
+      "image_id": 453,
+      "bbox_xywh": [
+        1721.1986083984375,
+        498.0733947753906,
+        25.85498046875,
+        15.311737060546875
+      ],
+      "score": 0.6513274908065796,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 17,
+      "original_frame": 0,
+      "file_name": "frame_0017_png.rf.jhgmYBH7e10zoTdMFJmf.png",
+      "image_id": 466,
+      "bbox_xywh": [
+        1685.1539306640625,
+        485.5291442871094,
+        28.718505859375,
+        14.8763427734375
+      ],
+      "score": 0.6343253254890442,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 18,
+      "original_frame": 0,
+      "file_name": "frame_0018_png.rf.LVw4mSjvbffyUl9FOzP0.png",
+      "image_id": 457,
+      "bbox_xywh": [
+        1648.31982421875,
+        471.51220703125,
+        31.1319580078125,
+        18.261322021484375
+      ],
+      "score": 0.6598303914070129,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 19,
+      "original_frame": 0,
+      "file_name": "frame_0019_png.rf.aos30FzntclSdZFzUz77.png",
+      "image_id": 459,
+      "bbox_xywh": [
+        1632.4979248046875,
+        467.0489196777344,
+        27.587890625,
+        14.781158447265625
+      ],
+      "score": 0.6653046011924744,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 20,
+      "original_frame": 0,
+      "file_name": "frame_0020_png.rf.JOeU7lR2gwDQPgujURL1.png",
+      "image_id": 456,
+      "bbox_xywh": [
+        1603.62109375,
+        456.1766357421875,
+        26.45849609375,
+        15.542999267578125
+      ],
+      "score": 0.6504541635513306,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 21,
+      "original_frame": 0,
+      "file_name": "frame_0021_png.rf.l7tiokFPlbyMTcgUuNTm.png",
+      "image_id": 464,
+      "bbox_xywh": [
+        1577.052734375,
+        447.85565185546875,
+        26.20654296875,
+        15.33294677734375
+      ],
+      "score": 0.6226473450660706,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 22,
+      "original_frame": 0,
+      "file_name": "frame_0022_png.rf.XFgYpArnPXjqA7iMOAbJ.png",
+      "image_id": 454,
+      "bbox_xywh": [
+        1566.4697265625,
+        444.8136291503906,
+        21.6263427734375,
+        12.443756103515625
+      ],
+      "score": 0.6648297905921936,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 23,
+      "original_frame": 0,
+      "file_name": "frame_0023_png.rf.cDTiGkic3mueyidjH6Km.png",
+      "image_id": 455,
+      "bbox_xywh": [
+        1542.7281494140625,
+        436.98724365234375,
+        20.8670654296875,
+        11.701324462890625
+      ],
+      "score": 0.6440948247909546,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 24,
+      "original_frame": 0,
+      "file_name": "frame_0024_png.rf.fb9lhoYpojWUo5IRH4XG.png",
+      "image_id": 470,
+      "bbox_xywh": [
+        1517.11474609375,
+        428.4627990722656,
+        24.4459228515625,
+        14.6722412109375
+      ],
+      "score": 0.5825484395027161,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 25,
+      "original_frame": 0,
+      "file_name": "frame_0025_png.rf.zlQQfJseP2Bd1Q8lUzpN.png",
+      "image_id": 468,
+      "bbox_xywh": [
+        1508.2188720703125,
+        426.31951904296875,
+        22.229248046875,
+        12.103515625
+      ],
+      "score": 0.586716890335083,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 26,
+      "original_frame": 0,
+      "file_name": "frame_0026_png.rf.F7ENGVcfNSdwETSu4X9A.png",
+      "image_id": 451,
+      "bbox_xywh": [
+        1489.1002197265625,
+        422.43829345703125,
+        19.994384765625,
+        11.730255126953125
+      ],
+      "score": 0.6253839135169983,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 27,
+      "original_frame": 0,
+      "file_name": "frame_0027_png.rf.lufNN1CvelcWglgZmsKe.png",
+      "image_id": 476,
+      "bbox_xywh": [
+        1470.7012939453125,
+        418.16259765625,
+        19.8572998046875,
+        12.470611572265625
+      ],
+      "score": 0.6547118425369263,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 28,
+      "original_frame": 0,
+      "file_name": "frame_0028_png.rf.8iD0t5EkgUSg8M8vIspl.png",
+      "image_id": 448,
+      "bbox_xywh": [
+        1462.0296630859375,
+        416.7476806640625,
+        21.481689453125,
+        12.482330322265625
+      ],
+      "score": 0.6403990387916565,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 29,
+      "original_frame": 0,
+      "file_name": "frame_0029_png.rf.Ty01ekC1unSWYSOILdrj.png",
+      "image_id": 465,
+      "bbox_xywh": [
+        1449.12060546875,
+        413.25311279296875,
+        19.419921875,
+        12.247283935546875
+      ],
+      "score": 0.624440610408783,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 30,
+      "original_frame": 0,
+      "file_name": "frame_0030_png.rf.ZJuqP8E9IITcfLYKn7uq.png",
+      "image_id": 11,
+      "bbox_xywh": [
+        1436.1923828125,
+        411.0826721191406,
+        19.1611328125,
+        11.894012451171875
+      ],
+      "score": 0.65390545129776,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 31,
+      "original_frame": 0,
+      "file_name": "frame_0031_png.rf.CKoAYE9aVCRmSmKwLxz6.png",
+      "image_id": 443,
+      "bbox_xywh": [
+        1430.4698486328125,
+        410.6309509277344,
+        18.5423583984375,
+        10.75958251953125
+      ],
+      "score": 0.7361881732940674,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 32,
+      "original_frame": 0,
+      "file_name": "frame_0032_png.rf.yamWSBqac7TeMZg72Hlt.png",
+      "image_id": 29,
+      "bbox_xywh": [
+        1418.8619384765625,
+        409.7594909667969,
+        19.80810546875,
+        13.20166015625
+      ],
+      "score": 0.595303475856781,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 34,
+      "original_frame": 0,
+      "file_name": "frame_0034_png.rf.Q6BUMbrpMULlXCTEnZ0E.png",
+      "image_id": 123,
+      "bbox_xywh": [
+        1401.344970703125,
+        412.60137939453125,
+        20.129638671875,
+        13.076873779296875
+      ],
+      "score": 0.629132866859436,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 35,
+      "original_frame": 0,
+      "file_name": "frame_0035_png.rf.GS824lY1z5Fp6foIsaju.png",
+      "image_id": 9,
+      "bbox_xywh": [
+        1392.552734375,
+        414.962890625,
+        18.096435546875,
+        11.7830810546875
+      ],
+      "score": 0.6956868171691895,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 36,
+      "original_frame": 0,
+      "file_name": "frame_0036_png.rf.m9CtvO05EiK7XBsfR6um.png",
+      "image_id": 75,
+      "bbox_xywh": [
+        1383.392333984375,
+        416.7210998535156,
+        18.0828857421875,
+        12.34442138671875
+      ],
+      "score": 0.7473993301391602,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 37,
+      "original_frame": 0,
+      "file_name": "frame_0037_png.rf.3FSKh0GyIS9Ldb1Zmfun.png",
+      "image_id": 32,
+      "bbox_xywh": [
+        1377.748779296875,
+        417.80157470703125,
+        19.0089111328125,
+        12.89410400390625
+      ],
+      "score": 0.6888652443885803,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 38,
+      "original_frame": 0,
+      "file_name": "frame_0038_png.rf.4MwnA6SrOu5GmcCJMKmb.png",
+      "image_id": 72,
+      "bbox_xywh": [
+        1367.2874755859375,
+        421.0958251953125,
+        20.6053466796875,
+        14.369140625
+      ],
+      "score": 0.6775590777397156,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 39,
+      "original_frame": 0,
+      "file_name": "frame_0039_png.rf.JGp5eQg39Ry45aE0b7X3.png",
+      "image_id": 5,
+      "bbox_xywh": [
+        1357.3299560546875,
+        427.250244140625,
+        18.7301025390625,
+        13.459686279296875
+      ],
+      "score": 0.7512995600700378,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 40,
+      "original_frame": 0,
+      "file_name": "frame_0040_png.rf.ULR0FaZMj4ARoOebIWxv.png",
+      "image_id": 158,
+      "bbox_xywh": [
+        1350.6014404296875,
+        430.1392517089844,
+        21.4857177734375,
+        14.276519775390625
+      ],
+      "score": 0.6720001101493835,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 41,
+      "original_frame": 0,
+      "file_name": "frame_0041_png.rf.zHHkpj5HOERRGUSBLs8z.png",
+      "image_id": 34,
+      "bbox_xywh": [
+        1336.4637451171875,
+        437.7101745605469,
+        22.5699462890625,
+        15.44134521484375
+      ],
+      "score": 0.6843735575675964,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 42,
+      "original_frame": 0,
+      "file_name": "frame_0042_png.rf.L44XX9g8UGDfB5omGoOk.png",
+      "image_id": 26,
+      "bbox_xywh": [
+        1322.6849365234375,
+        447.3695983886719,
+        21.11474609375,
+        13.750335693359375
+      ],
+      "score": 0.7158529758453369,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 43,
+      "original_frame": 0,
+      "file_name": "frame_0043_png.rf.Gai95ceGLs2DSkge9LAq.png",
+      "image_id": 6,
+      "bbox_xywh": [
+        1311.32861328125,
+        451.49114990234375,
+        22.9515380859375,
+        15.51385498046875
+      ],
+      "score": 0.684417724609375,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 44,
+      "original_frame": 0,
+      "file_name": "frame_0044_png.rf.3CvP0KcvomJ7cZvID0HY.png",
+      "image_id": 31,
+      "bbox_xywh": [
+        1286.137451171875,
+        461.9902648925781,
+        28.1961669921875,
+        18.06524658203125
+      ],
+      "score": 0.6650879383087158,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 45,
+      "original_frame": 0,
+      "file_name": "frame_0045_png.rf.LABJgnpKKbXBG1N77hN3.png",
+      "image_id": 74,
+      "bbox_xywh": [
+        1257.6103515625,
+        474.30963134765625,
+        27.4683837890625,
+        17.68975830078125
+      ],
+      "score": 0.6462400555610657,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 46,
+      "original_frame": 0,
+      "file_name": "frame_0046_png.rf.eABATV3ARcJyX3GBHMAB.png",
+      "image_id": 156,
+      "bbox_xywh": [
+        1242.8509521484375,
+        480.6838073730469,
+        29.6573486328125,
+        18.35565185546875
+      ],
+      "score": 0.6846924424171448,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 47,
+      "original_frame": 0,
+      "file_name": "frame_0047_png.rf.3R7fTEjCRMRmc1z1rxZt.png",
+      "image_id": 10,
+      "bbox_xywh": [
+        1211.4539794921875,
+        493.8871154785156,
+        28.5438232421875,
+        19.176666259765625
+      ],
+      "score": 0.7004300355911255,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 48,
+      "original_frame": 0,
+      "file_name": "frame_0048_png.rf.WpU6x8E2vtYCK9TV9GUk.png",
+      "image_id": 122,
+      "bbox_xywh": [
+        1179.310302734375,
+        510.2664489746094,
+        27.86279296875,
+        17.695343017578125
+      ],
+      "score": 0.7011071443557739,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 51,
+      "original_frame": 0,
+      "file_name": "frame_0051_png.rf.dxh7Yf7JFZKSlsM2YcsF.png",
+      "image_id": 104,
+      "bbox_xywh": [
+        1203.317626953125,
+        508.08905029296875,
+        20.57861328125,
+        14.1236572265625
+      ],
+      "score": 0.5220973491668701,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 52,
+      "original_frame": 0,
+      "file_name": "frame_0052_png.rf.sT8v4hng0dwH3ehwLVap.png",
+      "image_id": 27,
+      "bbox_xywh": [
+        1211.836181640625,
+        511.9221496582031,
+        19.5867919921875,
+        14.268768310546875
+      ],
+      "score": 0.6495280265808105,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 55,
+      "original_frame": 0,
+      "file_name": "frame_0055_png.rf.EzeIzF68h8UOKO09Gq2X.png",
+      "image_id": 4,
+      "bbox_xywh": [
+        1125.45556640625,
+        523.8873901367188,
+        20.9893798828125,
+        14.56341552734375
+      ],
+      "score": 0.601058304309845,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 56,
+      "original_frame": 0,
+      "file_name": "frame_0056_png.rf.CsPuiVStjNnOGSMCiShF.png",
+      "image_id": 8,
+      "bbox_xywh": [
+        1122.0303955078125,
+        521.7280883789062,
+        21.7451171875,
+        16.39422607421875
+      ],
+      "score": 0.6810603737831116,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 57,
+      "original_frame": 0,
+      "file_name": "frame_0057_png.rf.yeNBNBxXkVmlj0dBITkL.png",
+      "image_id": 33,
+      "bbox_xywh": [
+        1117.037841796875,
+        519.8997192382812,
+        24.4107666015625,
+        17.48101806640625
+      ],
+      "score": 0.6815871000289917,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 58,
+      "original_frame": 0,
+      "file_name": "frame_0058_png.rf.Zw80yAYvkTy495VM1DdC.png",
+      "image_id": 49,
+      "bbox_xywh": [
+        1113.027099609375,
+        520.0467529296875,
+        22.96142578125,
+        16.71441650390625
+      ],
+      "score": 0.6942660212516785,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 59,
+      "original_frame": 0,
+      "file_name": "frame_0059_png.rf.IzOWvfKRrg3k9xzzpCzR.png",
+      "image_id": 30,
+      "bbox_xywh": [
+        1099.552978515625,
+        519.96923828125,
+        22.3505859375,
+        16.280029296875
+      ],
+      "score": 0.7014381289482117,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 60,
+      "original_frame": 0,
+      "file_name": "frame_0060_png.rf.uYOIl6qh8GCKqSPIdcV2.png",
+      "image_id": 184,
+      "bbox_xywh": [
+        1077.935546875,
+        518.7335815429688,
+        27.6451416015625,
+        17.83489990234375
+      ],
+      "score": 0.6788769960403442,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 61,
+      "original_frame": 0,
+      "file_name": "frame_0061_png.rf.iglFu3gmaXFJBi0wnCWG.png",
+      "image_id": 73,
+      "bbox_xywh": [
+        1068.005615234375,
+        519.1793823242188,
+        26.3671875,
+        17.02215576171875
+      ],
+      "score": 0.6799725890159607,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 62,
+      "original_frame": 0,
+      "file_name": "frame_0062_png.rf.4kEQFcrOUniGMStEZi7m.png",
+      "image_id": 160,
+      "bbox_xywh": [
+        1045.935791015625,
+        520.0157470703125,
+        27.34375,
+        18.96759033203125
+      ],
+      "score": 0.6847910284996033,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 63,
+      "original_frame": 0,
+      "file_name": "frame_0063_png.rf.HyFr5eTZseGpLmwZQfSe.png",
+      "image_id": 174,
+      "bbox_xywh": [
+        1025.5201416015625,
+        524.21533203125,
+        25.7716064453125,
+        16.4119873046875
+      ],
+      "score": 0.7091664671897888,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 64,
+      "original_frame": 0,
+      "file_name": "frame_0064_png.rf.0T9votjVnGuxaOLfnVHd.png",
+      "image_id": 134,
+      "bbox_xywh": [
+        1016.5862426757812,
+        525.5769653320312,
+        26.27679443359375,
+        18.7674560546875
+      ],
+      "score": 0.6812213063240051,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 65,
+      "original_frame": 0,
+      "file_name": "frame_0065_png.rf.HLHw7VxAbcE3LtbMRqAz.png",
+      "image_id": 153,
+      "bbox_xywh": [
+        1001.7932739257812,
+        532.2213745117188,
+        26.65167236328125,
+        18.93572998046875
+      ],
+      "score": 0.6683862209320068,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 66,
+      "original_frame": 0,
+      "file_name": "frame_0066_png.rf.EnncUignz40AXclkRCoE.png",
+      "image_id": 151,
+      "bbox_xywh": [
+        990.8467407226562,
+        539.8207397460938,
+        24.9423828125,
+        16.77301025390625
+      ],
+      "score": 0.6916762590408325,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 67,
+      "original_frame": 0,
+      "file_name": "frame_0067_png.rf.4i795VzVlidXJEEWezYr.png",
+      "image_id": 161,
+      "bbox_xywh": [
+        987.1956176757812,
+        543.871826171875,
+        22.91290283203125,
+        16.34588623046875
+      ],
+      "score": 0.6899210810661316,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 68,
+      "original_frame": 0,
+      "file_name": "frame_0068_png.rf.Rq0svYpHQOH0OY9kq0gU.png",
+      "image_id": 201,
+      "bbox_xywh": [
+        981.205810546875,
+        546.5393676757812,
+        25.36578369140625,
+        17.46905517578125
+      ],
+      "score": 0.6783440113067627,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 69,
+      "original_frame": 0,
+      "file_name": "frame_0069_png.rf.8mV7BwB83yVn0Z6AJfdT.png",
+      "image_id": 149,
+      "bbox_xywh": [
+        979.8278198242188,
+        550.39990234375,
+        22.26397705078125,
+        16.44952392578125
+      ],
+      "score": 0.6279429197311401,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 70,
+      "original_frame": 0,
+      "file_name": "frame_0070_png.rf.La59Ts2d5qRMjwh7Xgy1.png",
+      "image_id": 175,
+      "bbox_xywh": [
+        978.2608642578125,
+        551.489013671875,
+        22.30181884765625,
+        15.98809814453125
+      ],
+      "score": 0.6507206559181213,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 72,
+      "original_frame": 0,
+      "file_name": "frame_0072_png.rf.7Sgpq5fl6InDytgb3N9l.png",
+      "image_id": 148,
+      "bbox_xywh": [
+        968.3543090820312,
+        559.19677734375,
+        21.65863037109375,
+        17.2747802734375
+      ],
+      "score": 0.6984326839447021,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 73,
+      "original_frame": 0,
+      "file_name": "frame_0073_png.rf.iFUDahfuNCEdowXEWyNW.png",
+      "image_id": 177,
+      "bbox_xywh": [
+        966.062744140625,
+        562.8148193359375,
+        20.99188232421875,
+        16.44525146484375
+      ],
+      "score": 0.7055678963661194,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 74,
+      "original_frame": 0,
+      "file_name": "frame_0074_png.rf.wIopPcSnfScpVW5IomX9.png",
+      "image_id": 186,
+      "bbox_xywh": [
+        960.1141967773438,
+        569.8569946289062,
+        21.83697509765625,
+        15.686767578125
+      ],
+      "score": 0.7328936457633972,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 75,
+      "original_frame": 0,
+      "file_name": "frame_0075_png.rf.tubIb3HtKnH7lr2DhJhB.png",
+      "image_id": 183,
+      "bbox_xywh": [
+        952.5556640625,
+        577.2014770507812,
+        22.7828369140625,
+        17.70416259765625
+      ],
+      "score": 0.6735631227493286,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 76,
+      "original_frame": 0,
+      "file_name": "frame_0076_png.rf.0vrsTimlcJeT8mX1E3av.png",
+      "image_id": 130,
+      "bbox_xywh": [
+        949.3419799804688,
+        582.2671508789062,
+        23.09100341796875,
+        17.24359130859375
+      ],
+      "score": 0.6922519207000732,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 77,
+      "original_frame": 0,
+      "file_name": "frame_0077_png.rf.dfBph0OoPfTUkdaOOeEm.png",
+      "image_id": 204,
+      "bbox_xywh": [
+        944.0686645507812,
+        591.9378051757812,
+        22.73236083984375,
+        18.8328857421875
+      ],
+      "score": 0.6908072829246521,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 78,
+      "original_frame": 0,
+      "file_name": "frame_0078_png.rf.Vtr6UHg8WL6bEpNi0aIj.png",
+      "image_id": 200,
+      "bbox_xywh": [
+        940.185302734375,
+        604.5021362304688,
+        23.9747314453125,
+        20.1044921875
+      ],
+      "score": 0.6718119382858276,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 79,
+      "original_frame": 0,
+      "file_name": "frame_0079_png.rf.0TbbnBzeN01bg8J4QAfd.png",
+      "image_id": 137,
+      "bbox_xywh": [
+        939.628173828125,
+        611.473876953125,
+        22.2874755859375,
+        19.26904296875
+      ],
+      "score": 0.6595473289489746,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 80,
+      "original_frame": 0,
+      "file_name": "frame_0080_png.rf.yzFx9Jhlj8dQMqdieVKv.png",
+      "image_id": 187,
+      "bbox_xywh": [
+        937.3729858398438,
+        627.1762084960938,
+        23.1768798828125,
+        20.04559326171875
+      ],
+      "score": 0.6751217246055603,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 81,
+      "original_frame": 0,
+      "file_name": "frame_0081_png.rf.BlVhMOucito2U04Xzkln.png",
+      "image_id": 150,
+      "bbox_xywh": [
+        934.8335571289062,
+        642.6603393554688,
+        26.2510986328125,
+        20.4576416015625
+      ],
+      "score": 0.6770504713058472,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 82,
+      "original_frame": 0,
+      "file_name": "frame_0082_png.rf.ufKCeXGz88rfadd4Atdg.png",
+      "image_id": 185,
+      "bbox_xywh": [
+        934.882568359375,
+        652.5046997070312,
+        25.3504638671875,
+        20.79119873046875
+      ],
+      "score": 0.6808560490608215,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 83,
+      "original_frame": 0,
+      "file_name": "frame_0083_png.rf.15COXEFDu7fgo9afIUuw.png",
+      "image_id": 159,
+      "bbox_xywh": [
+        932.773681640625,
+        665.9841918945312,
+        24.7489013671875,
+        20.3858642578125
+      ],
+      "score": 0.6693310141563416,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 84,
+      "original_frame": 0,
+      "file_name": "frame_0084_png.rf.n5t2SKFE1ivDcrZb0hws.png",
+      "image_id": 203,
+      "bbox_xywh": [
+        935.2496337890625,
+        656.8029174804688,
+        22.74102783203125,
+        18.71929931640625
+      ],
+      "score": 0.6752721667289734,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 85,
+      "original_frame": 0,
+      "file_name": "frame_0085_png.rf.MHFbdnXyWZFk9LgtXZfZ.png",
+      "image_id": 176,
+      "bbox_xywh": [
+        936.5453491210938,
+        650.902099609375,
+        24.6312255859375,
+        18.880615234375
+      ],
+      "score": 0.6942268013954163,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 86,
+      "original_frame": 0,
+      "file_name": "frame_0086_png.rf.cFdJfMc2pDyoINIt3C2C.png",
+      "image_id": 202,
+      "bbox_xywh": [
+        966.57568359375,
+        627.1721801757812,
+        35.02142333984375,
+        23.0728759765625
+      ],
+      "score": 0.6785191893577576,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 87,
+      "original_frame": 0,
+      "file_name": "frame_0087_png.rf.HmLJYYTe0XE5Prxplytz.png",
+      "image_id": 173,
+      "bbox_xywh": [
+        1005.8430786132812,
+        605.2642211914062,
+        30.83636474609375,
+        20.5667724609375
+      ],
+      "score": 0.6349500417709351,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 89,
+      "original_frame": 0,
+      "file_name": "frame_0089_png.rf.GQZax3HlivXW2lDI7xxE.png",
+      "image_id": 152,
+      "bbox_xywh": [
+        1070.3509521484375,
+        571.9865112304688,
+        31.18994140625,
+        21.3553466796875
+      ],
+      "score": 0.6755123138427734,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 90,
+      "original_frame": 0,
+      "file_name": "frame_0090_png.rf.ugJif47OjTmqnJWXcGCm.png",
+      "image_id": 320,
+      "bbox_xywh": [
+        1106.509033203125,
+        549.9290161132812,
+        33.1708984375,
+        23.638427734375
+      ],
+      "score": 0.6462871432304382,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 91,
+      "original_frame": 0,
+      "file_name": "frame_0091_png.rf.mYY1lIk4jOZoY5rhIxjO.png",
+      "image_id": 206,
+      "bbox_xywh": [
+        1126.9471435546875,
+        537.7913818359375,
+        34.990478515625,
+        22.9664306640625
+      ],
+      "score": 0.5384063720703125,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 93,
+      "original_frame": 0,
+      "file_name": "frame_0093_png.rf.sPyyfImKcD91XQcZUQ7O.png",
+      "image_id": 345,
+      "bbox_xywh": [
+        1202.823974609375,
+        487.2979431152344,
+        36.103271484375,
+        26.927703857421875
+      ],
+      "score": 0.7017172574996948,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 94,
+      "original_frame": 0,
+      "file_name": "frame_0094_png.rf.7mSEShtFUUiWhd6kBTqP.png",
+      "image_id": 275,
+      "bbox_xywh": [
+        1217.8890380859375,
+        476.6778869628906,
+        39.627197265625,
+        28.466705322265625
+      ],
+      "score": 0.6874657869338989,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 95,
+      "original_frame": 0,
+      "file_name": "frame_0095_png.rf.aFTA3MdcNHbh49qhDMtz.png",
+      "image_id": 325,
+      "bbox_xywh": [
+        1251.5771484375,
+        459.30877685546875,
+        35.281494140625,
+        23.71630859375
+      ],
+      "score": 0.6978882551193237,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 96,
+      "original_frame": 0,
+      "file_name": "frame_0096_png.rf.k0qkbqepzHHNNoLm2Fjv.png",
+      "image_id": 326,
+      "bbox_xywh": [
+        1279.240478515625,
+        444.6874084472656,
+        35.544677734375,
+        22.981170654296875
+      ],
+      "score": 0.6842136979103088,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 97,
+      "original_frame": 0,
+      "file_name": "frame_0097_png.rf.ryjIhyKg3h1jb7rFG9so.png",
+      "image_id": 319,
+      "bbox_xywh": [
+        1292.6094970703125,
+        439.0905456542969,
+        33.771484375,
+        22.384613037109375
+      ],
+      "score": 0.6688092947006226,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 98,
+      "original_frame": 0,
+      "file_name": "frame_0098_png.rf.NroIpntCZp0zohgpakUZ.png",
+      "image_id": 296,
+      "bbox_xywh": [
+        1312.6470947265625,
+        429.3619689941406,
+        30.8651123046875,
+        21.143707275390625
+      ],
+      "score": 0.6697379946708679,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 99,
+      "original_frame": 0,
+      "file_name": "frame_0099_png.rf.BJ5140GV4wBYxEASDh4q.png",
+      "image_id": 294,
+      "bbox_xywh": [
+        1328.5587158203125,
+        422.08209228515625,
+        27.1513671875,
+        19.14947509765625
+      ],
+      "score": 0.6726128458976746,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 100,
+      "original_frame": 0,
+      "file_name": "frame_0100_png.rf.rAfPGd4LKHUg3ZWnOXXi.png",
+      "image_id": 318,
+      "bbox_xywh": [
+        1334.4058837890625,
+        417.0653076171875,
+        27.4697265625,
+        19.75677490234375
+      ],
+      "score": 0.6905819773674011,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 101,
+      "original_frame": 0,
+      "file_name": "frame_0101_png.rf.blEetbhvbaY8TziZyDKP.png",
+      "image_id": 290,
+      "bbox_xywh": [
+        1347.2220458984375,
+        407.9935607910156,
+        27.1280517578125,
+        20.59466552734375
+      ],
+      "score": 0.6561940908432007,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 102,
+      "original_frame": 0,
+      "file_name": "frame_0102_png.rf.1hSsN5WUFMwI0XiTvSL9.png",
+      "image_id": 274,
+      "bbox_xywh": [
+        1357.6239013671875,
+        400.0019836425781,
+        25.4617919921875,
+        18.55596923828125
+      ],
+      "score": 0.7215635776519775,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 103,
+      "original_frame": 0,
+      "file_name": "frame_0103_png.rf.NjwUa36bn71Fu7NpYxUE.png",
+      "image_id": 292,
+      "bbox_xywh": [
+        1359.6929931640625,
+        395.5488586425781,
+        29.1776123046875,
+        20.4620361328125
+      ],
+      "score": 0.6632974147796631,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 104,
+      "original_frame": 0,
+      "file_name": "frame_0104_png.rf.52gAajQKBkiAyrjtlQrd.png",
+      "image_id": 273,
+      "bbox_xywh": [
+        1368.9610595703125,
+        386.9836730957031,
+        28.9874267578125,
+        22.26287841796875
+      ],
+      "score": 0.6773492097854614,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 105,
+      "original_frame": 0,
+      "file_name": "frame_0105_png.rf.TDqWRV8GX7XXkZyn12hT.png",
+      "image_id": 293,
+      "bbox_xywh": [
+        1378.43896484375,
+        381.3257751464844,
+        26.3565673828125,
+        18.83880615234375
+      ],
+      "score": 0.6819959282875061,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 106,
+      "original_frame": 0,
+      "file_name": "frame_0106_png.rf.O1yQUZ0aAPK6S7TLT0bY.png",
+      "image_id": 299,
+      "bbox_xywh": [
+        1383.6026611328125,
+        379.2664794921875,
+        23.050048828125,
+        17.614105224609375
+      ],
+      "score": 0.7753749489784241,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 107,
+      "original_frame": 0,
+      "file_name": "frame_0107_png.rf.LAQyI0VjMnlQwlSy0HHg.png",
+      "image_id": 291,
+      "bbox_xywh": [
+        1389.8568115234375,
+        373.35784912109375,
+        25.510498046875,
+        19.536712646484375
+      ],
+      "score": 0.6818275451660156,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 108,
+      "original_frame": 0,
+      "file_name": "frame_0108_png.rf.Z0NWcl6GBJdKdRJLT5O9.png",
+      "image_id": 327,
+      "bbox_xywh": [
+        1398.7080078125,
+        370.2580261230469,
+        24.3431396484375,
+        17.198150634765625
+      ],
+      "score": 0.6974324584007263,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 109,
+      "original_frame": 0,
+      "file_name": "frame_0109_png.rf.ujR0XbMI2owhEbDIEx97.png",
+      "image_id": 343,
+      "bbox_xywh": [
+        1401.6512451171875,
+        368.4910888671875,
+        25.827392578125,
+        18.400665283203125
+      ],
+      "score": 0.6716541051864624,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 110,
+      "original_frame": 0,
+      "file_name": "frame_0110_png.rf.bc2jI9qWBWEtAm8lyVWG.png",
+      "image_id": 289,
+      "bbox_xywh": [
+        1412.190185546875,
+        368.99420166015625,
+        23.564453125,
+        16.529205322265625
+      ],
+      "score": 0.8609769940376282,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 111,
+      "original_frame": 0,
+      "file_name": "frame_0111_png.rf.4hN1SKfM2ZuomWeLtyFf.png",
+      "image_id": 276,
+      "bbox_xywh": [
+        1420.466796875,
+        368.3004455566406,
+        24.4488525390625,
+        17.25970458984375
+      ],
+      "score": 0.7672905325889587,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 112,
+      "original_frame": 0,
+      "file_name": "frame_0112_png.rf.0NcpM9qEPiOGIFegePeG.png",
+      "image_id": 272,
+      "bbox_xywh": [
+        1425.2955322265625,
+        369.2610168457031,
+        24.6497802734375,
+        16.064788818359375
+      ],
+      "score": 0.8700198531150818,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 113,
+      "original_frame": 0,
+      "file_name": "frame_0113_png.rf.duA99d6rbLU9uN3xIe2N.png",
+      "image_id": 324,
+      "bbox_xywh": [
+        1436.03564453125,
+        370.3629455566406,
+        23.419189453125,
+        17.0283203125
+      ],
+      "score": 0.8299105763435364,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 114,
+      "original_frame": 0,
+      "file_name": "frame_0114_png.rf.qhTNMQwOuKWJXoz6pacW.png",
+      "image_id": 344,
+      "bbox_xywh": [
+        1445.88671875,
+        372.1430358886719,
+        24.52099609375,
+        18.06011962890625
+      ],
+      "score": 0.7809814214706421,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 115,
+      "original_frame": 0,
+      "file_name": "frame_0115_png.rf.xoPY3kiyzga75DpGrh9m.png",
+      "image_id": 321,
+      "bbox_xywh": [
+        1450.2227783203125,
+        373.23907470703125,
+        25.97119140625,
+        18.793060302734375
+      ],
+      "score": 0.6644688844680786,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 116,
+      "original_frame": 0,
+      "file_name": "frame_0116_png.rf.VmAG8Hgqf6SuE3iqnPnZ.png",
+      "image_id": 297,
+      "bbox_xywh": [
+        1460.6651611328125,
+        377.5335693359375,
+        24.0179443359375,
+        16.285552978515625
+      ],
+      "score": 0.8521929979324341,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 117,
+      "original_frame": 0,
+      "file_name": "frame_0117_png.rf.PH5hBIGDQOBc9XmDetYa.png",
+      "image_id": 295,
+      "bbox_xywh": [
+        1469.5196533203125,
+        381.90692138671875,
+        23.595947265625,
+        17.719970703125
+      ],
+      "score": 0.8590593338012695,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 118,
+      "original_frame": 0,
+      "file_name": "frame_0118_png.rf.Za7OeqiO9fKztisYc1Cu.png",
+      "image_id": 298,
+      "bbox_xywh": [
+        1473.673583984375,
+        384.3542785644531,
+        23.07373046875,
+        16.361968994140625
+      ],
+      "score": 0.8047094345092773,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 119,
+      "original_frame": 0,
+      "file_name": "frame_0119_png.rf.LnBsVsGXdYXok5QY91aL.png",
+      "image_id": 269,
+      "bbox_xywh": [
+        1481.978271484375,
+        390.0545959472656,
+        24.341796875,
+        17.302093505859375
+      ],
+      "score": 0.7232236862182617,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 120,
+      "original_frame": 0,
+      "file_name": "frame_0120_png.rf.JQdb3MQGsPlWfAL0xaGB.png",
+      "image_id": 300,
+      "bbox_xywh": [
+        1489.249267578125,
+        397.22271728515625,
+        22.2786865234375,
+        16.622894287109375
+      ],
+      "score": 0.7576492428779602,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 121,
+      "original_frame": 0,
+      "file_name": "frame_0121_png.rf.B3kqskhgyI3Vroty1hFm.png",
+      "image_id": 20,
+      "bbox_xywh": [
+        1492.9188232421875,
+        401.2783508300781,
+        21.847900390625,
+        15.20379638671875
+      ],
+      "score": 0.8132051825523376,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 122,
+      "original_frame": 0,
+      "file_name": "frame_0122_png.rf.r68sWu6erkKvSvtBXaqg.png",
+      "image_id": 78,
+      "bbox_xywh": [
+        1499.465576171875,
+        407.3899841308594,
+        23.94970703125,
+        17.400390625
+      ],
+      "score": 0.7354668378829956,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 123,
+      "original_frame": 0,
+      "file_name": "frame_0123_png.rf.xwjP0C7goHLh9w75UmN9.png",
+      "image_id": 57,
+      "bbox_xywh": [
+        1505.458740234375,
+        416.470703125,
+        24.993896484375,
+        19.018218994140625
+      ],
+      "score": 0.6989119052886963,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 124,
+      "original_frame": 0,
+      "file_name": "frame_0124_png.rf.fYAcnDopVaDUidw9fJP7.png",
+      "image_id": 61,
+      "bbox_xywh": [
+        1508.4091796875,
+        421.5603942871094,
+        26.2637939453125,
+        19.421600341796875
+      ],
+      "score": 0.6678302884101868,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 125,
+      "original_frame": 0,
+      "file_name": "frame_0125_png.rf.Xg7Jvo8mgIHI9lfPmV8c.png",
+      "image_id": 45,
+      "bbox_xywh": [
+        1515.84765625,
+        432.7022705078125,
+        23.2828369140625,
+        17.6859130859375
+      ],
+      "score": 0.6983082294464111,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 126,
+      "original_frame": 0,
+      "file_name": "frame_0126_png.rf.Dc4Jmb6HarBJv4e39Egq.png",
+      "image_id": 38,
+      "bbox_xywh": [
+        1520.4405517578125,
+        444.8360595703125,
+        25.6805419921875,
+        19.694976806640625
+      ],
+      "score": 0.6740374565124512,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 127,
+      "original_frame": 0,
+      "file_name": "frame_0127_png.rf.agqlz5wQR7TqtjsMxjhF.png",
+      "image_id": 46,
+      "bbox_xywh": [
+        1522.7227783203125,
+        450.7864990234375,
+        26.1392822265625,
+        19.473297119140625
+      ],
+      "score": 0.6769891381263733,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 128,
+      "original_frame": 0,
+      "file_name": "frame_0128_png.rf.0GUpCnCcWf6nqpiEHNAG.png",
+      "image_id": 16,
+      "bbox_xywh": [
+        1519.0048828125,
+        448.86053466796875,
+        27.842529296875,
+        23.0972900390625
+      ],
+      "score": 0.6560515761375427,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 129,
+      "original_frame": 0,
+      "file_name": "frame_0129_png.rf.A3N80OlkHla9uBNuF0Na.png",
+      "image_id": 14,
+      "bbox_xywh": [
+        1507.448486328125,
+        425.4546813964844,
+        27.1671142578125,
+        20.971954345703125
+      ],
+      "score": 0.6010795831680298,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 130,
+      "original_frame": 0,
+      "file_name": "frame_0130_png.rf.rsjKJXpyF1eLwQYzQhBW.png",
+      "image_id": 53,
+      "bbox_xywh": [
+        1501.33642578125,
+        413.9632263183594,
+        27.8155517578125,
+        23.881103515625
+      ],
+      "score": 0.6869028210639954,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 131,
+      "original_frame": 0,
+      "file_name": "frame_0131_png.rf.WlVnGqPSDFJ4iQH3jMjT.png",
+      "image_id": 43,
+      "bbox_xywh": [
+        1484.100341796875,
+        390.2438049316406,
+        31.762939453125,
+        26.372589111328125
+      ],
+      "score": 0.6687976717948914,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 132,
+      "original_frame": 0,
+      "file_name": "frame_0132_png.rf.tezMeTKqUYxHMsy8nFh1.png",
+      "image_id": 54,
+      "bbox_xywh": [
+        1468.314453125,
+        367.9242248535156,
+        32.876953125,
+        25.04058837890625
+      ],
+      "score": 0.6679894924163818,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 133,
+      "original_frame": 0,
+      "file_name": "frame_0133_png.rf.B1bMa8O1Xh2tKoEkqMk3.png",
+      "image_id": 19,
+      "bbox_xywh": [
+        1461.2171630859375,
+        359.2401123046875,
+        30.5789794921875,
+        23.833740234375
+      ],
+      "score": 0.6411020755767822,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 134,
+      "original_frame": 0,
+      "file_name": "frame_0134_png.rf.idpz2kbVkzQE1GOWF8ZX.png",
+      "image_id": 77,
+      "bbox_xywh": [
+        1444.642333984375,
+        340.3024597167969,
+        30.0457763671875,
+        22.49493408203125
+      ],
+      "score": 0.6640737056732178,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 135,
+      "original_frame": 0,
+      "file_name": "frame_0135_png.rf.1I7sF50WpYOzECbLPVmc.png",
+      "image_id": 18,
+      "bbox_xywh": [
+        1425.9688720703125,
+        323.4395751953125,
+        31.669921875,
+        23.2958984375
+      ],
+      "score": 0.681162416934967,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 136,
+      "original_frame": 0,
+      "file_name": "frame_0136_png.rf.8lDIRYzPinocvQ0w0qnW.png",
+      "image_id": 13,
+      "bbox_xywh": [
+        1417.0155029296875,
+        316.2537841796875,
+        30.4739990234375,
+        21.69317626953125
+      ],
+      "score": 0.6510999202728271,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 137,
+      "original_frame": 0,
+      "file_name": "frame_0137_png.rf.CLvBUEgzUUGro4dP0YwZ.png",
+      "image_id": 21,
+      "bbox_xywh": [
+        1397.668701171875,
+        302.2962646484375,
+        29.0101318359375,
+        20.53326416015625
+      ],
+      "score": 0.6342273354530334,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 152,
+      "original_frame": 0,
+      "file_name": "frame_0152_png.rf.jvInR2XHGTP1x8tWVyNK.png",
+      "image_id": 231,
+      "bbox_xywh": [
+        1239.8875732421875,
+        222.45306396484375,
+        24.4127197265625,
+        18.128631591796875
+      ],
+      "score": 0.5922710299491882,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 153,
+      "original_frame": 0,
+      "file_name": "frame_0153_png.rf.kGf7ZYmfhfEublMXfP2K.png",
+      "image_id": 249,
+      "bbox_xywh": [
+        1233.981689453125,
+        223.73887634277344,
+        23.74560546875,
+        16.929397583007812
+      ],
+      "score": 0.5400108098983765,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 165,
+      "original_frame": 0,
+      "file_name": "frame_0165_png.rf.qXs73l1mmtToQowjO03q.png",
+      "image_id": 252,
+      "bbox_xywh": [
+        1210.0697021484375,
+        298.735107421875,
+        25.3408203125,
+        19.905364990234375
+      ],
+      "score": 0.5183711647987366,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 167,
+      "original_frame": 0,
+      "file_name": "frame_0167_png.rf.qb0e2OLe3RTaSSN3mT5x.png",
+      "image_id": 258,
+      "bbox_xywh": [
+        1207.857666015625,
+        319.51873779296875,
+        27.4700927734375,
+        21.34918212890625
+      ],
+      "score": 0.5641066431999207,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 168,
+      "original_frame": 0,
+      "file_name": "frame_0168_png.rf.ZbR7AgSGNsjoGPKv4Ute.png",
+      "image_id": 228,
+      "bbox_xywh": [
+        1208.1368408203125,
+        336.1690979003906,
+        27.071044921875,
+        24.88067626953125
+      ],
+      "score": 0.6110498905181885,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 169,
+      "original_frame": 0,
+      "file_name": "frame_0169_png.rf.eiGYRnXXCcRJ43u4AzeU.png",
+      "image_id": 230,
+      "bbox_xywh": [
+        1209.0478515625,
+        347.21417236328125,
+        27.0157470703125,
+        22.68511962890625
+      ],
+      "score": 0.668218195438385,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 170,
+      "original_frame": 0,
+      "file_name": "frame_0170_png.rf.wJ8YNDe46BTy4ZjXheMN.png",
+      "image_id": 256,
+      "bbox_xywh": [
+        1211.5875244140625,
+        365.69110107421875,
+        24.9794921875,
+        21.300445556640625
+      ],
+      "score": 0.6734783053398132,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 171,
+      "original_frame": 0,
+      "file_name": "frame_0171_png.rf.6nEjWFelxhj1MnirU6j2.png",
+      "image_id": 188,
+      "bbox_xywh": [
+        1212.457763671875,
+        383.8335266113281,
+        27.00244140625,
+        24.538818359375
+      ],
+      "score": 0.6589471697807312,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 172,
+      "original_frame": 0,
+      "file_name": "frame_0172_png.rf.zCQ96MIYOXM4uuGXA1iH.png",
+      "image_id": 271,
+      "bbox_xywh": [
+        1214.2481689453125,
+        395.052978515625,
+        26.4425048828125,
+        23.4857177734375
+      ],
+      "score": 0.6806817054748535,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 173,
+      "original_frame": 0,
+      "file_name": "frame_0173_png.rf.wcQALwq9sQ8Jdh8UemnA.png",
+      "image_id": 257,
+      "bbox_xywh": [
+        1216.7281494140625,
+        415.9819641113281,
+        27.89453125,
+        25.16986083984375
+      ],
+      "score": 0.6786425113677979,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 174,
+      "original_frame": 0,
+      "file_name": "frame_0174_png.rf.QN0RJ1Mr9WkLNSWG77Jc.png",
+      "image_id": 254,
+      "bbox_xywh": [
+        1220.4886474609375,
+        438.5797424316406,
+        27.5570068359375,
+        25.0926513671875
+      ],
+      "score": 0.7000179886817932,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 175,
+      "original_frame": 0,
+      "file_name": "frame_0175_png.rf.c5lyj4keFbG8CrTGa0px.png",
+      "image_id": 229,
+      "bbox_xywh": [
+        1222.4351806640625,
+        449.97015380859375,
+        28.66015625,
+        25.86700439453125
+      ],
+      "score": 0.6889142990112305,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 176,
+      "original_frame": 0,
+      "file_name": "frame_0176_png.rf.SWmy56KnthdiTPowGxTt.png",
+      "image_id": 255,
+      "bbox_xywh": [
+        1226.6341552734375,
+        473.75604248046875,
+        27.169677734375,
+        26.68743896484375
+      ],
+      "score": 0.6800791621208191,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 177,
+      "original_frame": 0,
+      "file_name": "frame_0177_png.rf.F2ymT2UL6ZSpN0PXBEaO.png",
+      "image_id": 226,
+      "bbox_xywh": [
+        1229.0767822265625,
+        499.0504150390625,
+        27.232177734375,
+        26.6282958984375
+      ],
+      "score": 0.6776502728462219,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 178,
+      "original_frame": 0,
+      "file_name": "frame_0178_png.rf.GnLhjCVXTXt9CRtkDDa0.png",
+      "image_id": 210,
+      "bbox_xywh": [
+        1231.03857421875,
+        512.1779174804688,
+        25.780029296875,
+        25.34417724609375
+      ],
+      "score": 0.6922523975372314,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 179,
+      "original_frame": 0,
+      "file_name": "frame_0179_png.rf.Bb5aROVjTlIupzNCtlc4.png",
+      "image_id": 224,
+      "bbox_xywh": [
+        1229.921142578125,
+        539.2945556640625,
+        28.407470703125,
+        23.6337890625
+      ],
+      "score": 0.6488330364227295,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 180,
+      "original_frame": 0,
+      "file_name": "frame_0180_png.rf.fkKdxaljaq5oXlrcklFd.png",
+      "image_id": 259,
+      "bbox_xywh": [
+        1231.198974609375,
+        559.9375,
+        30.4888916015625,
+        21.48870849609375
+      ],
+      "score": 0.6805920004844666,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 181,
+      "original_frame": 0,
+      "file_name": "frame_0181_png.rf.4vOJHULhrvdl7JBS8tUY.png",
+      "image_id": 171,
+      "bbox_xywh": [
+        1240.224609375,
+        549.87158203125,
+        30.8653564453125,
+        23.541259765625
+      ],
+      "score": 0.693332850933075,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 182,
+      "original_frame": 0,
+      "file_name": "frame_0182_png.rf.vgGqmPtnL3GYVQRPkdh4.png",
+      "image_id": 193,
+      "bbox_xywh": [
+        1259.1483154296875,
+        528.0121459960938,
+        32.2020263671875,
+        24.7818603515625
+      ],
+      "score": 0.7011364102363586,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 183,
+      "original_frame": 0,
+      "file_name": "frame_0183_png.rf.ma4skUhQg1Ry0K0JtAYN.png",
+      "image_id": 197,
+      "bbox_xywh": [
+        1279.062255859375,
+        507.09869384765625,
+        33.2200927734375,
+        24.214111328125
+      ],
+      "score": 0.7089616060256958,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 184,
+      "original_frame": 0,
+      "file_name": "frame_0184_png.rf.1vsSLTOGvlOPXroM8VFc.png",
+      "image_id": 147,
+      "bbox_xywh": [
+        1288.3017578125,
+        497.6682434082031,
+        32.726806640625,
+        25.697418212890625
+      ],
+      "score": 0.6991697549819946,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 185,
+      "original_frame": 0,
+      "file_name": "frame_0185_png.rf.ljjrhTGVxNBnhPwx9fCw.png",
+      "image_id": 179,
+      "bbox_xywh": [
+        1311.477294921875,
+        480.9655456542969,
+        31.68359375,
+        23.40325927734375
+      ],
+      "score": 0.6858915090560913,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 186,
+      "original_frame": 0,
+      "file_name": "frame_0186_png.rf.Gu59PP1vIWyzYdgqkrTy.png",
+      "image_id": 132,
+      "bbox_xywh": [
+        1331.5521240234375,
+        464.3175964355469,
+        31.1324462890625,
+        23.840423583984375
+      ],
+      "score": 0.6822139620780945,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 187,
+      "original_frame": 0,
+      "file_name": "frame_0187_png.rf.pTUXAA1ktHGaBNHFSpLA.png",
+      "image_id": 195,
+      "bbox_xywh": [
+        1341.1927490234375,
+        456.09027099609375,
+        31.4476318359375,
+        21.43402099609375
+      ],
+      "score": 0.6762621998786926,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 188,
+      "original_frame": 0,
+      "file_name": "frame_0188_png.rf.KVrdHMrfJEGDHc1IRDWd.png",
+      "image_id": 163,
+      "bbox_xywh": [
+        1359.2420654296875,
+        439.9633483886719,
+        31.324951171875,
+        24.00994873046875
+      ],
+      "score": 0.6723200082778931,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 189,
+      "original_frame": 0,
+      "file_name": "frame_0189_png.rf.8KdeVcqSuWO5uoxwDRYq.png",
+      "image_id": 170,
+      "bbox_xywh": [
+        1374.8499755859375,
+        425.3009033203125,
+        30.95947265625,
+        23.26666259765625
+      ],
+      "score": 0.6682354807853699,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 190,
+      "original_frame": 0,
+      "file_name": "frame_0190_png.rf.Ipd1SsTT7ElPjzxJyXGM.png",
+      "image_id": 162,
+      "bbox_xywh": [
+        1381.264404296875,
+        416.3433837890625,
+        31.139892578125,
+        24.370849609375
+      ],
+      "score": 0.689200222492218,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 191,
+      "original_frame": 0,
+      "file_name": "frame_0191_png.rf.fzdfp9xpJkPvNyqSAEJp.png",
+      "image_id": 213,
+      "bbox_xywh": [
+        1394.1556396484375,
+        404.6009826660156,
+        29.223876953125,
+        21.529693603515625
+      ],
+      "score": 0.6792958974838257,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 192,
+      "original_frame": 0,
+      "file_name": "frame_0192_png.rf.bEqi1PZbIO0BklrXa5HG.png",
+      "image_id": 178,
+      "bbox_xywh": [
+        1405.2493896484375,
+        393.3406066894531,
+        26.363525390625,
+        20.0606689453125
+      ],
+      "score": 0.662850022315979,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 193,
+      "original_frame": 0,
+      "file_name": "frame_0193_png.rf.Lk1dQI7N5k4PtL3cCJdj.png",
+      "image_id": 164,
+      "bbox_xywh": [
+        1410.4959716796875,
+        388.611083984375,
+        24.3250732421875,
+        19.206146240234375
+      ],
+      "score": 0.6688180565834045,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 194,
+      "original_frame": 0,
+      "file_name": "frame_0194_png.rf.36eXffRb35W6LhpfMyxc.png",
+      "image_id": 142,
+      "bbox_xywh": [
+        1417.1368408203125,
+        380.2721252441406,
+        25.0301513671875,
+        18.076324462890625
+      ],
+      "score": 0.7297201156616211,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 195,
+      "original_frame": 0,
+      "file_name": "frame_0195_png.rf.NO7tEx9jw9UDYgxsHxUV.png",
+      "image_id": 165,
+      "bbox_xywh": [
+        1422.3653564453125,
+        371.3851013183594,
+        26.809814453125,
+        20.223358154296875
+      ],
+      "score": 0.6811518669128418,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 196,
+      "original_frame": 0,
+      "file_name": "frame_0196_png.rf.SPIaXkAaTMQ0oGR1JsS5.png",
+      "image_id": 181,
+      "bbox_xywh": [
+        1427.038818359375,
+        369.1329040527344,
+        23.592041015625,
+        17.563201904296875
+      ],
+      "score": 0.8068339824676514,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 197,
+      "original_frame": 0,
+      "file_name": "frame_0197_png.rf.1IWVAUks7hV9wLQ4lPAH.png",
+      "image_id": 143,
+      "bbox_xywh": [
+        1431.7532958984375,
+        365.43890380859375,
+        23.5869140625,
+        18.6900634765625
+      ],
+      "score": 0.7571423053741455,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 198,
+      "original_frame": 0,
+      "file_name": "frame_0198_png.rf.Um74VrjL47Jo8G1FGuvC.png",
+      "image_id": 180,
+      "bbox_xywh": [
+        1432.2841796875,
+        362.25286865234375,
+        25.3701171875,
+        19.622314453125
+      ],
+      "score": 0.653786301612854,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 199,
+      "original_frame": 0,
+      "file_name": "frame_0199_png.rf.IbHoJZf7cxkrWAxV418a.png",
+      "image_id": 131,
+      "bbox_xywh": [
+        1432.440185546875,
+        362.1265869140625,
+        23.42529296875,
+        18.23028564453125
+      ],
+      "score": 0.7136725187301636,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 200,
+      "original_frame": 0,
+      "file_name": "frame_0200_png.rf.3uzZJenOhr5ADb4e03kB.png",
+      "image_id": 154,
+      "bbox_xywh": [
+        1427.7783203125,
+        361.00994873046875,
+        24.48876953125,
+        18.7908935546875
+      ],
+      "score": 0.7144938707351685,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 201,
+      "original_frame": 0,
+      "file_name": "frame_0201_png.rf.fW6JcjlxGGucTRh6EbGk.png",
+      "image_id": 166,
+      "bbox_xywh": [
+        1422.1016845703125,
+        361.9971008300781,
+        23.235595703125,
+        17.318206787109375
+      ],
+      "score": 0.7404103875160217,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 202,
+      "original_frame": 0,
+      "file_name": "frame_0202_png.rf.9xH8mpsKUkQzfNYDs6mg.png",
+      "image_id": 110,
+      "bbox_xywh": [
+        1418.468017578125,
+        362.5553894042969,
+        23.470703125,
+        16.842498779296875
+      ],
+      "score": 0.8669037222862244,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 203,
+      "original_frame": 0,
+      "file_name": "frame_0203_png.rf.RBvVhxHxfSLsUJg31rm6.png",
+      "image_id": 167,
+      "bbox_xywh": [
+        1409.9134521484375,
+        363.26898193359375,
+        22.8717041015625,
+        18.650970458984375
+      ],
+      "score": 0.7795138359069824,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 204,
+      "original_frame": 0,
+      "file_name": "frame_0204_png.rf.a5FJSfDF35zYLun1FlLW.png",
+      "image_id": 155,
+      "bbox_xywh": [
+        1401.8092041015625,
+        366.1315002441406,
+        22.801513671875,
+        17.1455078125
+      ],
+      "score": 0.8246514201164246,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 205,
+      "original_frame": 0,
+      "file_name": "frame_0205_png.rf.yx29mMSD0SK0lgq5071R.png",
+      "image_id": 182,
+      "bbox_xywh": [
+        1397.2799072265625,
+        367.5562438964844,
+        23.623779296875,
+        18.009002685546875
+      ],
+      "score": 0.845339834690094,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 206,
+      "original_frame": 0,
+      "file_name": "frame_0206_png.rf.Qjo0XC4V5evCMyr44eCZ.png",
+      "image_id": 138,
+      "bbox_xywh": [
+        1393.40869140625,
+        370.5959167480469,
+        23.533203125,
+        16.912841796875
+      ],
+      "score": 0.8188828229904175,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 207,
+      "original_frame": 0,
+      "file_name": "frame_0207_png.rf.YeQMw2Ax0xXzorHawhMm.png",
+      "image_id": 139,
+      "bbox_xywh": [
+        1390.5789794921875,
+        374.5360412597656,
+        24.277099609375,
+        17.7398681640625
+      ],
+      "score": 0.7370492815971375,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 208,
+      "original_frame": 0,
+      "file_name": "frame_0208_png.rf.rqgYG2HxybsbBMBar8OU.png",
+      "image_id": 168,
+      "bbox_xywh": [
+        1389.4144287109375,
+        377.3274841308594,
+        23.5758056640625,
+        18.819580078125
+      ],
+      "score": 0.7443128228187561,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 209,
+      "original_frame": 0,
+      "file_name": "frame_0209_png.rf.Ntq0Rb9EiFkIKL1mUuvI.png",
+      "image_id": 133,
+      "bbox_xywh": [
+        1388.0631103515625,
+        383.7967529296875,
+        23.4814453125,
+        18.74920654296875
+      ],
+      "score": 0.6883761286735535,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 210,
+      "original_frame": 0,
+      "file_name": "frame_0210_png.rf.OXrLEtyKaVI12qCbEPxM.png",
+      "image_id": 172,
+      "bbox_xywh": [
+        1389.5445556640625,
+        391.17578125,
+        25.408447265625,
+        19.436004638671875
+      ],
+      "score": 0.6938464641571045,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 211,
+      "original_frame": 0,
+      "file_name": "frame_0211_png.rf.Y7XoeRVrJ9F2XazMg4YK.png",
+      "image_id": 118,
+      "bbox_xywh": [
+        1391.9755859375,
+        396.6058349609375,
+        24.5552978515625,
+        18.63623046875
+      ],
+      "score": 0.7393797636032104,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 212,
+      "original_frame": 0,
+      "file_name": "frame_0212_png.rf.nRQnI8Uo4vZL67eldEUI.png",
+      "image_id": 12,
+      "bbox_xywh": [
+        1396.4549560546875,
+        407.46282958984375,
+        25.9671630859375,
+        19.372772216796875
+      ],
+      "score": 0.6917271614074707,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 213,
+      "original_frame": 0,
+      "file_name": "frame_0213_png.rf.tRdE4NTzCOCMQn9klBRx.png",
+      "image_id": 1,
+      "bbox_xywh": [
+        1402.5281982421875,
+        419.6595153808594,
+        25.7821044921875,
+        20.96685791015625
+      ],
+      "score": 0.6666275858879089,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 214,
+      "original_frame": 0,
+      "file_name": "frame_0214_png.rf.AqeojG1AX3VBGyMLlbk6.png",
+      "image_id": 463,
+      "bbox_xywh": [
+        1405.8973388671875,
+        426.93701171875,
+        25.23828125,
+        20.672821044921875
+      ],
+      "score": 0.6904118061065674,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 215,
+      "original_frame": 0,
+      "file_name": "frame_0215_png.rf.AbDT8ceLTZYihyGtCDpF.png",
+      "image_id": 473,
+      "bbox_xywh": [
+        1413.2303466796875,
+        439.2791748046875,
+        26.845703125,
+        21.783111572265625
+      ],
+      "score": 0.6805330514907837,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 216,
+      "original_frame": 0,
+      "file_name": "frame_0216_png.rf.f3TRiFxQOMI9cuLBWPhk.png",
+      "image_id": 88,
+      "bbox_xywh": [
+        1419.8529052734375,
+        454.6131896972656,
+        26.0035400390625,
+        20.584747314453125
+      ],
+      "score": 0.679719865322113,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 217,
+      "original_frame": 0,
+      "file_name": "frame_0217_png.rf.z2s39RZ9ouZTPqp68ebX.png",
+      "image_id": 44,
+      "bbox_xywh": [
+        1422.395751953125,
+        461.5912780761719,
+        27.005615234375,
+        21.4139404296875
+      ],
+      "score": 0.6855291724205017,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 218,
+      "original_frame": 0,
+      "file_name": "frame_0218_png.rf.1YOETArR4tOiS7aRavbj.png",
+      "image_id": 460,
+      "bbox_xywh": [
+        1426.8648681640625,
+        477.0405578613281,
+        29.6905517578125,
+        21.794189453125
+      ],
+      "score": 0.6797571182250977,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 219,
+      "original_frame": 0,
+      "file_name": "frame_0219_png.rf.chTgtjavrLQFjoNK72s6.png",
+      "image_id": 62,
+      "bbox_xywh": [
+        1435.8333740234375,
+        492.71099853515625,
+        26.633056640625,
+        21.8062744140625
+      ],
+      "score": 0.695292592048645,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 220,
+      "original_frame": 0,
+      "file_name": "frame_0220_png.rf.2DNFRGr3ZZVmHpxeAoiw.png",
+      "image_id": 475,
+      "bbox_xywh": [
+        1441.3359375,
+        501.60174560546875,
+        26.2191162109375,
+        23.1474609375
+      ],
+      "score": 0.67730313539505,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 221,
+      "original_frame": 0,
+      "file_name": "frame_0221_png.rf.wLs3mrI2SAcBwbza6yo7.png",
+      "image_id": 24,
+      "bbox_xywh": [
+        1450.586181640625,
+        519.6500244140625,
+        25.1708984375,
+        22.039794921875
+      ],
+      "score": 0.6939188241958618,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 222,
+      "original_frame": 0,
+      "file_name": "frame_0222_png.rf.gJYKMNp7uZiT6KxPWU3Q.png",
+      "image_id": 87,
+      "bbox_xywh": [
+        1461.064453125,
+        538.0750122070312,
+        26.1453857421875,
+        22.2813720703125
+      ],
+      "score": 0.6788573861122131,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 223,
+      "original_frame": 0,
+      "file_name": "frame_0223_png.rf.3VzkqHgyCP8ftHGX8eET.png",
+      "image_id": 478,
+      "bbox_xywh": [
+        1465.6998291015625,
+        545.91796875,
+        25.625244140625,
+        21.2352294921875
+      ],
+      "score": 0.6618486046791077,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 225,
+      "original_frame": 0,
+      "file_name": "frame_0225_png.rf.EhEQwAVi4JCCEVOanpVK.png",
+      "image_id": 85,
+      "bbox_xywh": [
+        1420.9632568359375,
+        509.31561279296875,
+        37.664794921875,
+        28.2274169921875
+      ],
+      "score": 0.7059760689735413,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 226,
+      "original_frame": 0,
+      "file_name": "frame_0226_png.rf.gTc5Wqdz4uzUjdhZW6gD.png",
+      "image_id": 169,
+      "bbox_xywh": [
+        1404.9881591796875,
+        494.08349609375,
+        38.5574951171875,
+        28.26763916015625
+      ],
+      "score": 0.6770889163017273,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 227,
+      "original_frame": 0,
+      "file_name": "frame_0227_png.rf.D3bJLPEzm4n8IzU1rJ6r.png",
+      "image_id": 474,
+      "bbox_xywh": [
+        1376.6866455078125,
+        464.4703369140625,
+        35.50634765625,
+        28.71441650390625
+      ],
+      "score": 0.6719213128089905,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 228,
+      "original_frame": 0,
+      "file_name": "frame_0228_png.rf.v3vsE4OmgF1i9Bagvgca.png",
+      "image_id": 15,
+      "bbox_xywh": [
+        1347.1993408203125,
+        439.2702331542969,
+        36.2083740234375,
+        27.065826416015625
+      ],
+      "score": 0.6801068782806396,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 229,
+      "original_frame": 0,
+      "file_name": "frame_0229_png.rf.X0nPml3OKLvgCFeAzUZw.png",
+      "image_id": 50,
+      "bbox_xywh": [
+        1333.824462890625,
+        426.3931884765625,
+        34.9873046875,
+        26.6275634765625
+      ],
+      "score": 0.6640999913215637,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 230,
+      "original_frame": 0,
+      "file_name": "frame_0230_png.rf.nlG23bCgPR9qcfIYBajQ.png",
+      "image_id": 23,
+      "bbox_xywh": [
+        1307.7855224609375,
+        400.3385314941406,
+        32.3455810546875,
+        26.40484619140625
+      ],
+      "score": 0.6829814910888672,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 231,
+      "original_frame": 0,
+      "file_name": "frame_0231_png.rf.79EET8m70NodaGJFuUD1.png",
+      "image_id": 461,
+      "bbox_xywh": [
+        1284.23779296875,
+        376.39654541015625,
+        30.76220703125,
+        24.64581298828125
+      ],
+      "score": 0.6789873838424683,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 232,
+      "original_frame": 0,
+      "file_name": "frame_0232_png.rf.0b0bduvq5sMMfqfQJ91q.png",
+      "image_id": 479,
+      "bbox_xywh": [
+        1273.85888671875,
+        364.486328125,
+        29.54638671875,
+        23.4281005859375
+      ],
+      "score": 0.6763759255409241,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 233,
+      "original_frame": 0,
+      "file_name": "frame_0233_png.rf.EuqzxjHoyECq1EOIglpE.png",
+      "image_id": 60,
+      "bbox_xywh": [
+        1252.18603515625,
+        341.7784423828125,
+        31.4212646484375,
+        24.088714599609375
+      ],
+      "score": 0.6728869676589966,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 234,
+      "original_frame": 0,
+      "file_name": "frame_0234_png.rf.jWjRyeqFRCvYlIW99T1H.png",
+      "image_id": 2,
+      "bbox_xywh": [
+        691.6981811523438,
+        738.357666015625,
+        24.8948974609375,
+        15.130615234375
+      ],
+      "score": 0.5502536296844482,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 235,
+      "original_frame": 0,
+      "file_name": "frame_0235_png.rf.IGVXzCFB6UZOVleR2haW.png",
+      "image_id": 51,
+      "bbox_xywh": [
+        694.569580078125,
+        737.3457641601562,
+        25.56640625,
+        16.14617919921875
+      ],
+      "score": 0.5557872653007507,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 236,
+      "original_frame": 0,
+      "file_name": "frame_0236_png.rf.uGTpZhD3xHmb5bFnFLdp.png",
+      "image_id": 17,
+      "bbox_xywh": [
+        701.8565673828125,
+        737.898681640625,
+        26.15997314453125,
+        15.5921630859375
+      ],
+      "score": 0.5772313475608826,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 237,
+      "original_frame": 0,
+      "file_name": "frame_0237_png.rf.dGdeIHpHY3JHgy8fYD2L.png",
+      "image_id": 86,
+      "bbox_xywh": [
+        711.0157470703125,
+        738.4945678710938,
+        27.9681396484375,
+        15.951416015625
+      ],
+      "score": 0.5864562392234802,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 238,
+      "original_frame": 0,
+      "file_name": "frame_0238_png.rf.EyaPpsZSzbvzpSfpgyGe.png",
+      "image_id": 52,
+      "bbox_xywh": [
+        715.5125122070312,
+        737.5728149414062,
+        28.46405029296875,
+        16.68212890625
+      ],
+      "score": 0.6188562512397766,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 239,
+      "original_frame": 0,
+      "file_name": "frame_0239_png.rf.2M92R7nrdso6P31CGMpx.png",
+      "image_id": 477,
+      "bbox_xywh": [
+        725.7388305664062,
+        737.3501586914062,
+        27.01580810546875,
+        15.8486328125
+      ],
+      "score": 0.5138158202171326,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 244,
+      "original_frame": 0,
+      "file_name": "frame_0244_png.rf.zL9xRYk3cjRA0iKptmhq.png",
+      "image_id": 317,
+      "bbox_xywh": [
+        765.885498046875,
+        733.7400512695312,
+        25.89569091796875,
+        16.84967041015625
+      ],
+      "score": 0.5964416265487671,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 246,
+      "original_frame": 0,
+      "file_name": "frame_0246_png.rf.yT7lq0VPTQ8IAcLyuPpc.png",
+      "image_id": 278,
+      "bbox_xywh": [
+        789.5909423828125,
+        731.289306640625,
+        25.66900634765625,
+        16.801513671875
+      ],
+      "score": 0.5798406600952148,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 247,
+      "original_frame": 0,
+      "file_name": "frame_0247_png.rf.vabnUBDJruGTCWtKUKzd.png",
+      "image_id": 277,
+      "bbox_xywh": [
+        796.4241333007812,
+        732.6591186523438,
+        24.7103271484375,
+        15.5306396484375
+      ],
+      "score": 0.6288269758224487,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 249,
+      "original_frame": 0,
+      "file_name": "frame_0249_png.rf.3Rn7BkBkU9mRuCkI5uur.png",
+      "image_id": 240,
+      "bbox_xywh": [
+        824.3908081054688,
+        732.2706298828125,
+        23.96142578125,
+        15.3785400390625
+      ],
+      "score": 0.5266696810722351,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 250,
+      "original_frame": 0,
+      "file_name": "frame_0250_png.rf.tRo18CtzULOtST5nrsiz.png",
+      "image_id": 306,
+      "bbox_xywh": [
+        832.287109375,
+        732.70703125,
+        23.39532470703125,
+        14.767822265625
+      ],
+      "score": 0.5128348469734192,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 263,
+      "original_frame": 0,
+      "file_name": "frame_0263_png.rf.UrOuvr1WFPXhq6gRb7lh.png",
+      "image_id": 286,
+      "bbox_xywh": [
+        929.3682861328125,
+        702.7343139648438,
+        23.71923828125,
+        15.224609375
+      ],
+      "score": 0.6181734800338745,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 269,
+      "original_frame": 0,
+      "file_name": "frame_0269_png.rf.ydq3tobMXFsZ99pCH7Dv.png",
+      "image_id": 310,
+      "bbox_xywh": [
+        922.4287109375,
+        688.3495483398438,
+        22.83966064453125,
+        15.53851318359375
+      ],
+      "score": 0.5483245849609375,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 276,
+      "original_frame": 0,
+      "file_name": "frame_0276_png.rf.sDuYOMz2h7RcgKHuemPs.png",
+      "image_id": 434,
+      "bbox_xywh": [
+        804.4577026367188,
+        238.98695373535156,
+        30.0213623046875,
+        20.244461059570312
+      ],
+      "score": 0.5979955196380615,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 277,
+      "original_frame": 0,
+      "file_name": "frame_0277_png.rf.gTaxG1qPDf96JAQ4vS52.png",
+      "image_id": 432,
+      "bbox_xywh": [
+        794.0892944335938,
+        244.274169921875,
+        34.18853759765625,
+        28.1435546875
+      ],
+      "score": 0.5547783374786377,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 278,
+      "original_frame": 0,
+      "file_name": "frame_0278_png.rf.6xMkhJCNWZGfSkShzWSp.png",
+      "image_id": 401,
+      "bbox_xywh": [
+        777.8228149414062,
+        264.79901123046875,
+        29.87469482421875,
+        23.42559814453125
+      ],
+      "score": 0.6650403141975403,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 279,
+      "original_frame": 0,
+      "file_name": "frame_0279_png.rf.wJZObhSBJ2hMB7x7JTQg.png",
+      "image_id": 444,
+      "bbox_xywh": [
+        755.7149047851562,
+        284.6623840332031,
+        32.49639892578125,
+        25.075714111328125
+      ],
+      "score": 0.6549564599990845,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 280,
+      "original_frame": 0,
+      "file_name": "frame_0280_png.rf.uAGGHoKi71HwIZHAHqDq.png",
+      "image_id": 425,
+      "bbox_xywh": [
+        746.063232421875,
+        294.1520690917969,
+        31.886474609375,
+        23.4208984375
+      ],
+      "score": 0.6211034059524536,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 281,
+      "original_frame": 0,
+      "file_name": "frame_0281_png.rf.OpONZbv2Mq9x9mr46QFz.png",
+      "image_id": 420,
+      "bbox_xywh": [
+        948.755859375,
+        657.4736328125,
+        21.6318359375,
+        16.2919921875
+      ],
+      "score": 0.5643057227134705,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 282,
+      "original_frame": 0,
+      "file_name": "frame_0282_png.rf.3bnwQ5a8JxdAzU3sbVlP.png",
+      "image_id": 400,
+      "bbox_xywh": [
+        703.0895385742188,
+        340.0560607910156,
+        34.55633544921875,
+        25.669525146484375
+      ],
+      "score": 0.5923013091087341,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 282,
+      "original_frame": 0,
+      "file_name": "frame_0282_png.rf.3bnwQ5a8JxdAzU3sbVlP.png",
+      "image_id": 400,
+      "bbox_xywh": [
+        949.0303344726562,
+        655.1507568359375,
+        21.6788330078125,
+        17.00250244140625
+      ],
+      "score": 0.550237774848938,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 283,
+      "original_frame": 0,
+      "file_name": "frame_0283_png.rf.B57tuqOHJheGO0brrauO.png",
+      "image_id": 416,
+      "bbox_xywh": [
+        692.722412109375,
+        352.34942626953125,
+        33.24981689453125,
+        26.348388671875
+      ],
+      "score": 0.5918338298797607,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 283,
+      "original_frame": 0,
+      "file_name": "frame_0283_png.rf.B57tuqOHJheGO0brrauO.png",
+      "image_id": 416,
+      "bbox_xywh": [
+        949.6979370117188,
+        654.464599609375,
+        21.6917724609375,
+        17.12750244140625
+      ],
+      "score": 0.5489649772644043,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 284,
+      "original_frame": 0,
+      "file_name": "frame_0284_png.rf.mHHboosnE5dWhCIJ8zBO.png",
+      "image_id": 430,
+      "bbox_xywh": [
+        668.592529296875,
+        380.8819885253906,
+        35.72052001953125,
+        27.26446533203125
+      ],
+      "score": 0.6763404011726379,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 285,
+      "original_frame": 0,
+      "file_name": "frame_0285_png.rf.8cYHt3d5aPMIioZAfK8j.png",
+      "image_id": 399,
+      "bbox_xywh": [
+        645.2737426757812,
+        408.0657653808594,
+        34.05706787109375,
+        27.01812744140625
+      ],
+      "score": 0.6924998760223389,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 286,
+      "original_frame": 0,
+      "file_name": "frame_0286_png.rf.JLORT4KAOHTOwFP9gaRE.png",
+      "image_id": 421,
+      "bbox_xywh": [
+        635.0831298828125,
+        422.9332275390625,
+        32.523193359375,
+        27.0606689453125
+      ],
+      "score": 0.6990770101547241,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 287,
+      "original_frame": 0,
+      "file_name": "frame_0287_png.rf.8DXjNBXiQGqZhVA1NhIV.png",
+      "image_id": 398,
+      "bbox_xywh": [
+        608.66064453125,
+        452.9544982910156,
+        33.622314453125,
+        27.5479736328125
+      ],
+      "score": 0.7140580415725708,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 288,
+      "original_frame": 0,
+      "file_name": "frame_0288_png.rf.OHYEpFrmgv0hVrJZodbc.png",
+      "image_id": 423,
+      "bbox_xywh": [
+        580.2598876953125,
+        481.79095458984375,
+        38.37152099609375,
+        33.251708984375
+      ],
+      "score": 0.6867456436157227,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 289,
+      "original_frame": 0,
+      "file_name": "frame_0289_png.rf.AixZseAAI6DKGHfIQLNU.png",
+      "image_id": 417,
+      "bbox_xywh": [
+        567.8042602539062,
+        498.67181396484375,
+        35.07501220703125,
+        30.96832275390625
+      ],
+      "score": 0.6903585195541382,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 290,
+      "original_frame": 0,
+      "file_name": "frame_0290_png.rf.0LLzRBQLcwG3LRxKVT0S.png",
+      "image_id": 402,
+      "bbox_xywh": [
+        538.7772827148438,
+        531.9962158203125,
+        36.68023681640625,
+        30.5189208984375
+      ],
+      "score": 0.6792044639587402,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 291,
+      "original_frame": 0,
+      "file_name": "frame_0291_png.rf.it5bnQAwgZVZS48qipOz.png",
+      "image_id": 431,
+      "bbox_xywh": [
+        512.3253784179688,
+        565.4346923828125,
+        33.2979736328125,
+        28.9591064453125
+      ],
+      "score": 0.6733896732330322,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 292,
+      "original_frame": 0,
+      "file_name": "frame_0292_png.rf.arHex5x1ZXZU0o6rzT6r.png",
+      "image_id": 435,
+      "bbox_xywh": [
+        495.29840087890625,
+        583.0421142578125,
+        36.18634033203125,
+        29.66168212890625
+      ],
+      "score": 0.5991097688674927,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 294,
+      "original_frame": 0,
+      "file_name": "frame_0294_png.rf.SOZT9GOGk9QWa0e6kZV4.png",
+      "image_id": 433,
+      "bbox_xywh": [
+        431.7837219238281,
+        656.4437255859375,
+        36.185546875,
+        32.87762451171875
+      ],
+      "score": 0.7204725742340088,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 295,
+      "original_frame": 0,
+      "file_name": "frame_0295_png.rf.fF3ZqMLNHgTDGFoxxfSX.png",
+      "image_id": 437,
+      "bbox_xywh": [
+        418.7271423339844,
+        675.7357177734375,
+        35.679351806640625,
+        30.24786376953125
+      ],
+      "score": 0.7178984880447388,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 296,
+      "original_frame": 0,
+      "file_name": "frame_0296_png.rf.Eb3wJH7gnIaw1ys3hLQA.png",
+      "image_id": 419,
+      "bbox_xywh": [
+        396.9147033691406,
+        716.5435180664062,
+        28.650665283203125,
+        21.61669921875
+      ],
+      "score": 0.6206673979759216,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 297,
+      "original_frame": 0,
+      "file_name": "frame_0297_png.rf.BgCptPZg3itzAGsiiPhx.png",
+      "image_id": 438,
+      "bbox_xywh": [
+        396.0943298339844,
+        706.8435668945312,
+        25.181854248046875,
+        20.85498046875
+      ],
+      "score": 0.7077201008796692,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 298,
+      "original_frame": 0,
+      "file_name": "frame_0298_png.rf.z7CsbejjuU1IGSJauJov.png",
+      "image_id": 428,
+      "bbox_xywh": [
+        395.6377868652344,
+        701.6107177734375,
+        25.843780517578125,
+        21.14398193359375
+      ],
+      "score": 0.7021636962890625,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 299,
+      "original_frame": 0,
+      "file_name": "frame_0299_png.rf.RY8DRJjjNzksmAN6g5H6.png",
+      "image_id": 422,
+      "bbox_xywh": [
+        394.9841613769531,
+        691.3983764648438,
+        27.229217529296875,
+        21.5009765625
+      ],
+      "score": 0.6902771592140198,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 300,
+      "original_frame": 0,
+      "file_name": "frame_0300_png.rf.kCvAwurlzCsaxpmz5bVv.png",
+      "image_id": 235,
+      "bbox_xywh": [
+        397.3267822265625,
+        683.6964111328125,
+        25.76336669921875,
+        19.34588623046875
+      ],
+      "score": 0.7129620909690857,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 301,
+      "original_frame": 0,
+      "file_name": "frame_0301_png.rf.AJSNN20oAeRoGfTjEqba.png",
+      "image_id": 415,
+      "bbox_xywh": [
+        397.3725280761719,
+        679.225341796875,
+        27.211761474609375,
+        20.5098876953125
+      ],
+      "score": 0.7099761962890625,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 302,
+      "original_frame": 0,
+      "file_name": "frame_0302_png.rf.ydvDSm8IbXdnMAChFy42.png",
+      "image_id": 239,
+      "bbox_xywh": [
+        397.4405517578125,
+        671.9196166992188,
+        30.214569091796875,
+        21.7923583984375
+      ],
+      "score": 0.6713563203811646,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 303,
+      "original_frame": 0,
+      "file_name": "frame_0303_png.rf.MJeDoPr2Jvqrm75xdDI5.png",
+      "image_id": 216,
+      "bbox_xywh": [
+        400.151123046875,
+        667.2802124023438,
+        26.687469482421875,
+        19.4600830078125
+      ],
+      "score": 0.7151605486869812,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 304,
+      "original_frame": 0,
+      "file_name": "frame_0304_png.rf.5Dvw0Wpf8g0pK0dJZNit.png",
+      "image_id": 196,
+      "bbox_xywh": [
+        400.12823486328125,
+        664.8129272460938,
+        28.18341064453125,
+        20.50628662109375
+      ],
+      "score": 0.7079271078109741,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 305,
+      "original_frame": 0,
+      "file_name": "frame_0305_png.rf.5d98QNQbSEx63m8aK9hw.png",
+      "image_id": 199,
+      "bbox_xywh": [
+        403.5450439453125,
+        659.7449951171875,
+        26.89837646484375,
+        20.892822265625
+      ],
+      "score": 0.6891816258430481,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 306,
+      "original_frame": 0,
+      "file_name": "frame_0306_png.rf.66x31slatubPJG3aOi8G.png",
+      "image_id": 198,
+      "bbox_xywh": [
+        405.384521484375,
+        657.3521728515625,
+        28.71380615234375,
+        20.14453125
+      ],
+      "score": 0.6315510272979736,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 307,
+      "original_frame": 0,
+      "file_name": "frame_0307_png.rf.SsBTJPdGd8Ka7up0iPSO.png",
+      "image_id": 214,
+      "bbox_xywh": [
+        407.101318359375,
+        656.7012329101562,
+        27.36651611328125,
+        19.000244140625
+      ],
+      "score": 0.6886974573135376,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 308,
+      "original_frame": 0,
+      "file_name": "frame_0308_png.rf.oDSOf3jIWgvmQPXPvOBr.png",
+      "image_id": 236,
+      "bbox_xywh": [
+        408.3687438964844,
+        655.3579711914062,
+        28.248016357421875,
+        20.012451171875
+      ],
+      "score": 0.6732340455055237,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 309,
+      "original_frame": 0,
+      "file_name": "frame_0309_png.rf.eJGzylFDGVSoMLv1kWVP.png",
+      "image_id": 243,
+      "bbox_xywh": [
+        411.119140625,
+        656.008544921875,
+        24.992523193359375,
+        18.01824951171875
+      ],
+      "score": 0.6611265540122986,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 310,
+      "original_frame": 0,
+      "file_name": "frame_0310_png.rf.grkjsWP6YHfhTE8KB0Dq.png",
+      "image_id": 234,
+      "bbox_xywh": [
+        412.28558349609375,
+        656.6693725585938,
+        25.49652099609375,
+        17.8896484375
+      ],
+      "score": 0.6874912977218628,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 311,
+      "original_frame": 0,
+      "file_name": "frame_0311_png.rf.MMbufE6bzmhvQFTZnOzt.png",
+      "image_id": 215,
+      "bbox_xywh": [
+        415.1852111816406,
+        657.6224365234375,
+        25.088592529296875,
+        17.88128662109375
+      ],
+      "score": 0.696808934211731,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 312,
+      "original_frame": 0,
+      "file_name": "frame_0312_png.rf.R68vGtnMI8EMtsZji3Fa.png",
+      "image_id": 220,
+      "bbox_xywh": [
+        415.5596618652344,
+        659.5479736328125,
+        27.5335693359375,
+        21.84344482421875
+      ],
+      "score": 0.6988440155982971,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 313,
+      "original_frame": 0,
+      "file_name": "frame_0313_png.rf.gT8ofzvJ35DtXBkrDT1U.png",
+      "image_id": 233,
+      "bbox_xywh": [
+        417.15179443359375,
+        662.4337158203125,
+        26.55096435546875,
+        21.12646484375
+      ],
+      "score": 0.694475531578064,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 314,
+      "original_frame": 0,
+      "file_name": "frame_0314_png.rf.ORC5En1brFNrM0XLhSCV.png",
+      "image_id": 218,
+      "bbox_xywh": [
+        419.8076477050781,
+        669.87060546875,
+        25.79052734375,
+        18.68585205078125
+      ],
+      "score": 0.6902225017547607,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 315,
+      "original_frame": 0,
+      "file_name": "frame_0315_png.rf.0lNc9moVqmX7jMt0vyYW.png",
+      "image_id": 194,
+      "bbox_xywh": [
+        422.46954345703125,
+        676.3408203125,
+        25.474945068359375,
+        20.8841552734375
+      ],
+      "score": 0.6700891852378845,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 316,
+      "original_frame": 0,
+      "file_name": "frame_0316_png.rf.CmStrumHsgXxYUEED9fD.png",
+      "image_id": 189,
+      "bbox_xywh": [
+        423.0885009765625,
+        679.6845703125,
+        26.2008056640625,
+        21.1480712890625
+      ],
+      "score": 0.6885892748832703,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 317,
+      "original_frame": 0,
+      "file_name": "frame_0317_png.rf.b1uCrG7vFVxkZDA5qHzM.png",
+      "image_id": 244,
+      "bbox_xywh": [
+        425.2171325683594,
+        688.3017578125,
+        25.92041015625,
+        20.61572265625
+      ],
+      "score": 0.6469082236289978,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 318,
+      "original_frame": 0,
+      "file_name": "frame_0318_png.rf.sNEPKHbWcyqgdRCrynG0.png",
+      "image_id": 237,
+      "bbox_xywh": [
+        427.6071472167969,
+        697.8951416015625,
+        25.60284423828125,
+        19.755615234375
+      ],
+      "score": 0.6185838580131531,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 319,
+      "original_frame": 0,
+      "file_name": "frame_0319_png.rf.TCY46Dv3cZywoksJ5tu5.png",
+      "image_id": 219,
+      "bbox_xywh": [
+        428.82171630859375,
+        702.75341796875,
+        24.8609619140625,
+        19.40997314453125
+      ],
+      "score": 0.602882444858551,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 324,
+      "original_frame": 0,
+      "file_name": "frame_0324_png.rf.PdEsvDSHMqNTgI5VY1Ln.png",
+      "image_id": 245,
+      "bbox_xywh": [
+        439.3189392089844,
+        748.0313110351562,
+        23.81182861328125,
+        16.03546142578125
+      ],
+      "score": 0.5015484094619751,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 329,
+      "original_frame": 0,
+      "file_name": "frame_0329_png.rf.f5ulEHLlsys2R963PpoC.png",
+      "image_id": 232,
+      "bbox_xywh": [
+        376.14923095703125,
+        705.6295776367188,
+        28.43109130859375,
+        19.824951171875
+      ],
+      "score": 0.5953845977783203,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 330,
+      "original_frame": 0,
+      "file_name": "frame_0330_png.rf.qcLw1K7xzctBW1IQpT6t.png",
+      "image_id": 248,
+      "bbox_xywh": [
+        365.3078918457031,
+        701.50244140625,
+        25.767913818359375,
+        18.43682861328125
+      ],
+      "score": 0.6875166296958923,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 331,
+      "original_frame": 0,
+      "file_name": "frame_0331_png.rf.ZwOftLG4G4oJ4tTlcFzx.png",
+      "image_id": 353,
+      "bbox_xywh": [
+        359.3586120605469,
+        698.1678466796875,
+        25.495269775390625,
+        19.35272216796875
+      ],
+      "score": 0.6891515851020813,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 332,
+      "original_frame": 0,
+      "file_name": "frame_0332_png.rf.JtNWyyc8f4jBcBLMCin2.png",
+      "image_id": 371,
+      "bbox_xywh": [
+        346.0763244628906,
+        692.0663452148438,
+        29.014434814453125,
+        20.43438720703125
+      ],
+      "score": 0.6946138739585876,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 333,
+      "original_frame": 0,
+      "file_name": "frame_0333_png.rf.zzVISlzCWb39jB1r6HFe.png",
+      "image_id": 387,
+      "bbox_xywh": [
+        337.396728515625,
+        689.3793334960938,
+        26.915679931640625,
+        18.79302978515625
+      ],
+      "score": 0.7001790404319763,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 334,
+      "original_frame": 0,
+      "file_name": "frame_0334_png.rf.rQy7JApaGKluZ3qnfv1H.png",
+      "image_id": 375,
+      "bbox_xywh": [
+        333.2686767578125,
+        687.9395141601562,
+        25.9190673828125,
+        18.95849609375
+      ],
+      "score": 0.6883832216262817,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 335,
+      "original_frame": 0,
+      "file_name": "frame_0335_png.rf.p6y4mvPAWFi9ETW0JaxJ.png",
+      "image_id": 366,
+      "bbox_xywh": [
+        323.7214660644531,
+        685.4738159179688,
+        27.214202880859375,
+        19.38323974609375
+      ],
+      "score": 0.7009621858596802,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 336,
+      "original_frame": 0,
+      "file_name": "frame_0336_png.rf.7PatkLkSFaWZcoDR6ZZz.png",
+      "image_id": 370,
+      "bbox_xywh": [
+        317.3948974609375,
+        685.5267944335938,
+        22.20159912109375,
+        16.36822509765625
+      ],
+      "score": 0.7388535141944885,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 337,
+      "original_frame": 0,
+      "file_name": "frame_0337_png.rf.GH1h1yCFpsv4TRBtSTAJ.png",
+      "image_id": 342,
+      "bbox_xywh": [
+        313.3570251464844,
+        685.218994140625,
+        23.4166259765625,
+        18.0675048828125
+      ],
+      "score": 0.7071583271026611,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 338,
+      "original_frame": 0,
+      "file_name": "frame_0338_png.rf.JVQDnzIeY0wGPsNeDke9.png",
+      "image_id": 372,
+      "bbox_xywh": [
+        305.7320556640625,
+        680.3178100585938,
+        25.494171142578125,
+        19.7264404296875
+      ],
+      "score": 0.7051889896392822,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 339,
+      "original_frame": 0,
+      "file_name": "frame_0339_png.rf.uVbX3iWqoRL36KAPlYtn.png",
+      "image_id": 380,
+      "bbox_xywh": [
+        302.94171142578125,
+        674.2838745117188,
+        22.908782958984375,
+        16.91229248046875
+      ],
+      "score": 0.6794000267982483,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 340,
+      "original_frame": 0,
+      "file_name": "frame_0340_png.rf.2rGQlQrqMFpg6B1yWbq1.png",
+      "image_id": 328,
+      "bbox_xywh": [
+        301.93487548828125,
+        671.7297973632812,
+        22.838348388671875,
+        16.31890869140625
+      ],
+      "score": 0.6830370426177979,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 341,
+      "original_frame": 0,
+      "file_name": "frame_0341_png.rf.Q00TexDF5uKrdA2dhWE0.png",
+      "image_id": 351,
+      "bbox_xywh": [
+        298.7320861816406,
+        660.6160278320312,
+        27.792724609375,
+        21.07366943359375
+      ],
+      "score": 0.6496872901916504,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 342,
+      "original_frame": 0,
+      "file_name": "frame_0342_png.rf.AYH8vbf4rngjt931WjuH.png",
+      "image_id": 369,
+      "bbox_xywh": [
+        295.6338806152344,
+        657.5488891601562,
+        24.788482666015625,
+        17.70281982421875
+      ],
+      "score": 0.7003375291824341,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 343,
+      "original_frame": 0,
+      "file_name": "frame_0343_png.rf.balc0JMs8GgOxhWNcXXd.png",
+      "image_id": 388,
+      "bbox_xywh": [
+        295.52239990234375,
+        654.9783935546875,
+        24.26239013671875,
+        17.44427490234375
+      ],
+      "score": 0.6909119486808777,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 344,
+      "original_frame": 0,
+      "file_name": "frame_0344_png.rf.iVhDL0IbXEf3o9ABdHDH.png",
+      "image_id": 365,
+      "bbox_xywh": [
+        289.38934326171875,
+        652.5564575195312,
+        26.276458740234375,
+        17.42144775390625
+      ],
+      "score": 0.5547540783882141,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 345,
+      "original_frame": 0,
+      "file_name": "frame_0345_png.rf.JM5DmB3S7rt4QJ0syEw6.png",
+      "image_id": 374,
+      "bbox_xywh": [
+        300.16241455078125,
+        655.8767700195312,
+        22.145233154296875,
+        16.5482177734375
+      ],
+      "score": 0.6558506488800049,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 346,
+      "original_frame": 0,
+      "file_name": "frame_0346_png.rf.xdcpAzwXCjaU9JB9lOIa.png",
+      "image_id": 386,
+      "bbox_xywh": [
+        302.54595947265625,
+        651.3822631835938,
+        23.71868896484375,
+        17.98345947265625
+      ],
+      "score": 0.6464974880218506,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 347,
+      "original_frame": 0,
+      "file_name": "frame_0347_png.rf.r2MWPVbCqoGFz1f59nce.png",
+      "image_id": 368,
+      "bbox_xywh": [
+        309.5649719238281,
+        643.6090087890625,
+        24.515716552734375,
+        18.056884765625
+      ],
+      "score": 0.6783689856529236,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 349,
+      "original_frame": 0,
+      "file_name": "frame_0349_png.rf.0oSi63OlU6N8PARAzIly.png",
+      "image_id": 322,
+      "bbox_xywh": [
+        321.59429931640625,
+        635.2430419921875,
+        24.285247802734375,
+        17.74774169921875
+      ],
+      "score": 0.5852044224739075,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 350,
+      "original_frame": 0,
+      "file_name": "frame_0350_png.rf.az6r1emPfs0LjnvFZIy8.png",
+      "image_id": 393,
+      "bbox_xywh": [
+        330.4209899902344,
+        631.35693359375,
+        21.422882080078125,
+        16.00750732421875
+      ],
+      "score": 0.6611053943634033,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 351,
+      "original_frame": 0,
+      "file_name": "frame_0351_png.rf.vqIA0ReHPizQ7UleDRKe.png",
+      "image_id": 381,
+      "bbox_xywh": [
+        337.1758728027344,
+        627.9340209960938,
+        22.92584228515625,
+        15.81475830078125
+      ],
+      "score": 0.6648871898651123,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 352,
+      "original_frame": 0,
+      "file_name": "frame_0352_png.rf.6Oz4h3miNkonRP4meBtk.png",
+      "image_id": 340,
+      "bbox_xywh": [
+        342.4871520996094,
+        627.0335693359375,
+        21.525482177734375,
+        14.52252197265625
+      ],
+      "score": 0.6781938076019287,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 353,
+      "original_frame": 0,
+      "file_name": "frame_0353_png.rf.8XxfnBNfZwuPzOWEnGCg.png",
+      "image_id": 341,
+      "bbox_xywh": [
+        351.3544616699219,
+        625.5955810546875,
+        21.60211181640625,
+        15.59912109375
+      ],
+      "score": 0.679163932800293,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 354,
+      "original_frame": 0,
+      "file_name": "frame_0354_png.rf.rr20yJMxzF4YiYNr31U6.png",
+      "image_id": 376,
+      "bbox_xywh": [
+        359.27508544921875,
+        624.5961303710938,
+        22.548736572265625,
+        16.0745849609375
+      ],
+      "score": 0.6698113679885864,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 355,
+      "original_frame": 0,
+      "file_name": "frame_0355_png.rf.JEEvv5nBCUcWwJnPR3hm.png",
+      "image_id": 373,
+      "bbox_xywh": [
+        364.0643310546875,
+        624.9336547851562,
+        20.83221435546875,
+        15.22845458984375
+      ],
+      "score": 0.7445304989814758,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 356,
+      "original_frame": 0,
+      "file_name": "frame_0356_png.rf.XuiyU0Hx1DWfFutYFJQk.png",
+      "image_id": 352,
+      "bbox_xywh": [
+        370.1654052734375,
+        624.7691040039062,
+        22.651885986328125,
+        16.3341064453125
+      ],
+      "score": 0.6793933510780334,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 357,
+      "original_frame": 0,
+      "file_name": "frame_0357_png.rf.5WsF3JuRv9XHxCYwUiXz.png",
+      "image_id": 339,
+      "bbox_xywh": [
+        376.89825439453125,
+        626.6187744140625,
+        22.750457763671875,
+        15.6932373046875
+      ],
+      "score": 0.687388002872467,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 358,
+      "original_frame": 0,
+      "file_name": "frame_0358_png.rf.T6wy0kkGOt6QsA25tgVb.png",
+      "image_id": 338,
+      "bbox_xywh": [
+        379.3667297363281,
+        627.8294067382812,
+        22.34967041015625,
+        16.121826171875
+      ],
+      "score": 0.6815339922904968,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 359,
+      "original_frame": 0,
+      "file_name": "frame_0359_png.rf.3XvdDtnvwEDxTfbfc7j4.png",
+      "image_id": 333,
+      "bbox_xywh": [
+        384.42767333984375,
+        631.4150390625,
+        22.671722412109375,
+        15.184814453125
+      ],
+      "score": 0.6602187752723694,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 360,
+      "original_frame": 0,
+      "file_name": "frame_0360_png.rf.sXAnHIAAmM9W0jX5TtU8.png",
+      "image_id": 377,
+      "bbox_xywh": [
+        390.1345520019531,
+        635.6362915039062,
+        22.768951416015625,
+        17.36102294921875
+      ],
+      "score": 0.6914001107215881,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 361,
+      "original_frame": 0,
+      "file_name": "frame_0361_png.rf.XLuuitxDTUlVveHmW7BZ.png",
+      "image_id": 332,
+      "bbox_xywh": [
+        392.0316467285156,
+        638.66552734375,
+        24.135345458984375,
+        16.44696044921875
+      ],
+      "score": 0.6483169198036194,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 362,
+      "original_frame": 0,
+      "file_name": "frame_0362_png.rf.aNwo6EbdAFZPPP6wG82G.png",
+      "image_id": 336,
+      "bbox_xywh": [
+        396.843505859375,
+        645.228759765625,
+        24.88421630859375,
+        18.8408203125
+      ],
+      "score": 0.6826354265213013,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 363,
+      "original_frame": 0,
+      "file_name": "frame_0363_png.rf.wW97nTc33gz6Td4jsxqf.png",
+      "image_id": 364,
+      "bbox_xywh": [
+        403.7726745605469,
+        654.1286010742188,
+        22.496185302734375,
+        16.91888427734375
+      ],
+      "score": 0.6930379867553711,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 364,
+      "original_frame": 0,
+      "file_name": "frame_0364_png.rf.hhu9NrjlxCExDVJY9JQR.png",
+      "image_id": 363,
+      "bbox_xywh": [
+        410.3075256347656,
+        652.065185546875,
+        23.546722412109375,
+        17.15838623046875
+      ],
+      "score": 0.6600265502929688,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 365,
+      "original_frame": 0,
+      "file_name": "frame_0365_png.rf.hXwOFTCplfOvC1xKQeMH.png",
+      "image_id": 355,
+      "bbox_xywh": [
+        414.5951843261719,
+        649.4677734375,
+        23.8603515625,
+        17.39166259765625
+      ],
+      "score": 0.6895720958709717,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 366,
+      "original_frame": 0,
+      "file_name": "frame_0366_png.rf.zBRYh5JoEJObjaosqAIr.png",
+      "image_id": 346,
+      "bbox_xywh": [
+        416.9189453125,
+        648.5426025390625,
+        23.650054931640625,
+        17.30609130859375
+      ],
+      "score": 0.6964000463485718,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 367,
+      "original_frame": 0,
+      "file_name": "frame_0367_png.rf.EPmSsRjk6lHKeWs6r6kJ.png",
+      "image_id": 312,
+      "bbox_xywh": [
+        421.2440490722656,
+        647.6732788085938,
+        22.35186767578125,
+        16.446533203125
+      ],
+      "score": 0.6967933177947998,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 368,
+      "original_frame": 0,
+      "file_name": "frame_0368_png.rf.aueSTi6UiYhvc94MJuHs.png",
+      "image_id": 334,
+      "bbox_xywh": [
+        424.4630126953125,
+        647.703125,
+        23.059814453125,
+        16.70928955078125
+      ],
+      "score": 0.6858967542648315,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 369,
+      "original_frame": 0,
+      "file_name": "frame_0369_png.rf.cQ7fw0YXyrf0eGVZo0rA.png",
+      "image_id": 354,
+      "bbox_xywh": [
+        425.9268798828125,
+        647.7294311523438,
+        23.118988037109375,
+        16.85296630859375
+      ],
+      "score": 0.6729625463485718,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 370,
+      "original_frame": 0,
+      "file_name": "frame_0370_png.rf.KZzlFQQ9ZHeoSKWAeg9d.png",
+      "image_id": 331,
+      "bbox_xywh": [
+        429.98388671875,
+        649.0596923828125,
+        21.93865966796875,
+        16.37481689453125
+      ],
+      "score": 0.6978585124015808,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 371,
+      "original_frame": 0,
+      "file_name": "frame_0371_png.rf.xfgSdK75yz3JNw83P2gp.png",
+      "image_id": 360,
+      "bbox_xywh": [
+        433.38897705078125,
+        651.1683349609375,
+        22.41339111328125,
+        17.256591796875
+      ],
+      "score": 0.6538609266281128,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 372,
+      "original_frame": 0,
+      "file_name": "frame_0372_png.rf.qF4WGkyHFTaUDXZABJDB.png",
+      "image_id": 356,
+      "bbox_xywh": [
+        434.8520812988281,
+        652.0371704101562,
+        23.70928955078125,
+        17.65277099609375
+      ],
+      "score": 0.6685639023780823,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 373,
+      "original_frame": 0,
+      "file_name": "frame_0373_png.rf.XKguagI466K6FelXRsCM.png",
+      "image_id": 335,
+      "bbox_xywh": [
+        439.5603942871094,
+        656.8399047851562,
+        19.98138427734375,
+        14.99761962890625
+      ],
+      "score": 0.6782407760620117,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 374,
+      "original_frame": 0,
+      "file_name": "frame_0374_png.rf.05IjulPRnuFDbcVSJfam.png",
+      "image_id": 301,
+      "bbox_xywh": [
+        441.855224609375,
+        661.4702758789062,
+        20.719451904296875,
+        16.43865966796875
+      ],
+      "score": 0.6880434155464172,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 375,
+      "original_frame": 0,
+      "file_name": "frame_0375_png.rf.C5AbDellzN2tKcctxRXA.png",
+      "image_id": 304,
+      "bbox_xywh": [
+        442.63525390625,
+        662.4115600585938,
+        21.895965576171875,
+        16.71685791015625
+      ],
+      "score": 0.6912186145782471,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 376,
+      "original_frame": 0,
+      "file_name": "frame_0376_png.rf.3any3Xodmv3KfKYIVwPT.png",
+      "image_id": 316,
+      "bbox_xywh": [
+        445.3543701171875,
+        660.2071533203125,
+        21.87481689453125,
+        16.63580322265625
+      ],
+      "score": 0.7025233507156372,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 377,
+      "original_frame": 0,
+      "file_name": "frame_0377_png.rf.rcAsHNeytI2RNaWDmm9M.png",
+      "image_id": 362,
+      "bbox_xywh": [
+        448.2548828125,
+        657.9766235351562,
+        21.8187255859375,
+        16.3970947265625
+      ],
+      "score": 0.6983898282051086,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 378,
+      "original_frame": 0,
+      "file_name": "frame_0378_png.rf.E0Ttx7vIXJBriWfF8IUk.png",
+      "image_id": 305,
+      "bbox_xywh": [
+        449.2059020996094,
+        657.2054443359375,
+        22.600067138671875,
+        16.9053955078125
+      ],
+      "score": 0.7079421281814575,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 379,
+      "original_frame": 0,
+      "file_name": "frame_0379_png.rf.tbvka7QtgrDp103yRs7S.png",
+      "image_id": 358,
+      "bbox_xywh": [
+        450.4455261230469,
+        658.2925415039062,
+        21.939971923828125,
+        15.400634765625
+      ],
+      "score": 0.7090846300125122,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 380,
+      "original_frame": 0,
+      "file_name": "frame_0380_png.rf.RUXMRz7zi82Arz9R0wLs.png",
+      "image_id": 315,
+      "bbox_xywh": [
+        450.8242492675781,
+        659.4097290039062,
+        24.65618896484375,
+        16.72528076171875
+      ],
+      "score": 0.6980480551719666,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 381,
+      "original_frame": 0,
+      "file_name": "frame_0381_png.rf.ElbU65TXPCEmteryb7KS.png",
+      "image_id": 313,
+      "bbox_xywh": [
+        451.5196838378906,
+        660.164306640625,
+        24.63153076171875,
+        16.94879150390625
+      ],
+      "score": 0.6835481524467468,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 382,
+      "original_frame": 0,
+      "file_name": "frame_0382_png.rf.5N2oZ4JttYnnn5fYARmt.png",
+      "image_id": 303,
+      "bbox_xywh": [
+        453.2859802246094,
+        661.9620971679688,
+        24.698974609375,
+        17.435302734375
+      ],
+      "score": 0.6750317215919495,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 383,
+      "original_frame": 0,
+      "file_name": "frame_0383_png.rf.2Kyxs5qCUBMsFINNumVm.png",
+      "image_id": 302,
+      "bbox_xywh": [
+        455.0977478027344,
+        661.3460083007812,
+        23.7386474609375,
+        17.16571044921875
+      ],
+      "score": 0.6418748497962952,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 384,
+      "original_frame": 0,
+      "file_name": "frame_0384_png.rf.InxpLeT2V9mKjVroq0SP.png",
+      "image_id": 314,
+      "bbox_xywh": [
+        457.8734130859375,
+        661.1416625976562,
+        22.119140625,
+        16.77532958984375
+      ],
+      "score": 0.6126983165740967,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 385,
+      "original_frame": 0,
+      "file_name": "frame_0385_png.rf.la5bzjiIobCOLESzpV0O.png",
+      "image_id": 359,
+      "bbox_xywh": [
+        485.8999328613281,
+        656.4111938476562,
+        30.655975341796875,
+        17.995849609375
+      ],
+      "score": 0.5020711421966553,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 386,
+      "original_frame": 0,
+      "file_name": "frame_0386_png.rf.S4U4YGrvwDQOY7Id0g3L.png",
+      "image_id": 330,
+      "bbox_xywh": [
+        522.8834838867188,
+        653.9485473632812,
+        32.4951171875,
+        17.23883056640625
+      ],
+      "score": 0.7002984881401062,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 387,
+      "original_frame": 0,
+      "file_name": "frame_0387_png.rf.Uhmh0On0nMWdEmAj1u6z.png",
+      "image_id": 329,
+      "bbox_xywh": [
+        540.1365966796875,
+        651.8025512695312,
+        34.0443115234375,
+        17.87689208984375
+      ],
+      "score": 0.7034722566604614,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 388,
+      "original_frame": 0,
+      "file_name": "frame_0388_png.rf.EqOvArA98BoyL8hShPTe.png",
+      "image_id": 337,
+      "bbox_xywh": [
+        577.362060546875,
+        650.0120239257812,
+        32.5975341796875,
+        17.30767822265625
+      ],
+      "score": 0.7225162982940674,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 389,
+      "original_frame": 0,
+      "file_name": "frame_0389_png.rf.eDFa2CYIKVShpVN3F3Rf.png",
+      "image_id": 357,
+      "bbox_xywh": [
+        613.381591796875,
+        647.0200805664062,
+        28.87939453125,
+        15.6341552734375
+      ],
+      "score": 0.6995593905448914,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 390,
+      "original_frame": 0,
+      "file_name": "frame_0390_png.rf.w6oGPGR5Zowvp2IUIaht.png",
+      "image_id": 361,
+      "bbox_xywh": [
+        629.7262573242188,
+        644.410888671875,
+        29.28912353515625,
+        16.44696044921875
+      ],
+      "score": 0.6868707537651062,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 391,
+      "original_frame": 0,
+      "file_name": "frame_0391_png.rf.XOkz0CSoV1G6mx4WWKfQ.png",
+      "image_id": 111,
+      "bbox_xywh": [
+        660.9282836914062,
+        641.1358642578125,
+        28.484130859375,
+        16.1243896484375
+      ],
+      "score": 0.7107516527175903,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 392,
+      "original_frame": 0,
+      "file_name": "frame_0392_png.rf.1OwwbYd7dbfac9pjrJay.png",
+      "image_id": 82,
+      "bbox_xywh": [
+        691.0211181640625,
+        638.8746948242188,
+        30.62640380859375,
+        17.15814208984375
+      ],
+      "score": 0.7071325778961182,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 393,
+      "original_frame": 0,
+      "file_name": "frame_0393_png.rf.EOIyQfFJm26DoujMpuj5.png",
+      "image_id": 106,
+      "bbox_xywh": [
+        706.732421875,
+        638.343017578125,
+        29.3612060546875,
+        16.3656005859375
+      ],
+      "score": 0.7004969716072083,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 394,
+      "original_frame": 0,
+      "file_name": "frame_0394_png.rf.lSVFtIshUhCt4UHugHB1.png",
+      "image_id": 120,
+      "bbox_xywh": [
+        734.368896484375,
+        634.22314453125,
+        28.8192138671875,
+        17.8001708984375
+      ],
+      "score": 0.6951290965080261,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 395,
+      "original_frame": 0,
+      "file_name": "frame_0395_png.rf.mZrbdLZg3WBNy4UJcDAf.png",
+      "image_id": 144,
+      "bbox_xywh": [
+        762.1297607421875,
+        632.0554809570312,
+        25.4827880859375,
+        16.1661376953125
+      ],
+      "score": 0.7263723015785217,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 396,
+      "original_frame": 0,
+      "file_name": "frame_0396_png.rf.byDbzJljA1oWGsjiKoNY.png",
+      "image_id": 115,
+      "bbox_xywh": [
+        774.32763671875,
+        629.855224609375,
+        26.64947509765625,
+        16.89764404296875
+      ],
+      "score": 0.7231114506721497,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 398,
+      "original_frame": 0,
+      "file_name": "frame_0398_png.rf.mUE1QSfx7LfujufB1XyD.png",
+      "image_id": 141,
+      "bbox_xywh": [
+        824.33935546875,
+        624.7611694335938,
+        26.9599609375,
+        14.953369140625
+      ],
+      "score": 0.6885311603546143,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 399,
+      "original_frame": 0,
+      "file_name": "frame_0399_png.rf.fktFegguS2UXT1rf5M3J.png",
+      "image_id": 119,
+      "bbox_xywh": [
+        838.1410522460938,
+        624.6242065429688,
+        21.9786376953125,
+        14.13177490234375
+      ],
+      "score": 0.7123804092407227,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 400,
+      "original_frame": 0,
+      "file_name": "frame_0400_png.rf.5KSWFOAyFo63OZBpRgeg.png",
+      "image_id": 93,
+      "bbox_xywh": [
+        856.4509887695312,
+        620.2196044921875,
+        25.49652099609375,
+        16.053466796875
+      ],
+      "score": 0.7120639085769653,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 401,
+      "original_frame": 0,
+      "file_name": "frame_0401_png.rf.LZoJcdcWDhRo8fUaipTP.png",
+      "image_id": 105,
+      "bbox_xywh": [
+        879.7843017578125,
+        617.4280395507812,
+        23.9442138671875,
+        15.1212158203125
+      ],
+      "score": 0.7390385270118713,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 402,
+      "original_frame": 0,
+      "file_name": "frame_0402_png.rf.0hMh7R5En1flCE4BC4GB.png",
+      "image_id": 80,
+      "bbox_xywh": [
+        890.59423828125,
+        616.9076538085938,
+        23.248779296875,
+        14.7225341796875
+      ],
+      "score": 0.7304618954658508,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 403,
+      "original_frame": 0,
+      "file_name": "frame_0403_png.rf.oNyq2oDklBAAxgjwS9mX.png",
+      "image_id": 146,
+      "bbox_xywh": [
+        911.3536987304688,
+        615.6521606445312,
+        22.64215087890625,
+        14.53204345703125
+      ],
+      "score": 0.8903233408927917,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 404,
+      "original_frame": 0,
+      "file_name": "frame_0404_png.rf.lMms0grm0OPwpiYlaXiG.png",
+      "image_id": 140,
+      "bbox_xywh": [
+        929.944580078125,
+        612.5439453125,
+        22.32171630859375,
+        14.3463134765625
+      ],
+      "score": 0.8037858605384827,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 405,
+      "original_frame": 0,
+      "file_name": "frame_0405_png.rf.4M8UL1d1yv7ddsRmVnOX.png",
+      "image_id": 95,
+      "bbox_xywh": [
+        939.0192260742188,
+        610.6011962890625,
+        21.50787353515625,
+        14.714599609375
+      ],
+      "score": 0.7828138470649719,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 406,
+      "original_frame": 0,
+      "file_name": "frame_0406_png.rf.WgRjiRzT2iNarNqSjY9X.png",
+      "image_id": 109,
+      "bbox_xywh": [
+        956.4662475585938,
+        608.2611694335938,
+        21.4169921875,
+        13.993408203125
+      ],
+      "score": 0.7929301857948303,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 407,
+      "original_frame": 0,
+      "file_name": "frame_0407_png.rf.UBOc3hfUMYs3wZleeBxh.png",
+      "image_id": 108,
+      "bbox_xywh": [
+        974.0996704101562,
+        606.5863647460938,
+        21.9344482421875,
+        13.9747314453125
+      ],
+      "score": 0.755466639995575,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 408,
+      "original_frame": 0,
+      "file_name": "frame_0408_png.rf.ZiUyY9Hdfs1I1p5ukWK9.png",
+      "image_id": 117,
+      "bbox_xywh": [
+        982.616943359375,
+        606.093994140625,
+        21.0443115234375,
+        13.96978759765625
+      ],
+      "score": 0.883163571357727,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 409,
+      "original_frame": 0,
+      "file_name": "frame_0409_png.rf.5xxl22N89L8It9RtxYVe.png",
+      "image_id": 113,
+      "bbox_xywh": [
+        998.5550537109375,
+        603.8392333984375,
+        21.3935546875,
+        13.4002685546875
+      ],
+      "score": 0.8424230813980103,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 410,
+      "original_frame": 0,
+      "file_name": "frame_0410_png.rf.A5AxgaYWPInEaCClXOdt.png",
+      "image_id": 107,
+      "bbox_xywh": [
+        1012.9420776367188,
+        600.8222045898438,
+        21.33270263671875,
+        14.2528076171875
+      ],
+      "score": 0.7508121132850647,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 411,
+      "original_frame": 0,
+      "file_name": "frame_0411_png.rf.NhpmzIHJSedgk88vYu9t.png",
+      "image_id": 92,
+      "bbox_xywh": [
+        1020.90673828125,
+        599.9775390625,
+        20.7108154296875,
+        14.214111328125
+      ],
+      "score": 0.8971260190010071,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 412,
+      "original_frame": 0,
+      "file_name": "frame_0412_png.rf.ByrSQgiCDxqSmMLQ3Sh1.png",
+      "image_id": 90,
+      "bbox_xywh": [
+        1034.3643798828125,
+        598.5933837890625,
+        21.4830322265625,
+        14.5220947265625
+      ],
+      "score": 0.8771112561225891,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 413,
+      "original_frame": 0,
+      "file_name": "frame_0413_png.rf.0qqV0FmQ5Mkm7NBfTKbw.png",
+      "image_id": 81,
+      "bbox_xywh": [
+        1049.046630859375,
+        597.7167358398438,
+        20.24755859375,
+        14.05877685546875
+      ],
+      "score": 0.9048483371734619,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 414,
+      "original_frame": 0,
+      "file_name": "frame_0414_png.rf.zURprQfWgCIeYKsfkEJb.png",
+      "image_id": 145,
+      "bbox_xywh": [
+        1054.6068115234375,
+        596.7261962890625,
+        20.519775390625,
+        13.5770263671875
+      ],
+      "score": 0.8971459269523621,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 415,
+      "original_frame": 0,
+      "file_name": "frame_0415_png.rf.iW5vObwrYD6aNm95DXEm.png",
+      "image_id": 112,
+      "bbox_xywh": [
+        1066.6788330078125,
+        594.187255859375,
+        20.016845703125,
+        13.85400390625
+      ],
+      "score": 0.8823269605636597,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 416,
+      "original_frame": 0,
+      "file_name": "frame_0416_png.rf.2ttR2m8RmV7pL64bH49H.png",
+      "image_id": 94,
+      "bbox_xywh": [
+        1078.4267578125,
+        592.507568359375,
+        19.7003173828125,
+        14.15399169921875
+      ],
+      "score": 0.8376340270042419,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 417,
+      "original_frame": 0,
+      "file_name": "frame_0417_png.rf.fw7tw1Ec7gPOC4eMdprW.png",
+      "image_id": 114,
+      "bbox_xywh": [
+        1083.3338623046875,
+        591.796875,
+        20.009521484375,
+        14.512451171875
+      ],
+      "score": 0.7664547562599182,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 418,
+      "original_frame": 0,
+      "file_name": "frame_0418_png.rf.Xog3DvPt9oZzjPsJ7v7m.png",
+      "image_id": 121,
+      "bbox_xywh": [
+        1093.58154296875,
+        590.6483154296875,
+        19.2740478515625,
+        14.08441162109375
+      ],
+      "score": 0.7536628842353821,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 419,
+      "original_frame": 0,
+      "file_name": "frame_0419_png.rf.FtQX1CBqEjg95dkR38Ky.png",
+      "image_id": 91,
+      "bbox_xywh": [
+        1093.898681640625,
+        588.6278076171875,
+        21.2978515625,
+        15.23876953125
+      ],
+      "score": 0.6772747039794922,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 420,
+      "original_frame": 0,
+      "file_name": "frame_0420_png.rf.Xkgna0fwDpFrtl42Ee8B.png",
+      "image_id": 116,
+      "bbox_xywh": [
+        1091.865234375,
+        587.24365234375,
+        20.917236328125,
+        16.3680419921875
+      ],
+      "score": 0.6760327816009521,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 421,
+      "original_frame": 0,
+      "file_name": "frame_0421_png.rf.KwqJk1BLLJipCg5lKTiR.png",
+      "image_id": 390,
+      "bbox_xywh": [
+        1087.8843994140625,
+        585.2268676757812,
+        18.610107421875,
+        13.59442138671875
+      ],
+      "score": 0.5666586756706238,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 450,
+      "original_frame": 0,
+      "file_name": "frame_0450_png.rf.5eKqnLqlvCvgt6RsV1SW.png",
+      "image_id": 348,
+      "bbox_xywh": [
+        967.403076171875,
+        564.9525146484375,
+        19.717041015625,
+        13.67822265625
+      ],
+      "score": 0.5808666348457336,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 451,
+      "original_frame": 0,
+      "file_name": "frame_0451_png.rf.NPqRWbniijeXTkYmnQD6.png",
+      "image_id": 66,
+      "bbox_xywh": [
+        962.4435424804688,
+        565.5189208984375,
+        21.79180908203125,
+        14.45947265625
+      ],
+      "score": 0.6791596412658691,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 452,
+      "original_frame": 0,
+      "file_name": "frame_0452_png.rf.nwkde20tIyQW4dUCr8FS.png",
+      "image_id": 127,
+      "bbox_xywh": [
+        958.6500244140625,
+        565.8936157226562,
+        20.6754150390625,
+        14.17388916015625
+      ],
+      "score": 0.7033721804618835,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 453,
+      "original_frame": 0,
+      "file_name": "frame_0453_png.rf.Qg0yTU39DWcg7PHJBDaW.png",
+      "image_id": 68,
+      "bbox_xywh": [
+        958.0284423828125,
+        565.97900390625,
+        18.02740478515625,
+        13.16290283203125
+      ],
+      "score": 0.6414713859558105,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 457,
+      "original_frame": 0,
+      "file_name": "frame_0457_png.rf.REn9jDYYkXjg9xWKthsF.png",
+      "image_id": 69,
+      "bbox_xywh": [
+        1085.09130859375,
+        568.2218627929688,
+        24.23388671875,
+        15.72821044921875
+      ],
+      "score": 0.502090334892273,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 458,
+      "original_frame": 0,
+      "file_name": "frame_0458_png.rf.EOaLhJObrVaOUAJgJf0c.png",
+      "image_id": 63,
+      "bbox_xywh": [
+        1077.46630859375,
+        571.3217163085938,
+        23.9337158203125,
+        15.334716796875
+      ],
+      "score": 0.5159014463424683,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 461,
+      "original_frame": 0,
+      "file_name": "frame_0461_png.rf.LVy7OdPoiwpH38LJ29bL.png",
+      "image_id": 65,
+      "bbox_xywh": [
+        900.6644897460938,
+        532.5462036132812,
+        19.302978515625,
+        13.8033447265625
+      ],
+      "score": 0.6601629853248596,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 462,
+      "original_frame": 0,
+      "file_name": "frame_0462_png.rf.jrKntnX1DUpzQHVMe5XN.png",
+      "image_id": 101,
+      "bbox_xywh": [
+        897.8350830078125,
+        530.3521118164062,
+        19.95562744140625,
+        14.281494140625
+      ],
+      "score": 0.7098267078399658,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 463,
+      "original_frame": 0,
+      "file_name": "frame_0463_png.rf.fpshUNFvsbjpsHeNTiaj.png",
+      "image_id": 124,
+      "bbox_xywh": [
+        891.953369140625,
+        527.315185546875,
+        17.530517578125,
+        12.2718505859375
+      ],
+      "score": 0.7884282469749451,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 464,
+      "original_frame": 0,
+      "file_name": "frame_0464_png.rf.u5eF6Z1sefUFjL45ydEh.png",
+      "image_id": 128,
+      "bbox_xywh": [
+        885.4104614257812,
+        523.28173828125,
+        17.3704833984375,
+        12.0023193359375
+      ],
+      "score": 0.8124034404754639,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 465,
+      "original_frame": 0,
+      "file_name": "frame_0465_png.rf.ZhbjAsA39rcMIAhwKIWv.png",
+      "image_id": 71,
+      "bbox_xywh": [
+        882.0274658203125,
+        521.6614990234375,
+        17.1676025390625,
+        12.11236572265625
+      ],
+      "score": 0.8248922228813171,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 466,
+      "original_frame": 0,
+      "file_name": "frame_0466_png.rf.2ybziVA6GCfhplJETn05.png",
+      "image_id": 35,
+      "bbox_xywh": [
+        874.6558837890625,
+        518.4878540039062,
+        18.41754150390625,
+        12.1363525390625
+      ],
+      "score": 0.869564950466156,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 467,
+      "original_frame": 0,
+      "file_name": "frame_0467_png.rf.JRQdqCmHMcSn34zeKZa2.png",
+      "image_id": 64,
+      "bbox_xywh": [
+        869.1853637695312,
+        514.9808959960938,
+        17.36114501953125,
+        12.42138671875
+      ],
+      "score": 0.7992091774940491,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 468,
+      "original_frame": 0,
+      "file_name": "frame_0468_png.rf.sXFqcZw6kUgZYsL1LOOp.png",
+      "image_id": 129,
+      "bbox_xywh": [
+        865.8883056640625,
+        513.6701049804688,
+        17.847412109375,
+        12.75787353515625
+      ],
+      "score": 0.7981216311454773,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 469,
+      "original_frame": 0,
+      "file_name": "frame_0469_png.rf.nWJikGtnyGIdtFhNWjFa.png",
+      "image_id": 125,
+      "bbox_xywh": [
+        860.0408325195312,
+        511.8116455078125,
+        17.74176025390625,
+        11.91644287109375
+      ],
+      "score": 0.8489343523979187,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 470,
+      "original_frame": 0,
+      "file_name": "frame_0470_png.rf.pBGyGMzmPdWjw7AB8Vhd.png",
+      "image_id": 103,
+      "bbox_xywh": [
+        855.2776489257812,
+        509.3788146972656,
+        17.1165771484375,
+        12.472686767578125
+      ],
+      "score": 0.8678194284439087,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 471,
+      "original_frame": 0,
+      "file_name": "frame_0471_png.rf.Syq0cpOP0lea7qcnRDvX.png",
+      "image_id": 70,
+      "bbox_xywh": [
+        851.9927368164062,
+        508.4847717285156,
+        17.7171630859375,
+        12.239898681640625
+      ],
+      "score": 0.892629861831665,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 472,
+      "original_frame": 0,
+      "file_name": "frame_0472_png.rf.6uk9CVpqmfbkpKUNWhrN.png",
+      "image_id": 37,
+      "bbox_xywh": [
+        847.0346069335938,
+        506.72637939453125,
+        17.11041259765625,
+        12.394287109375
+      ],
+      "score": 0.8689023852348328,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 473,
+      "original_frame": 0,
+      "file_name": "frame_0473_png.rf.Uh6sw2FZTHAJRltUw2V9.png",
+      "image_id": 97,
+      "bbox_xywh": [
+        842.6583251953125,
+        505.5938415527344,
+        16.38409423828125,
+        12.114776611328125
+      ],
+      "score": 0.8422311544418335,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 474,
+      "original_frame": 0,
+      "file_name": "frame_0474_png.rf.pBFaS1idDe8WbIFUC4Zt.png",
+      "image_id": 102,
+      "bbox_xywh": [
+        839.4237060546875,
+        505.1382751464844,
+        17.28497314453125,
+        12.112030029296875
+      ],
+      "score": 0.879369854927063,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 475,
+      "original_frame": 0,
+      "file_name": "frame_0475_png.rf.mqkwKS2ZazHJMGPu0RP2.png",
+      "image_id": 126,
+      "bbox_xywh": [
+        834.3244018554688,
+        503.39892578125,
+        17.60479736328125,
+        12.365478515625
+      ],
+      "score": 0.8778640627861023,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 476,
+      "original_frame": 0,
+      "file_name": "frame_0476_png.rf.d5B0JPCaccwtRmNu20Hl.png",
+      "image_id": 96,
+      "bbox_xywh": [
+        829.5877685546875,
+        501.7806091308594,
+        16.31365966796875,
+        11.955169677734375
+      ],
+      "score": 0.8874002695083618,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 477,
+      "original_frame": 0,
+      "file_name": "frame_0477_png.rf.s9WJVSwadSPxAgmCQHba.png",
+      "image_id": 135,
+      "bbox_xywh": [
+        826.7555541992188,
+        501.1034851074219,
+        16.6759033203125,
+        11.859405517578125
+      ],
+      "score": 0.8932647109031677,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 478,
+      "original_frame": 0,
+      "file_name": "frame_0478_png.rf.SjvGbMFWETqqtFLJLGWh.png",
+      "image_id": 98,
+      "bbox_xywh": [
+        821.85595703125,
+        500.0020751953125,
+        16.6351318359375,
+        11.501800537109375
+      ],
+      "score": 0.8875488042831421,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 479,
+      "original_frame": 0,
+      "file_name": "frame_0479_png.rf.fFeHo9PU5UgGP5zXVA9a.png",
+      "image_id": 136,
+      "bbox_xywh": [
+        816.7337036132812,
+        498.8626403808594,
+        17.2977294921875,
+        12.197601318359375
+      ],
+      "score": 0.8770053386688232,
+      "stage": "final",
+      "source": "rfdetr"
+    },
+    {
+      "sequence": "FLAT-COCO",
+      "frame_index": 480,
+      "original_frame": 0,
+      "file_name": "frame_0480_png.rf.Cav5E6T8tp3ytoCTmASC.png",
+      "image_id": 83,
+      "bbox_xywh": [
+        814.2880249023438,
+        498.1366271972656,
+        17.1044921875,
+        12.318084716796875
+      ],
+      "score": 0.8667577505111694,
+      "stage": "final",
+      "source": "rfdetr"
+    }
+  ]
+}
